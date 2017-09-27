@@ -1,0 +1,40 @@
+@large-screen: ~"screen and (max-width: 1200px)";
+@medium-screen: ~"screen and (max-width: 992px)";
+@small-screen: ~"screen and (max-width: 768px)";
+@xsmall-screen: ~"screen and (max-width: 480px)";
+
+.container {
+    max-width: 960px;
+    position: relative;
+    margin: 0 auto;
+    @media @medium-screen {
+        width: 85%;
+    }
+    @media @xsmall-screen {
+        width: 90%;
+    }
+}
+.section {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid lighten(@primary, 60%);
+}
+
+.paper {
+    border: 1px solid @primary-light;
+    background-color: #FFF;
+    padding: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    -webkit-box-shadow: -1px 5px 35px -9px hsla(0,0%,0%,.2);
+    -moz-box-shadow: -1px 5px 35px -9px hsla(0,0%,0%,.2);
+    box-shadow: -1px 5px 35px -9px hsla(0,0%,0%,.2);
+    @media @xsmall-screen {
+        padding: 1rem;
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+

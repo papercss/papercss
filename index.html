@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/dist/styles.css">
+  <link rel="stylesheet" href="/demo.css">
+</head>
+
+<body>
+  <div class="container paper">
+    <div class="demo-title">
+      <div class="row flex-center">
+        <div class="text-center">
+          <h1>Paper CSS</h1>
+          <h3>the less formal css framework</h3>
+        </div>
+      </div>
+      <div class="row flex-center child-borders">
+        <a href="#flexbox" class="paper-btn margin">Download</a>
+        <a href="#flexbox" class="paper-btn margin">Docs</a>
+        <a href="#about" class="paper-btn margin">About</a>
+        <a href="" class="paper-btn margin">Github</a>
+      </div>
+    </div>
+    <div id="flexbox" class="section">
+      <h2>Flexbox</h2>
+      <h4>Flexgrid</h4>
+      <div class="demo">
+        <div class="row">
+          <div class="col-4 col">col-4 col</div>
+          <div class="col-4 col">col-4 col</div>
+          <div class="col-4 col">col-4 col</div>
+        </div>
+        <div class="row">
+          <div class="col-3 col">col-3 col</div>
+          <div class="col-9 col">col-9 col</div>
+        </div>
+        <div class="row">
+          <div class="sm-6 md-8 lg-10 col">sm-6 md-8 lg-10 col</div>
+          <div class="sm-6 md-4 lg-2 col">sm-6 md-4 lg-2 col</div>
+        </div>
+        <div class="row">
+          <div class="sm-5 col">sm-5 col</div>
+          <div class="col-fill col">col-fill col</div>
+          <div class="col-fill col">col-fill col</div>
+        </div>
+        <div class="row">
+          <div class="sm-4 col">Aligned</div>
+          <div class="sm-4 col">Left (default)</div>
+        </div>
+        <div class="row flex-right">
+          <div class="sm-4 col">Aligned</div>
+          <div class="sm-4 col">Right (flex-right)</div>
+        </div>
+        <div class="row flex-center">
+          <div class="sm-4 col">Aligned</div>
+          <div class="sm-4 col">Right (flex-right)</div>
+        </div>
+        <div class="row flex-edges">
+          <div class="sm-4 col">Aligned</div>
+          <div class="sm-4 col">to edges (flex-edges)</div>
+        </div>
+        <div class="row flex-spaces">
+          <div class="sm-4 col">Aligned</div>
+          <div class="sm-4 col">to be evenly spaced (flex-spaces)</div>
+        </div>
+        <div class="row flex-top">
+          <div class="sm-6 col">Aligned top</div>
+          <div class="sm-6 col">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lorem lectus, lobortis a nibh non, luctus luctus erat posuere. Curabitur ac turpis aliquam, malesuada elit suscipit, blandit dolor.
+          </div>
+        </div>
+        <div class="row flex-middle">
+          <div class="sm-6 col">Aligned middle</div>
+          <div class="sm-6 col">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lorem lectus, lobortis a nibh non, luctus luctus erat posuere. Curabitur ac turpis aliquam, malesuada elit suscipit, blandit dolor.
+          </div>
+        </div>
+        <div class="row flex-bottom">
+          <div class="sm-6 col">Aligned bottom</div>
+          <div class="sm-6 col">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lorem lectus, lobortis a nibh non, luctus luctus erat posuere. Curabitur ac turpis aliquam, malesuada elit suscipit, blandit dolor.
+          </div>
+        </div>
+        <div class="row">
+          <div class="sm-3 col align-bottom">Align bottom</div>
+          <div class="sm-3 col align-middle">Align middle</div>
+          <div class="sm-3 col align-top">Align top</div>
+          <div class="sm-3 col">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lorem lectus, lobortis a nibh non, luctus luctus erat posuere. Curabitur ac turpis aliquam, malesuada elit suscipit, blandit dolor.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <h2>Typography</h2>
+      <p>How pretty is the text?</p>
+      <h1>Heading 1</h1>
+      <h2>Heading 2</h2>
+      <h3>Heading 3</h3>
+      <h4>Heading 4</h4>
+      <h5>Heading 5</h5>
+      <h6>Heading 6</h6>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean ultrices, eros non elementum accumsan, massa nulla
+        aliquam libero, ut posuere justo nibh ac ipsum. Aliquam blandit commodo justo at laoreet. Suspendisse potenti. Duis
+        magna neque, venenatis non libero a, tincidunt convallis diam. Donec vel fermentum ante. Quisque diam nisl, vestibulum
+        imperdiet sapien nec, interdum fringilla lorem. Morbi sed arcu facilisis, maximus justo vel, porttitor nisl. Nam
+        suscipit metus facilisis iaculis vestibulum.</p>
+    </div>
+    <div class="section">
+      <h2>Buttons</h2>
+      <p>Borrowed from <a href="https://codepen.io/tmrDevelops/pen/VeRvKX" target="_blank">Imprefect Buttons</a></p>
+      <button class="btn-large">Large</button>
+      <button>Default</button>
+      <button class="btn-small">Small</button>
+    </div>
+    <div class="section">
+      <h2>Forms</h2>
+      <div class="form-group">
+        <label>Input</label>
+        <input type="text">
+      </div>
+      <div class="form-group">
+        <label>Select</label>
+        <select>
+          <option value="1">Option 1</option>
+          <option value="2">Option 2</option>
+          <option value="3">Option 3</option>
+        <select>
+      </div>
+      <fieldset class="form-group">
+        <legend>Some Radio Buttons</legend>
+        <label for="paperRadios1" class="paper-radio"> 
+          <input type="radio" name="paperRadios" id="paperRadios1" value="option 1"> <span>This is the first option<span>
+        </label>
+        <label for="paperRadios2" class="paper-radio"> 
+          <input type="radio" name="paperRadios" id="paperRadios2" value="option 2"> <span>This is the second option<span>
+        </label>
+      </fieldset>
+      <fieldset class="form-group">
+        <legend>Some Check Boxes</legend>
+        <label for="paperChecks1" class="paper-check">
+          <input type="checkbox" name="paperChecks" id="paperChecks1" value="option 1"> <span>This is the first check</span>
+        </label>
+        <label for="paperChecks2" class="paper-check">
+          <input type="checkbox" name="paperChecks" id="paperChecks2" value="option 2"> <span>This is the second check</span>
+        </label>
+      </fieldset>
+    </div>
+    <div class="section">
+      <h2>Lists</h2>
+      <h4>Ordered Lists</h4>
+      <ol>
+        <li>Do this</li>
+        <li>Then this</li>
+        <li>Finally this</li>
+        <li>Then we'll go one deeper</li>
+        <ol>
+            <li>Dillon</li>
+            <li>Francis</li>
+            <ol>
+              <li>What if we went...</li>
+              <li>One more deeper?</li>
+              <ol>
+                <li>DJ</li>
+                <li>Hanzel</li>
+                <ol>
+                  <li>Five levels should be enough</li>
+                  <li>Right?</li>
+                </ol>
+              </ol>
+            </ol>
+        </ol>
+        <li>But don't forget this</li>
+      </ol>
+      <h4>Unordered Lists</h4>
+      <ul>
+        <li>Let's try this</li>
+        <li>Let's try this again</li>
+        <ul>
+          <li>And now we are nested</li>
+          <li>Pretty cool?</li>
+          <ul>
+            <li>The list items are just text</li>
+            <li>From this font</li>
+            <ul>
+              <li>We'll keep going</li>
+              <li>Until we hit</li>
+              <ul>
+                <li>LEVEL 5</li>
+              </ul>
+            </ul>
+          </ul>
+        </ul>
+        <li>And now we're are the top!</li>
+      </ul>
+    </div>
+    <div class="section">
+      <h2>Code</h2>
+      <p>Let's make some pretty <code>&lt;code&gt;</code></p>
+      <p>Print files backwards using <kbd>tac</kbd></p>
+      <p>To stop a process, hit <kbd>ctrl + c</kbd></p>
+      <pre>
+function add(x, y) {
+  return x + y;
+}     </pre>
+    </div>
+    <div class="section">
+      <h2>Tables</h2>
+      <h4>Regular</h4>
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Position</th>
+            <th>Location</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Bob Dylan</td>
+            <td>Musician</td>
+            <td>California, USA</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Eric Claption</td>
+            <td>Musician</td>
+            <td>Ohio, USA</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Daniel Kahneman</td>
+            <td>Psychologist</td>
+            <td>California, USA</td>
+          </tr>
+        </tbody>
+      </table>
+      <h4>Hover</h4>
+      <table class="table-hover">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Position</th>
+            <th>Location</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Bob Dylan</td>
+            <td>Musician</td>
+            <td>California, USA</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Eric Claption</td>
+            <td>Musician</td>
+            <td>Ohio, USA</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Daniel Kahneman</td>
+            <td>Psychologist</td>
+            <td>California, USA</td>
+          </tr>
+        </tbody>
+      </table>
+      <h4>Alternating</h4>
+      <table class="table-alternating">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Position</th>
+            <th>Location</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Bob Dylan</td>
+            <td>Musician</td>
+            <td>California, USA</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Eric Claption</td>
+            <td>Musician</td>
+            <td>Ohio, USA</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Daniel Kahneman</td>
+            <td>Psychologist</td>
+            <td>California, USA</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="section">
+      <h2>Colors</h2>
+      <h4>Text</h4>
+      <p class="text-primary">Text primary</p>
+      <p class="text-secondary">Text secondary</p>
+      <p class="text-success">Text success</p>
+      <p class="text-warning">Text warning</p>
+      <p class="text-danger">Text danger</p>
+      <h4>Backgrounds</h4>
+      <div class="row flex-center">
+        <div class="sm-2 col background-primary">Background primary</div>
+        <div class="sm-2 col background-secondary">Background secondary</div>
+        <div class="sm-2 col background-success">Background success</div>
+        <div class="sm-2 col background-warning">Background warning</div>
+        <div class="sm-2 col background-danger">Background danger</div>
+      </div>
+    </div>
+    <div class="section">
+      <h2>Borders &amp; Shadows</h2>
+      <h4>Borders</h4>
+      <div class="row flex-spaces">
+        <div class="sm-3 col border border-primary">Default Border</div>
+        <div class="sm-3 col border border-2 border-primary">Border-1</div>
+        <div class="sm-3 col border border-3 border-primary">Border-2</div>
+      </div>
+      <div class="row flex-spaces">
+        <div class="sm-3 col border border-4 border-primary">Border-3</div>
+        <div class="sm-3 col border border-5 border-primary">Border-4</div>
+        <div class="sm-3 col border border-6 border-primary">Border-5</div>
+      </div>
+      <h4>Border Colors</h4>
+      <div class="row child-borders">
+        <div class="sm-2 col border border-primary">Border primary</div>
+        <div class="sm-2 col border border-secondary">Border secondary</div>
+        <div class="sm-2 col border border-success">Border success</div>
+        <div class="sm-2 col border border-warning">Border warning</div>
+        <div class="sm-2 col border border-danger">Border danger</div>
+        <div class="sm-2 col border background-primary border-white">Border white</div>
+      </div>
+      <h4>Child Borders</h4>
+      <p>Use this if you want all children to have a border. This will alternate through the different border styles defined above instead of having to add the border class for each element.</p>
+      <div class="row flex-center child-borders">
+        <div class="sm-2 col">1</div>
+        <div class="sm-2 col">2</div>
+        <div class="sm-2 col">3</div>
+        <div class="sm-2 col">4</div>
+        <div class="sm-2 col">5</div>
+        <div class="sm-2 col">6</div>
+      </div>
+      <h4>Shadows</h4>
+      <div class="row flex-spaces child-borders">
+        <div class="sm-3 col shadow shadow-large">Large</div>
+        <div class="sm-3 col shadow">Default</div>
+        <div class="sm-3 col shadow shadow-small">Small</div>
+        <div class="sm-3 col shadow shadow-hover">Hover</div>
+      </div>
+      <h4>Child Shadows</h4>
+      <div class="row flex-spaces child-borders child-shadows">
+        <div class="sm-3 col">Shadow</div>
+        <div class="sm-3 col">Shadow</div>
+        <div class="sm-3 col">Shadow</div>
+      </div>
+      <h4>Child Shadows Hover</h4>
+      <div class="row flex-spaces child-borders child-shadows-hover">
+        <div class="sm-3 col">Shadow</div>
+        <div class="sm-3 col">Shadow</div>
+        <div class="sm-3 col">Shadow</div>
+      </div>
+    </div>
+    <div class="section">
+      <h2>Utilities</h2>
+      <h4>Margin</h4>
+      <div class="row flex-spaces child-borders">
+        <div class="sm-3 col margin">Margin</div>
+        <div class="sm-3 col margin-large">Margin-large</div>
+        <div class="sm-3 col margin-top-small">Margin-top-small</div>
+      </div>
+      <h4>Padding</h4>
+      <div class="row flex-spaces child-borders">
+        <div class="sm-3 col padding-small">Padding-small</div>
+        <div class="sm-3 col padding-none">Padding-none</div>
+        <div class="sm-3 col padding-left-large">Padding-left-large</div>
+      </div>
+    </div>
+    <div class="section">
+      <h2>Images</h2>
+      <h4>Responsive</h4>
+      <p>Images by default are responsive</p>
+      <img src="https://unsplash.it/900" alt="Random Unsplash">
+      <h4>Float</h4>
+      <p>You can also float responsive images to fit neatly with your text</p>
+      <p>
+        <img src="https://unsplash.it/200" alt="Smaller Unsplash" class="float-left">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur non elit sed lorem vulputate consectetur sed vel orci. Nunc orci metus, hendrerit viverra diam a, viverra efficitur nisi. Suspendisse ante sapien, porta vitae augue et, pulvinar posuere nibh. Suspendisse id commodo sem, vestibulum malesuada erat. Duis luctus est sit amet nisl maximus porta. Curabitur tempor nisi tincidunt ultricies rutrum. Nam finibus turpis ut nibh dignissim, in tincidunt mauris suscipit. Curabitur sollicitudin mi quis orci semper, nec egestas nibh mollis. Aenean pellentesque lectus rutrum, ultrices felis malesuada, finibus purus.
+        Morbi eleifend pellentesque justo, quis vestibulum mi. Donec porta ipsum tellus, ac scelerisque lectus pellentesque eget. Etiam quis rutrum dui. Nulla facilisi. Donec imperdiet mattis mi nec fringilla. Donec mollis augue sed viverra placerat. Donec varius, sem sed porttitor euismod, est nunc varius tellus, eget molestie urna arcu ac turpis. Phasellus id sem elit. Vivamus pellentesque mauris vel ex laoreet varius. Vivamus non tempor libero. Nam consectetur nisi erat, ac varius elit porttitor quis. Morbi ullamcorper, tortor in sagittis tempus, justo ipsum pretium urna, ut bibendum nisl orci et eros. Quisque ut ipsum neque. Integer sapien dolor, vestibulum id maximus ac, pharetra eu augue.
+        <img src="https://unsplash.it/100" alt="Smallerer Unsplash" class="float-right">
+        Aenean mauris tellus, facilisis sed quam non, tincidunt rutrum risus. Fusce quam urna, commodo vitae nunc condimentum, efficitur commodo libero. Sed dignissim odio enim, ac pharetra dui laoreet id. Suspendisse nec accumsan erat. Integer sit amet leo arcu. Proin sagittis blandit tempor. Vivamus at egestas lectus. Mauris eros tellus, egestas ac neque eget, lacinia sagittis ante. Phasellus faucibus suscipit erat, eget malesuada neque congue non.
+      </p>
+      <h4>No Responsive &amp; No Borders</h4>
+      <p>If you don't like the default, you can just add the class <code>no-responsive</code> to prevent the image from being responsive. You can also remove the default border with <code>no-border</code>.</p>
+      <img src="https://unsplash.it/300" alt="Not responsive Unsplash" class="no-responsive no-border">
+    </div>
+    <div class="section">
+      <h2 id="about">About</h2>
+      <p>I got tired of straight lines and clean pages on the internet. I also wanted to learn more about flexbox and less. So I made Paper CSS to solve these two challenges of mine :)</p>
+      <p>The goal of Paper CSS is to be as minimal as possible when adding classes. For example, a button should just look like a paper button. There shouldn't be a need to add a class such as <code>paper-button</code>. Because of this, adding Paper CSS to a markdown generated page should instantly paper-ize it.</p>
+      <p>While I'm proud of how it's turned out so far, I think there's a lot that can still be done to make it better. Such things as refactoring, adding more utility classes and more border types (like dashed/dotted) could really polish off this framework. That's why it's open sourced and available for pull requests!</p>
+      <p>If you are new to git/less, this would be a great project to get your feet wet with. I'd be happy to help walk you through the pull request process!</p>
+    </div>
+    <div class="row flex-right">
+      <p>Made with 💛 by <a href="https://vlaservi.ch" target="_blank">Rhyne</a></p>
+    </div>
+  </div>
+</body>
+
+</html>

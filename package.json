@@ -1,0 +1,32 @@
+{
+  "name": "papercss",
+  "version": "1.0.0",
+  "description": "Another CSS framework",
+  "main": "index.js",
+  "scripts": {
+    "start": "node_modules/gulp/bin/gulp.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rhyneav/papercss.git"
+  },
+  "author": "rhyneav",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rhyneav/papercss/issues"
+  },
+  "homepage": "https://github.com/rhyneav/papercss#readme",
+  "devDependencies": {
+    "gulp": "3.9.1",
+    "gulp-connect": "5.0.0",
+    "gulp-less": "3.3.2",
+    "gulp-plumber": "1.1.0",
+    "gulp-watch-less": "1.0.1",
+    "install": "0.10.1",
+    "less": "2.7.2",
+    "normalize.css": "7.0.0",
+    "npm": "5.3.0",
+    "webpack-dev-server": "2.7.1"
+  }
+}

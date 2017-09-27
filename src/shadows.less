@@ -1,0 +1,30 @@
+.shadow {
+    -webkit-box-shadow: 15px 28px 25px -18px hsla(0,0%,0%,.2);
+    -moz-box-shadow: 15px 28px 25px -18px hsla(0,0%,0%,.2);
+    box-shadow: 15px 28px 25px -18px hsla(0,0%,0%,.2);
+    transition:all .5s ease;
+    &.shadow-large {
+        -webkit-box-shadow: 20px 38px 34px -26px hsla(0,0%,0%,.2);
+        -moz-box-shadow: 20px 38px 34px -26px hsla(0,0%,0%,.2);
+        box-shadow: 20px 38px 34px -26px hsla(0,0%,0%,.2);
+    }
+    &.shadow-small {
+        -webkit-box-shadow: 10px 19px 17px -13px hsla(0,0%,0%,.2);
+        -moz-box-shadow: 10px 19px 17px -13px hsla(0,0%,0%,.2);
+        box-shadow: 10px 19px 17px -13px hsla(0,0%,0%,.2);
+    }
+    &.shadow-hover {
+        &:hover{
+            -webkit-box-shadow:2px 8px 4px -6px hsla(0,0%,0%,.3);
+            -moz-box-shadow:2px 8px 4px -6px hsla(0,0%,0%,.3);
+            box-shadow:2px 8px 4px -6px hsla(0,0%,0%,.3);
+        }
+    }
+}
+.child-shadows > * {
+    .shadow;
+}
+.child-shadows-hover > * {
+    .shadow;
+    .shadow-hover;
+}

@@ -1,0 +1,42 @@
+button, .paper-btn {
+    align-self:center;
+    background:transparent;
+    transition:all .5s ease;
+    color: @primary;
+    outline:none;
+    border:solid 2px @primary;
+    .border;
+    font-size: 1rem;
+    padding: .75rem .75rem;
+    cursor: pointer;
+    .shadow;
+    &.btn-large {
+        .shadow-large;
+        font-size:2rem;
+        padding:1rem 1rem;
+    }
+    &.btn-small {
+        .shadow-small;
+        font-size: .75rem;
+        padding: .5rem;
+    }
+    &:hover{
+        .shadow-hover;
+    }
+}
+
+a {
+    text-decoration: none;
+    background-image:
+        linear-gradient(5deg, transparent 65%, @secondary 80%, transparent 90%),
+        linear-gradient(165deg, transparent 5%, @secondary 15%, transparent 25%),
+        linear-gradient(165deg, transparent 45%, @secondary 55%, transparent 65%),
+        linear-gradient(15deg, transparent 25%, @secondary 35%, transparent 50%);
+    background-repeat:repeat-x;
+    background-size: 4px 3px;
+    background-position:0 90%;
+    &:visited {
+        text-decoration: none;
+        color: @primary;
+    }
+}

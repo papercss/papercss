@@ -1,0 +1,48 @@
+@primary: #41403E;
+@secondary: #0071DE;
+
+@success: #86a361;
+@warning: #ddcd45;
+@danger: #a7342d;
+
+@main-colors: @primary, @secondary, @success, @warning, @danger;
+
+@primary-light: lighten(@primary, 50%);
+@secondary-light: lighten(@secondary, 50%);
+@success-light: lighten(@success, 30%);
+@warning-light: lighten(@warning, 30%);
+@danger-light: lighten(@danger, 45%);
+
+// Mixin to create colors from list
+.text-primary {
+    color: @primary;
+}
+.text-secondary {
+    color: @secondary;
+}
+.text-success {
+    color: @success;
+}
+.text-warning {
+    color: @warning;
+}
+.text-danger {
+    color: @danger;
+}
+.background {
+    &-primary {
+        background-color: @primary-light;
+    }
+    &-secondary {
+        background-color: @secondary-light;
+    }
+    &-success {
+        background-color: @success-light;
+    }
+    &-warning {
+        background-color: @warning-light;
+    }
+    &-danger {
+        background-color: @danger-light;
+    }
+}
