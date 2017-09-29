@@ -4,7 +4,7 @@
   "description": "Another CSS framework",
   "main": "index.js",
   "scripts": {
-    "start": "node_modules/gulp/bin/gulp.js",
+    "start": "node node_modules/gulp/bin/gulp.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
