@@ -7,3 +7,6 @@ body {
 .demo .row .col:nth-child(even) {
     background-color: #ddd;
 }
+.docs {
+    margin-top: 2rem;
+}

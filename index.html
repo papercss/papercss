@@ -55,7 +55,7 @@
         </div>
         <div class="row flex-center">
           <div class="sm-4 col">Aligned</div>
-          <div class="sm-4 col">Right (flex-right)</div>
+          <div class="sm-4 col">Center (flex-center)</div>
         </div>
         <div class="row flex-edges">
           <div class="sm-4 col">Aligned</div>
@@ -66,20 +66,23 @@
           <div class="sm-4 col">to be evenly spaced (flex-spaces)</div>
         </div>
         <div class="row flex-top">
-          <div class="sm-6 col">Aligned top</div>
-          <div class="sm-6 col">
+          <div class="sm-4 col">Aligned top</div>
+          <div class="sm-4 col">Aligned top</div>
+          <div class="sm-4 col">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lorem lectus, lobortis a nibh non, luctus luctus erat posuere. Curabitur ac turpis aliquam, malesuada elit suscipit, blandit dolor.
           </div>
         </div>
         <div class="row flex-middle">
-          <div class="sm-6 col">Aligned middle</div>
-          <div class="sm-6 col">
+          <div class="sm-4 col">Aligned middle</div>
+          <div class="sm-4 col">Aligned middle</div>
+          <div class="sm-4 col">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lorem lectus, lobortis a nibh non, luctus luctus erat posuere. Curabitur ac turpis aliquam, malesuada elit suscipit, blandit dolor.
           </div>
         </div>
         <div class="row flex-bottom">
-          <div class="sm-6 col">Aligned bottom</div>
-          <div class="sm-6 col">
+          <div class="sm-4 col">Aligned bottom</div>
+          <div class="sm-4 col">Aligned bottom</div>
+          <div class="sm-4 col">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lorem lectus, lobortis a nibh non, luctus luctus erat posuere. Curabitur ac turpis aliquam, malesuada elit suscipit, blandit dolor.
           </div>
         </div>
@@ -92,6 +95,74 @@
           </div>
         </div>
       </div>
+      <div class="docs">
+          <pre>
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-4 col&quot;&gt;col-4 col&lt;/div&gt;
+  &lt;div class=&quot;col-4 col&quot;&gt;col-4 col&lt;/div&gt;
+  &lt;div class=&quot;col-4 col&quot;&gt;col-4 col&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col-3 col&quot;&gt;col-3 col&lt;/div&gt;
+  &lt;div class=&quot;col-9 col&quot;&gt;col-9 col&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;sm-6 md-8 lg-10 col&quot;&gt;sm-6 md-8 lg-10 col&lt;/div&gt;
+  &lt;div class=&quot;sm-6 md-4 lg-2 col&quot;&gt;sm-6 md-4 lg-2 col&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;sm-5 col&quot;&gt;sm-5 col&lt;/div&gt;
+  &lt;div class=&quot;col-fill col&quot;&gt;col-fill col&lt;/div&gt;
+  &lt;div class=&quot;col-fill col&quot;&gt;col-fill col&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;sm-4 col&quot;&gt;Aligned&lt;/div&gt;
+  &lt;div class=&quot;sm-4 col&quot;&gt;Left (default)&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row flex-right&quot;&gt;
+  &lt;div class=&quot;sm-4 col&quot;&gt;Aligned&lt;/div&gt;
+  &lt;div class=&quot;sm-4 col&quot;&gt;Right (flex-right)&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row flex-center&quot;&gt;
+  &lt;div class=&quot;sm-4 col&quot;&gt;Aligned&lt;/div&gt;
+  &lt;div class=&quot;sm-4 col&quot;&gt;Right (flex-right)&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row flex-edges&quot;&gt;
+  &lt;div class=&quot;sm-4 col&quot;&gt;Aligned&lt;/div&gt;
+  &lt;div class=&quot;sm-4 col&quot;&gt;to edges (flex-edges)&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row flex-spaces&quot;&gt;
+  &lt;div class=&quot;sm-4 col&quot;&gt;Aligned&lt;/div&gt;
+  &lt;div class=&quot;sm-4 col&quot;&gt;to be evenly spaced (flex-spaces)&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row flex-top&quot;&gt;
+  &lt;div class=&quot;sm-6 col&quot;&gt;Aligned top&lt;/div&gt;
+  &lt;div class=&quot;sm-6 col&quot;&gt;
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lorem lectus, lobortis a nibh non, luctus luctus erat posuere. Curabitur ac turpis aliquam, malesuada elit suscipit, blandit dolor.
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row flex-middle&quot;&gt;
+  &lt;div class=&quot;sm-6 col&quot;&gt;Aligned middle&lt;/div&gt;
+  &lt;div class=&quot;sm-6 col&quot;&gt;
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lorem lectus, lobortis a nibh non, luctus luctus erat posuere. Curabitur ac turpis aliquam, malesuada elit suscipit, blandit dolor.
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row flex-bottom&quot;&gt;
+  &lt;div class=&quot;sm-6 col&quot;&gt;Aligned bottom&lt;/div&gt;
+  &lt;div class=&quot;sm-6 col&quot;&gt;
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lorem lectus, lobortis a nibh non, luctus luctus erat posuere. Curabitur ac turpis aliquam, malesuada elit suscipit, blandit dolor.
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;sm-3 col align-bottom&quot;&gt;Align bottom&lt;/div&gt;
+  &lt;div class=&quot;sm-3 col align-middle&quot;&gt;Align middle&lt;/div&gt;
+  &lt;div class=&quot;sm-3 col align-top&quot;&gt;Align top&lt;/div&gt;
+  &lt;div class=&quot;sm-3 col&quot;&gt;
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lorem lectus, lobortis a nibh non, luctus luctus erat posuere. Curabitur ac turpis aliquam, malesuada elit suscipit, blandit dolor.
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+        </div>
     </div>
     <div class="section">
       <h2>Typography</h2>
@@ -107,6 +178,16 @@
         magna neque, venenatis non libero a, tincidunt convallis diam. Donec vel fermentum ante. Quisque diam nisl, vestibulum
         imperdiet sapien nec, interdum fringilla lorem. Morbi sed arcu facilisis, maximus justo vel, porttitor nisl. Nam
         suscipit metus facilisis iaculis vestibulum.</p>
+      <div class="docs">
+        <pre>
+&lt;h1&gt;Heading 1&lt;/h1&gt;
+&lt;h2&gt;Heading 2&lt;/h2&gt;
+&lt;h3&gt;Heading 3&lt;/h3&gt;
+&lt;h4&gt;Heading 4&lt;/h4&gt;
+&lt;h5&gt;Heading 5&lt;/h5&gt;
+&lt;h6&gt;Heading 6&lt;/h6&gt;
+&lt;p&gt;Lorem ipsum dolor....&lt;/p&gt;</pre>
+      </div>
     </div>
     <div class="section">
       <h2>Buttons</h2>
@@ -114,6 +195,12 @@
       <button class="btn-large">Large</button>
       <button>Default</button>
       <button class="btn-small">Small</button>
+      <div class="docs">
+        <pre>
+&lt;button class=&quot;btn-large&quot;&gt;Large&lt;/button&gt;
+&lt;button&gt;Default&lt;/button&gt;
+&lt;button class=&quot;btn-small&quot;&gt;Small&lt;/button&gt;</pre>
+      </div>
     </div>
     <div class="section">
       <h2>Forms</h2>
@@ -147,6 +234,39 @@
           <input type="checkbox" name="paperChecks" id="paperChecks2" value="option 2"> <span>This is the second check</span>
         </label>
       </fieldset>
+      <div class="docs">
+        <pre>
+&lt;div class=&quot;form-group&quot;&gt;
+  &lt;label&gt;Input&lt;/label&gt;
+  &lt;input type=&quot;text&quot;&gt;
+&lt;/div&gt;
+&lt;div class=&quot;form-group&quot;&gt;
+  &lt;label&gt;Select&lt;/label&gt;
+  &lt;select&gt;
+    &lt;option value=&quot;1&quot;&gt;Option 1&lt;/option&gt;
+    &lt;option value=&quot;2&quot;&gt;Option 2&lt;/option&gt;
+    &lt;option value=&quot;3&quot;&gt;Option 3&lt;/option&gt;
+  &lt;select&gt;
+&lt;/div&gt;
+&lt;fieldset class=&quot;form-group&quot;&gt;
+  &lt;legend&gt;Some Radio Buttons&lt;/legend&gt;
+  &lt;label for=&quot;paperRadios1&quot; class=&quot;paper-radio&quot;&gt; 
+    &lt;input type=&quot;radio&quot; name=&quot;paperRadios&quot; id=&quot;paperRadios1&quot; value=&quot;option 1&quot;&gt; &lt;span&gt;This is the first option&lt;span&gt;
+  &lt;/label&gt;
+  &lt;label for=&quot;paperRadios2&quot; class=&quot;paper-radio&quot;&gt; 
+    &lt;input type=&quot;radio&quot; name=&quot;paperRadios&quot; id=&quot;paperRadios2&quot; value=&quot;option 2&quot;&gt; &lt;span&gt;This is the second option&lt;span&gt;
+  &lt;/label&gt;
+&lt;/fieldset&gt;
+&lt;fieldset class=&quot;form-group&quot;&gt;
+  &lt;legend&gt;Some Check Boxes&lt;/legend&gt;
+  &lt;label for=&quot;paperChecks1&quot; class=&quot;paper-check&quot;&gt;
+    &lt;input type=&quot;checkbox&quot; name=&quot;paperChecks&quot; id=&quot;paperChecks1&quot; value=&quot;option 1&quot;&gt; &lt;span&gt;This is the first check&lt;/span&gt;
+  &lt;/label&gt;
+  &lt;label for=&quot;paperChecks2&quot; class=&quot;paper-check&quot;&gt;
+    &lt;input type=&quot;checkbox&quot; name=&quot;paperChecks&quot; id=&quot;paperChecks2&quot; value=&quot;option 2&quot;&gt; &lt;span&gt;This is the second check&lt;/span&gt;
+  &lt;/label&gt;
+&lt;/fieldset&gt;</pre>
+      </div>
     </div>
     <div class="section">
       <h2>Lists</h2>
@@ -195,6 +315,34 @@
         </ul>
         <li>And now we're are the top!</li>
       </ul>
+      <div class="docs">
+        <pre>
+&lt;ol&gt;
+  &lt;li&gt;Do this&lt;/li&gt;
+  &lt;li&gt;Then this&lt;/li&gt;
+  &lt;li&gt;Finally this&lt;/li&gt;
+  &lt;li&gt;Then we'll go one deeper&lt;/li&gt;
+  &lt;ol&gt;
+      &lt;li&gt;Dillon&lt;/li&gt;
+      &lt;li&gt;Francis&lt;/li&gt;
+      &lt;ol&gt;
+        &lt;li&gt;What if we went...&lt;/li&gt;
+        &lt;li&gt;One more deeper?&lt;/li&gt;
+        &lt;ol&gt;
+          &lt;li&gt;DJ&lt;/li&gt;
+          &lt;li&gt;Hanzel&lt;/li&gt;
+          &lt;ol&gt;
+            &lt;li&gt;Five levels should be enough&lt;/li&gt;
+            &lt;li&gt;Right?&lt;/li&gt;
+          &lt;/ol&gt;
+        &lt;/ol&gt;
+      &lt;/ol&gt;
+  &lt;/ol&gt;
+  &lt;li&gt;But don't forget this&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;!-- Replace ol with ul for unordered lists. Go up to 5 levels deep! --&gt;</pre>
+      </div>
     </div>
     <div class="section">
       <h2>Code</h2>
@@ -205,6 +353,17 @@
 function add(x, y) {
   return x + y;
 }     </pre>
+      <div class="docs">
+        <pre>
+&lt;p&gt;Let's make some pretty &lt;code&gt;&amp;lt;code&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Print files backwards using &lt;kbd&gt;tac&lt;/kbd&gt;&lt;/p&gt;
+&lt;p&gt;To stop a process, hit &lt;kbd&gt;ctrl + c&lt;/kbd&gt;&lt;/p&gt;
+&lt;pre&gt;
+  function add(x, y) {
+    return x + y;
+  }
+&lt;/pre&gt;</pre>
+      </div>
     </div>
     <div class="section">
       <h2>Tables</h2>
@@ -301,6 +460,43 @@ function add(x, y) {
           </tr>
         </tbody>
       </table>
+      <div class="docs">
+        <pre>
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;#&lt;/th&gt;
+      &lt;th&gt;Name&lt;/th&gt;
+      &lt;th&gt;Position&lt;/th&gt;
+      &lt;th&gt;Location&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;Bob Dylan&lt;/td&gt;
+      &lt;td&gt;Musician&lt;/td&gt;
+      &lt;td&gt;California, USA&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;Eric Claption&lt;/td&gt;
+      &lt;td&gt;Musician&lt;/td&gt;
+      &lt;td&gt;Ohio, USA&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;Daniel Kahneman&lt;/td&gt;
+      &lt;td&gt;Psychologist&lt;/td&gt;
+      &lt;td&gt;California, USA&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;!-- Add table-hover or table-alternating to change the style of the table --&gt;
+&lt;table class=&quot;table-hover&quot;&gt;
+&lt;table class=&quot;table-alternating&quot;&gt;</pre>
+      </div>
     </div>
     <div class="section">
       <h2>Colors</h2>
@@ -310,6 +506,14 @@ function add(x, y) {
       <p class="text-success">Text success</p>
       <p class="text-warning">Text warning</p>
       <p class="text-danger">Text danger</p>
+      <div class="docs">
+        <pre>
+&lt;p class=&quot;text-primary&quot;&gt;Text primary&lt;/p&gt;
+&lt;p class=&quot;text-secondary&quot;&gt;Text secondary&lt;/p&gt;
+&lt;p class=&quot;text-success&quot;&gt;Text success&lt;/p&gt;
+&lt;p class=&quot;text-warning&quot;&gt;Text warning&lt;/p&gt;
+&lt;p class=&quot;text-danger&quot;&gt;Text danger&lt;/p&gt; </pre>
+      </div>
       <h4>Backgrounds</h4>
       <div class="row flex-center">
         <div class="sm-2 col background-primary">Background primary</div>
@@ -318,19 +522,29 @@ function add(x, y) {
         <div class="sm-2 col background-warning">Background warning</div>
         <div class="sm-2 col background-danger">Background danger</div>
       </div>
+      <div class="docs">
+        <pre>
+&lt;div class=&quot;row flex-center&quot;&gt;
+  &lt;div class=&quot;sm-2 col background-primary&quot;&gt;Background primary&lt;/div&gt;
+  &lt;div class=&quot;sm-2 col background-secondary&quot;&gt;Background secondary&lt;/div&gt;
+  &lt;div class=&quot;sm-2 col background-success&quot;&gt;Background success&lt;/div&gt;
+  &lt;div class=&quot;sm-2 col background-warning&quot;&gt;Background warning&lt;/div&gt;
+  &lt;div class=&quot;sm-2 col background-danger&quot;&gt;Background danger&lt;/div&gt;
+&lt;/div&gt;</pre>
+      </div>
     </div>
     <div class="section">
       <h2>Borders &amp; Shadows</h2>
       <h4>Borders</h4>
       <div class="row flex-spaces">
         <div class="sm-3 col border border-primary">Default Border</div>
-        <div class="sm-3 col border border-2 border-primary">Border-1</div>
-        <div class="sm-3 col border border-3 border-primary">Border-2</div>
+        <div class="sm-3 col border border-2 border-primary">Border-2</div>
+        <div class="sm-3 col border border-3 border-primary">Border-3</div>
       </div>
       <div class="row flex-spaces">
-        <div class="sm-3 col border border-4 border-primary">Border-3</div>
-        <div class="sm-3 col border border-5 border-primary">Border-4</div>
-        <div class="sm-3 col border border-6 border-primary">Border-5</div>
+        <div class="sm-3 col border border-4 border-primary">Border-4</div>
+        <div class="sm-3 col border border-5 border-primary">Border-5</div>
+        <div class="sm-3 col border border-6 border-primary">Border-6</div>
       </div>
       <h4>Border Colors</h4>
       <div class="row child-borders">
@@ -359,12 +573,14 @@ function add(x, y) {
         <div class="sm-3 col shadow shadow-hover">Hover</div>
       </div>
       <h4>Child Shadows</h4>
+      <p>Use this if you want all children to have a shadow.</p>
       <div class="row flex-spaces child-borders child-shadows">
         <div class="sm-3 col">Shadow</div>
         <div class="sm-3 col">Shadow</div>
         <div class="sm-3 col">Shadow</div>
       </div>
       <h4>Child Shadows Hover</h4>
+      <p>Use this if you want all children to have a shadow... that changes on hover</p>
       <div class="row flex-spaces child-borders child-shadows-hover">
         <div class="sm-3 col">Shadow</div>
         <div class="sm-3 col">Shadow</div>
@@ -406,10 +622,10 @@ function add(x, y) {
     </div>
     <div class="section">
       <h2 id="about">About</h2>
-      <p>I got tired of straight lines and clean pages on the internet. I also wanted to learn more about flexbox and less. So I made Paper CSS to solve these two challenges of mine :)</p>
+      <p>I got tired of mODerN STylEs and clean pages on the internet. I also wanted to learn more about Flexbox and Less. So I made Paper CSS to solve these two challenges of mine :)</p>
       <p>The goal of Paper CSS is to be as minimal as possible when adding classes. For example, a button should just look like a paper button. There shouldn't be a need to add a class such as <code>paper-button</code>. Because of this, adding Paper CSS to a markdown generated page should instantly paper-ize it.</p>
       <p>While I'm proud of how it's turned out so far, I think there's a lot that can still be done to make it better. Such things as refactoring, adding more utility classes and more border types (like dashed/dotted) could really polish off this framework. That's why it's open sourced and available for pull requests!</p>
-      <p>If you are new to git/less, this would be a great project to get your feet wet with. I'd be happy to help walk you through the pull request process!</p>
+      <p>If you are new to Git or Less, this would be a great project to get your feet wet with. I'd be happy to help walk you through the pull request process. Check out the Git repo for more info!</p>
     </div>
     <div class="row flex-right">
       <p>Made with 💛 by <a href="https://vlaservi.ch" target="_blank">Rhyne</a></p>
