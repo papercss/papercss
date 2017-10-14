@@ -1,6 +1,8 @@
 var gulp = require('gulp'),
   	connect = require('gulp-connect'),
-  	less = require('gulp-less');
+  	less = require('gulp-less'),
+    cleanCSS = require('gulp-clean-css'),
+    rename = require('gulp-rename');
  
 gulp.task('webserver', function() {
   connect.server({
@@ -11,12 +13,21 @@ gulp.task('webserver', function() {
 gulp.task('less', function() {
   gulp.src('src/styles.less')
     .pipe(less())
+    .pipe(cleanCSS({format: 'beautify'}))
     .pipe(gulp.dest('dist'))
     .pipe(connect.reload());
 });
  
 gulp.task('watch', function() {
   gulp.watch('src/*.less', ['less']);
-})
+});
+
+gulp.task('minify-css', () => {
+  gulp.src('dist/styles.css')
+    .pipe(cleanCSS())
+    .pipe(rename('styles.min.css'))
+    .pipe(gulp.dest('dist'));
+});
  
 gulp.task('default', ['less', 'webserver', 'watch']);
+gulp.task('build', ['less', 'minify-css'])

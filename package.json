@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node node_modules/gulp/bin/gulp.js",
+    "build": "node node_modules/gulp/bin/gulp.js build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,9 +20,11 @@
   "homepage": "https://github.com/rhyneav/papercss#readme",
   "devDependencies": {
     "gulp": "3.9.1",
+    "gulp-clean-css": "^3.9.0",
     "gulp-connect": "5.0.0",
     "gulp-less": "3.3.2",
     "gulp-plumber": "1.1.0",
+    "gulp-rename": "^1.2.2",
     "gulp-watch-less": "1.0.1",
     "install": "0.10.1",
     "less": "2.7.2",
