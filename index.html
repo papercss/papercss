@@ -26,6 +26,7 @@
     <div id="flexbox" class="section">
       <h2>Flexbox</h2>
       <h4>Flexgrid</h4>
+      <p>The flexgrid is a base 12 grid system that utilizes 3 different view widths.</p>
       <div class="demo">
         <div class="row">
           <div class="col-4 col">col-4 col</div>
@@ -547,6 +548,19 @@ function add(x, y) {
         <div class="sm-3 col border border-5 border-primary">Border-5</div>
         <div class="sm-3 col border border-6 border-primary">Border-6</div>
       </div>
+      <div class="docs">
+        <pre>
+&lt;div class="row flex-spaces"&gt;
+  &lt;div class="sm-3 col border border-primary"&gt;Default Border&lt;/div&gt;
+  &lt;div class="sm-3 col border border-2 border-primary"&gt;Border-2&lt;/div&gt;
+  &lt;div class="sm-3 col border border-3 border-primary"&gt;Border-3&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="row flex-spaces"&gt;
+  &lt;div class="sm-3 col border border-4 border-primary"&gt;Border-4&lt;/div&gt;
+  &lt;div class="sm-3 col border border-5 border-primary"&gt;Border-5&lt;/div&gt;
+  &lt;div class="sm-3 col border border-6 border-primary"&gt;Border-6&lt;/div&gt;
+&lt;/div&gt;</pre>
+      </div>
       <h4>Border Colors</h4>
       <div class="row child-borders">
         <div class="sm-2 col border border-primary">Border primary</div>
@@ -555,6 +569,25 @@ function add(x, y) {
         <div class="sm-2 col border border-warning">Border warning</div>
         <div class="sm-2 col border border-danger">Border danger</div>
         <div class="sm-2 col border background-primary border-white">Border white</div>
+      </div>
+      <div class="docs">
+        <pre>
+&lt;div class="row child-borders"&gt;
+  &lt;div class="sm-2 col border border-primary"&gt;Border primary&lt;/div&gt;
+  &lt;div class="sm-2 col border border-secondary"&gt;Border secondary&lt;/div&gt;
+  &lt;div class="sm-2 col border border-success"&gt;Border success&lt;/div&gt;
+  &lt;div class="sm-2 col border border-warning"&gt;Border warning&lt;/div&gt;
+  &lt;div class="sm-2 col border border-danger"&gt;Border danger&lt;/div&gt;
+  &lt;div class="sm-2 col border background-primary border-white"&gt;Border white&lt;/div&gt;
+&lt;/div&gt;      
+&lt;div class="row child-borders"&gt;
+  &lt;div class="sm-2 col border border-primary"&gt;Border primary&lt;/div&gt;
+  &lt;div class="sm-2 col border border-secondary"&gt;Border secondary&lt;/div&gt;
+  &lt;div class="sm-2 col border border-success"&gt;Border success&lt;/div&gt;
+  &lt;div class="sm-2 col border border-warning"&gt;Border warning&lt;/div&gt;
+  &lt;div class="sm-2 col border border-danger"&gt;Border danger&lt;/div&gt;
+  &lt;div class="sm-2 col border background-primary border-white"&gt;Border white&lt;/div&gt;
+&lt;/div&gt;</pre>
       </div>
       <h4>Child Borders</h4>
       <p>Use this if you want all children to have a border. This will alternate through the different border styles defined above instead of having to add the border class for each element.</p>
@@ -566,12 +599,32 @@ function add(x, y) {
         <div class="sm-2 col">5</div>
         <div class="sm-2 col">6</div>
       </div>
+      <div class="docs">
+        <pre>
+&lt;div class="row flex-center child-borders"&gt;
+  &lt;div class="sm-2 col"&gt;1&lt;/div&gt;
+  &lt;div class="sm-2 col"&gt;2&lt;/div&gt;
+  &lt;div class="sm-2 col"&gt;3&lt;/div&gt;
+  &lt;div class="sm-2 col"&gt;4&lt;/div&gt;
+  &lt;div class="sm-2 col"&gt;5&lt;/div&gt;
+  &lt;div class="sm-2 col"&gt;6&lt;/div&gt;
+&lt;/div&gt;</pre>
+      </div>
       <h4>Shadows</h4>
       <div class="row flex-spaces child-borders">
         <div class="sm-3 col shadow shadow-large">Large</div>
         <div class="sm-3 col shadow">Default</div>
         <div class="sm-3 col shadow shadow-small">Small</div>
         <div class="sm-3 col shadow shadow-hover">Hover</div>
+      </div>
+      <div class="docs">
+        <pre>
+&lt;div class="row flex-spaces child-borders"&gt;
+  &lt;div class="sm-3 col shadow shadow-large"&gt;Large&lt;/div&gt;
+  &lt;div class="sm-3 col shadow"&gt;Default&lt;/div&gt;
+  &lt;div class="sm-3 col shadow shadow-small"&gt;Small&lt;/div&gt;
+  &lt;div class="sm-3 col shadow shadow-hover"&gt;Hover&lt;/div&gt;
+&lt;/div&gt;</pre>
       </div>
       <h4>Child Shadows</h4>
       <p>Use this if you want all children to have a shadow.</p>
@@ -580,12 +633,28 @@ function add(x, y) {
         <div class="sm-3 col">Shadow</div>
         <div class="sm-3 col">Shadow</div>
       </div>
+      <div class="docs">
+        <pre>
+&lt;div class="row flex-spaces child-borders child-shadows"&gt;
+  &lt;div class="sm-3 col"&gt;Shadow&lt;/div&gt;
+  &lt;div class="sm-3 col"&gt;Shadow&lt;/div&gt;
+  &lt;div class="sm-3 col"&gt;Shadow&lt;/div&gt;
+&lt;/div&gt;</pre>
+      </div>
       <h4>Child Shadows Hover</h4>
       <p>Use this if you want all children to have a shadow... that changes on hover</p>
       <div class="row flex-spaces child-borders child-shadows-hover">
         <div class="sm-3 col">Shadow</div>
         <div class="sm-3 col">Shadow</div>
         <div class="sm-3 col">Shadow</div>
+      </div>
+      <div class="docs">
+        <pre>
+&lt;div class="row flex-spaces child-borders child-shadows-hover"&gt;
+  &lt;div class="sm-3 col"&gt;Shadow&lt;/div&gt;
+  &lt;div class="sm-3 col"&gt;Shadow&lt;/div&gt;
+  &lt;div class="sm-3 col"&gt;Shadow&lt;/div&gt;
+&lt;/div&gt;</pre>
       </div>
     </div>
     <div class="section">
@@ -596,11 +665,27 @@ function add(x, y) {
         <div class="sm-3 col margin-large">Margin-large</div>
         <div class="sm-3 col margin-top-small">Margin-top-small</div>
       </div>
+      <div class="docs">
+        <pre>
+&lt;div class="row flex-spaces child-borders"&gt;
+  &lt;div class="sm-3 col margin"&gt;Margin&lt;/div&gt;
+  &lt;div class="sm-3 col margin-large"&gt;Margin-large&lt;/div&gt;
+  &lt;div class="sm-3 col margin-top-small"&gt;Margin-top-small&lt;/div&gt;
+&lt;/div&gt;</pre>
+      </div>
       <h4>Padding</h4>
       <div class="row flex-spaces child-borders">
         <div class="sm-3 col padding-small">Padding-small</div>
         <div class="sm-3 col padding-none">Padding-none</div>
         <div class="sm-3 col padding-left-large">Padding-left-large</div>
+      </div>
+      <div class="docs">
+        <pre>
+&lt;div class="row flex-spaces child-borders"&gt;
+  &lt;div class="sm-3 col padding-small"&gt;Padding-small&lt;/div&gt;
+  &lt;div class="sm-3 col padding-none"&gt;Padding-none&lt;/div&gt;
+  &lt;div class="sm-3 col padding-left-large"&gt;Padding-left-large&lt;/div&gt;
+&lt;/div&gt;</pre>
       </div>
     </div>
     <div class="section">
@@ -608,6 +693,10 @@ function add(x, y) {
       <h4>Responsive</h4>
       <p>Images by default are responsive</p>
       <img src="https://unsplash.it/900" alt="Random Unsplash">
+      <div class="docs">
+        <pre>
+&lt;img src="https://unsplash.it/900" alt="Random Unsplash"&gt;</pre>
+      </div>
       <h4>Float</h4>
       <p>You can also float responsive images to fit neatly with your text</p>
       <p>
@@ -617,9 +706,22 @@ function add(x, y) {
         <img src="https://unsplash.it/100" alt="Smallerer Unsplash" class="float-right">
         Aenean mauris tellus, facilisis sed quam non, tincidunt rutrum risus. Fusce quam urna, commodo vitae nunc condimentum, efficitur commodo libero. Sed dignissim odio enim, ac pharetra dui laoreet id. Suspendisse nec accumsan erat. Integer sit amet leo arcu. Proin sagittis blandit tempor. Vivamus at egestas lectus. Mauris eros tellus, egestas ac neque eget, lacinia sagittis ante. Phasellus faucibus suscipit erat, eget malesuada neque congue non.
       </p>
+      <div class="docs">
+        <pre>
+&lt;p&gt;
+  &lt;img src="https://unsplash.it/200" class="float-left"&gt;
+  Lorem ipsum dolor.......
+  &lt;img src="https://unsplash.it/100" class="float-right"&gt;
+  Aenean mauris tellus......
+&lt;/p&gt;</pre>
+      </div>
       <h4>No Responsive &amp; No Borders</h4>
       <p>If you don't like the default, you can just add the class <code>no-responsive</code> to prevent the image from being responsive. You can also remove the default border with <code>no-border</code>.</p>
       <img src="https://unsplash.it/300" alt="Not responsive Unsplash" class="no-responsive no-border">
+      <div class="docs">
+        <pre>
+&lt;img src="https://unsplash.it/300" class="no-responsive no-border"&gt;</pre>
+      </div>
     </div>
     <div class="section">
       <h2 id="download">Download</h2>
