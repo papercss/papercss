@@ -4,6 +4,13 @@
 ## Demo
 View the demo at papercss.tech
 
+## Get Started
+### Download
+
+
+### CDN
+
+
 ## About
 I got tired of mODerN STylEs and clean pages on the internet. I also wanted to learn more about Flexbox and Less. So I made PaperCSS to solve these two challenges of mine :)
 
@@ -30,6 +37,8 @@ Here's the full workflow for customization:
 - OR run `npm run build` to create the new CSS in the /dist folder
 
 ## Contributing
+This project is open source and contributions are very welcomed. It is also as beginner friendly as possible, so don't be afraid to jump in if you've never contributed to any Git project before! Feel free to reach out if you are new and need help with the process.
+
 Similar to customizing, make sure you have Git, Node, and NPM on your system.
 - fork the repo via the fork button in the upper left
 - run `git clone https://github.com/[your_username]/papercss.git`
