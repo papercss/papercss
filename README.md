@@ -6,8 +6,8 @@ View the demo & docs at [getpapercss.com](https://www.getpapercss.com)
 ![Preview](/img/screenshots/preview.gif)
 
 ## Download
-[![Download](/img/screenshots/download.png)](https://github.com/rhyneav/papercss/releases/download/v1.0.0/paper.css)
-[![Download](/img/screenshots/download-minified.png)](https://github.com/rhyneav/papercss/releases/download/v1.0.0/paper.min.css)
+[![Download](/img/screenshots/download.png)][download]
+[![Download](/img/screenshots/download-minified.png)][download-minified]
 
 ## About
 I got tired of mODerN STylEs and clean pages on the internet. I also wanted to learn more about Flexbox and Less. So I made PaperCSS to solve these two challenges of mine :)
@@ -50,3 +50,6 @@ Similar to customizing, make sure you have Git, Node, and NPM on your system.
 
 ## Credits
 Shouts outs to Tiffany Rayside for creating Imperfect Buttons, which was an inspiration for this project. https://codepen.io/tmrDevelops/pen/VeRvKX
+
+[download]: https://github.com/rhyneav/papercss/releases/download/v1.0.0/paper.css
+[download-minified]: https://github.com/rhyneav/papercss/releases/download/v1.0.0/paper.min.css
