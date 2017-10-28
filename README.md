@@ -6,8 +6,8 @@ View the demo & docs at [getpapercss.com](https://www.getpapercss.com)
 ![Preview](/img/screenshots/preview.gif)
 
 ## Download
-[![Download](/img/screenshots/download.png)][download]
-[![Download](/img/screenshots/download-minified.png)][download-minified]
+[![Download](/img/screenshots/download.PNG)][download]
+[![Download](/img/screenshots/download-minified.PNG)][download-minified]
 
 ## About
 I got tired of mODerN STylEs and clean pages on the internet. I also wanted to learn more about Flexbox and Less. So I made PaperCSS to solve these two challenges of mine :)
