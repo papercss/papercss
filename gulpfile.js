@@ -14,6 +14,7 @@ gulp.task('less', function() {
   gulp.src('src/styles.less')
     .pipe(less())
     .pipe(cleanCSS({format: 'beautify'}))
+    .pipe(rename('paper.css'))
     .pipe(gulp.dest('dist'))
     .pipe(connect.reload());
 });
@@ -23,9 +24,9 @@ gulp.task('watch', function() {
 });
 
 gulp.task('minify-css', () => {
-  gulp.src('dist/styles.css')
+  gulp.src('dist/paper.css')
     .pipe(cleanCSS())
-    .pipe(rename('styles.min.css'))
+    .pipe(rename('paper.min.css'))
     .pipe(gulp.dest('dist'));
 });
  
