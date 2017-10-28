@@ -1,15 +1,13 @@
 # PaperCSS
 ### The Less Formal CSS Framework
 
-## Demo
-View the demo at papercss.tech
+## Demo & Docs
+View the demo & docs at [getpapercss.com](https://www.getpapercss.com)
+![Preview](/img/screenshots/preview.gif)
 
-## Get Started
-### Download
-
-
-### CDN
-
+## Download
+[![Download](/img/screenshots/download.png)](https://github.com/rhyneav/papercss/releases/download/v1.0.0/paper.css)
+[![Download](/img/screenshots/download-minified.png)](https://github.com/rhyneav/papercss/releases/download/v1.0.0/paper.min.css)
 
 ## About
 I got tired of mODerN STylEs and clean pages on the internet. I also wanted to learn more about Flexbox and Less. So I made PaperCSS to solve these two challenges of mine :)
@@ -23,7 +21,7 @@ If you are new to Git or Less, this would be a great project to get your feet we
 ## Customizing
 To customize PaperCSS, clone the Git repo, run `npm install`, and make any chages to the .less files within /src
 
-The main place you might want to make changes would be colors.less. Here, you can specify new colors for your CSS build.
+The main places you might want to make changes would be colors.less or fonts.less. Here, you can specify new colors or fonts for your CSS build.
 
 After you make changes, be sure to build the new CSS files. Do so by running `npm run build` and get them from the /dist folder.
 
@@ -33,7 +31,7 @@ Here's the full workflow for customization:
 - change directories to papercss `cd papercss`
 - run `npm install`
 - _make changes to .less files within source_
-- preview changes with `npm start` and go to http://localhost:8080 (changes are automaticall reloaded on page)
+- preview changes with `npm start` and go to http://localhost:8080 (changes are automatically reloaded on page)
 - OR run `npm run build` to create the new CSS in the /dist folder
 
 ## Contributing
