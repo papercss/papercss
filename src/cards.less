@@ -30,12 +30,25 @@
       margin-top: 0;
       margin-bottom: 1rem;
     }
+
+    .card-link + .card-link,
+    a + a {
+      margin-left: 1.25rem;
+    }
   }
 
+  .image-bottom {
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 255px 18px !important;
+    border-bottom-left-radius: 18px 225px !important;
+  }
+
+  .image-top,
   img {
     border: 0;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
     border-top-left-radius: 255px 14px !important;
     border-top-right-radius: 13px 225px !important;
   }
