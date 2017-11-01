@@ -1,5 +1,7 @@
-.border, .border-1, .child-borders > *:nth-child(6n+1) {
+.border {
     border: 2px solid @primary;
+}
+.border, .border-1, .child-borders > *:nth-child(6n+1) {
     border-top-left-radius: 255px 15px;
     border-top-right-radius: 15px 225px;
     border-bottom-right-radius: 225px 15px;
@@ -55,4 +57,13 @@
 }
 .border-white {
     border-color: #FFF;
+}
+.border-dotted {
+    border-style: dotted;
+}
+.border-dashed {
+    border-style: dashed;
+}
+.border-thick {
+    border-width: 5px;
 }
