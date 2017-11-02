@@ -11,6 +11,12 @@
 @warning-light: lighten(@warning, 30%);
 @danger-light: lighten(@danger, 45%);
 
+@primary-text: #FFF;
+@secondary-text: @primary;
+@success-text: @primary;
+@warning-text: @primary;
+@danger-text: @primary;
+
 @colors: primary, secondary, success, warning, danger;
 
 .make-text-color-classes(@i: length(@colors)) when (@i > 0) {
