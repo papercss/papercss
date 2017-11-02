@@ -5,7 +5,25 @@
   display: flex;
   flex-direction: column;
   word-wrap: break-word;
-  border: 2px solid @muted-light;
+  border: 2px solid @muted-light; 
+
+  &:hover {
+    .shadow-hover;
+  }
+
+  .card-header,
+  .card-footer {
+    padding: .75rem 1.25rem;
+    background-color: @white-dark;
+  }
+
+  .card-header {
+    border-bottom: 2px solid @muted-light;
+  }
+
+  .card-footer {
+    border-top: 2px solid @muted-light;
+  }
 
   .card-body {
     flex: 1 1 auto;
