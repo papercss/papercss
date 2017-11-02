@@ -40,21 +40,6 @@
 .child-borders > * {
     border: 2px solid @primary;
 }
-.border-primary {
-    border-color: @primary;
-}
-.border-secondary {
-    border-color: @secondary;
-}
-.border-success {
-    border-color: @success;
-}
-.border-warning {
-    border-color: @warning;
-}
-.border-danger {
-    border-color: @danger;
-}
 .border-white {
     border-color: #FFF;
 }
@@ -67,3 +52,13 @@
 .border-thick {
     border-width: 5px;
 }
+
+.make-border-color-classes(@i: length(@colors)) when (@i > 0) {
+    .make-border-color-classes(@i - 1);
+    @color: extract(@colors, @i);
+    .border-@{color} {
+        border-color: @@color;
+    }
+}
+
+.make-border-color-classes();
