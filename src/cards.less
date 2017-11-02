@@ -1,14 +1,11 @@
 .card {
-  // Card border can't be changed with .border-x classes
-  // since we want to avoid the little blank space between
-  // image and border-top-left/right-radius, so we force
-  // the default border class and customize it on the img
-  .border;
+  .shadow;
 
   position: relative;
   display: flex;
   flex-direction: column;
   word-wrap: break-word;
+  border: 2px solid @muted-light;
 
   .card-body {
     flex: 1 1 auto;
@@ -37,19 +34,10 @@
     }
   }
 
-  .image-bottom {
-    border-top-left-radius: 0 !important;
-    border-top-right-radius: 0 !important;
-    border-bottom-right-radius: 255px 18px !important;
-    border-bottom-left-radius: 18px 225px !important;
-  }
-
   .image-top,
+  .image-bottom,
   img {
     border: 0;
-    border-bottom-left-radius: 0 !important;
-    border-bottom-right-radius: 0 !important;
-    border-top-left-radius: 255px 14px !important;
-    border-top-right-radius: 13px 225px !important;
+    border-radius: 0;
   }
 }

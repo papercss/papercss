@@ -1,6 +1,4 @@
 .badge {
-  .border;
-
   display: inline-block;
   padding: .25em .4em;
   font-size: 75%;
@@ -9,9 +7,10 @@
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
-  background-color: #868e96;
+  background-color: @muted;
   color: white;
-  border-color: transparent;
+  border: 2px solid transparent;
+  border-radius: 20px;
 
   &.primary {
     background-color: @primary;

@@ -4,6 +4,7 @@
 @success: #86a361;
 @warning: #ddcd45;
 @danger: #a7342d;
+@muted: #868e96;
 
 @main-colors: @primary, @secondary, @success, @warning, @danger;
 
@@ -12,6 +13,7 @@
 @success-light: lighten(@success, 30%);
 @warning-light: lighten(@warning, 30%);
 @danger-light: lighten(@danger, 45%);
+@muted-light: lighten(@muted, 35%);
 
 // Mixin to create colors from list
 .text-primary {
@@ -44,5 +46,8 @@
     }
     &-danger {
         background-color: @danger-light;
+    }
+    &-muted {
+        background-color: @muted-light;
     }
 }
