@@ -620,6 +620,144 @@ function add(x, y) {
 &lt;button popover="Popover on top" popover-position="top"&gt;Popover on top and on a button!&lt;/button&gt;</pre>
       </div>
     </div>
+          
+    <div id="colors" class="section">
+    <div class="section">
+      <h2>Cards</h2>
+      <h4>Full card example</h4>
+      <p>It is possible to not put all the sub-classes like card-title, card-subtitle, card-text, ... But instead the framework will recognize the element properly if it's a h4, h5, p, ... And you need to put all this content on a div with card class.</p>
+      <div class="row flex-center">
+        <div class="card" style="width: 20rem;">
+          <img class="image-top" src="https://picsum.photos/768" alt="Card example image">
+          
+          <div class="card-body">
+            <h4 class="card-title">My awesome Paper card!</h4>
+            <h5 class="card-subtitle">Nice looking subtitle.</h5>
+            <p class="card-text">Notice that the card width in this example have been set to 20rem, otherwise it will try to fill the current container/row where the card is.</p>
+            <button>Let me go here!</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="docs">
+        <pre>
+&lt;div class="card" style="width: 20rem;"&gt;
+  &lt;img src="https://picsum.photos/768" alt="Card example image"&gt;
+
+  &lt;div class="card-body"&gt;
+    &lt;h4 class="card-title"&gt;My awesome Paper card!&lt;/h4&gt;
+    &lt;h5 class="card-subtitle"&gt;Nice looking subtitle.&lt;/h5&gt;
+    &lt;p class="card-text"&gt;Notice that the card width in this example have been set to 20rem, otherwise it will try to fill the current container/row where the card is.&lt;/p&gt;
+    &lt;button&gt;Let me go here!&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+      </div>
+
+      <h4>Card title, text, links</h4>
+      <div class="row flex-center">
+        <div class="card" style="width: 20rem;">
+          <div class="card-body">
+            <h4 class="card-title">My awesome Paper card!</h4>
+            <h5 class="card-subtitle">Nice looking subtitle.</h5>
+            <p class="card-text">This is another example of a card without image. Cards are also meant to be used without images, but with text/links/buttons.</p>
+            <a class="card-link" href="#">First link</a>
+            <a class="card-link" href="#">Second link</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="docs">
+        <pre>
+&lt;div class="card" style="width: 20rem;"&gt;
+  &lt;div class="card-body"&gt;
+    &lt;h4 class="card-title"&gt;My awesome Paper card!&lt;/h4&gt;
+    &lt;h5 class="card-subtitle"&gt;Nice looking subtitle.&lt;/h5&gt;
+    &lt;p class="card-text"&gt;This is another example of a card without image. Cards are also meant to be used without images, but with text/links/buttons.&lt;/p&gt;
+    &lt;a class="card-link" href="#"&gt;First link&lt;/a&gt;
+    &lt;a class="card-link" href="#"&gt;Second link&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</pre>
+      </div>
+
+      <h4>Image on top or bottom</h4>
+      <div class="row flex-center">
+        <div class="card" style="width: 20rem;">
+          <div class="card-body">
+            <h4 class="card-title">My awesome Paper card!</h4>
+            <h5 class="card-subtitle">Nice looking subtitle.</h5>
+            <p class="card-text">You can also place image on the bottom of the card.</p>
+            <button>Let me go here!</button>
+          </div>
+          <img class="image-bottom" src="http://via.placeholder.com/550x250" alt="Card example image">
+        </div>
+      </div>
+
+      <div class="docs">
+        <pre>
+&lt;div class="card" style="width: 20rem;"&gt;
+  &lt;div class="card-body"&gt;
+    &lt;h4 class="card-title"&gt;My awesome Paper card!&lt;/h4&gt;
+    &lt;h5 class="card-subtitle"&gt;Nice looking subtitle.&lt;/h5&gt;
+    &lt;p class="card-text"&gt;You can also place image on the bottom of the card.&lt;/p&gt;
+    &lt;button&gt;Let me go here!&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;img class="image-bottom" src="http://via.placeholder.com/550x250" alt="Card example image"&gt;
+&lt;/div&gt;</pre>
+      </div>
+
+      <h4>Header and footer</h4>
+      <div class="row flex-center">
+        <div class="card" style="width: 20rem;">
+          <div class="card-header">Header</div>
+          <div class="card-body">
+            <h4 class="card-title">My awesome Paper card!</h4>
+            <h5 class="card-subtitle">Nice looking subtitle.</h5>
+            <p class="card-text">You can also place image on the bottom of the card.</p>
+            <button>Let me go here!</button>
+          </div>
+          <div class="card-footer">Footer</div>
+        </div>
+      </div>
+
+      <div class="docs">
+<pre>
+&lt;div class="card" style="width: 20rem;"&gt;
+  &lt;div class="card-header"&gt;Header&lt;/div&gt;
+    &lt;div class="card-body"&gt;
+      &lt;h4 class="card-title"&gt;My awesome Paper card!&lt;/h4&gt;
+      &lt;h5 class="card-subtitle"&gt;Nice looking subtitle.&lt;/h5&gt;
+      &lt;p class="card-text"&gt;You can also place image on the bottom of the card.&lt;/p&gt;
+      &lt;button&gt;Let me go here!&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;div class="card-footer"&gt;Footer&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Badges</h2>
+      <h4>Default</h4>
+      <p>You can customize badges colors with secondary, success, warning, danger classes.</p>
+
+      <h1>Example h1 heading <span class="badge">123</span></h1>
+      <h2>Example h2 heading <span class="badge secondary">123</span></h2>
+      <h3>Example h3 heading <span class="badge success">123</span></h3>
+      <h4>Example h4 heading <span class="badge warning">123</span></h4>
+      <h5>Example h5 heading <span class="badge danger">123</span></h5>
+      <h6>Example h6 heading <span class="badge">123</span></h6>
+
+      <div class="docs">
+        <pre>
+&lt;h1&gt;Example h1 heading &lt;span class="badge"&gt;123&lt;/span&gt;&lt;/h1&gt;
+&lt;h2&gt;Example h2 heading &lt;span class="badge secondary"&gt;123&lt;/span&gt;&lt;/h2&gt;
+&lt;h3&gt;Example h3 heading &lt;span class="badge success"&gt;123&lt;/span&gt;&lt;/h3&gt;
+&lt;h4&gt;Example h4 heading &lt;span class="badge warning"&gt;123&lt;/span&gt;&lt;/h4&gt;
+&lt;h5&gt;Example h5 heading &lt;span class="badge danger"&gt;123&lt;/span&gt;&lt;/h5&gt;
+&lt;h6&gt;Example h6 heading &lt;span class="badge"&gt;123&lt;/span&gt;&lt;/h6&gt;</pre>
+      </div>
+    </div>
+
     <div id="colors" class="section">
       <h2>Colors</h2>
       <h4>Text</h4>
@@ -628,13 +766,15 @@ function add(x, y) {
       <p class="text-success">Text success</p>
       <p class="text-warning">Text warning</p>
       <p class="text-danger">Text danger</p>
+      <p class="text-muted">Text muted</p>
       <div class="docs">
         <pre>
 &lt;p class=&quot;text-primary&quot;&gt;Text primary&lt;/p&gt;
 &lt;p class=&quot;text-secondary&quot;&gt;Text secondary&lt;/p&gt;
 &lt;p class=&quot;text-success&quot;&gt;Text success&lt;/p&gt;
 &lt;p class=&quot;text-warning&quot;&gt;Text warning&lt;/p&gt;
-&lt;p class=&quot;text-danger&quot;&gt;Text danger&lt;/p&gt; </pre>
+&lt;p class=&quot;text-danger&quot;&gt;Text danger&lt;/p&gt;
+&lt;p class="text-muted"&gt;Text muted&lt;/p&gt; </pre>
       </div>
       <h4>Backgrounds</h4>
       <div class="row flex-center">
