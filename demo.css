@@ -11,3 +11,6 @@ body {
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
+.summary a {
+    color: #41403e;    
+}

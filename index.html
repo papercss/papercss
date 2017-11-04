@@ -2,27 +2,65 @@
 <html>
 
 <head>
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <title>PaperCSS · the less formal CSS framework</title>
+
+  <meta name="description" content="The less formal CSS framework.">
+  <meta name="author" content="Rhyneav and PaperCSS contributors.">
+
+  <!-- Twitter -->
+  <meta name="twitter:description" content="The less formal CSS framework">
+  <meta name="twitter:title" content="PaperCSS">
+
+  <!-- OpenGraph -->
+  <meta property="og:url" content="https://www.getpapercss.com/">
+  <meta property="og:title" content="PaperCSS">
+  <meta property="og:description" content="The less formal CSS framework">
+
+  <!-- Styles -->
   <link rel="stylesheet" href="/dist/paper.css">
   <link rel="stylesheet" href="/demo.css">
 </head>
 
 <body>
   <div class="container paper">
+
     <div class="demo-title">
       <div class="row flex-center">
         <div class="text-center">
           <h1>PaperCSS</h1>
-          <h3>the less formal css framework</h3>
+          <h3>the less formal CSS framework</h3>
         </div>
       </div>
+
       <div class="row flex-center child-borders">
         <a href="#download" class="paper-btn margin">Download</a>
         <a href="#flexbox" class="paper-btn margin">Docs</a>
         <a href="#about" class="paper-btn margin">About</a>
-        <a href="https://github.com/rhyneav/papercss" class="paper-btn margin">Github</a>
+        <a href="https://github.com/rhyneav/papercss" target="_blank" class="paper-btn margin">Github</a>
       </div>
+
+      <h3>Summary:</h3>
+
+      <ul class="summary">
+        <li><a href="#flexbox">Flexbox</a></li>
+        <li><a href="#typography">Typography</a></li>
+        <li><a href="#buttons">Buttons</a></li>
+        <li><a href="#forms">Forms</a></li>
+        <li><a href="#lists">Lists</a></li>
+        <li><a href="#code">Code</a></li>
+        <li><a href="#tables">Tables</a></li>
+        <li><a href="#popovers">Popovers</a></li>
+        <li><a href="#colors">Colors</a></li>
+        <li><a href="#borders">Borders & shadows</a></li>
+        <li><a href="#utilities">Utilities</a></li>
+        <li><a href="#images">Images</a></li>
+        <li><a href="#alerts">Alerts</a></li>
+      </ul>
     </div>
+
     <div id="flexbox" class="section">
       <h2>Flexbox</h2>
       <h4>Flexgrid</h4>
@@ -165,7 +203,7 @@
 </pre>
         </div>
     </div>
-    <div class="section">
+    <div id="typography" class="section">
       <h2>Typography</h2>
       <p>How pretty is the text?</p>
       <h1>Heading 1</h1>
@@ -190,7 +228,7 @@
 &lt;p&gt;Lorem ipsum dolor....&lt;/p&gt;</pre>
       </div>
     </div>
-    <div class="section">
+    <div id="buttons" class="section">
       <h2>Buttons</h2>
       <p>Insprired by <a href="https://codepen.io/tmrDevelops/pen/VeRvKX" target="_blank">Imprefect Buttons</a></p>
       <button class="btn-large">Large</button>
@@ -216,7 +254,7 @@
 &lt;/div&gt;</pre>
       </div>
     </div>
-    <div class="section">
+    <div id="forms" class="section">
       <h2>Forms</h2>
       <div class="form-group">
         <label>Input</label>
@@ -311,7 +349,7 @@
 </pre>
       </div>
     </div>
-    <div class="section">
+    <div id="lists" class="section">
       <h2>Lists</h2>
       <h4>Ordered Lists</h4>
       <ol>
@@ -387,7 +425,7 @@
 &lt;!-- Replace ol with ul for unordered lists. Go up to 5 levels deep! --&gt;</pre>
       </div>
     </div>
-    <div class="section">
+    <div id="code" class="section">
       <h2>Code</h2>
       <p>Let's make some pretty <code>&lt;code&gt;</code></p>
       <p>Print files backwards using <kbd>tac</kbd></p>
@@ -408,7 +446,7 @@ function add(x, y) {
 &lt;/pre&gt;</pre>
       </div>
     </div>
-    <div class="section">
+    <div id="tables" class="section">
       <h2>Tables</h2>
       <h4>Regular</h4>
       <table>
@@ -541,7 +579,7 @@ function add(x, y) {
 &lt;table class=&quot;table-alternating&quot;&gt;</pre>
       </div>
     </div>
-    <div class="section">
+    <div id="popovers" class="section">
       <h2>Popovers</h2>
       <h4>Basic usage</h4>
       <p>You can add popovers, also called tooltips, on your elements. popover attribute is the popover text content, popover-position attribute can be: top, left, right, bottom.</p>
@@ -582,7 +620,8 @@ function add(x, y) {
 &lt;button popover="Popover on top" popover-position="top"&gt;Popover on top and on a button!&lt;/button&gt;</pre>
       </div>
     </div>
-
+          
+    <div id="colors" class="section">
     <div class="section">
       <h2>Cards</h2>
       <h4>Full card example</h4>
@@ -719,7 +758,7 @@ function add(x, y) {
       </div>
     </div>
 
-    <div class="section">
+    <div id="colors" class="section">
       <h2>Colors</h2>
       <h4>Text</h4>
       <p class="text-primary">Text primary</p>
@@ -756,7 +795,7 @@ function add(x, y) {
 &lt;/div&gt;</pre>
       </div>
     </div>
-    <div class="section">
+    <div id="borders" class="section">
       <h2>Borders &amp; Shadows</h2>
       <h4>Borders</h4>
       <div class="row flex-spaces">
@@ -894,7 +933,7 @@ function add(x, y) {
 &lt;/div&gt;</pre>
       </div>
     </div>
-    <div class="section">
+    <div id="utilities" class="section">
       <h2>Utilities</h2>
       <h4>Margin</h4>
       <div class="row flex-spaces child-borders">
@@ -925,7 +964,7 @@ function add(x, y) {
 &lt;/div&gt;</pre>
       </div>
     </div>
-    <div class="section">
+    <div id="images" class="section">
       <h2>Images</h2>
       <h4>Responsive</h4>
       <p>Images by default are responsive</p>
@@ -960,7 +999,7 @@ function add(x, y) {
 &lt;img src="https://unsplash.it/300" class="no-responsive no-border"&gt;</pre>
       </div>
     </div>
-    <div class="section">
+    <div id="alerts" class="section">
       <h2>Alerts</h2>
       <div class="row flex-spaces">
           <div class="alert alert-primary">
