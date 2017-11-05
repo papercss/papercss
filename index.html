@@ -240,6 +240,8 @@
           <button class="btn-block">Block level</button>
         </div>
       </div>
+      <button class="disabled">Disabled</button>
+      <button disabled>Disabled</button>
       <div class="docs">
         <pre>
 &lt;p&gt;Insprired by &lt;a href="https://codepen.io/tmrDevelops/pen/VeRvKX" target="_blank"&gt;Imprefect Buttons&lt;/a&gt;&lt;/p&gt;
@@ -251,7 +253,9 @@
   &lt;div class="col-6 col"&gt;
     &lt;button class="btn-block"&gt;Block level&lt;/button&gt;
   &lt;/div&gt;
-&lt;/div&gt;</pre>
+&lt;/div&gt;
+&lt;button class="disabled"&gt;Disabled&lt;/button&gt;
+&lt;button disabled&gt;Disabled&lt;/button&gt;</pre>
       </div>
     </div>
     <div id="forms" class="section">
@@ -273,6 +277,10 @@
             <input class="input-block" type="text">
           </div>
         </div>
+      </div>
+      <div class="form-group">
+          <label>Disabled</label>
+          <input type="text" placeholder="Disabled" disabled>
       </div>
       <div class="form-group">
         <label>Select</label>
@@ -319,6 +327,10 @@
       &lt;input class="input-block" type="text"&gt;
     &lt;/div&gt;
   &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="form-group"&gt;
+  &lt;label&gt;Disabled&lt;/label&gt;
+  &lt;input type="text" placeholder="Disabled" disabled&gt;
 &lt;/div&gt;
 &lt;div class="form-group"&gt;
   &lt;label&gt;Select&lt;/label&gt;
@@ -629,7 +641,7 @@ function add(x, y) {
       <div class="row flex-center">
         <div class="card" style="width: 20rem;">
           <img class="image-top" src="https://picsum.photos/768" alt="Card example image">
-          
+
           <div class="card-body">
             <h4 class="card-title">My awesome Paper card!</h4>
             <h5 class="card-subtitle">Nice looking subtitle.</h5>
