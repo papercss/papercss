@@ -1,0 +1,6 @@
+/node_modules
+npm-debug.log
+index.html
+demo.css
+/img
+yarn.lock
