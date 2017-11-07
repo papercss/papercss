@@ -1,6 +1,6 @@
 {
   "name": "papercss",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Another CSS framework",
   "main": "index.js",
   "scripts": {
@@ -12,7 +12,7 @@
     "type": "git",
     "url": "git+https://github.com/rhyneav/papercss.git"
   },
-  "author": "rhyneav",
+  "author": "Rhyne Vlaservich <rhyneav@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/rhyneav/papercss/issues"

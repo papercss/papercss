@@ -1,4 +1,4 @@
-button, .paper-btn {
+button, .paper-btn, input[type="button"] {
     align-self:center;
     background:transparent;
     transition:all .5s ease;
@@ -26,6 +26,9 @@ button, .paper-btn {
     }
     &:hover{
         .shadow-hover;
+    }
+    &.disabled, &[disabled]{
+        .disabled;
     }
 }
 
