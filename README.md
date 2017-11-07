@@ -49,6 +49,7 @@ Similar to customizing, make sure you have Git, Node, and NPM on your system.
 - run `git clone https://github.com/[your_username]/papercss.git`
 - change directories to papercss `cd papercss`
 - run `npm install`
+- switch to the develop branch `git checkout develop`. This is the branch where features are added. Checking it out will set up the remote tracking to the develop branch on Github.
 - create a new branch for your feature off of the develop branch `git checkout -b feature-thing develop`. Please be sure to prepend your new feature branch with "feature-"
 - Start the local server to view changes with `npm start`
 - _code and stuff_
