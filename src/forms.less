@@ -13,6 +13,14 @@ input, select {
     &:focus {
         border: 2px solid @secondary;
     }
+    &.disabled, &[disabled]{
+        .disabled;
+    }
+}
+
+.disabled{
+    cursor: not-allowed;
+    opacity: 0.5;
 }
 
 .form-group {
@@ -30,11 +38,11 @@ input, select {
         margin-bottom: .5rem;
         cursor: pointer;
         input {
-            border: 0; 
-            height: 1px; margin: -1px; 
-            overflow: hidden; 
-            padding: 0; 
-            position: absolute; 
+            border: 0;
+            height: 1px; margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
             width: 1px;
             display: none;
         }
@@ -53,10 +61,10 @@ input, select {
             vertical-align: -0.25em;
         }
         input[type="radio"] + span:before {
-            border-top-left-radius: 1rem 1rem; 
-            border-top-right-radius: 1rem .6rem; 
-            border-bottom-right-radius: 1rem .9rem; 
-            border-bottom-left-radius: .7rem 1rem; 
+            border-top-left-radius: 1rem 1rem;
+            border-top-right-radius: 1rem .6rem;
+            border-bottom-right-radius: 1rem .9rem;
+            border-bottom-left-radius: .7rem 1rem;
         }
         input[type="checkbox"] + span:before {
             border-top-left-radius: 255px 15px;
@@ -84,4 +92,4 @@ input, select {
 fieldset.form-group {
     border: none;
     padding: 0;
-} 
+}
