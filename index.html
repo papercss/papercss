@@ -20,8 +20,8 @@
   <meta property="og:description" content="The less formal CSS framework">
 
   <!-- Styles -->
-  <link rel="stylesheet" href="/dist/paper.css">
-  <link rel="stylesheet" href="/demo.css">
+  <link rel="stylesheet" href="./dist/paper.css">
+  <link rel="stylesheet" href="./demo.css">
 </head>
 
 <body>
@@ -611,42 +611,42 @@ function add(x, y) {
     <div id="popovers" class="section">
       <h2>Popovers</h2>
       <h4>Basic usage</h4>
-      <p>You can add popovers, also called tooltips, on your elements. popover attribute is the popover text content, popover-position attribute can be: top, left, right, bottom.</p>
+      <p>You can add popovers, also called tooltips, on your elements. popover-[position] attribute is the popover text content and it can be: top, left, right, bottom.</p>
 
       <div class="row flex-spaces">
         <div class="sm-3 col">
-          <p popover="Popover on left" popover-position="left">Popover left position</p>
+          <p popover-left="Popover on left">Popover left position</p>
         </div>
         <div class="sm-3 col">
-          <p popover="Popover on top" popover-position="top">Popover top position</p>
+          <p popover-top="Popover on top">Popover top position</p>
         </div>
         <div class="sm-3 col">
-          <p popover="Popover on bottom" popover-position="bottom">Popover bottom position</p>
+          <p popover-bottom="Popover on bottom">Popover bottom position</p>
         </div>
         <div class="sm-3 col">
-          <p popover="Popover on right" popover-position="right">Popover right position</p>
+          <p popover-right="Popover on right">Popover right position</p>
         </div>
       </div>
 
       <div class="docs">
         <pre>
-&lt;p popover="Popover on left" popover-position="left"&gt;Popover left position&lt;/p&gt;
-&lt;p popover="Popover on top" popover-position="top"&gt;Popover top position&lt;/p&gt;
-&lt;p popover="Popover on bottom" popover-position="bottom"&gt;Popover bottom position&lt;/p&gt;
-&lt;p popover="Popover on right" popover-position="right"&gt;Popover right position&lt;/p&gt;</pre>
+&lt;p popover-left="Popover on left"&gt;Popover left position&lt;/p&gt;
+&lt;p popover-top="Popover on top"&gt;Popover top position&lt;/p&gt;
+&lt;p popover-bottom="Popover on bottom"&gt;Popover bottom position&lt;/p&gt;
+&lt;p popover-right="Popover on right"&gt;Popover right position&lt;/p&gt;</pre>
       </div>
 
       <p>But you can also popover on pretty much any element you want, it can be on a button, on a table cell, ...</p>
 
       <div class="row flex-center">
         <div class="sm-6 col">
-          <button popover="Popover on top" popover-position="top">Popover on top and on a button!</button>
+          <button popover-top="Popover on top">Popover on top and on a button!</button>
         </div>
       </div>
 
       <div class="docs">
         <pre>
-&lt;button popover="Popover on top" popover-position="top"&gt;Popover on top and on a button!&lt;/button&gt;</pre>
+&lt;button popover-top="Popover on top"&gt;Popover on top and on a button!&lt;/button&gt;</pre>
       </div>
     </div>
     <div id="cards" class="section">
