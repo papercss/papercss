@@ -4,7 +4,7 @@
 @shadow-small: 10px 19px 17px -13px @shadow-color-regular;
 @shadow-regular: 15px 28px 25px -18px @shadow-color-regular;
 @shadow-large: 20px 38px 34px -26px @shadow-color-regular;
-@shadow-hover: 2px 8px 4px -6px @shadow-color-hover;
+@shadow-hover: 2px 8px 8px -5px @shadow-color-hover;
 
 .shadow {
     -webkit-box-shadow: @shadow-regular;
@@ -23,10 +23,10 @@
     }
     &.shadow-hover {
         &:hover{
-            transform: translate(0, -3px);
             -webkit-box-shadow: @shadow-hover;
             -moz-box-shadow: @shadow-hover;
             box-shadow: @shadow-hover;
+            transform: translate(0, 2px);
         }
     }
 }
