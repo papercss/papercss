@@ -1,8 +1,10 @@
-button, .paper-btn, input[type="button"] {
+button, .paper-btn, [type="button"] {
+    .shadow;
     align-self:center;
     background:transparent;
-    transition:all .5s ease;
+    transition:all .5s ease, background-color .1s ease;
     color: @primary;
+    display: inline;
     outline:none;
     border:solid 2px @primary;
     .border;
@@ -45,3 +47,19 @@ a {
         color: @primary;
     }
 }
+
+.make-button-color-classes(@i: length(@colors)) when (@i > 0) {
+    .make-button-color-classes(@i - 1);
+    @color: extract(@colors, @i);
+    button.btn-@{color}, .paper-btn.btn-@{color}, [type="button"].btn-@{color} {
+        border-color: @@color;
+        background-color: ~"@{@{color}-light}";
+        color: ~"@{@{color}-text}";
+        &:hover:active{
+            @darkcolour: ~"@{color}-light";
+            background-color: darken(@@darkcolour, 10%);
+        }
+    }
+}
+
+.make-button-color-classes();
