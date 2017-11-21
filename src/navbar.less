@@ -1,0 +1,56 @@
+@link_color: #41403E;
+@black_color: black;
+@white_color: white;
+@background_hover_color: #ddd;
+@background_active_color: #C1C0BD;
+
+.topnav {
+	overflow: hidden;
+	a {
+		float: left;
+		display: block;
+		text-align: center;
+		background-image: none;
+		padding: 14px 16px;
+		color: @link_color;
+		text-decoration: none;
+		font-size: 17px;
+		&:hover {
+			background-color: @background_hover_color;
+			color: @black_color;
+		}
+	}
+	.icon {
+		display: none;
+	}
+}
+.active {
+	background-color: @background_active_color;
+	color: @white_color;
+}
+@media screen and (max-width: 600px) {
+	.topnav {
+		a {
+			&:not(:first-child) {
+				display: none;
+			}
+		}
+		a.icon {
+			float: right;
+			display: block;
+		}
+	}
+	.topnav.responsive {
+		position: relative;
+		a.icon {
+			position: absolute;
+			right: 0;
+			top: 0;
+		}
+		a {
+			float: none;
+			display: block;
+			text-align: left;
+		}
+	}
+}
