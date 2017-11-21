@@ -1,4 +1,4 @@
-input, select {
+input, select, textarea {
     display: block;
     background:transparent;
     color:@primary;
@@ -32,6 +32,16 @@ input, select {
     .input-block {
         width: 100%;
     }
+
+    textarea{
+        max-width: 100%;
+        max-height: 90vh;
+    }
+
+    textarea.no-resize{
+        resize: none;
+    }
+
     // TODO: make these classes implicit. We can find out what class to apply based on its type
     .paper-radio, .paper-check {
         display: block;
