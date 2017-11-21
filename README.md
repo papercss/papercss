@@ -21,7 +21,7 @@ Don't want to download it? That's cool. You can just link to PaperCSS via unpkg'
 - https://unpkg.com/papercss@1.1.0/dist/paper.min.css
 
 ## Quick Start
-```
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
