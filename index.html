@@ -22,23 +22,27 @@
   <!-- Styles -->
   <link rel="stylesheet" href="./dist/paper.css">
   <link rel="stylesheet" href="./demo.css">
+  <link rel="stylesheet" href="./src/test.css">
 </head>
 
 <body>
 
   <div class="container paper">
-
     <!-- Topnav START -->
-    <div class="topnav" id="myTopnav">
-      <a href="#home" class="active">Home</a>
-      <a href="#news">News</a>
-      <a href="#contact">Contact</a>
-      <a href="#about">About</a>
-      <a href="#" class="icon">&#9776;</a>
+    <div class="paper-navbar">
+      <label for="show-menu" class="show-menu paper-btn">&#9776;</label>
+      <input type="checkbox" id="show-menu" class="menu-checkbox" role="button"></input>
+      <ul id="menu" class="paper-nav">
+        <li><a href="#" class="paper-btn btn-small home-icon"></a></li>
+        <li><a href="#" class="paper-btn btn-small">About ￬</a></li>
+        <li><a href="#" class="paper-btn btn-small">Portfolio ￬</a></li>
+        <li><a href="#" class="paper-btn btn-small">News</a></li>
+        <li><a href="#" class="paper-btn btn-small">Contact</a></li>
+      </ul>
     </div>
     <!-- Topnav END -->
-
     <div class="demo-title">
+
       <div class="row flex-center">
         <div class="text-center">
           <h1>PaperCSS</h1>
