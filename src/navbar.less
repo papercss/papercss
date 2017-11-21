@@ -1,56 +1,61 @@
-@link_color: #41403E;
-@black_color: black;
-@white_color: white;
-@background_hover_color: #ddd;
-@background_active_color: #C1C0BD;
-
-.topnav {
-	overflow: hidden;
-	a {
-		float: left;
-		display: block;
-		text-align: center;
-		background-image: none;
-		padding: 14px 16px;
-		color: @link_color;
-		text-decoration: none;
-		font-size: 17px;
-		&:hover {
-			background-color: @background_hover_color;
-			color: @black_color;
+.paper-navbar {
+	display: block;
+	margin-top: 0px;
+	margin-left: 0px;
+}
+.paper-nav {
+	li {
+		&:not(:first-child) {
+			margin-top: 30px;
+		}
+		&:before {
+			content: "";
+		}
+		display: inline-block;
+		margin-right: 8px;
+	}
+}
+.hidden {
+	display: none;
+}
+.home-icon {
+	&:after {
+		content: "Home";
+	}
+}
+.show-menu {
+	display: none;
+	float: right;
+}
+.menu-checkbox {
+	display: none;
+	&:checked {
+		&~#menu {
+			display: block;
 		}
 	}
-	.icon {
+}
+@media screen and (max-width : 760px) {
+	.home-icon {
+		background-image: url('../img/home_ic.png');
+		background-repeat: no-repeat;
+		background-position: 4px 4px;
+		width: 64px;
+		background-size: 24px 24px;
+		&:after {
+			white-space: pre;
+			content: "   ";
+		}
+	}
+	.paper-nav {
+		position: static;
 		display: none;
-	}
-}
-.active {
-	background-color: @background_active_color;
-	color: @white_color;
-}
-@media screen and (max-width: 600px) {
-	.topnav {
-		a {
-			&:not(:first-child) {
-				display: none;
-			}
-		}
-		a.icon {
-			float: right;
+		li {
+			margin-bottom: 1px;
 			display: block;
 		}
 	}
-	.topnav.responsive {
-		position: relative;
-		a.icon {
-			position: absolute;
-			right: 0;
-			top: 0;
-		}
-		a {
-			float: none;
-			display: block;
-			text-align: left;
-		}
+	.show-menu {
+		display: block;
 	}
 }
