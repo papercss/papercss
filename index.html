@@ -4,8 +4,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+
   <title>PaperCSS · the less formal CSS framework</title>
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
 
   <meta name="description" content="The less formal CSS framework.">
   <meta name="author" content="Rhyneav and PaperCSS contributors.">
@@ -20,8 +23,8 @@
   <meta property="og:description" content="The less formal CSS framework">
 
   <!-- Styles -->
-  <link rel="stylesheet" href="/dist/paper.css">
-  <link rel="stylesheet" href="/demo.css">
+  <link rel="stylesheet" href="./dist/paper.css">
+  <link rel="stylesheet" href="./demo.css">
 </head>
 
 <body>
@@ -53,6 +56,8 @@
         <li><a href="#code">Code</a></li>
         <li><a href="#tables">Tables</a></li>
         <li><a href="#popovers">Popovers</a></li>
+        <li><a href="#cards">Cards</a></li>
+        <li><a href="#badges">Badges</a></li>
         <li><a href="#colors">Colors</a></li>
         <li><a href="#borders">Borders & shadows</a></li>
         <li><a href="#utilities">Utilities</a></li>
@@ -257,6 +262,21 @@
 &lt;button class="disabled"&gt;Disabled&lt;/button&gt;
 &lt;button disabled&gt;Disabled&lt;/button&gt;</pre>
       </div>
+      <h4>Colors</h4>
+      <input type="button" class="paper-btn btn-primary" value="Primary"/>
+      <input type="button" class="btn-secondary" value="Secondary"/>
+      <button class="btn-success">Success</button>
+      <button class="btn-warning">Warning</button>
+      <button class="btn-danger">Danger</button>
+      <div class="docs">
+          <pre>
+  &lt;input type="button" class="paper-btn btn-primary" value="Primary"/&gt;
+  &lt;input type="button" class="btn-secondary" value="Secondary"/&gt;
+  &lt;button class="btn-success"&gt;Success&lt;/button&gt;
+  &lt;button class="btn-warning"&gt;Warning&lt;/button&gt;
+  &lt;button class="btn-danger"&gt;Danger&lt;/button&gt;
+          </pre>
+        </div>
     </div>
     <div id="forms" class="section">
       <h2>Forms</h2>
@@ -281,6 +301,14 @@
       <div class="form-group">
           <label>Disabled</label>
           <input type="text" placeholder="Disabled" disabled>
+      </div>
+      <div class="form-group">
+        <label>Large Input</label>
+        <textarea placeholder="Large input"></textarea>
+      </div>
+      <div class="form-group">
+          <label>No Resize</label>
+          <textarea class="no-resize" placeholder="No resize"></textarea>
       </div>
       <div class="form-group">
         <label>Select</label>
@@ -331,6 +359,14 @@
 &lt;div class="form-group"&gt;
   &lt;label&gt;Disabled&lt;/label&gt;
   &lt;input type="text" placeholder="Disabled" disabled&gt;
+&lt;/div&gt;
+&lt;div class="form-group"&gt;
+&lt;label&gt;Large Input&lt;/label&gt;
+&lt;textarea placeholder="Large input"&gt; &lt;/textarea&gt;
+&lt;/div&gt;
+&lt;div class="form-group"&gt;
+&lt;label&gt;No Resize&lt;/label&gt;
+&lt;textarea class="no-resize" placeholder="No resize"&gt; &lt;/textarea&gt;
 &lt;/div&gt;
 &lt;div class="form-group"&gt;
   &lt;label&gt;Select&lt;/label&gt;
@@ -594,46 +630,45 @@ function add(x, y) {
     <div id="popovers" class="section">
       <h2>Popovers</h2>
       <h4>Basic usage</h4>
-      <p>You can add popovers, also called tooltips, on your elements. popover attribute is the popover text content, popover-position attribute can be: top, left, right, bottom.</p>
+      <p>You can add popovers, also called tooltips, on your elements. popover-[position] attribute is the popover text content and it can be: top, left, right, bottom.</p>
 
       <div class="row flex-spaces">
         <div class="sm-3 col">
-          <p popover="Popover on left" popover-position="left">Popover left position</p>
+          <p popover-left="Popover on left">Popover left position</p>
         </div>
         <div class="sm-3 col">
-          <p popover="Popover on top" popover-position="top">Popover top position</p>
+          <p popover-top="Popover on top">Popover top position</p>
         </div>
         <div class="sm-3 col">
-          <p popover="Popover on bottom" popover-position="bottom">Popover bottom position</p>
+          <p popover-bottom="Popover on bottom">Popover bottom position</p>
         </div>
         <div class="sm-3 col">
-          <p popover="Popover on right" popover-position="right">Popover right position</p>
+          <p popover-right="Popover on right">Popover right position</p>
         </div>
       </div>
 
       <div class="docs">
         <pre>
-&lt;p popover="Popover on left" popover-position="left"&gt;Popover left position&lt;/p&gt;
-&lt;p popover="Popover on top" popover-position="top"&gt;Popover top position&lt;/p&gt;
-&lt;p popover="Popover on bottom" popover-position="bottom"&gt;Popover bottom position&lt;/p&gt;
-&lt;p popover="Popover on right" popover-position="right"&gt;Popover right position&lt;/p&gt;</pre>
+&lt;p popover-left="Popover on left"&gt;Popover left position&lt;/p&gt;
+&lt;p popover-top="Popover on top"&gt;Popover top position&lt;/p&gt;
+&lt;p popover-bottom="Popover on bottom"&gt;Popover bottom position&lt;/p&gt;
+&lt;p popover-right="Popover on right"&gt;Popover right position&lt;/p&gt;</pre>
       </div>
 
       <p>But you can also popover on pretty much any element you want, it can be on a button, on a table cell, ...</p>
 
       <div class="row flex-center">
         <div class="sm-6 col">
-          <button popover="Popover on top" popover-position="top">Popover on top and on a button!</button>
+          <button popover-top="Popover on top">Popover on top and on a button!</button>
         </div>
       </div>
 
       <div class="docs">
         <pre>
-&lt;button popover="Popover on top" popover-position="top"&gt;Popover on top and on a button!&lt;/button&gt;</pre>
+&lt;button popover-top="Popover on top"&gt;Popover on top and on a button!&lt;/button&gt;</pre>
       </div>
     </div>
-          
-    <div id="colors" class="section">
+    <div id="cards" class="section">
       <h2>Cards</h2>
       <h4>Full card example</h4>
       <p>It is possible to not put all the sub-classes like card-title, card-subtitle, card-text, ... But instead the framework will recognize the element properly if it's a h4, h5, p, ... And you need to put all this content on a div with card class.</p>
@@ -746,7 +781,7 @@ function add(x, y) {
       </div>
     </div>
 
-    <div class="section">
+    <div id="badges" class="section">
       <h2>Badges</h2>
       <h4>Default</h4>
       <p>You can customize badges colors with secondary, success, warning, danger classes.</p>

@@ -12,24 +12,14 @@
   background-color: @muted;
   color: white;
   border-color: transparent;
+}
 
-  &.primary {
-    background-color: @primary;
-  }
-
-  &.secondary {
-    background-color: @secondary;
-  }
-
-  &.success {
-    background-color: @success;
-  }
-
-  &.warning {
-    background-color: @warning;
-  }
-
-  &.danger {
-    background-color: @danger;
+.make-badge-color-classes(@i: length(@colors)) when (@i > 0) {
+  .make-badge-color-classes(@i - 1);
+  @color: extract(@colors, @i);
+  .badge.@{color} {
+    background-color: @@color;
   }
 }
+
+.make-badge-color-classes();
