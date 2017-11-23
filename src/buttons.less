@@ -27,7 +27,14 @@ button, .paper-btn, [type="button"] {
         display: block;
         width: 100%;
     }
-    &.disabled, &[disabled]{
+    &:hover {
+        .shadow-hover;
+    }
+    &:active {
+      border-color: hsla(0,0%,0%,.2);
+      transition: none;
+    }
+    &.disabled, &[disabled] {
         .disabled;
     }
 }
