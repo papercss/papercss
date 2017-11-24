@@ -1,5 +1,5 @@
 ## Contributing
-Check out what's been added but not yet releases at [develop.getpapercss.com](https://develop.getpapercss.com)
+Check out what's been added but not yet released at [develop.getpapercss.com](https://develop.getpapercss.com)
 
 This project is open source and contributions are very welcomed. It is also as beginner friendly as possible, so don't be afraid to jump in if you've never contributed to any Git project before! Feel free to reach out if you are new and need help with the process.
 
