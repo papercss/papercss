@@ -30,6 +30,12 @@ button, .paper-btn, [type="button"] {
     &:hover {
         .shadow-hover;
     }
+    &:focus{
+        border: 2px solid @secondary;
+        -webkit-box-shadow:2px 8px 4px -6px hsla(0,0%,0%,.3);
+        -moz-box-shadow:2px 8px 4px -6px hsla(0,0%,0%,.3);
+        box-shadow:2px 8px 4px -6px hsla(0,0%,0%,.3);
+    }
     &:active {
       border-color: hsla(0,0%,0%,.2);
       transition: none;
