@@ -1,5 +1,6 @@
 ---
 title: Colors
+description: PaperCSS Colors
 ---
 ### Text
 

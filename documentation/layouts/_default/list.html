@@ -5,11 +5,11 @@
 
   {{ .Content }}
 
-  <ul>
+  <div class='row flex-spaces'>
   {{ range .Pages }}
     {{ .Render "li" }}
   {{ end }}
-  </ul>
+  </div>
 </div>
 
 {{ partial "footer" . }}

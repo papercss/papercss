@@ -1,5 +1,6 @@
 ---
 title: Badges
+description: PaperCSS Badges
 ---
 ### Default
 

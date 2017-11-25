@@ -1,5 +1,6 @@
 ---
 title: Alerts
+description: PaperCSS Alerts
 ---
 <div class="row flex-spaces">
   <div class="alert alert-primary">

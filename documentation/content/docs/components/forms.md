@@ -1,5 +1,6 @@
 ---
 title: Forms
+description: PaperCSS Forms
 ---
 <div class="form-group">
   <label for="paperInputs1">Input</label>

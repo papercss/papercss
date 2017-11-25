@@ -1,6 +1,6 @@
 ---
 title: Typography
-slug: typography
+description: PaperCSS Typography
 ---
 
 How pretty is the text?

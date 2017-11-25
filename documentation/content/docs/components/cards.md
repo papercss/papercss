@@ -1,5 +1,6 @@
 ---
 title: Cards
+description: PaperCSS Cards
 ---
 ### Full card example
 

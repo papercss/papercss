@@ -1,6 +1,6 @@
 ---
 title: Flexbox
-slug: flexbox
+description: PaperCSS Flexbox
 ---
 
 ### Flexgrid

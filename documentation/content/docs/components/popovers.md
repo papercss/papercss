@@ -1,5 +1,6 @@
 ---
 title: Popovers
+description: PaperCSS Popovers
 ---
 ### Basic usage
 

@@ -1,5 +1,6 @@
 ---
 title: Buttons
+description: PaperCSS Buttons
 ---
 
 Insprired by [Imprefect Buttons](https://codepen.io/tmrDevelops/pen/VeRvKX)

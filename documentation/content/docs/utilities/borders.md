@@ -1,6 +1,7 @@
 ---
 title: Borders & Shadows
 slug: borders
+description: PaperCSS Borders & Shadows
 ---
 ### Borders
 

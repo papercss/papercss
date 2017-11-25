@@ -1,5 +1,6 @@
 ---
 title: Lists
+description: PaperCSS Lists
 ---
 
 ### Ordered Lists

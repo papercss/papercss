@@ -1,5 +1,6 @@
 ---
 title: Code
+description: PaperCSS Code
 ---
 Let's make some pretty `<code>`
 

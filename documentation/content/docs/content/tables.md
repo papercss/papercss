@@ -1,5 +1,6 @@
 ---
 title: Tables
+description: PaperCSS Tables
 ---
 ### Regular
 

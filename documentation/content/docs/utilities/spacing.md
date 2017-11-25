@@ -1,5 +1,6 @@
 ---
 title: Spacing
+description: PaperCSS Spacing
 ---
 ### Margin
 <div class="row flex-spaces child-borders">
