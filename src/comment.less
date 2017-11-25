@@ -1,0 +1,71 @@
+.comment {
+  .border;
+  padding: 40px;
+  .comment-header {
+    border-bottom: 2px solid @light-dark;
+
+    img {
+      margin-right: 20px;
+    }
+
+    .comment-header-wrap {
+
+      h4 {
+        margin: 20px 0 0 0;
+
+        a {
+          color: @light-dark;
+        }
+      }
+
+      .comment-meta {
+        padding-left: 0;
+        margin-top: 10px;
+
+        li {
+          text-indent: 10px;
+
+          &:before {
+            content: "#";
+          }
+
+          a {
+            background-image: none;
+            color: @muted;
+          }
+        }
+      }
+    }
+  }
+
+  &-body {
+    margin: 30px 0px;
+  }
+
+  &-list {
+    padding-left: 0;
+
+    li,
+    .comment:first-child {
+      margin-bottom: 20px;
+    }
+
+    li:before {
+      content: "";
+    }
+
+    ul {
+      padding-left: 100px;
+      li:before {
+        content: "⬑";
+      }
+
+      li {
+
+        .comment {
+          background: @warning-light;
+        }
+      }
+    }
+  }
+}
