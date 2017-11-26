@@ -7,6 +7,9 @@
 
   <title>PaperCSS · the less formal CSS framework</title>
 
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+
   <meta name="description" content="The less formal CSS framework.">
   <meta name="author" content="Rhyneav and PaperCSS contributors.">
 
@@ -61,6 +64,7 @@
         <li><a href="#images">Images</a></li>
         <li><a href="#alerts">Alerts</a></li>
         <li><a href="#tabs">Tabs</a></li>
+        <li><a href="#article">Article</a></li>
       </ul>
     </div>
 
@@ -167,7 +171,7 @@
 &lt;/div&gt;
 &lt;div class=&quot;row flex-center&quot;&gt;
   &lt;div class=&quot;sm-4 col&quot;&gt;Aligned&lt;/div&gt;
-  &lt;div class=&quot;sm-4 col&quot;&gt;Right (flex-right)&lt;/div&gt;
+  &lt;div class=&quot;sm-4 col&quot;&gt;Center (flex-center)&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;row flex-edges&quot;&gt;
   &lt;div class=&quot;sm-4 col&quot;&gt;Aligned&lt;/div&gt;
@@ -279,30 +283,38 @@
     <div id="forms" class="section">
       <h2>Forms</h2>
       <div class="form-group">
-        <label>Input</label>
-        <input type="text" placeholder="Nice input">
+        <label for="paperInputs1">Input</label>
+        <input type="text" placeholder="Nice input" id="paperInputs1">
       </div>
       <div class="row">
         <div class="col sm-4">
           <div class="form-group">
-            <label>Block Level</label>
-            <input class="input-block" type="text">
+            <label for="paperInputs2">Block Level</label>
+            <input class="input-block" type="text" id="paperInputs2">
           </div>
         </div>
         <div class="col sm-8">
           <div class="form-group">
-            <label>Block Level</label>
-            <input class="input-block" type="text">
+            <label for="paperInputs3">Block Level</label>
+            <input class="input-block" type="text" id="paperInputs3">
           </div>
         </div>
       </div>
       <div class="form-group">
-          <label>Disabled</label>
-          <input type="text" placeholder="Disabled" disabled>
+          <label for="paperInputs4">Disabled</label>
+          <input type="text" placeholder="Disabled" id="paperInputs4" disabled>
       </div>
       <div class="form-group">
-        <label>Select</label>
-        <select>
+        <label>Large Input</label>
+        <textarea placeholder="Large input"></textarea>
+      </div>
+      <div class="form-group">
+          <label>No Resize</label>
+          <textarea class="no-resize" placeholder="No resize"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="paperSelects1">Select</label>
+        <select id="paperSelects1">
           <option value="1">Option 1</option>
           <option value="2">Option 2</option>
           <option value="3">Option 3</option>
@@ -329,30 +341,38 @@
       <div class="docs">
         <pre>
 &lt;div class="form-group"&gt;
-  &lt;label&gt;Input&lt;/label&gt;
-  &lt;input type="text" placeholder="Nice input"&gt;
+  &lt;label for="paperInputs1"&gt;Input&lt;/label&gt;
+  &lt;input type="text" placeholder="Nice input" id="paperInputs1"&gt;
 &lt;/div&gt;
 &lt;div class="row"&gt;
   &lt;div class="col sm-4"&gt;
     &lt;div class="form-group"&gt;
-      &lt;label&gt;Block Level&lt;/label&gt;
-      &lt;input class="input-block" type="text"&gt;
+      &lt;label for="paperInputs2"&gt;Block Level&lt;/label&gt;
+      &lt;input class="input-block" type="text" id="paperInputs2"&gt;
     &lt;/div&gt;
   &lt;/div&gt;
   &lt;div class="col sm-8"&gt;
     &lt;div class="form-group"&gt;
-      &lt;label&gt;Block Level&lt;/label&gt;
-      &lt;input class="input-block" type="text"&gt;
+      &lt;label for="paperInputs3"&gt;Block Level&lt;/label&gt;
+      &lt;input class="input-block" type="text" id="paperInputs3"&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="form-group"&gt;
-  &lt;label&gt;Disabled&lt;/label&gt;
-  &lt;input type="text" placeholder="Disabled" disabled&gt;
+  &lt;label for="paperInputs4"&gt;Disabled&lt;/label&gt;
+  &lt;input type="text" placeholder="Disabled" id="paperInputs4" disabled&gt;
 &lt;/div&gt;
 &lt;div class="form-group"&gt;
-  &lt;label&gt;Select&lt;/label&gt;
-  &lt;select&gt;
+&lt;label&gt;Large Input&lt;/label&gt;
+&lt;textarea placeholder="Large input"&gt; &lt;/textarea&gt;
+&lt;/div&gt;
+&lt;div class="form-group"&gt;
+&lt;label&gt;No Resize&lt;/label&gt;
+&lt;textarea class="no-resize" placeholder="No resize"&gt; &lt;/textarea&gt;
+&lt;/div&gt;
+&lt;div class="form-group"&gt;
+  &lt;label for="paperSelects1"&gt;Select&lt;/label&gt;
+  &lt;select id="paperSelects1"&gt;
     &lt;option value="1"&gt;Option 1&lt;/option&gt;
     &lt;option value="2"&gt;Option 2&lt;/option&gt;
     &lt;option value="3"&gt;Option 3&lt;/option&gt;
@@ -650,6 +670,7 @@ function add(x, y) {
 &lt;button popover-top="Popover on top"&gt;Popover on top and on a button!&lt;/button&gt;</pre>
       </div>
     </div>
+          
     <div id="cards" class="section">
       <h2>Cards</h2>
       <h4>Full card example</h4>
@@ -716,7 +737,7 @@ function add(x, y) {
             <p class="card-text">You can also place image on the bottom of the card.</p>
             <button>Let me go here!</button>
           </div>
-          <img class="image-bottom" src="http://via.placeholder.com/550x250" alt="Card example image">
+          <img class="image-bottom" src="https://unsplash.it/550/250" alt="Card example image">
         </div>
       </div>
 
@@ -729,7 +750,7 @@ function add(x, y) {
     &lt;p class="card-text"&gt;You can also place image on the bottom of the card.&lt;/p&gt;
     &lt;button&gt;Let me go here!&lt;/button&gt;
   &lt;/div&gt;
-  &lt;img class="image-bottom" src="http://via.placeholder.com/550x250" alt="Card example image"&gt;
+  &lt;img class="image-bottom" src="https://unsplash.it/550/250" alt="Card example image"&gt;
 &lt;/div&gt;</pre>
       </div>
 
@@ -1162,6 +1183,46 @@ function add(x, y) {
     &lt;/div&gt;</pre>
             </div>
       </div>
+
+
+
+    <div id="article" class="section">
+      <h2>Article</h2>
+      
+      <article class="article">
+        <h1 class="article-title"><a href="">Article Title</a></h1>
+        <p class="article-meta">Written by <a href="#">Super User</a> on 24 November 2017. Posted in <a href="#">Blog</a></p>
+        <p class="text-lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur repellendus excepturi, consequatur illo rerum, non sint asperiores dolore sapiente, vitae blanditiis. Officiis at quaerat modi earum, fugiat magni impedit, aperiam.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti iure totam nam debitis aliquid impedit, et quas omnis aspernatur optio molestias ex laborum quia. Ducimus culpa tempore, veritatis officia delectus dolore dignissimos reprehenderit vero, sunt odit placeat est non molestiae ipsa nam velit in iusto hic quasi similique facere. Maxime?</p>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti iure totam nam debitis aliquid impedit, et quas omnis aspernatur optio molestias ex laborum quia. Ducimus culpa tempore, veritatis officia delectus dolore dignissimos reprehenderit vero, sunt odit placeat est non molestiae ipsa nam velit in iusto hic quasi similique facere. Maxime?</p>
+
+        <div class="row">
+          <button>Read More</button>
+          <button>5 Comments</button>
+        </div>
+      </article>
+
+      <div class="docs">
+        <pre>
+&lt;article class="article"&gt;
+  &lt;h1 class="article-title"&gt;&lt;a href=""&gt;Article Title&lt;/a&gt;&lt;/h1&gt;
+  &lt;p class="article-meta"&gt;Written by &lt;a href="#"&gt;Super User&lt;/a&gt;&lt;/p&gt;
+  &lt;p class="text-lead"&gt; Lorem... &lt;/p&gt;
+  &lt;p&gt;Lorem...&lt;/p&gt;
+
+  &lt;div class="row"&gt;
+    &lt;button&gt;Read More&lt;/button&gt;
+    &lt;button&gt;5 Comments&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/article&gt;
+        </pre>
+      </div>
+    </div>
+
+
+
+
 
     <div class="section">
       <h2 id="download">Download and Link</h2>
