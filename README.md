@@ -11,14 +11,14 @@ View the demo & docs at [getpapercss.com](https://www.getpapercss.com)
 [![Download](/img/screenshots/download-minified.PNG)][download-minified]
 
 ### NPM
-PaperCSS is now available on NPM as of version 1.1.0. Install with `npm install papercss --save` and find the CSS in:
+PaperCSS is now available on NPM as of version 1.2.0. Install with `npm install papercss --save` and find the CSS in:
 - node_modules/papercss/dist/paper.css
 - node_modules/papercss/dist/paper.min.css
 
 ### CDN
 Don't want to download it? That's cool. You can just link to PaperCSS via unpkg's CDN. You can use either:
-- https://unpkg.com/papercss@1.1.0/dist/paper.css
-- https://unpkg.com/papercss@1.1.0/dist/paper.min.css
+- https://unpkg.com/papercss@1.2.0/dist/paper.css
+- https://unpkg.com/papercss@1.2.0/dist/paper.min.css
 
 ## Quick Start
 ```html
@@ -28,7 +28,7 @@ Don't want to download it? That's cool. You can just link to PaperCSS via unpkg'
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://unpkg.com/papercss@1.1.0/dist/paper.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/papercss@1.2.0/dist/paper.min.css">
   <title>Document</title>
 </head>
 <body>
@@ -99,5 +99,5 @@ If you are new to Git or Less, this would be a great project to get your feet we
 ## Credits
 Shouts outs to Tiffany Rayside for creating Imperfect Buttons, which was an inspiration for this project. https://codepen.io/tmrDevelops/pen/VeRvKX
 
-[download]: https://github.com/rhyneav/papercss/releases/download/v1.1.0/paper.css
-[download-minified]: https://github.com/rhyneav/papercss/releases/download/v1.1.0/paper.min.css
+[download]: https://github.com/rhyneav/papercss/releases/download/v1.2.0/paper.css
+[download-minified]: https://github.com/rhyneav/papercss/releases/download/v1.2.0/paper.min.css
