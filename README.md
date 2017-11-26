@@ -32,9 +32,11 @@ Don't want to download it? That's cool. You can just link to PaperCSS via unpkg'
   <title>Document</title>
 </head>
 <body>
-  <div class="paper container">
-    <h1>Some Fresh Title</h1>
-    <p>This is where some content would go.</p>
+  <div class="container">
+    <div class="paper">
+      <h1>Some Fresh Title</h1>
+      <p>This is where some content would go.</p>
+    </div>
   </div>
 </body>
 </html>
