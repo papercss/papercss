@@ -29,7 +29,7 @@
 
     .loop(@num) when (@num > 0) {
         .loop((@num - 1));
-        input[id^= ~"tab@{num}"]:checked~div[id^= ~"content@{num}"]{
+        input[id = ~"tab@{num}"]:checked~div[id = ~"content@{num}"]{
             display:block;
         }
     }
