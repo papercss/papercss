@@ -7,6 +7,9 @@
 
   <title>PaperCSS · the less formal CSS framework</title>
 
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+
   <meta name="description" content="The less formal CSS framework.">
   <meta name="author" content="Rhyneav and PaperCSS contributors.">
 
@@ -25,8 +28,8 @@
 </head>
 
 <body>
-  <div class="container paper">
-
+  <div class="container">
+    <div class=" paper">
     <div class="demo-title">
       <div class="row flex-center">
         <div class="text-center">
@@ -60,6 +63,7 @@
         <li><a href="#utilities">Utilities</a></li>
         <li><a href="#images">Images</a></li>
         <li><a href="#alerts">Alerts</a></li>
+        <li><a href="#article">Article</a></li>
       </ul>
     </div>
 
@@ -300,6 +304,14 @@
           <input type="text" placeholder="Disabled" id="paperInputs4" disabled>
       </div>
       <div class="form-group">
+        <label>Large Input</label>
+        <textarea placeholder="Large input"></textarea>
+      </div>
+      <div class="form-group">
+          <label>No Resize</label>
+          <textarea class="no-resize" placeholder="No resize"></textarea>
+      </div>
+      <div class="form-group">
         <label for="paperSelects1">Select</label>
         <select id="paperSelects1">
           <option value="1">Option 1</option>
@@ -348,6 +360,14 @@
 &lt;div class="form-group"&gt;
   &lt;label for="paperInputs4"&gt;Disabled&lt;/label&gt;
   &lt;input type="text" placeholder="Disabled" id="paperInputs4" disabled&gt;
+&lt;/div&gt;
+&lt;div class="form-group"&gt;
+&lt;label&gt;Large Input&lt;/label&gt;
+&lt;textarea placeholder="Large input"&gt; &lt;/textarea&gt;
+&lt;/div&gt;
+&lt;div class="form-group"&gt;
+&lt;label&gt;No Resize&lt;/label&gt;
+&lt;textarea class="no-resize" placeholder="No resize"&gt; &lt;/textarea&gt;
 &lt;/div&gt;
 &lt;div class="form-group"&gt;
   &lt;label for="paperSelects1"&gt;Select&lt;/label&gt;
@@ -1057,6 +1077,47 @@ function add(x, y) {
   &lt;/div&gt;</pre>
         </div>
     </div>
+
+
+
+    <div id="article" class="section">
+      <h2>Article</h2>
+
+      <article class="article">
+        <h1 class="article-title"><a href="">Article Title</a></h1>
+        <p class="article-meta">Written by <a href="#">Super User</a> on 24 November 2017. Posted in <a href="#">Blog</a></p>
+        <p class="text-lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur repellendus excepturi, consequatur illo rerum, non sint asperiores dolore sapiente, vitae blanditiis. Officiis at quaerat modi earum, fugiat magni impedit, aperiam.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti iure totam nam debitis aliquid impedit, et quas omnis aspernatur optio molestias ex laborum quia. Ducimus culpa tempore, veritatis officia delectus dolore dignissimos reprehenderit vero, sunt odit placeat est non molestiae ipsa nam velit in iusto hic quasi similique facere. Maxime?</p>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti iure totam nam debitis aliquid impedit, et quas omnis aspernatur optio molestias ex laborum quia. Ducimus culpa tempore, veritatis officia delectus dolore dignissimos reprehenderit vero, sunt odit placeat est non molestiae ipsa nam velit in iusto hic quasi similique facere. Maxime?</p>
+
+        <div class="row">
+          <button>Read More</button>
+          <button>5 Comments</button>
+        </div>
+      </article>
+
+      <div class="docs">
+        <pre>
+&lt;article class="article"&gt;
+  &lt;h1 class="article-title"&gt;&lt;a href=""&gt;Article Title&lt;/a&gt;&lt;/h1&gt;
+  &lt;p class="article-meta"&gt;Written by &lt;a href="#"&gt;Super User&lt;/a&gt;&lt;/p&gt;
+  &lt;p class="text-lead"&gt; Lorem... &lt;/p&gt;
+  &lt;p&gt;Lorem...&lt;/p&gt;
+
+  &lt;div class="row"&gt;
+    &lt;button&gt;Read More&lt;/button&gt;
+    &lt;button&gt;5 Comments&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/article&gt;
+        </pre>
+      </div>
+    </div>
+
+
+
+
+
     <div class="section">
       <h2 id="download">Download and Link</h2>
       <h4>Download</h4>
@@ -1091,9 +1152,11 @@ function add(x, y) {
   &lt;title&gt;Document&lt;/title&gt;
 &lt;/head&gt;
 &lt;body&gt;
-  &lt;div class=&quot;paper container&quot;&gt;
-    &lt;h1&gt;Some Fresh Title&lt;/h1&gt;
-    &lt;p&gt;This is where some content would go.&lt;/p&gt;
+  &lt;div class=&quot;container&quot;&gt;
+    &lt;div class=&quot;paper&quot;&gt;
+      &lt;h1&gt;Some Fresh Title&lt;/h1&gt;
+      &lt;p&gt;This is where some content would go.&lt;/p&gt;
+    &lt;/div&gt;
   &lt;/div&gt;
 &lt;/body&gt;
 &lt;/html&gt;</pre>
@@ -1119,6 +1182,7 @@ function add(x, y) {
       <p>Made with 💛 by <a href="https://vlaservi.ch" target="_blank">Rhyne</a> and some <a href="https://github.com/rhyneav/papercss/graphs/contributors">fantastic contributors</a>!</p>
     </div>
   </div>
+</div>
 </body>
 
 </html>
