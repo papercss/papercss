@@ -5,4 +5,4 @@ before_script:
     - export DISPLAY=:99.0
     - npm install karma-firefox-launcher
 
-script: ". ./tests/jake.sh loose=true capture=Firefox"
+script: "node node_modules/gulp/bin/gulp.js build && ./tests/jake.sh loose=true capture=Firefox"
