@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node node_modules/gulp/bin/gulp.js",
     "build": "node node_modules/gulp/bin/gulp.js build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./tests/jake.sh loose=true capture=Firefox"
   },
   "repository": {
     "type": "git",
