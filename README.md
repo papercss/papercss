@@ -21,7 +21,7 @@ Don't want to download it? That's cool. You can just link to PaperCSS via unpkg'
 - https://unpkg.com/papercss@1.1.0/dist/paper.min.css
 
 ## Quick Start
-```
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,9 +32,11 @@ Don't want to download it? That's cool. You can just link to PaperCSS via unpkg'
   <title>Document</title>
 </head>
 <body>
-  <div class="paper container">
-    <h1>Some Fresh Title</h1>
-    <p>This is where some content would go.</p>
+  <div class="container">
+    <div class="paper">
+      <h1>Some Fresh Title</h1>
+      <p>This is where some content would go.</p>
+    </div>
   </div>
 </body>
 </html>
@@ -58,13 +60,17 @@ Here's the full workflow for customization:
 
 ### Adding a new color
 - Go to file `src/color.less`
-- Add a new varable and assign it to a color hex value
+- Add a new variable and assign it to a color hex value
 - Add the new variable to the list of colors
 - Add a new variable for the light variation
 - Once `npm start` or `npm run build` has been run then it will create the new css so that the new color can be used as a text, border or background
 
 ## Contributing
+Check out what's been added but not yet releases at [develop.getpapercss.com](https://develop.getpapercss.com)
+
 This project is open source and contributions are very welcomed. It is also as beginner friendly as possible, so don't be afraid to jump in if you've never contributed to any Git project before! Feel free to reach out if you are new and need help with the process.
+
+Please before sending a PR, make sure you are using the `.editorconfig` file with your IDE. If your IDE doesn't natively support editorconfig files, you can use an extension. For example in Atom there is the [editorconfig package](https://atom.io/packages/editorconfig), as well for [Sublime](https://github.com/sindresorhus/editorconfig-sublime), [VS Code](https://github.com/editorconfig/editorconfig-vscode), [Vim](https://github.com/editorconfig/editorconfig-vim), ...
 
 Similar to customizing, make sure you have Git, Node, and NPM on your system.
 - fork the repo via the fork button in the upper left
