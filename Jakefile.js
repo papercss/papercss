@@ -10,10 +10,10 @@
 
 	var shell = require("shelljs");
 	var karma = require("simplebuild-karma");
-	var browserify = require("./tests/util/browserify_runner.js");
+	var browserify = require("./tests/build/util/browserify_runner.js");
 
-	var browsers = require("./tests/config/tested_browsers.js");
-	var paths = require("./tests/config/paths.js");
+	var browsers = require("./tests/build/config/tested_browsers.js");
+	var paths = require("./tests/build/config/paths.js");
 
 	var KARMA_CONFIG = "./tests/build/config/karma.conf.js";
 
