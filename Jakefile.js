@@ -8,7 +8,7 @@
 
 	var startTime = Date.now();
 
-	var shell = require("/node_modules/shelljs/shell.js");
+	var shell = require("shell");
 	var karma = require("simplebuild-karma");
 	var browserify = require("tests/util/browserify_runner.js");
 
