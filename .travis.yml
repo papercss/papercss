@@ -1,7 +1,18 @@
 language: node_js
 node_js: "8.8.1"
 
+addons:
+  firefox: latest
+  apt:
+    sources:
+     - google-chrome
+    packages:
+     - google-chrome-stable fluxbox
+
 before_script:
+    - "sh -e /etc/init.d/xvfb start"
+    - sleep 3
+    - fluxbox >/dev/null 2>&1 &
     - chmod +x ./jake.sh
     - chmod +x ./tests/build/scripts/run_jake.sh
     - export DISPLAY=:99.0
