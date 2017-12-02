@@ -2,9 +2,9 @@ language: node_js
 node_js: "8.8.1"
 
 before_script:
-    - chmod +x ./tests/jake.sh
+    - chmod +x ./jake.sh
     - chmod +x ./tests/build/scripts/run_jake.sh
     - export DISPLAY=:99.0
     - npm install karma-firefox-launcher
 
-script: "node node_modules/gulp/bin/gulp.js build && ./tests/jake.sh loose=true capture=Firefox"
+script: "node node_modules/gulp/bin/gulp.js build && ./jake.sh loose=true capture=Firefox"

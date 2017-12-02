@@ -13,13 +13,15 @@
 			basePath: '../../..',
 
 			// frameworks to use
-			frameworks: ['mocha', 'commonjs'],
+			frameworks: ['mocha'],
+
+			middleware: ['node-modules'],
 
 			// list of files / patterns to load in the browser
 			files: [
-				'tests/src/**/*.js',
-				'tests/node_modules/chai/chai.js',
-				'tests/node_modules/quixote/dist/quixote.js',
+				'tests/**/*.js',
+				'node_modules/**/*.js',
+				//'node_modules/**/*.js',
 				// QUIXOTE: Serve the CSS file so we can load it in our tests
 				// Mark it `included: false` so Karma doesn't load it automatically
 				{ pattern: 'dist/paper.css', included: false }
@@ -30,11 +32,9 @@
 
 			// preprocess matching files before serving them to the browser
 			// available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
-			preprocessors: {
-				'tests/src/**/*.js': ['commonjs'],
-				'tests/node_modules/chai/chai.js': ['commonjs'],
-				'tests/node_modules/quixote/dist/quixote.js': ['commonjs']
-			},
+			//preprocessors: {
+			//	'tests/**/*.js': ['commonjs'],
+			//},
 
 			// test results reporter to use
 			// possible values: 'dots', 'progress', 'junit', 'growl', 'coverage'

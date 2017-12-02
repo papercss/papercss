@@ -8,16 +8,14 @@
 
 	var startTime = Date.now();
 
-	var shell = require("shelljs");
-	var jshint = require("simplebuild-jshint");
+	var shell = require("../../../node_modules/shelljs/shell.js");
 	var karma = require("simplebuild-karma");
 	var browserify = require("../util/browserify_runner.js");
 
 	var browsers = require("../config/tested_browsers.js");
-	var jshintConfig = require("../config/jshint.conf.js");
 	var paths = require("../config/paths.js");
 
-	var KARMA_CONFIG = "./build/config/karma.conf.js";
+	var KARMA_CONFIG = "./tests/build/config/karma.conf.js";
 
 	var strict = !process.env.loose;
 
@@ -42,28 +40,19 @@
 
 
 	//*** LINT
-
+/** */
 	desc("Lint everything");
 	task("lint", ["lintNode", "lintClient"]);
 
 	task("lintNode", function() {
 		process.stdout.write("Linting Node.js code: ");
-		jshint.checkFiles({
-			files: [ paths.buildDir + "/**/*.js" ],
-			options: jshintConfig.nodeOptions,
-			globals: jshintConfig.nodeGlobals
-		}, complete, fail);
-	}, { async: true });
+
+	}, { async: false });
 
 	task("lintClient", function() {
 		process.stdout.write("Linting browser code: ");
-		jshint.checkFiles({
-			files: [ paths.clientDir + "/**/*.js" ],
-			options: jshintConfig.clientOptions,
-			globals: jshintConfig.clientGlobals
-		}, complete, fail);
-	}, { async: true });
 
+	}, { async: false });
 
 	//*** TEST
 
