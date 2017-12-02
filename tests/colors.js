@@ -1,8 +1,8 @@
 (function() {
 	"use strict";
 
-	var quixote = require("../node_modules/quixote/dist/quixote.js");
-	var assert = require("../node_modules/chai/chai.js").assert;
+	var quixote = require("./vendor/quixote.js");
+	var assert = require("./vendor/chai.js").assert;
 
 	describe("Colors", function() {
 		var frame;
