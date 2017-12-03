@@ -1,6 +1,8 @@
 # PaperCSS
 ### The Less Formal CSS Framework
 
+[![Build Status](https://travis-ci.org/papercss/papercss.svg?branch=master)](https://travis-ci.org/papercss/papercss)
+
 ## Demo & Docs
 View the demo & docs at [getpapercss.com](https://www.getpapercss.com)
 
