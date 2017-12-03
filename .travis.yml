@@ -1,6 +1,11 @@
 language: node_js
 node_js: "8.8.1"
 
+notifications:
+  slack:
+    rooms:
+      - papercss:1MrmPTVH6FLA95Oa5IfXl7xQ#travis
+
 addons:
   firefox: latest
   apt:
