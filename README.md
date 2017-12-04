@@ -66,7 +66,7 @@ Here's the full workflow for customization:
 - Once `npm start` or `npm run build` has been run then it will create the new css so that the new color can be used as a text, border or background
 
 ## Contributing
-Check out what's been added but not yet releases at [develop.getpapercss.com](https://develop.getpapercss.com)
+Check out what's been added but not yet released at [develop.getpapercss.com](https://develop.getpapercss.com)
 
 This project is open source and contributions are very welcomed. It is also as beginner friendly as possible, so don't be afraid to jump in if you've never contributed to any Git project before! Feel free to reach out if you are new and need help with the process.
 
@@ -85,7 +85,7 @@ Similar to customizing, make sure you have Git, Node, and NPM on your system.
 - Finally, open a pull request on this repo. Be sure to include any pictures and details on what you changed!
 - Once approved, your changes will be merged to the develop branch where it will eventually be added to a release that ends up in the master branch. Check out [Vincent Driessen's blog post](http://nvie.com/posts/a-successful-git-branching-model/), [GitFlow](https://datasift.github.io/gitflow/IntroducingGitFlow.html), or [#27](https://github.com/rhyneav/papercss/issues/27) for more details on how this works.
 
-Note: If you have a hotfix, create your hotfix branch off of the master branch instead of develop: `git checkout -b hotfix-1.X.X master`
+Note: If you have a hotfix (usually typos and minor documentation tweaks), create your hotfix branch off of the master branch instead of develop: `git checkout -b hotfix-1.X.X master`. The changes will be merged into both master and develop to keep the branches consistent.
 
 ## About
 I got tired of mODerN STylEs and clean pages on the internet. I also wanted to learn more about Flexbox and Less. So I made PaperCSS to solve these two challenges of mine :)
