@@ -7,6 +7,9 @@
 
   <title>PaperCSS · the less formal CSS framework</title>
 
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+
   <meta name="description" content="The less formal CSS framework.">
   <meta name="author" content="Rhyneav and PaperCSS contributors.">
 
@@ -75,9 +78,13 @@
         <li><a href="#utilities">Utilities</a></li>
         <li><a href="#images">Images</a></li>
         <li><a href="#alerts">Alerts</a></li>
+        <li><a href="#tabs">Tabs</a></li>
+        <li><a href="#article">Article</a></li>
       </ul>
     </div>
-
+    <div class="to-top">
+        <a href="#top" class="paper-btn margin">^</a>
+    </div>
     <div id="flexbox" class="section">
       <h2>Flexbox</h2>
       <h4>Flexgrid</h4>
@@ -181,7 +188,7 @@
 &lt;/div&gt;
 &lt;div class=&quot;row flex-center&quot;&gt;
   &lt;div class=&quot;sm-4 col&quot;&gt;Aligned&lt;/div&gt;
-  &lt;div class=&quot;sm-4 col&quot;&gt;Right (flex-right)&lt;/div&gt;
+  &lt;div class=&quot;sm-4 col&quot;&gt;Center (flex-center)&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;row flex-edges&quot;&gt;
   &lt;div class=&quot;sm-4 col&quot;&gt;Aligned&lt;/div&gt;
@@ -247,7 +254,7 @@
     </div>
     <div id="buttons" class="section">
       <h2>Buttons</h2>
-      <p>Insprired by <a href="https://codepen.io/tmrDevelops/pen/VeRvKX" target="_blank">Imprefect Buttons</a></p>
+      <p>Insprired by <a href="https://codepen.io/tmrDevelops/pen/VeRvKX" target="_blank">Imperfect Buttons</a></p>
       <button class="btn-large">Large</button>
       <button>Default</button>
       <button class="btn-small">Small</button>
@@ -261,7 +268,7 @@
       <button disabled>Disabled</button>
       <div class="docs">
         <pre>
-&lt;p&gt;Insprired by &lt;a href="https://codepen.io/tmrDevelops/pen/VeRvKX" target="_blank"&gt;Imprefect Buttons&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Insprired by &lt;a href="https://codepen.io/tmrDevelops/pen/VeRvKX" target="_blank"&gt;Imperfect Buttons&lt;/a&gt;&lt;/p&gt;
 &lt;button class="btn-large"&gt;Large&lt;/button&gt;
 &lt;button&gt;Default&lt;/button&gt;
 &lt;button class="btn-small"&gt;Small&lt;/button&gt;
@@ -293,30 +300,38 @@
     <div id="forms" class="section">
       <h2>Forms</h2>
       <div class="form-group">
-        <label>Input</label>
-        <input type="text" placeholder="Nice input">
+        <label for="paperInputs1">Input</label>
+        <input type="text" placeholder="Nice input" id="paperInputs1">
       </div>
       <div class="row">
         <div class="col sm-4">
           <div class="form-group">
-            <label>Block Level</label>
-            <input class="input-block" type="text">
+            <label for="paperInputs2">Block Level</label>
+            <input class="input-block" type="text" id="paperInputs2">
           </div>
         </div>
         <div class="col sm-8">
           <div class="form-group">
-            <label>Block Level</label>
-            <input class="input-block" type="text">
+            <label for="paperInputs3">Block Level</label>
+            <input class="input-block" type="text" id="paperInputs3">
           </div>
         </div>
       </div>
       <div class="form-group">
-          <label>Disabled</label>
-          <input type="text" placeholder="Disabled" disabled>
+          <label for="paperInputs4">Disabled</label>
+          <input type="text" placeholder="Disabled" id="paperInputs4" disabled>
       </div>
       <div class="form-group">
-        <label>Select</label>
-        <select>
+        <label>Large Input</label>
+        <textarea placeholder="Large input"></textarea>
+      </div>
+      <div class="form-group">
+          <label>No Resize</label>
+          <textarea class="no-resize" placeholder="No resize"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="paperSelects1">Select</label>
+        <select id="paperSelects1">
           <option value="1">Option 1</option>
           <option value="2">Option 2</option>
           <option value="3">Option 3</option>
@@ -343,30 +358,38 @@
       <div class="docs">
         <pre>
 &lt;div class="form-group"&gt;
-  &lt;label&gt;Input&lt;/label&gt;
-  &lt;input type="text" placeholder="Nice input"&gt;
+  &lt;label for="paperInputs1"&gt;Input&lt;/label&gt;
+  &lt;input type="text" placeholder="Nice input" id="paperInputs1"&gt;
 &lt;/div&gt;
 &lt;div class="row"&gt;
   &lt;div class="col sm-4"&gt;
     &lt;div class="form-group"&gt;
-      &lt;label&gt;Block Level&lt;/label&gt;
-      &lt;input class="input-block" type="text"&gt;
+      &lt;label for="paperInputs2"&gt;Block Level&lt;/label&gt;
+      &lt;input class="input-block" type="text" id="paperInputs2"&gt;
     &lt;/div&gt;
   &lt;/div&gt;
   &lt;div class="col sm-8"&gt;
     &lt;div class="form-group"&gt;
-      &lt;label&gt;Block Level&lt;/label&gt;
-      &lt;input class="input-block" type="text"&gt;
+      &lt;label for="paperInputs3"&gt;Block Level&lt;/label&gt;
+      &lt;input class="input-block" type="text" id="paperInputs3"&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class="form-group"&gt;
-  &lt;label&gt;Disabled&lt;/label&gt;
-  &lt;input type="text" placeholder="Disabled" disabled&gt;
+  &lt;label for="paperInputs4"&gt;Disabled&lt;/label&gt;
+  &lt;input type="text" placeholder="Disabled" id="paperInputs4" disabled&gt;
 &lt;/div&gt;
 &lt;div class="form-group"&gt;
-  &lt;label&gt;Select&lt;/label&gt;
-  &lt;select&gt;
+&lt;label&gt;Large Input&lt;/label&gt;
+&lt;textarea placeholder="Large input"&gt; &lt;/textarea&gt;
+&lt;/div&gt;
+&lt;div class="form-group"&gt;
+&lt;label&gt;No Resize&lt;/label&gt;
+&lt;textarea class="no-resize" placeholder="No resize"&gt; &lt;/textarea&gt;
+&lt;/div&gt;
+&lt;div class="form-group"&gt;
+  &lt;label for="paperSelects1"&gt;Select&lt;/label&gt;
+  &lt;select id="paperSelects1"&gt;
     &lt;option value="1"&gt;Option 1&lt;/option&gt;
     &lt;option value="2"&gt;Option 2&lt;/option&gt;
     &lt;option value="3"&gt;Option 3&lt;/option&gt;
@@ -439,6 +462,13 @@
           </ul>
         </ul>
         <li>And now we're are the top!</li>
+      </ul>
+      <h4>Inline List</h4>
+      <ul class="inline">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
       </ul>
       <div class="docs">
         <pre>
@@ -664,6 +694,7 @@ function add(x, y) {
 &lt;button popover-top="Popover on top"&gt;Popover on top and on a button!&lt;/button&gt;</pre>
       </div>
     </div>
+          
     <div id="cards" class="section">
       <h2>Cards</h2>
       <h4>Full card example</h4>
@@ -730,7 +761,7 @@ function add(x, y) {
             <p class="card-text">You can also place image on the bottom of the card.</p>
             <button>Let me go here!</button>
           </div>
-          <img class="image-bottom" src="http://via.placeholder.com/550x250" alt="Card example image">
+          <img class="image-bottom" src="https://unsplash.it/550/250" alt="Card example image">
         </div>
       </div>
 
@@ -743,7 +774,7 @@ function add(x, y) {
     &lt;p class="card-text"&gt;You can also place image on the bottom of the card.&lt;/p&gt;
     &lt;button&gt;Let me go here!&lt;/button&gt;
   &lt;/div&gt;
-  &lt;img class="image-bottom" src="http://via.placeholder.com/550x250" alt="Card example image"&gt;
+  &lt;img class="image-bottom" src="https://unsplash.it/550/250" alt="Card example image"&gt;
 &lt;/div&gt;</pre>
       </div>
 
@@ -1071,17 +1102,163 @@ function add(x, y) {
   &lt;/div&gt;</pre>
         </div>
     </div>
+    <div id="tabs" class="section">
+        <h2>Tabs</h2>
+        <div class="row flex-spaces tabs">
+            <input id="tab1" type="radio" name="tabs" checked>
+            <label for="tab1">Tab 1</label>
+  
+            <input id="tab2" type="radio" name="tabs">
+            <label for="tab2">Tab 2</label>
+  
+            <input id="tab3" type="radio" name="tabs">
+            <label for="tab3">Tab 3</label>
+  
+            <input id="tab4" type="radio" name="tabs">
+            <label for="tab4">Tab 4</label>
+  
+            <div class="content" id="content1">
+                <p>
+                    Bacon ipsum dolor sit amet beef venison beef ribs kielbasa. Sausage pig leberkas, t-bone sirloin shoulder bresaola. Frankfurter
+                    rump porchetta ham. Pork belly prosciutto brisket meatloaf short ribs.
+                </p>
+                <p>
+                    Brisket meatball turkey short loin boudin leberkas meatloaf chuck andouille pork loin pastrami spare ribs pancetta rump.
+                    Frankfurter corned beef beef tenderloin short loin meatloaf swine ground round venison.
+                </p>
+            </div>
+  
+            <div class="content" id="content2">
+                <p>
+                    Bacon ipsum dolor sit amet landjaeger sausage brisket, jerky drumstick fatback boudin ball tip turducken. Pork belly meatball
+                    t-bone bresaola tail filet mignon kevin turkey ribeye shank flank doner cow kielbasa shankle. Pig swine
+                    chicken hamburger, tenderloin turkey rump ball tip sirloin frankfurter meatloaf boudin brisket ham hock.
+                    Hamburger venison brisket tri-tip andouille pork belly ball tip short ribs biltong meatball chuck. Pork
+                    chop ribeye tail short ribs, beef hamburger meatball kielbasa rump corned beef porchetta landjaeger flank.
+                    Doner rump frankfurter meatball meatloaf, cow kevin pork pork loin venison fatback spare ribs salami
+                    beef ribs.
+                </p>
+            </div>
+  
+            <div class="content" id="content3">
+                <p>
+                    Bacon ipsum dolor sit amet beef venison beef ribs kielbasa. Sausage pig leberkas, t-bone sirloin shoulder bresaola. Frankfurter
+                    rump porchetta ham. Pork belly prosciutto brisket meatloaf short ribs.
+                </p>
+                <p>
+                    Brisket meatball turkey short loin boudin leberkas meatloaf chuck andouille pork loin pastrami spare ribs pancetta rump.
+                    Frankfurter corned beef beef tenderloin short loin meatloaf swine ground round venison.
+                </p>
+            </div>
+  
+            <div class="content" id="content4">
+                <p>
+                    Bacon ipsum dolor sit amet landjaeger sausage brisket, jerky drumstick fatback boudin ball tip turducken. Pork belly meatball
+                    t-bone bresaola tail filet mignon kevin turkey ribeye shank flank doner cow kielbasa shankle. Pig swine
+                    chicken hamburger, tenderloin turkey rump ball tip sirloin frankfurter meatloaf boudin brisket ham hock.
+                    Hamburger venison brisket tri-tip andouille pork belly ball tip short ribs biltong meatball chuck. Pork
+                    chop ribeye tail short ribs, beef hamburger meatball kielbasa rump corned beef porchetta landjaeger flank.
+                    Doner rump frankfurter meatball meatloaf, cow kevin pork pork loin venison fatback spare ribs salami
+                    beef ribs.
+                </p>
+            </div>
+        </div>
+          <div class="docs">
+              <pre>
+    &lt;div class="row flex-spaces tabs"&gt;
+      &lt;input id="tab1" type="radio" name="tabs" checked&gt;
+      &lt;label for="tab1"&gt;Tab 1&lt;/label&gt;
+      
+      &lt;input id="tab2" type="radio" name="tabs"&gt;
+      &lt;label for="tab2"&gt;Tab 2&lt;/label&gt;
+      
+      &lt;input id="tab3" type="radio" name="tabs"&gt;
+      &lt;label for="tab3"&gt;Tab 3&lt;/label&gt;
+      
+      &lt;input id="tab4" type="radio" name="tabs"&gt;
+      &lt;label for="tab4"&gt;Tab 4&lt;/label&gt;
+  
+      &lt;div class="content" id="content1"&gt;
+        &lt;p&gt;
+          Bacon ipsum dolor sit amet beef venison beef ribs kielbasa...
+        &lt;/p&gt;
+        &lt;p&gt;
+          Brisket meatball turkey short loin boudin leberkas meatloaf...
+        &lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="content" id="content2"&gt;
+        &lt;p&gt;
+          Bacon ipsum dolor sit amet landjaeger sausage brisket...
+        &lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="content" id="content3"&gt;
+        &lt;p&gt;
+          Bacon ipsum dolor sit amet beef venison beef ribs kielbasa...
+        &lt;/p&gt;
+        &lt;p&gt;
+          Brisket meatball turkey short loin boudin leberkas meatloaf...
+        &lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="content" id="content4"&gt;
+        &lt;p&gt;
+          Bacon ipsum dolor sit amet landjaeger sausage brisket...
+        &lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;</pre>
+            </div>
+      </div>
+
+
+
+    <div id="article" class="section">
+      <h2>Article</h2>
+      
+      <article class="article">
+        <h1 class="article-title"><a href="">Article Title</a></h1>
+        <p class="article-meta">Written by <a href="#">Super User</a> on 24 November 2017. Posted in <a href="#">Blog</a></p>
+        <p class="text-lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur repellendus excepturi, consequatur illo rerum, non sint asperiores dolore sapiente, vitae blanditiis. Officiis at quaerat modi earum, fugiat magni impedit, aperiam.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti iure totam nam debitis aliquid impedit, et quas omnis aspernatur optio molestias ex laborum quia. Ducimus culpa tempore, veritatis officia delectus dolore dignissimos reprehenderit vero, sunt odit placeat est non molestiae ipsa nam velit in iusto hic quasi similique facere. Maxime?</p>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti iure totam nam debitis aliquid impedit, et quas omnis aspernatur optio molestias ex laborum quia. Ducimus culpa tempore, veritatis officia delectus dolore dignissimos reprehenderit vero, sunt odit placeat est non molestiae ipsa nam velit in iusto hic quasi similique facere. Maxime?</p>
+
+        <div class="row">
+          <button>Read More</button>
+          <button>5 Comments</button>
+        </div>
+      </article>
+
+      <div class="docs">
+        <pre>
+&lt;article class="article"&gt;
+  &lt;h1 class="article-title"&gt;&lt;a href=""&gt;Article Title&lt;/a&gt;&lt;/h1&gt;
+  &lt;p class="article-meta"&gt;Written by &lt;a href="#"&gt;Super User&lt;/a&gt;&lt;/p&gt;
+  &lt;p class="text-lead"&gt; Lorem... &lt;/p&gt;
+  &lt;p&gt;Lorem...&lt;/p&gt;
+
+  &lt;div class="row"&gt;
+    &lt;button&gt;Read More&lt;/button&gt;
+    &lt;button&gt;5 Comments&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/article&gt;
+        </pre>
+      </div>
+    </div>
+
+
+
+
+
     <div class="section">
       <h2 id="download">Download and Link</h2>
       <h4>Download</h4>
-      <p>Download the latest version (1.1.0) using either of the links below. Or download an older release via Github.</p>
+      <p>Download the latest version (1.2.0) using either of the links below. Or download an older release via Github.</p>
       <div class="row flex-spaces text-center">
-        <a class="paper-btn margin" href="https://github.com/rhyneav/papercss/releases/download/v1.1.0/paper.css">CSS File</a>
-        <a class="paper-btn margin" href="https://github.com/rhyneav/papercss/releases/download/v1.1.0/paper.min.css">Minified CSS File</a>
+        <a class="paper-btn margin" href="https://github.com/rhyneav/papercss/releases/download/v1.2.0/paper.css">CSS File</a>
+        <a class="paper-btn margin" href="https://github.com/rhyneav/papercss/releases/download/v1.2.0/paper.min.css">Minified CSS File</a>
         <a class="paper-btn margin" href="https://github.com/rhyneav/papercss/releases">Github Releases</a>
       </div>
       <h4>NPM</h4>
-      <p>PaperCSS is now available on NPM as of version 1.1.0. Install with <code>npm install papercss --save</code> and find the CSS in:</p>
+      <p>PaperCSS is now available on NPM as of version 1.2.0. Install with <code>npm install papercss --save</code> and find the CSS in:</p>
       <ul>
         <li>node_modules/papercss/dist/paper.css</li>
         <li>node_modules/papercss/dist/paper.min.css</li>
@@ -1089,8 +1266,8 @@ function add(x, y) {
       <h4>CDN</h4>
       <p>Don't want to download it? That's cool. You can just link to PaperCSS via <a href="https://unpkg.com/#/">unpkg's CDN</a>. You can use either:</p>
       <ul>
-        <li><a href="https://unpkg.com/papercss@1.1.0/dist/paper.css">https://unpkg.com/papercss@1.1.0/dist/paper.css</a></li>
-        <li><a href="https://unpkg.com/papercss@1.1.0/dist/paper.min.css">https://unpkg.com/papercss@1.1.0/dist/paper.min.css</a></li>
+        <li><a href="https://unpkg.com/papercss@1.2.0/dist/paper.css">https://unpkg.com/papercss@1.2.0/dist/paper.css</a></li>
+        <li><a href="https://unpkg.com/papercss@1.2.0/dist/paper.min.css">https://unpkg.com/papercss@1.2.0/dist/paper.min.css</a></li>
       </ul>
       <p>Here's a quck snippet to get started with PaperCSS:</p>
       <div class="docs">
@@ -1101,13 +1278,15 @@ function add(x, y) {
   &lt;meta charset=&quot;UTF-8&quot;&gt;
   &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
   &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot;&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/papercss@1.1.0/dist/paper.min.css&quot;&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/papercss@1.2.0/dist/paper.min.css&quot;&gt;
   &lt;title&gt;Document&lt;/title&gt;
 &lt;/head&gt;
 &lt;body&gt;
-  &lt;div class=&quot;paper container&quot;&gt;
-    &lt;h1&gt;Some Fresh Title&lt;/h1&gt;
-    &lt;p&gt;This is where some content would go.&lt;/p&gt;
+  &lt;div class=&quot;container&quot;&gt;
+    &lt;div class=&quot;paper&quot;&gt;
+      &lt;h1&gt;Some Fresh Title&lt;/h1&gt;
+      &lt;p&gt;This is where some content would go.&lt;/p&gt;
+    &lt;/div&gt;
   &lt;/div&gt;
 &lt;/body&gt;
 &lt;/html&gt;</pre>
@@ -1133,6 +1312,7 @@ function add(x, y) {
       <p>Made with 💛 by <a href="https://vlaservi.ch" target="_blank">Rhyne</a> and some <a href="https://github.com/rhyneav/papercss/graphs/contributors">fantastic contributors</a>!</p>
     </div>
   </div>
+</div>
 </body>
 
 </html>
