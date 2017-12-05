@@ -4,8 +4,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
+
   <title>PaperCSS · the less formal CSS framework</title>
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
 
   <meta name="description" content="The less formal CSS framework.">
   <meta name="author" content="Rhyneav and PaperCSS contributors.">
@@ -20,13 +23,13 @@
   <meta property="og:description" content="The less formal CSS framework">
 
   <!-- Styles -->
-  <link rel="stylesheet" href="/dist/paper.css">
-  <link rel="stylesheet" href="/demo.css">
+  <link rel="stylesheet" href="./dist/paper.css">
+  <link rel="stylesheet" href="./demo.css">
 </head>
 
 <body>
-  <div class="container paper">
-
+  <div class="container">
+    <div class=" paper">
     <div class="demo-title">
       <div class="row flex-center">
         <div class="text-center">
@@ -60,6 +63,7 @@
         <li><a href="#utilities">Utilities</a></li>
         <li><a href="#images">Images</a></li>
         <li><a href="#alerts">Alerts</a></li>
+        <li><a href="#article">Article</a></li>
       </ul>
     </div>
 
@@ -259,6 +263,21 @@
 &lt;button class="disabled"&gt;Disabled&lt;/button&gt;
 &lt;button disabled&gt;Disabled&lt;/button&gt;</code></pre>
       </div>
+      <h4>Colors</h4>
+      <input type="button" class="paper-btn btn-primary" value="Primary"/>
+      <input type="button" class="btn-secondary" value="Secondary"/>
+      <button class="btn-success">Success</button>
+      <button class="btn-warning">Warning</button>
+      <button class="btn-danger">Danger</button>
+      <div class="docs">
+          <pre>
+  &lt;input type="button" class="paper-btn btn-primary" value="Primary"/&gt;
+  &lt;input type="button" class="btn-secondary" value="Secondary"/&gt;
+  &lt;button class="btn-success"&gt;Success&lt;/button&gt;
+  &lt;button class="btn-warning"&gt;Warning&lt;/button&gt;
+  &lt;button class="btn-danger"&gt;Danger&lt;/button&gt;
+          </pre>
+        </div>
     </div>
     <div id="forms" class="section">
       <h2>Forms</h2>
@@ -283,6 +302,14 @@
       <div class="form-group">
           <label for="paperInputs4">Disabled</label>
           <input type="text" placeholder="Disabled" id="paperInputs4" disabled>
+      </div>
+      <div class="form-group">
+        <label>Large Input</label>
+        <textarea placeholder="Large input"></textarea>
+      </div>
+      <div class="form-group">
+          <label>No Resize</label>
+          <textarea class="no-resize" placeholder="No resize"></textarea>
       </div>
       <div class="form-group">
         <label for="paperSelects1">Select</label>
@@ -333,6 +360,14 @@
 &lt;div class="form-group"&gt;
   &lt;label for="paperInputs4"&gt;Disabled&lt;/label&gt;
   &lt;input type="text" placeholder="Disabled" id="paperInputs4" disabled&gt;
+&lt;/div&gt;
+&lt;div class="form-group"&gt;
+&lt;label&gt;Large Input&lt;/label&gt;
+&lt;textarea placeholder="Large input"&gt; &lt;/textarea&gt;
+&lt;/div&gt;
+&lt;div class="form-group"&gt;
+&lt;label&gt;No Resize&lt;/label&gt;
+&lt;textarea class="no-resize" placeholder="No resize"&gt; &lt;/textarea&gt;
 &lt;/div&gt;
 &lt;div class="form-group"&gt;
   &lt;label for="paperSelects1"&gt;Select&lt;/label&gt;
@@ -596,42 +631,42 @@ function add(x, y) {
     <div id="popovers" class="section">
       <h2>Popovers</h2>
       <h4>Basic usage</h4>
-      <p>You can add popovers, also called tooltips, on your elements. popover attribute is the popover text content, popover-position attribute can be: top, left, right, bottom.</p>
+      <p>You can add popovers, also called tooltips, on your elements. popover-[position] attribute is the popover text content and it can be: top, left, right, bottom.</p>
 
       <div class="row flex-spaces">
         <div class="sm-3 col">
-          <p popover="Popover on left" popover-position="left">Popover left position</p>
+          <p popover-left="Popover on left">Popover left position</p>
         </div>
         <div class="sm-3 col">
-          <p popover="Popover on top" popover-position="top">Popover top position</p>
+          <p popover-top="Popover on top">Popover top position</p>
         </div>
         <div class="sm-3 col">
-          <p popover="Popover on bottom" popover-position="bottom">Popover bottom position</p>
+          <p popover-bottom="Popover on bottom">Popover bottom position</p>
         </div>
         <div class="sm-3 col">
-          <p popover="Popover on right" popover-position="right">Popover right position</p>
+          <p popover-right="Popover on right">Popover right position</p>
         </div>
       </div>
 
       <div class="docs">
         <pre><code>
-&lt;p popover="Popover on left" popover-position="left"&gt;Popover left position&lt;/p&gt;
-&lt;p popover="Popover on top" popover-position="top"&gt;Popover top position&lt;/p&gt;
-&lt;p popover="Popover on bottom" popover-position="bottom"&gt;Popover bottom position&lt;/p&gt;
-&lt;p popover="Popover on right" popover-position="right"&gt;Popover right position&lt;/p&gt;</code></pre>
+&lt;p popover-left="Popover on left"&gt;Popover left position&lt;/p&gt;
+&lt;p popover-top="Popover on top"&gt;Popover top position&lt;/p&gt;
+&lt;p popover-bottom="Popover on bottom"&gt;Popover bottom position&lt;/p&gt;
+&lt;p popover-right="Popover on right"&gt;Popover right position&lt;/p&gt;</pre>
       </div>
 
       <p>But you can also popover on pretty much any element you want, it can be on a button, on a table cell, ...</p>
 
       <div class="row flex-center">
         <div class="sm-6 col">
-          <button popover="Popover on top" popover-position="top">Popover on top and on a button!</button>
+          <button popover-top="Popover on top">Popover on top and on a button!</button>
         </div>
       </div>
 
       <div class="docs">
         <pre><code>
-&lt;button popover="Popover on top" popover-position="top"&gt;Popover on top and on a button!&lt;/button&gt;</code></pre>
+&lt;button popover-top="Popover on top"&gt;Popover on top and on a button!&lt;/button&gt;</pre>
       </div>
     </div>
           
@@ -1042,17 +1077,58 @@ function add(x, y) {
   &lt;/div&gt;</code></pre>
         </div>
     </div>
+
+
+
+    <div id="article" class="section">
+      <h2>Article</h2>
+      
+      <article class="article">
+        <h1 class="article-title"><a href="">Article Title</a></h1>
+        <p class="article-meta">Written by <a href="#">Super User</a> on 24 November 2017. Posted in <a href="#">Blog</a></p>
+        <p class="text-lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur repellendus excepturi, consequatur illo rerum, non sint asperiores dolore sapiente, vitae blanditiis. Officiis at quaerat modi earum, fugiat magni impedit, aperiam.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti iure totam nam debitis aliquid impedit, et quas omnis aspernatur optio molestias ex laborum quia. Ducimus culpa tempore, veritatis officia delectus dolore dignissimos reprehenderit vero, sunt odit placeat est non molestiae ipsa nam velit in iusto hic quasi similique facere. Maxime?</p>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti iure totam nam debitis aliquid impedit, et quas omnis aspernatur optio molestias ex laborum quia. Ducimus culpa tempore, veritatis officia delectus dolore dignissimos reprehenderit vero, sunt odit placeat est non molestiae ipsa nam velit in iusto hic quasi similique facere. Maxime?</p>
+
+        <div class="row">
+          <button>Read More</button>
+          <button>5 Comments</button>
+        </div>
+      </article>
+
+      <div class="docs">
+        <pre>
+&lt;article class="article"&gt;
+  &lt;h1 class="article-title"&gt;&lt;a href=""&gt;Article Title&lt;/a&gt;&lt;/h1&gt;
+  &lt;p class="article-meta"&gt;Written by &lt;a href="#"&gt;Super User&lt;/a&gt;&lt;/p&gt;
+  &lt;p class="text-lead"&gt; Lorem... &lt;/p&gt;
+  &lt;p&gt;Lorem...&lt;/p&gt;
+
+  &lt;div class="row"&gt;
+    &lt;button&gt;Read More&lt;/button&gt;
+    &lt;button&gt;5 Comments&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/article&gt;
+        </pre>
+      </div>
+    </div>
+
+
+
+
+
     <div class="section">
       <h2 id="download">Download and Link</h2>
       <h4>Download</h4>
-      <p>Download the latest version (1.1.0) using either of the links below. Or download an older release via Github.</p>
+      <p>Download the latest version (1.2.0) using either of the links below. Or download an older release via Github.</p>
       <div class="row flex-spaces text-center">
-        <a class="paper-btn margin" href="https://github.com/rhyneav/papercss/releases/download/v1.1.0/paper.css">CSS File</a>
-        <a class="paper-btn margin" href="https://github.com/rhyneav/papercss/releases/download/v1.1.0/paper.min.css">Minified CSS File</a>
+        <a class="paper-btn margin" href="https://github.com/rhyneav/papercss/releases/download/v1.2.0/paper.css">CSS File</a>
+        <a class="paper-btn margin" href="https://github.com/rhyneav/papercss/releases/download/v1.2.0/paper.min.css">Minified CSS File</a>
         <a class="paper-btn margin" href="https://github.com/rhyneav/papercss/releases">Github Releases</a>
       </div>
       <h4>NPM</h4>
-      <p>PaperCSS is now available on NPM as of version 1.1.0. Install with <code>npm install papercss --save</code> and find the CSS in:</p>
+      <p>PaperCSS is now available on NPM as of version 1.2.0. Install with <code>npm install papercss --save</code> and find the CSS in:</p>
       <ul>
         <li>node_modules/papercss/dist/paper.css</li>
         <li>node_modules/papercss/dist/paper.min.css</li>
@@ -1060,8 +1136,8 @@ function add(x, y) {
       <h4>CDN</h4>
       <p>Don't want to download it? That's cool. You can just link to PaperCSS via <a href="https://unpkg.com/#/">unpkg's CDN</a>. You can use either:</p>
       <ul>
-        <li><a href="https://unpkg.com/papercss@1.1.0/dist/paper.css">https://unpkg.com/papercss@1.1.0/dist/paper.css</a></li>
-        <li><a href="https://unpkg.com/papercss@1.1.0/dist/paper.min.css">https://unpkg.com/papercss@1.1.0/dist/paper.min.css</a></li>
+        <li><a href="https://unpkg.com/papercss@1.2.0/dist/paper.css">https://unpkg.com/papercss@1.2.0/dist/paper.css</a></li>
+        <li><a href="https://unpkg.com/papercss@1.2.0/dist/paper.min.css">https://unpkg.com/papercss@1.2.0/dist/paper.min.css</a></li>
       </ul>
       <p>Here's a quck snippet to get started with PaperCSS:</p>
       <div class="docs">
@@ -1071,13 +1147,15 @@ function add(x, y) {
   &lt;meta charset=&quot;UTF-8&quot;&gt;
   &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
   &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot;&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/papercss@1.1.0/dist/paper.min.css&quot;&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/papercss@1.2.0/dist/paper.min.css&quot;&gt;
   &lt;title&gt;Document&lt;/title&gt;
 &lt;/head&gt;
 &lt;body&gt;
-  &lt;div class=&quot;paper container&quot;&gt;
-    &lt;h1&gt;Some Fresh Title&lt;/h1&gt;
-    &lt;p&gt;This is where some content would go.&lt;/p&gt;
+  &lt;div class=&quot;container&quot;&gt;
+    &lt;div class=&quot;paper&quot;&gt;
+      &lt;h1&gt;Some Fresh Title&lt;/h1&gt;
+      &lt;p&gt;This is where some content would go.&lt;/p&gt;
+    &lt;/div&gt;
   &lt;/div&gt;
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
@@ -1103,6 +1181,7 @@ function add(x, y) {
       <p>Made with 💛 by <a href="https://vlaservi.ch" target="_blank">Rhyne</a> and some <a href="https://github.com/rhyneav/papercss/graphs/contributors">fantastic contributors</a>!</p>
     </div>
   </div>
+</div>
 </body>
 
 </html>
