@@ -65,6 +65,7 @@
         <li><a href="#alerts">Alerts</a></li>
         <li><a href="#tabs">Tabs</a></li>
         <li><a href="#article">Article</a></li>
+        <li><a href="#modals">Modals</a></li>
       </ul>
     </div>
     <div class="to-top">
@@ -1229,7 +1230,96 @@ function add(x, y) {
       </div>
     </div>
 
+    <div id="modals" class="section">
+      <h2>Modals</h2>
+      <h4>Simple modal example</h4>
+      <p>This can be used to implement modals along with features like title, subtitle, text, button and links. Just use whichever component you need for your modal with proper classes and leave the rest on the framework.</p>
+      <div class="row flex-spaces child-borders">
+        <a href="#modal-1" class="paper-btn margin">Open Modal!</a>
+      </div>
+      <div class="modal row flex-spaces" id="modal-1">
+        <div class="modal-body">
+          <a href="#modals" class="btn-close">x</a>
+          <h4 class="modal-title">Modal Title</h4>
+          <h5 class="modal-subtitle">Modal Subtitle</h5>
+          <p class="modal-text">This is an example of modal which is implemented with pure CSS! :D</p>
+          <a href="#modals"><button>Nice!</button></a>
+        </div>
+      </div>
+      <div class="docs">
+          <pre><code>&lt;div class="row flex-space child-borders"&gt;
+  &lt;a href="modal-1" class="paper-btn margin"&gt;Open Modal!&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class="modal row flex-space" id="modal-1"&gt;
+  &lt;div class="modal-body"&gt;
+    &lt;a class="btn-close" href="#modals"&gt;x&lt;/a&gt;
+    &lt;h4 class="modal-title"&gt;Modal Title&lt;/h4&gt;
+    &lt;h5 class="modal-subtitle"&gt;Modal Subtitle&lt;/h5&gt;
+    &lt;p class="modal-text"&gt;This is an example of modal which is implemented with pure CSS! :D&lt;/p&gt;
+    &lt;button&gt;Nice!&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
 
+      <h4>Modal with title, text and links</h4>
+      <div class="row flex-spaces child-borders">
+        <a href="#modal-2" class="paper-btn margin">Another Modal!</a>
+      </div>
+      <div class="modal row flex-spaces" id="modal-2">
+        <div class="modal-body">          
+          <a href="#modals" class="btn-close">x</a>
+          <h4 class="modal-title">Modal Title</h4>
+          <h5 class="modal-subtitle">Modal Subtitle</h5>
+          <p class="modal-text">This is an example of modal which is implemented with pure CSS! :D</p>
+          <a class="modal-link" href="#modals">OK</a>
+          <a class="modal-link" href="#modals">Close</a>
+        </div>
+      </div>
+      <div class="docs">
+          <pre><code>&lt;div class="row flex-space child-borders"&gt;
+  &lt;a href="modal-1" class="paper-btn margin"&gt;Open Modal!&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class="modal row flex-space" id="modal-1"&gt;
+  &lt;div class="modal-body"&gt;
+    &lt;a class="btn-close" href="#modals"&gt;x&lt;/a&gt;
+    &lt;h4 class="modal-title"&gt;Modal Title&lt;/h4&gt;
+    &lt;h5 class="modal-subtitle"&gt;Modal Subtitle&lt;/h5&gt;
+    &lt;p class="modal-text"&gt;This is an example of modal which is implemented with pure CSS! :D&lt;/p&gt;
+    &lt;a class="modal-link" href="#modals"&gt;OK&lt;/a&gt;
+    &lt;a class="modal-link" href="#modals"&gt;Close&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+
+      <h4>Paper border</h4>
+      <div class="row flex-spaces child-borders">
+        <a href="#modal-3" class="paper-btn margin">Paper Modal!</a>
+      </div>
+      <div class="modal row flex-spaces" id="modal-3">
+        <div class="modal-body border">
+          <a href="#modals" class="btn-close">x</a>
+          <h4 class="modal-title">Modal Title</h4>
+          <h5 class="modal-subtitle">Modal Subtitle</h5>
+          <p class="modal-text">This is an example of modal which is implemented with pure CSS! :D</p>
+          <a href="#modals"><button>Nice!</button></a>
+        </div>
+      </div>
+      <div class="docs">
+          <pre><code>&lt;div class="row flex-space child-borders"&gt;
+  &lt;a href="modal-1" class="paper-btn margin"&gt;Open Modal!&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class="modal row flex-space" id="modal-1"&gt;
+  &lt;div class="modal-body border"&gt;
+    &lt;a class="btn-close" href="#modals"&gt;x&lt;/a&gt;
+    &lt;h4 class="modal-title"&gt;Modal Title&lt;/h4&gt;
+    &lt;h5 class="modal-subtitle"&gt;Modal Subtitle&lt;/h5&gt;
+    &lt;p class="modal-text"&gt;This is an example of modal which is implemented with pure CSS! :D&lt;/p&gt;
+    &lt;button&gt;Nice!&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+
+    </div>
 
 
 
