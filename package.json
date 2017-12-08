@@ -28,7 +28,8 @@
     "gulp-rename": "1.2.2",
     "gulp-watch-less": "1.0.1",
     "less": "2.7.2",
-    "normalize.css": "7.0.0"
+    "normalize.css": "7.0.0",
+    "normalize.less": "^1.0.0"
   },
   "devDependencies": {
     "browserify": "^14.1.0",
