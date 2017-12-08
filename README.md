@@ -1,6 +1,8 @@
 # PaperCSS
 ### The Less Formal CSS Framework
 
+[![Build Status](https://travis-ci.org/papercss/papercss.svg?branch=master)](https://travis-ci.org/papercss/papercss)
+
 ## Demo & Docs
 View the demo & docs at [getpapercss.com](https://www.getpapercss.com)
 
@@ -11,14 +13,14 @@ View the demo & docs at [getpapercss.com](https://www.getpapercss.com)
 [![Download](/img/screenshots/download-minified.PNG)][download-minified]
 
 ### NPM
-PaperCSS is now available on NPM as of version 1.1.0. Install with `npm install papercss --save` and find the CSS in:
+PaperCSS is now available on NPM as of version 1.2.0. Install with `npm install papercss --save` and find the CSS in:
 - node_modules/papercss/dist/paper.css
 - node_modules/papercss/dist/paper.min.css
 
 ### CDN
 Don't want to download it? That's cool. You can just link to PaperCSS via unpkg's CDN. You can use either:
-- https://unpkg.com/papercss@1.1.0/dist/paper.css
-- https://unpkg.com/papercss@1.1.0/dist/paper.min.css
+- https://unpkg.com/papercss@1.2.0/dist/paper.css
+- https://unpkg.com/papercss@1.2.0/dist/paper.min.css
 
 ## Quick Start
 ```html
@@ -28,7 +30,7 @@ Don't want to download it? That's cool. You can just link to PaperCSS via unpkg'
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://unpkg.com/papercss@1.1.0/dist/paper.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/papercss@1.2.0/dist/paper.min.css">
   <title>Document</title>
 </head>
 <body>
@@ -66,7 +68,7 @@ Here's the full workflow for customization:
 - Once `npm start` or `npm run build` has been run then it will create the new css so that the new color can be used as a text, border or background
 
 ## Contributing
-Check out what's been added but not yet releases at [develop.getpapercss.com](https://develop.getpapercss.com)
+Check out what's been added but not yet released at [develop.getpapercss.com](https://develop.getpapercss.com)
 
 This project is open source and contributions are very welcomed. It is also as beginner friendly as possible, so don't be afraid to jump in if you've never contributed to any Git project before! Feel free to reach out if you are new and need help with the process.
 
@@ -85,7 +87,7 @@ Similar to customizing, make sure you have Git, Node, and NPM on your system.
 - Finally, open a pull request on this repo. Be sure to include any pictures and details on what you changed!
 - Once approved, your changes will be merged to the develop branch where it will eventually be added to a release that ends up in the master branch. Check out [Vincent Driessen's blog post](http://nvie.com/posts/a-successful-git-branching-model/), [GitFlow](https://datasift.github.io/gitflow/IntroducingGitFlow.html), or [#27](https://github.com/rhyneav/papercss/issues/27) for more details on how this works.
 
-Note: If you have a hotfix, create your hotfix branch off of the master branch instead of develop: `git checkout -b hotfix-1.X.X master`
+Note: If you have a hotfix (usually typos and minor documentation tweaks), create your hotfix branch off of the master branch instead of develop: `git checkout -b hotfix-1.X.X master`. The changes will be merged into both master and develop to keep the branches consistent.
 
 ## About
 I got tired of mODerN STylEs and clean pages on the internet. I also wanted to learn more about Flexbox and Less. So I made PaperCSS to solve these two challenges of mine :)
@@ -99,5 +101,5 @@ If you are new to Git or Less, this would be a great project to get your feet we
 ## Credits
 Shouts outs to Tiffany Rayside for creating Imperfect Buttons, which was an inspiration for this project. https://codepen.io/tmrDevelops/pen/VeRvKX
 
-[download]: https://github.com/rhyneav/papercss/releases/download/v1.1.0/paper.css
-[download-minified]: https://github.com/rhyneav/papercss/releases/download/v1.1.0/paper.min.css
+[download]: https://github.com/rhyneav/papercss/releases/download/v1.2.0/paper.css
+[download-minified]: https://github.com/rhyneav/papercss/releases/download/v1.2.0/paper.min.css
