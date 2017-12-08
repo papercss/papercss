@@ -28,7 +28,7 @@
   &:target{
   
     &:before{
-      display: block;
+      display: flex;
     }  
     .modal-body{
       .translate(0, 0); 
@@ -44,6 +44,13 @@
     word-wrap: break-word;
     position: fixed;
     z-index: 11;
+    max-width: 960px;
+    @media @medium-screen {
+      max-width: 85%;
+    }
+    @media @xsmall-screen {
+      max-width: 90%;
+    }
     .translate(0, -500%);
     .transition-transform(~"0.3s ease-out");
   }
