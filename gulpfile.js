@@ -1,8 +1,8 @@
-var gulp = require('gulp'),
-  	connect = require('gulp-connect'),
-  	less = require('gulp-less'),
-    cleanCSS = require('gulp-clean-css'),
-    rename = require('gulp-rename');
+const gulp = require('gulp'),
+  connect = require('gulp-connect'),
+  less = require('gulp-less'),
+  cleanCSS = require('gulp-clean-css'),
+  rename = require('gulp-rename');
 
 gulp.task('webserver', function() {
   connect.server({
