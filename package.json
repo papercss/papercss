@@ -22,6 +22,7 @@
   "dependencies": {
     "gulp": "3.9.1",
     "gulp-clean-css": "3.9.0",
+    "gulp-concat": "^2.6.1",
     "gulp-connect": "5.0.0",
     "gulp-less": "3.3.2",
     "gulp-plumber": "1.1.0",

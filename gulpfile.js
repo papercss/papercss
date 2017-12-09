@@ -2,7 +2,8 @@ const gulp = require('gulp'),
   connect = require('gulp-connect'),
   less = require('gulp-less'),
   cleanCSS = require('gulp-clean-css'),
-  rename = require('gulp-rename');
+  rename = require('gulp-rename'),
+  concat = require('gulp-concat');
 
 gulp.task('webserver', function() {
   connect.server({
@@ -11,7 +12,8 @@ gulp.task('webserver', function() {
 });
 
 gulp.task('less', function() {
-  gulp.src('src/styles.less')
+  gulp.src(['node_modules/normalize.less/normalize.less', 'src/styles.less'])
+    .pipe(concat('papercss.less'))
     .pipe(less())
     .pipe(cleanCSS({format: 'beautify'}))
     .pipe(rename('paper.css'))
