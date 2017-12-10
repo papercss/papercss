@@ -30,7 +30,7 @@
 <body>
   <div class="container">
     <div class=" paper">
-    <div class="demo-title">
+    <div id="top" class="demo-title">
       <div class="row flex-center">
         <div class="text-center">
           <h1>PaperCSS</h1>
@@ -63,10 +63,13 @@
         <li><a href="#utilities">Utilities</a></li>
         <li><a href="#images">Images</a></li>
         <li><a href="#alerts">Alerts</a></li>
+        <li><a href="#tabs">Tabs</a></li>
         <li><a href="#article">Article</a></li>
       </ul>
     </div>
-
+    <div class="to-top">
+        <a href="#top" class="paper-btn margin">^</a>
+    </div>
     <div id="flexbox" class="section">
       <h2>Flexbox</h2>
       <h4>Flexgrid</h4>
@@ -440,6 +443,13 @@
         </ul>
         <li>And now we're are the top!</li>
       </ul>
+      <h4>Inline List</h4>
+      <ul class="inline">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+      </ul>
       <div class="docs">
         <pre><code>&lt;ol&gt;
   &lt;li&gt;Do this&lt;/li&gt;
@@ -473,10 +483,9 @@
       <p>Let's make some pretty <code>&lt;code&gt;</code></p>
       <p>Print files backwards using <kbd>tac</kbd></p>
       <p>To stop a process, hit <kbd>ctrl + c</kbd></p>
-      <pre>
-function add(x, y) {
+      <pre><code>function add(x, y) {
   return x + y;
-}     </pre>
+}     </code></pre>
       <div class="docs">
         <pre><code>&lt;p&gt;Let's make some pretty &lt;code&gt;&amp;lt;code&amp;gt;&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Print files backwards using &lt;kbd&gt;tac&lt;/kbd&gt;&lt;/p&gt;
@@ -659,7 +668,7 @@ function add(x, y) {
         <pre><code>&lt;button popover-top="Popover on top"&gt;Popover on top and on a button!&lt;/button&gt;</code></pre>
       </div>
     </div>
-          
+
     <div id="cards" class="section">
       <h2>Cards</h2>
       <h4>Full card example</h4>
@@ -1038,21 +1047,125 @@ function add(x, y) {
           </div>
       </div>
       <div class="docs">
-          <pre><code>  &lt;div class="row flex-spaces"&gt;
-    &lt;div class="alert alert-primary"&gt;Alert-primary&lt;/div&gt;
-    &lt;div class="alert alert-secondary"&gt;Alert-secondary&lt;/div&gt;
-    &lt;div class="alert alert-success"&gt;Alert-success&lt;/div&gt;
-    &lt;div class="alert alert-warning"&gt;Alert-warning&lt;/div&gt;
-    &lt;div class="alert alert-danger"&gt;Alert-danger&lt;/div&gt;
-  &lt;/div&gt;</code></pre>
+          <pre><code>&lt;div class="row flex-spaces"&gt;
+  &lt;div class="alert alert-primary"&gt;Alert-primary&lt;/div&gt;
+  &lt;div class="alert alert-secondary"&gt;Alert-secondary&lt;/div&gt;
+  &lt;div class="alert alert-success"&gt;Alert-success&lt;/div&gt;
+  &lt;div class="alert alert-warning"&gt;Alert-warning&lt;/div&gt;
+  &lt;div class="alert alert-danger"&gt;Alert-danger&lt;/div&gt;
+&lt;/div&gt;</code></pre>
         </div>
     </div>
+    <div id="tabs" class="section">
+        <h2>Tabs</h2>
+        <div class="row flex-spaces tabs">
+            <input id="tab1" type="radio" name="tabs" checked>
+            <label for="tab1">Tab 1</label>
+  
+            <input id="tab2" type="radio" name="tabs">
+            <label for="tab2">Tab 2</label>
+  
+            <input id="tab3" type="radio" name="tabs">
+            <label for="tab3">Tab 3</label>
+  
+            <input id="tab4" type="radio" name="tabs">
+            <label for="tab4">Tab 4</label>
+  
+            <div class="content" id="content1">
+                <p>
+                    Bacon ipsum dolor sit amet beef venison beef ribs kielbasa. Sausage pig leberkas, t-bone sirloin shoulder bresaola. Frankfurter
+                    rump porchetta ham. Pork belly prosciutto brisket meatloaf short ribs.
+                </p>
+                <p>
+                    Brisket meatball turkey short loin boudin leberkas meatloaf chuck andouille pork loin pastrami spare ribs pancetta rump.
+                    Frankfurter corned beef beef tenderloin short loin meatloaf swine ground round venison.
+                </p>
+            </div>
+  
+            <div class="content" id="content2">
+                <p>
+                    Bacon ipsum dolor sit amet landjaeger sausage brisket, jerky drumstick fatback boudin ball tip turducken. Pork belly meatball
+                    t-bone bresaola tail filet mignon kevin turkey ribeye shank flank doner cow kielbasa shankle. Pig swine
+                    chicken hamburger, tenderloin turkey rump ball tip sirloin frankfurter meatloaf boudin brisket ham hock.
+                    Hamburger venison brisket tri-tip andouille pork belly ball tip short ribs biltong meatball chuck. Pork
+                    chop ribeye tail short ribs, beef hamburger meatball kielbasa rump corned beef porchetta landjaeger flank.
+                    Doner rump frankfurter meatball meatloaf, cow kevin pork pork loin venison fatback spare ribs salami
+                    beef ribs.
+                </p>
+            </div>
+  
+            <div class="content" id="content3">
+                <p>
+                    Bacon ipsum dolor sit amet beef venison beef ribs kielbasa. Sausage pig leberkas, t-bone sirloin shoulder bresaola. Frankfurter
+                    rump porchetta ham. Pork belly prosciutto brisket meatloaf short ribs.
+                </p>
+                <p>
+                    Brisket meatball turkey short loin boudin leberkas meatloaf chuck andouille pork loin pastrami spare ribs pancetta rump.
+                    Frankfurter corned beef beef tenderloin short loin meatloaf swine ground round venison.
+                </p>
+            </div>
+  
+            <div class="content" id="content4">
+                <p>
+                    Bacon ipsum dolor sit amet landjaeger sausage brisket, jerky drumstick fatback boudin ball tip turducken. Pork belly meatball
+                    t-bone bresaola tail filet mignon kevin turkey ribeye shank flank doner cow kielbasa shankle. Pig swine
+                    chicken hamburger, tenderloin turkey rump ball tip sirloin frankfurter meatloaf boudin brisket ham hock.
+                    Hamburger venison brisket tri-tip andouille pork belly ball tip short ribs biltong meatball chuck. Pork
+                    chop ribeye tail short ribs, beef hamburger meatball kielbasa rump corned beef porchetta landjaeger flank.
+                    Doner rump frankfurter meatball meatloaf, cow kevin pork pork loin venison fatback spare ribs salami
+                    beef ribs.
+                </p>
+            </div>
+        </div>
+          <div class="docs">
+              <pre><code>&lt;div class="row flex-spaces tabs"&gt;
+  &lt;input id="tab1" type="radio" name="tabs" checked&gt;
+  &lt;label for="tab1"&gt;Tab 1&lt;/label&gt;
+  
+  &lt;input id="tab2" type="radio" name="tabs"&gt;
+  &lt;label for="tab2"&gt;Tab 2&lt;/label&gt;
+  
+  &lt;input id="tab3" type="radio" name="tabs"&gt;
+  &lt;label for="tab3"&gt;Tab 3&lt;/label&gt;
+  
+  &lt;input id="tab4" type="radio" name="tabs"&gt;
+  &lt;label for="tab4"&gt;Tab 4&lt;/label&gt;
+
+  &lt;div class="content" id="content1"&gt;
+    &lt;p&gt;
+      Bacon ipsum dolor sit amet beef venison beef ribs kielbasa...
+    &lt;/p&gt;
+    &lt;p&gt;
+      Brisket meatball turkey short loin boudin leberkas meatloaf...
+    &lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="content" id="content2"&gt;
+    &lt;p&gt;
+      Bacon ipsum dolor sit amet landjaeger sausage brisket...
+    &lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="content" id="content3"&gt;
+    &lt;p&gt;
+      Bacon ipsum dolor sit amet beef venison beef ribs kielbasa...
+    &lt;/p&gt;
+    &lt;p&gt;
+      Brisket meatball turkey short loin boudin leberkas meatloaf...
+    &lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="content" id="content4"&gt;
+    &lt;p&gt;
+      Bacon ipsum dolor sit amet landjaeger sausage brisket...
+    &lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+      </div>
 
 
 
     <div id="article" class="section">
       <h2>Article</h2>
-      
+
       <article class="article">
         <h1 class="article-title"><a href="">Article Title</a></h1>
         <p class="article-meta">Written by <a href="#">Super User</a> on 24 November 2017. Posted in <a href="#">Blog</a></p>

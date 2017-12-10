@@ -3,13 +3,13 @@ var gulp = require('gulp'),
   	less = require('gulp-less'),
     cleanCSS = require('gulp-clean-css'),
     rename = require('gulp-rename');
- 
+
 gulp.task('webserver', function() {
   connect.server({
     livereload: true
   });
 });
- 
+
 gulp.task('less', function() {
   gulp.src('src/styles.less')
     .pipe(less())
@@ -18,7 +18,7 @@ gulp.task('less', function() {
     .pipe(gulp.dest('dist'))
     .pipe(connect.reload());
 });
- 
+
 gulp.task('watch', function() {
   gulp.watch('src/*.less', ['less']);
 });
@@ -29,6 +29,13 @@ gulp.task('minify-css', () => {
     .pipe(rename('paper.min.css'))
     .pipe(gulp.dest('dist'));
 });
- 
+
+gulp.task('components', () => {
+  gulp.src('src/*.less')
+    .pipe(less())
+    .pipe(cleanCSS({format: 'beautify'}))
+    .pipe(gulp.dest('dist/components'));
+});
+
 gulp.task('default', ['less', 'webserver', 'watch']);
-gulp.task('build', ['less', 'minify-css'])
+gulp.task('build', ['components', 'less', 'minify-css']);
