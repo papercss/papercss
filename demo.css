@@ -14,6 +14,10 @@ body {
 .summary a {
     color: #41403e;    
 }
+img.no-responsive {
+    max-width: -webkit-fill-available;
+    max-width: -moz-available;
+}
 .to-top {
     opacity: 1;
     display: inline-block;
