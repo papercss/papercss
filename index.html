@@ -28,15 +28,30 @@
 </head>
 
 <body>
-  <div class="container">
-    <div class=" paper">
-    <div id="top" class="demo-title">
+
+  <div class="container paper">
+
+    <nav>
+      <label for="menu-toggle">&#9776;</label>
+      <input type="checkbox" id="menu-toggle" role="button"></input>
+      <ul>
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="demo-title">
+
       <div class="row flex-center">
         <div class="text-center">
           <h1>PaperCSS</h1>
           <h3>the less formal CSS framework</h3>
         </div>
       </div>
+
 
       <div class="row flex-center child-borders">
         <a href="#download" class="paper-btn margin">Download</a>

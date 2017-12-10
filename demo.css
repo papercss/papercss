@@ -1,8 +1,8 @@
 body {
-    background-image: url("/img/geometry2.png")
+    background-image: url("/img/geometry2.png");
 }
 .demo .row .col {
-    background-color: #eee;    
+    background-color: #eee;
 }
 .demo .row .col:nth-child(even) {
     background-color: #ddd;
