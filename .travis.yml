@@ -21,7 +21,6 @@ before_script:
     - chmod +x ./jake.sh
     - chmod +x ./tests/build/scripts/run_jake.sh
     - export DISPLAY=:99.0
-    - npm install karma-firefox-launcher
     - gulp build
 
 script: "./jake.sh loose=true capture=Firefox"
