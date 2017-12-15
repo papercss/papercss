@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<!-- smoke test marker: automatopia home page -->
+<head>
+	<title>Agile Engineering for the Web</title>
+
+	<link rel="stylesheet" type="text/css" href="./screen.css">
+
+	<script src="bundle.js" type="text/javascript"></script>
+</head>
+<body>
+<!-- Note: This page is for manual demonstration of the example code. It's not tested like real production code should be. -->
+
+<div class="media">
+	<img id="image" class="media__figure" src="icon.svg" width="25" />
+	<p id="content" class="media__body invisible">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+</div>
+
+<script type="text/javascript">
+	document.addEventListener("DOMContentLoaded", function(event) {
+		var image = document.getElementById("image");
+		var content = document.getElementById("content");
+		toggle.init(image, content, "invisible");
+	});
+</script>
+
+</body>
+</html>
