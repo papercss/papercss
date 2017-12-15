@@ -1,3 +1,7 @@
+@import './colors.less';
+@import './container.less';
+@import './utilities.less';
+
 .translate(@x; @y) {
   -webkit-transform: translate(@x, @y);
   -ms-transform: translate(@x, @y);
@@ -15,24 +19,24 @@
 }
 
 .modal{
-  
+
   &:before{
-    content: ""; 
+    content: "";
     display: none;
     background: rgba(0,0,0,.6);
     position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0; 
+    top: 0; left: 0; right: 0; bottom: 0;
     z-index: 10;
   }
 
   &:target{
-  
+
     &:before{
       display: flex;
-    }  
+    }
     .modal-body{
-      .translate(0, 0); 
-      top: 20%;  
+      .translate(0, 0);
+      top: 20%;
     }
   }
 
@@ -65,7 +69,7 @@
     &:hover{
       color: @muted;
     }
-    
+
   }
 
   .modal-title, h4 {
