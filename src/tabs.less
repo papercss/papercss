@@ -1,0 +1,40 @@
+@import './colors.less';
+
+.tabs {
+    .content {
+        display: none;
+        padding: 0.75rem 0 0;
+    }
+
+    input {
+        display: none;
+    }
+
+    label {
+        display: inline-block;
+        margin: 0 0 -1px;
+        padding: 0.75rem 0.75rem;
+        font-weight: 600;
+        text-align: center;
+        color: @primary-light;
+    }
+
+    label:hover {
+        color: @muted;
+        cursor: pointer;
+    }
+
+    input:checked+label {
+        color: @primary;
+        border-bottom: solid 3px @secondary;
+    }
+
+    .loop(@num) when (@num > 0) {
+        .loop((@num - 1));
+        input[id = ~"tab@{num}"]:checked~div[id = ~"content@{num}"]{
+            display:block;
+        }
+    }
+
+    .loop(5);
+}

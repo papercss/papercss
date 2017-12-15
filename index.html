@@ -30,7 +30,7 @@
 <body>
   <div class="container">
     <div class=" paper">
-    <div class="demo-title">
+    <div id="top" class="demo-title">
       <div class="row flex-center">
         <div class="text-center">
           <h1>PaperCSS</h1>
@@ -63,10 +63,14 @@
         <li><a href="#utilities">Utilities</a></li>
         <li><a href="#images">Images</a></li>
         <li><a href="#alerts">Alerts</a></li>
+        <li><a href="#tabs">Tabs</a></li>
         <li><a href="#article">Article</a></li>
+        <li><a href="#modals">Modals</a></li>
       </ul>
     </div>
-
+    <div class="to-top">
+        <a href="#top" class="paper-btn margin">^</a>
+    </div>
     <div id="flexbox" class="section">
       <h2>Flexbox</h2>
       <h4>Flexgrid</h4>
@@ -357,12 +361,12 @@
   &lt;input type="text" placeholder="Disabled" id="paperInputs4" disabled&gt;
 &lt;/div&gt;
 &lt;div class="form-group"&gt;
-&lt;label&gt;Large Input&lt;/label&gt;
-&lt;textarea placeholder="Large input"&gt; &lt;/textarea&gt;
+  &lt;label&gt;Large Input&lt;/label&gt;
+  &lt;textarea placeholder="Large input"&gt; &lt;/textarea&gt;
 &lt;/div&gt;
 &lt;div class="form-group"&gt;
-&lt;label&gt;No Resize&lt;/label&gt;
-&lt;textarea class="no-resize" placeholder="No resize"&gt; &lt;/textarea&gt;
+  &lt;label&gt;No Resize&lt;/label&gt;
+  &lt;textarea class="no-resize" placeholder="No resize"&gt; &lt;/textarea&gt;
 &lt;/div&gt;
 &lt;div class="form-group"&gt;
   &lt;label for="paperSelects1"&gt;Select&lt;/label&gt;
@@ -440,6 +444,13 @@
         </ul>
         <li>And now we're are the top!</li>
       </ul>
+      <h4>Inline List</h4>
+      <ul class="inline">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+      </ul>
       <div class="docs">
         <pre><code>&lt;ol&gt;
   &lt;li&gt;Do this&lt;/li&gt;
@@ -473,10 +484,9 @@
       <p>Let's make some pretty <code>&lt;code&gt;</code></p>
       <p>Print files backwards using <kbd>tac</kbd></p>
       <p>To stop a process, hit <kbd>ctrl + c</kbd></p>
-      <pre>
-function add(x, y) {
+      <pre><code>function add(x, y) {
   return x + y;
-}     </pre>
+}     </code></pre>
       <div class="docs">
         <pre><code>&lt;p&gt;Let's make some pretty &lt;code&gt;&amp;lt;code&amp;gt;&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Print files backwards using &lt;kbd&gt;tac&lt;/kbd&gt;&lt;/p&gt;
@@ -659,7 +669,7 @@ function add(x, y) {
         <pre><code>&lt;button popover-top="Popover on top"&gt;Popover on top and on a button!&lt;/button&gt;</code></pre>
       </div>
     </div>
-          
+
     <div id="cards" class="section">
       <h2>Cards</h2>
       <h4>Full card example</h4>
@@ -1038,21 +1048,125 @@ function add(x, y) {
           </div>
       </div>
       <div class="docs">
-          <pre><code>  &lt;div class="row flex-spaces"&gt;
-    &lt;div class="alert alert-primary"&gt;Alert-primary&lt;/div&gt;
-    &lt;div class="alert alert-secondary"&gt;Alert-secondary&lt;/div&gt;
-    &lt;div class="alert alert-success"&gt;Alert-success&lt;/div&gt;
-    &lt;div class="alert alert-warning"&gt;Alert-warning&lt;/div&gt;
-    &lt;div class="alert alert-danger"&gt;Alert-danger&lt;/div&gt;
-  &lt;/div&gt;</code></pre>
+          <pre><code>&lt;div class="row flex-spaces"&gt;
+  &lt;div class="alert alert-primary"&gt;Alert-primary&lt;/div&gt;
+  &lt;div class="alert alert-secondary"&gt;Alert-secondary&lt;/div&gt;
+  &lt;div class="alert alert-success"&gt;Alert-success&lt;/div&gt;
+  &lt;div class="alert alert-warning"&gt;Alert-warning&lt;/div&gt;
+  &lt;div class="alert alert-danger"&gt;Alert-danger&lt;/div&gt;
+&lt;/div&gt;</code></pre>
         </div>
     </div>
+    <div id="tabs" class="section">
+        <h2>Tabs</h2>
+        <div class="row flex-spaces tabs">
+            <input id="tab1" type="radio" name="tabs" checked>
+            <label for="tab1">Tab 1</label>
+  
+            <input id="tab2" type="radio" name="tabs">
+            <label for="tab2">Tab 2</label>
+  
+            <input id="tab3" type="radio" name="tabs">
+            <label for="tab3">Tab 3</label>
+  
+            <input id="tab4" type="radio" name="tabs">
+            <label for="tab4">Tab 4</label>
+  
+            <div class="content" id="content1">
+                <p>
+                    Bacon ipsum dolor sit amet beef venison beef ribs kielbasa. Sausage pig leberkas, t-bone sirloin shoulder bresaola. Frankfurter
+                    rump porchetta ham. Pork belly prosciutto brisket meatloaf short ribs.
+                </p>
+                <p>
+                    Brisket meatball turkey short loin boudin leberkas meatloaf chuck andouille pork loin pastrami spare ribs pancetta rump.
+                    Frankfurter corned beef beef tenderloin short loin meatloaf swine ground round venison.
+                </p>
+            </div>
+  
+            <div class="content" id="content2">
+                <p>
+                    Bacon ipsum dolor sit amet landjaeger sausage brisket, jerky drumstick fatback boudin ball tip turducken. Pork belly meatball
+                    t-bone bresaola tail filet mignon kevin turkey ribeye shank flank doner cow kielbasa shankle. Pig swine
+                    chicken hamburger, tenderloin turkey rump ball tip sirloin frankfurter meatloaf boudin brisket ham hock.
+                    Hamburger venison brisket tri-tip andouille pork belly ball tip short ribs biltong meatball chuck. Pork
+                    chop ribeye tail short ribs, beef hamburger meatball kielbasa rump corned beef porchetta landjaeger flank.
+                    Doner rump frankfurter meatball meatloaf, cow kevin pork pork loin venison fatback spare ribs salami
+                    beef ribs.
+                </p>
+            </div>
+  
+            <div class="content" id="content3">
+                <p>
+                    Bacon ipsum dolor sit amet beef venison beef ribs kielbasa. Sausage pig leberkas, t-bone sirloin shoulder bresaola. Frankfurter
+                    rump porchetta ham. Pork belly prosciutto brisket meatloaf short ribs.
+                </p>
+                <p>
+                    Brisket meatball turkey short loin boudin leberkas meatloaf chuck andouille pork loin pastrami spare ribs pancetta rump.
+                    Frankfurter corned beef beef tenderloin short loin meatloaf swine ground round venison.
+                </p>
+            </div>
+  
+            <div class="content" id="content4">
+                <p>
+                    Bacon ipsum dolor sit amet landjaeger sausage brisket, jerky drumstick fatback boudin ball tip turducken. Pork belly meatball
+                    t-bone bresaola tail filet mignon kevin turkey ribeye shank flank doner cow kielbasa shankle. Pig swine
+                    chicken hamburger, tenderloin turkey rump ball tip sirloin frankfurter meatloaf boudin brisket ham hock.
+                    Hamburger venison brisket tri-tip andouille pork belly ball tip short ribs biltong meatball chuck. Pork
+                    chop ribeye tail short ribs, beef hamburger meatball kielbasa rump corned beef porchetta landjaeger flank.
+                    Doner rump frankfurter meatball meatloaf, cow kevin pork pork loin venison fatback spare ribs salami
+                    beef ribs.
+                </p>
+            </div>
+        </div>
+          <div class="docs">
+              <pre><code>&lt;div class="row flex-spaces tabs"&gt;
+  &lt;input id="tab1" type="radio" name="tabs" checked&gt;
+  &lt;label for="tab1"&gt;Tab 1&lt;/label&gt;
+  
+  &lt;input id="tab2" type="radio" name="tabs"&gt;
+  &lt;label for="tab2"&gt;Tab 2&lt;/label&gt;
+  
+  &lt;input id="tab3" type="radio" name="tabs"&gt;
+  &lt;label for="tab3"&gt;Tab 3&lt;/label&gt;
+  
+  &lt;input id="tab4" type="radio" name="tabs"&gt;
+  &lt;label for="tab4"&gt;Tab 4&lt;/label&gt;
+
+  &lt;div class="content" id="content1"&gt;
+    &lt;p&gt;
+      Bacon ipsum dolor sit amet beef venison beef ribs kielbasa...
+    &lt;/p&gt;
+    &lt;p&gt;
+      Brisket meatball turkey short loin boudin leberkas meatloaf...
+    &lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="content" id="content2"&gt;
+    &lt;p&gt;
+      Bacon ipsum dolor sit amet landjaeger sausage brisket...
+    &lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="content" id="content3"&gt;
+    &lt;p&gt;
+      Bacon ipsum dolor sit amet beef venison beef ribs kielbasa...
+    &lt;/p&gt;
+    &lt;p&gt;
+      Brisket meatball turkey short loin boudin leberkas meatloaf...
+    &lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="content" id="content4"&gt;
+    &lt;p&gt;
+      Bacon ipsum dolor sit amet landjaeger sausage brisket...
+    &lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+      </div>
 
 
 
     <div id="article" class="section">
       <h2>Article</h2>
-      
+
       <article class="article">
         <h1 class="article-title"><a href="">Article Title</a></h1>
         <p class="article-meta">Written by <a href="#">Super User</a> on 24 November 2017. Posted in <a href="#">Blog</a></p>
@@ -1083,21 +1197,81 @@ function add(x, y) {
       </div>
     </div>
 
+    <div id="modals" class="section">
+      <h2>Modals</h2>
+      <h4>Simple modal example</h4>
+      <p>This can be used to implement modals along with features like title, subtitle, text, button and links. Just use whichever component you need for your modal with proper classes and leave the rest on the framework.</p>
+      <div class="row flex-spaces child-borders">
+        <a href="#modal-1" class="paper-btn margin">Open Modal!</a>
+      </div>
+      <div class="modal row flex-spaces" id="modal-1">
+        <div class="modal-body">
+          <a href="#modals" class="btn-close">x</a>
+          <h4 class="modal-title">Modal Title</h4>
+          <h5 class="modal-subtitle">Modal Subtitle</h5>
+          <p class="modal-text">This is an example of modal which is implemented with pure CSS! :D</p>
+          <a href="#modals"><button>Nice!</button></a>
+        </div>
+      </div>
+      <div class="docs">
+          <pre><code>&lt;div class="row flex-space child-borders"&gt;
+  &lt;a href="modal-1" class="paper-btn margin"&gt;Open Modal!&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class="modal row flex-space" id="modal-1"&gt;
+  &lt;div class="modal-body"&gt;
+    &lt;a class="btn-close" href="#modals"&gt;x&lt;/a&gt;
+    &lt;h4 class="modal-title"&gt;Modal Title&lt;/h4&gt;
+    &lt;h5 class="modal-subtitle"&gt;Modal Subtitle&lt;/h5&gt;
+    &lt;p class="modal-text"&gt;This is an example of modal which is implemented with pure CSS! :D&lt;/p&gt;
+    &lt;button&gt;Nice!&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
 
+      <h4>Modal with title, text and links</h4>
+      <div class="row flex-spaces child-borders">
+        <a href="#modal-2" class="paper-btn margin">Another Modal!</a>
+      </div>
+      <div class="modal row flex-spaces" id="modal-2">
+        <div class="modal-body">          
+          <a href="#modals" class="btn-close">x</a>
+          <h4 class="modal-title">Modal Title</h4>
+          <h5 class="modal-subtitle">Modal Subtitle</h5>
+          <p class="modal-text">This is an example of modal which is implemented with pure CSS! :D</p>
+          <a class="modal-link" href="#modals">OK</a>
+          <a class="modal-link" href="#modals">Close</a>
+        </div>
+      </div>
+      <div class="docs">
+          <pre><code>&lt;div class="row flex-space child-borders"&gt;
+  &lt;a href="modal-1" class="paper-btn margin"&gt;Open Modal!&lt;/a&gt;
+&lt;/div&gt;
+&lt;div class="modal row flex-space" id="modal-1"&gt;
+  &lt;div class="modal-body"&gt;
+    &lt;a class="btn-close" href="#modals"&gt;x&lt;/a&gt;
+    &lt;h4 class="modal-title"&gt;Modal Title&lt;/h4&gt;
+    &lt;h5 class="modal-subtitle"&gt;Modal Subtitle&lt;/h5&gt;
+    &lt;p class="modal-text"&gt;This is an example of modal which is implemented with pure CSS! :D&lt;/p&gt;
+    &lt;a class="modal-link" href="#modals"&gt;OK&lt;/a&gt;
+    &lt;a class="modal-link" href="#modals"&gt;Close&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+      </div>
+    </div>
 
 
 
     <div class="section">
       <h2 id="download">Download and Link</h2>
       <h4>Download</h4>
-      <p>Download the latest version (1.2.0) using either of the links below. Or download an older release via Github.</p>
+      <p>Download the latest version (1.3.0) using either of the links below. Or download an older release via Github.</p>
       <div class="row flex-spaces text-center">
-        <a class="paper-btn margin" href="https://github.com/rhyneav/papercss/releases/download/v1.2.0/paper.css">CSS File</a>
-        <a class="paper-btn margin" href="https://github.com/rhyneav/papercss/releases/download/v1.2.0/paper.min.css">Minified CSS File</a>
-        <a class="paper-btn margin" href="https://github.com/rhyneav/papercss/releases">Github Releases</a>
+        <a class="paper-btn margin" href="https://github.com/papercss/papercss/releases/download/v1.3.0/paper.css">CSS File</a>
+        <a class="paper-btn margin" href="https://github.com/papercss/papercss/releases/download/v1.3.0/paper.min.css">Minified CSS File</a>
+        <a class="paper-btn margin" href="https://github.com/papercss/papercss/releases">Github Releases</a>
       </div>
       <h4>NPM</h4>
-      <p>PaperCSS is now available on NPM as of version 1.2.0. Install with <code>npm install papercss --save</code> and find the CSS in:</p>
+      <p>PaperCSS is now available on NPM as of version 1.3.0. Install with <code>npm install papercss --save</code> and find the CSS in:</p>
       <ul>
         <li>node_modules/papercss/dist/paper.css</li>
         <li>node_modules/papercss/dist/paper.min.css</li>
@@ -1105,8 +1279,8 @@ function add(x, y) {
       <h4>CDN</h4>
       <p>Don't want to download it? That's cool. You can just link to PaperCSS via <a href="https://unpkg.com/#/">unpkg's CDN</a>. You can use either:</p>
       <ul>
-        <li><a href="https://unpkg.com/papercss@1.2.0/dist/paper.css">https://unpkg.com/papercss@1.2.0/dist/paper.css</a></li>
-        <li><a href="https://unpkg.com/papercss@1.2.0/dist/paper.min.css">https://unpkg.com/papercss@1.2.0/dist/paper.min.css</a></li>
+        <li><a href="https://unpkg.com/papercss@1.3.0/dist/paper.css">https://unpkg.com/papercss@1.3.0/dist/paper.css</a></li>
+        <li><a href="https://unpkg.com/papercss@1.3.0/dist/paper.min.css">https://unpkg.com/papercss@1.3.0/dist/paper.min.css</a></li>
       </ul>
       <p>Here's a quck snippet to get started with PaperCSS:</p>
       <div class="docs">
@@ -1116,7 +1290,7 @@ function add(x, y) {
   &lt;meta charset=&quot;UTF-8&quot;&gt;
   &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
   &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot;&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/papercss@1.2.0/dist/paper.min.css&quot;&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/papercss@1.3.0/dist/paper.min.css&quot;&gt;
   &lt;title&gt;Document&lt;/title&gt;
 &lt;/head&gt;
 &lt;body&gt;

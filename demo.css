@@ -14,3 +14,26 @@ body {
 .summary a {
     color: #41403e;    
 }
+img.no-responsive {
+    max-width: -webkit-fill-available;
+    max-width: -moz-available;
+}
+.to-top {
+    opacity: 1;
+    display: inline-block;
+    padding: 1em;
+    position: fixed;
+    bottom: 1em;
+    right: 1em
+}
+.to-top .paper-btn {
+    padding: .6em 1em;
+    background: #fff;
+    border-top-left-radius: 185px 160px;
+    border-top-right-radius: 200px 195px;
+    border-bottom-right-radius: 160px 195px;
+    border-bottom-left-radius: 185px 190px
+}
+.demo-title:hover + .to-top {
+    opacity: 0
+}
