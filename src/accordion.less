@@ -1,5 +1,13 @@
 @import './colors.less';
 
+.transition(@transition) {
+    -webkit-transition: max-height @transition, padding @transition, opacity @transition;
+    -moz-transition: max-height @transition, padding @transition, opacity @transition;
+    -o-transition: max-height @transition, padding @transition, opacity @transition;
+    transition: max-height @transition, padding @transition, opacity @transition;
+}
+
+
 .collapsible {
     display: flex;
     flex-direction: column;
@@ -15,10 +23,7 @@
         margin:0;
         background-color: lighten(@white-dark,80%);
         border-bottom: 1px solid @muted-light;        
-        transition: max-height 0.25s ease, padding 0.25s ease, opacity 0.25s ease;
-        -webkit-transition: max-height 0.25s ease, padding 0.25s ease, opacity 0.25s ease; 
-        -o-transition:  max-height 0.25s ease, padding 0.25s ease, opacity 0.25s ease;
-        -moz-transition:  max-height 0.25s ease, padding 0.25s ease, opacity 0.25s ease;
+        .transition(~"0.25s ease");
     }
 
     input {
