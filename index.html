@@ -65,6 +65,7 @@
         <li><a href="#alerts">Alerts</a></li>
         <li><a href="#tabs">Tabs</a></li>
         <li><a href="#article">Article</a></li>
+        <li><a href="#collapsible">Collapsibles</a></li>
         <li><a href="#modals">Modals</a></li>
       </ul>
     </div>
@@ -1196,7 +1197,159 @@
 </code></pre>
       </div>
     </div>
+    <div id="collapsible" class="section">
+          <h2>Collapsibles</h2>
+          <p>Collapsibles are elements that expand when you click on them. You can hide/reveal content back on clicking.</p>
+        <div class="row">
+          <div class="collapsible">
+            <input id="collapsible1" type="checkbox" name="collapsible">
+            <label for="collapsible1">First</label>
+            <div class="collapsible-body">
+                <span>
+                    Bacon ipsum dolor sit amet beef venison beef ribs kielbasa. Sausage pig leberkas, t-bone sirloin shoulder bresaola. Frankfurter
+                    rump porchetta ham. Pork belly prosciutto brisket meatloaf short ribs.
+                </span>
+            </div>
+          </div>
+          <div class="collapsible">
+            <input id="collapsible2" type="checkbox" name="collapsible">
+            <label for="collapsible2">Second</label>
+            <div class="collapsible-body">
+                <span>
+                    Bacon ipsum dolor sit amet landjaeger sausage brisket, jerky drumstick fatback boudin ball tip turducken. Pork belly meatball
+                    t-bone bresaola tail filet mignon kevin turkey ribeye shank flank doner cow kielbasa shankle.
+                </span>
+            </div>
+          </div>
+          <div class="collapsible">
+            <input id="collapsible3" type="checkbox" name="collapsible">
+            <label for="collapsible3">Third</label>
+            <div class="collapsible-body">
+                <span>
+                    Bacon ipsum dolor sit amet beef venison beef ribs kielbasa. Sausage pig leberkas, t-bone sirloin shoulder bresaola. Frankfurter
+                    rump porchetta ham. Pork belly prosciutto brisket meatloaf short ribs.
+                </span>
+            </div>
+          </div>
+          <div class="collapsible">
+            <input id="collapsible4" type="checkbox" name="collapsible">
+            <label for="collapsible4">Fourth</label>
+            <div class="collapsible-body">
+                <span>
+                    Bacon ipsum dolor sit amet landjaeger sausage brisket, jerky drumstick fatback boudin ball tip turducken. Pork belly meatball
+                    t-bone bresaola tail filet mignon kevin turkey ribeye shank flank doner cow kielbasa shankle.
+                </span>
+            </div>
+          </div>
+        </div>
+        <div class="docs">
+          <pre><code>&lt;div class="row"&gt;
+  &lt;div class="collapsible"&gt;
+    &lt;input id="collapsible1" type="checkbox" name="collapsible"&gt;
+    &lt;label for="collapsible1"&gt;First&lt;/label&gt;
+    &lt;div class="collapsible-body"&gt;
+      &lt;span&gt;Bacon ipsum dolor sit amet landjaeger sausage brisket, jerky drumstick fatback boudin ball tip turducken...&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="collapsible"&gt;
+    &lt;input id="collapsible2" type="checkbox" name="collapsible"&gt;
+    &lt;label for="collapsible2"&gt;Second&lt;/label&gt;
+    &lt;div class="collapsible-body"&gt;
+      &lt;span&gt;Bacon ipsum dolor sit amet beef venison beef ribs kielbasa. Sausage pig leberkas, t-bone sirloin shoulder bresaola...&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="collapsible"&gt;
+    &lt;input id="collapsible3" type="checkbox" name="collapsible"&gt;
+    &lt;label for="collapsible3"&gt;Third&lt;/label&gt;
+    &lt;div class="collapsible-body"&gt;
+      &lt;span&gt;Bacon ipsum dolor sit amet landjaeger sausage brisket, jerky drumstick fatback boudin ball tip turducken...&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="collapsible"&gt;
+    &lt;input id="collapsible4" type="checkbox" name="collapsible"&gt;
+    &lt;label for="collapsible4"&gt;Fourth&lt;/label&gt;
+    &lt;div class="collapsible-body"&gt;
+      &lt;span&gt;Bacon ipsum dolor sit amet beef venison beef ribs kielbasa. Sausage pig leberkas, t-bone sirloin shoulder bresaola...&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
 
+
+        <h4>Accordions</h4>
+        <p>Use <code>input type="radio"</code> when you want to keep only one element collapsed at a time.</p>
+        <div class="row">
+          <div class="collapsible">
+            <input id="collapsible5" type="radio" name="collapsible">
+            <label for="collapsible5">First</label>
+            <div class="collapsible-body">
+                <span>
+                    Bacon ipsum dolor sit amet beef venison beef ribs kielbasa. Sausage pig leberkas, t-bone sirloin shoulder bresaola. Frankfurter
+                    rump porchetta ham. Pork belly prosciutto brisket meatloaf short ribs.
+                </span>
+            </div>
+          </div>
+          <div class="collapsible">
+            <input id="collapsible6" type="radio" name="collapsible">
+            <label for="collapsible6">Second</label>
+            <div class="collapsible-body">
+                <span>
+                    Bacon ipsum dolor sit amet landjaeger sausage brisket, jerky drumstick fatback boudin ball tip turducken. Pork belly meatball
+                    t-bone bresaola tail filet mignon kevin turkey ribeye shank flank doner cow kielbasa shankle.
+                </span>
+            </div>
+          </div>
+          <div class="collapsible">
+            <input id="collapsible7" type="radio" name="collapsible">
+            <label for="collapsible7">Third</label>
+            <div class="collapsible-body">
+                <span>
+                    Bacon ipsum dolor sit amet beef venison beef ribs kielbasa. Sausage pig leberkas, t-bone sirloin shoulder bresaola. Frankfurter
+                    rump porchetta ham. Pork belly prosciutto brisket meatloaf short ribs.
+                </span>
+            </div>
+          </div>
+          <div class="collapsible">
+            <input id="collapsible8" type="radio" name="collapsible">
+            <label for="collapsible8">Fourth</label>
+            <div class="collapsible-body">
+                <span>
+                    Bacon ipsum dolor sit amet landjaeger sausage brisket, jerky drumstick fatback boudin ball tip turducken. Pork belly meatball
+                    t-bone bresaola tail filet mignon kevin turkey ribeye shank flank doner cow kielbasa shankle.
+                </span>
+            </div>
+          </div>
+        </div>
+        <pre><code>&lt;div class="row"&gt;
+  &lt;div class="collapsible"&gt;
+    &lt;input id="collapsible5" type="radio" name="collapsible"&gt;
+    &lt;label for="collapsible5"&gt;First&lt;/label&gt;
+    &lt;div class="collapsible-body"&gt;
+      &lt;span&gt;Bacon ipsum dolor sit amet landjaeger sausage brisket, jerky drumstick fatback boudin ball tip turducken...&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="collapsible"&gt;
+    &lt;input id="collapsible6" type="radio" name="collapsible"&gt;
+    &lt;label for="collapsible6"&gt;Second&lt;/label&gt;
+    &lt;div class="collapsible-body"&gt;
+      &lt;span&gt;Bacon ipsum dolor sit amet beef venison beef ribs kielbasa. Sausage pig leberkas, t-bone sirloin shoulder bresaola...&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="collapsible"&gt;
+    &lt;input id="collapsible7" type="radio" name="collapsible"&gt;
+    &lt;label for="collapsible7"&gt;Third&lt;/label&gt;
+    &lt;div class="collapsible-body"&gt;
+      &lt;span&gt;Bacon ipsum dolor sit amet landjaeger sausage brisket, jerky drumstick fatback boudin ball tip turducken...&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="collapsible"&gt;
+    &lt;input id="collapsible8" type="radio" name="collapsible"&gt;
+    &lt;label for="collapsible8"&gt;Fourth&lt;/label&gt;
+    &lt;div class="collapsible-body"&gt;
+      &lt;span&gt;Bacon ipsum dolor sit amet beef venison beef ribs kielbasa. Sausage pig leberkas, t-bone sirloin shoulder bresaola...&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
     <div id="modals" class="section">
       <h2>Modals</h2>
       <h4>Simple modal example</h4>
