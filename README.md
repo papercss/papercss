@@ -91,4 +91,4 @@ If you are new to Git or Less, this would be a great project to get your feet we
 
 Code and documentation under [ISC license](https://github.com/papercss/papercss/blob/master/license∏).
 
-Shouts outs to Tiffany Rayside for creating Imperfect Buttons, which was an inspiration for this project. https://codepen.io/tmrDevelops/pen/VeRvKX
+Shout out to Tiffany Rayside for creating Imperfect Buttons, which was an inspiration for this project. https://codepen.io/tmrDevelops/pen/VeRvKX
