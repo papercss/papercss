@@ -1,7 +1,7 @@
 {
   "name": "papercss",
-  "version": "1.3.0",
-  "description": "Another CSS framework",
+  "version": "1.3.1",
+  "description": "The less formal CSS framework.",
   "main": "index.js",
   "scripts": {
     "start": "node node_modules/gulp/bin/gulp.js",
