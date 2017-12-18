@@ -1,8 +1,8 @@
-@import './colors.less';
-@import './borders.less';
+@import 'colors';
+@import 'borders';
 
-.alert{
-    .border;
+.alert {
+    @extend .border;
     padding: 15px;
     margin-bottom: 20px;
     width: 100%;
