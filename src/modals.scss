@@ -2,16 +2,18 @@
 @import './container.less';
 @import './utilities.less';
 
-.translate(@x; @y) {
-  -webkit-transform: translate(@x, @y);
-  -ms-transform: translate(@x, @y);
-  transform: translate(@x, @y);
+@mixin translate($x; $y)
+{
+  -webkit-transform: translate($x, $y);
+  -ms-transform: translate($x, $y);
+  transform: translate($x, $y);
 }
-.transition-transform(@transition) {
-  -webkit-transition: -webkit-transform @transition;
-  -moz-transition: -moz-transform @transition;
-  -o-transition: -o-transform @transition;
-  transition: transform @transition;
+@mixin transition-transform($transition)
+{
+  -webkit-transition: -webkit-transform $transition;
+  -moz-transition: -moz-transform $transition;
+  -o-transition: -o-transform $transition;
+  transition: transform $transition;
 }
 
 .modal{
@@ -31,7 +33,7 @@
       display: flex;
     }
     .modal-body{
-      .translate(0, 0);
+      @include translate(0, 0);
       top: 20%;
     }
   }
@@ -39,31 +41,31 @@
   .modal-body{
     flex: 1 1 auto;
     padding: 1.25rem;
-    background: @white;
-    border: 2px solid @muted-light;
+    background: $white;
+    border: 2px solid $muted-light;
     word-wrap: break-word;
     position: fixed;
     z-index: 11;
     max-width: 960px;
-    @media @medium-screen {
+    @media $medium-screen {
       max-width: 85%;
     }
-    @media @xsmall-screen {
+    @media $xsmall-screen {
       max-width: 90%;
     }
-    .translate(0, -500%);
-    .transition-transform(~"0.3s ease-out");
+    @include translate(0, -500%);
+    @include transition-transform(#{"0.3s ease-out"});
   }
 
   .btn-close{
-    color: @primary-light;
+    color: $primary-light;
     font-size: 30px;
     text-decoration: none;
     position: absolute; right: 0; top: 0;
     .margin;
     background: inherit;
     &:hover{
-      color: @muted;
+      color: $muted;
     }
 
   }
@@ -92,6 +94,6 @@
 
   a button {
     text-decoration: none;
-    background: @white;
+    background: $white;
   }
 }

@@ -27,8 +27,8 @@
     min-width: 80px;
     font-size: 0.7em;
     text-align: center;
-    color: @white;
-    background: @light-dark;
+    color: $white;
+    background: $light-dark;
     transition: opacity .25s ease-out;
     transform: translateX(-50%) translateY(-100%);
     .border;

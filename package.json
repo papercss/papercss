@@ -32,6 +32,7 @@
   "devDependencies": {
     "browserify": "^14.1.0",
     "chai": "^4.1.2",
+    "gulp-sass": "^3.1.0",
     "http-server": "^0.9.0",
     "install": "0.10.1",
     "jake": "^8.0.15",

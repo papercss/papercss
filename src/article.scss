@@ -7,14 +7,14 @@ article {
 
 	.article-meta {
 		font-size: 15px;
-		color: @muted;
+		color: $muted;
 
 		a {
-			color: @muted-text;
+			color: $muted-text;
 			background-image: none;
 
 			&:hover {
-				color: @light-dark;
+				color: $light-dark;
 			}
 		}
 	}

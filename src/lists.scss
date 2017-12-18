@@ -13,9 +13,10 @@ ol {
         }
     }
 }
-.li-bullet(@char) {
+@mixin li-bullet($char)
+{
     li:before {
-        content: @char;
+        content: $char;
     }
 }
 ul {
@@ -28,13 +29,13 @@ ul {
         position: relative;
         left: -7px;
     }
-    .li-bullet("-");
+    @include li-bullet("-");
     ul {
-        .li-bullet("+");
+        @include li-bullet("+");
         ul {
-            .li-bullet("~");
+            @include li-bullet("~");
             ul {
-                .li-bullet("⤍");
+                @include li-bullet("⤍");
                 ul {
                     .li-bullet("⁎")
                 }

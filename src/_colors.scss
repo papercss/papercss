@@ -1,0 +1,42 @@
+$primary: #41403E;
+$secondary: #0071DE;
+
+$success: #86a361;
+$warning: #ddcd45;
+$danger: #a7342d;
+$muted: #868e96;
+
+$primary-light: lighten($primary, 50%);
+$secondary-light: lighten($secondary, 50%);
+$success-light: lighten($success, 30%);
+$warning-light: lighten($warning, 30%);
+$danger-light: lighten($danger, 45%);
+$muted-light: lighten($muted, 35%);
+
+$white-dark: rgba(black, 0.03);
+$light-dark: rgba(black, 0.7);
+$white: rgba(white, 1);
+$main-background: rgba(white, 1);
+
+$primary-text: #FFF;
+$secondary-text: $primary;
+$success-text: $primary;
+$warning-text: $primary;
+$danger-text: $primary;
+$muted-text: $primary;
+
+$colors: (primary, $primary, $primary-light),
+         (secondary, $secondary, $secondary-light),
+         (success, $success, $success-light),
+         (warning, $warning, $warning-light),
+         (danger, $danger, $danger-light),
+         (muted, $muted, $muted-light);
+
+@each $colorName, $color, $color-light in $colors {
+  .text-#{$colorName} {
+    color: #{$color};
+  }
+  .background-#{$colorName} {
+    background-color: #{$color-light};
+  }
+}

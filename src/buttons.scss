@@ -8,10 +8,10 @@ button, .paper-btn, [type="button"] {
     align-self:center;
     background:transparent;
     transition:all .5s ease, background-color .1s ease;
-    color: @primary;
+    color: $primary;
     display: inline;
     outline:none;
-    border:solid 2px @primary;
+    border:solid 2px $primary;
     .border;
     font-size: 1rem;
     padding: .75rem .75rem;
@@ -36,7 +36,7 @@ button, .paper-btn, [type="button"] {
         .shadow-hover;
     }
     &:focus{
-        border: 2px solid @secondary;
+        border: 2px solid $secondary;
         -webkit-box-shadow:2px 8px 4px -6px hsla(0,0%,0%,.3);
         -moz-box-shadow:2px 8px 4px -6px hsla(0,0%,0%,.3);
         box-shadow:2px 8px 4px -6px hsla(0,0%,0%,.3);
@@ -53,31 +53,32 @@ button, .paper-btn, [type="button"] {
 a {
     text-decoration: none;
     background-image:
-        linear-gradient(5deg, transparent 65%, @secondary 80%, transparent 90%),
-        linear-gradient(165deg, transparent 5%, @secondary 15%, transparent 25%),
-        linear-gradient(165deg, transparent 45%, @secondary 55%, transparent 65%),
-        linear-gradient(15deg, transparent 25%, @secondary 35%, transparent 50%);
+        linear-gradient(5deg, transparent 65%, $secondary 80%, transparent 90%),
+        linear-gradient(165deg, transparent 5%, $secondary 15%, transparent 25%),
+        linear-gradient(165deg, transparent 45%, $secondary 55%, transparent 65%),
+        linear-gradient(15deg, transparent 25%, $secondary 35%, transparent 50%);
     background-repeat:repeat-x;
     background-size: 4px 3px;
     background-position:0 90%;
     &:visited {
         text-decoration: none;
-        color: @primary;
+        color: $primary;
     }
 }
 
-.make-button-color-classes(@i: length(@colors)) when (@i > 0) {
-    .make-button-color-classes(@i - 1);
-    @color: extract(@colors, @i);
-    button.btn-@{color}, .paper-btn.btn-@{color}, [type="button"].btn-@{color} {
-        border-color: @@color;
-        background-color: ~"@{@{color}-light}";
-        color: ~"@{@{color}-text}";
+@mixin make-button-color-classes($i: length($colors)) when ($i > 0)
+{
+    @include make-button-color-classes($i - 1);
+    $color: extract($colors, $i);
+    button.btn-${color}, .paper-btn.btn-${color}, [type="button"].btn-${color} {
+        border-color: $$color;
+        background-color: #{"${${color}-light}"};
+        color: #{"${${color}-text}"};
         &:hover:active{
-            @darkcolour: ~"@{color}-light";
-            background-color: darken(@@darkcolour, 10%);
+            $darkcolour: #{"${color}-light"};
+            background-color: darken($$darkcolour, 10%);
         }
     }
 }
 
-.make-button-color-classes();
+@include make-button-color-classes();

@@ -12,17 +12,18 @@
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
-  background-color: @muted;
+  background-color: $muted;
   color: white;
   border-color: transparent;
 }
 
-.make-badge-color-classes(@i: length(@colors)) when (@i > 0) {
-  .make-badge-color-classes(@i - 1);
-  @color: extract(@colors, @i);
-  .badge.@{color} {
-    background-color: @@color;
+@mixin make-badge-color-classes($i: length($colors)) when ($i > 0)
+{
+  @include make-badge-color-classes($i - 1);
+  $color: extract($colors, $i);
+  .badge.${color} {
+    background-color: $$color;
   }
 }
 
-.make-badge-color-classes();
+@include make-badge-color-classes();

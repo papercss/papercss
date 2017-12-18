@@ -1,0 +1,22 @@
+@import './colors.less';
+@import './borders.less';
+
+.alert{
+    .border;
+    padding: 15px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+@mixin make-alert-color-classes($a: length($colors)) when ($a > 0)
+{
+    @include make-alert-color-classes($a - 1);
+    $color: extract($colors, $a);
+    .alert-${color} {
+        border-color: $$color;
+        color: $$color;
+        background-color: #{"${${color}-light}"};
+    }
+}
+
+@include make-alert-color-classes();
