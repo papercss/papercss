@@ -1,12 +1,3 @@
-@import 'colors';
-
-@import url('https://fonts.googleapis.com/css?family=Neucha|Patrick+Hand+SC');
-
-$global-font-size: 20px;
-$header-font: 'Patrick Hand SC';
-$body-font: 'Neucha';
-$font-color: $primary;
-
 html {
   font-size: $global-font-size;
   font-family: $body-font, sans-serif;

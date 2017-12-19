@@ -1,14 +1,14 @@
-@import 'colors';
-@import 'shadows';
-
 .card {
-  @extend .shadow;
-  @extend .shadow-hover;
+  @include shadow;
   position: relative;
   display: flex;
   flex-direction: column;
   word-wrap: break-word;
   border: 2px solid $muted-light;
+
+  &:hover {
+    @include shadow(hover);
+  }
 
   .card-header,
   .card-footer {

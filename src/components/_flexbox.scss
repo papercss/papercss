@@ -1,5 +1,3 @@
-@import 'container';
-
 $columns: (0, col),
           ($large-screen, lg),
           ($medium-screen, md),
@@ -8,37 +6,7 @@ $columns: (0, col),
 
 $numberOfColumns: 12;
 
-@mixin make-column($columns) {
-  @each $breakpoint, $columnName in $columns {
-    // @todo: fix failing resp() mixin here
-    @media only screen and (max-width: $breakpoint) {
-      @for $i from 1 through $numberOfColumns {
-        .#{$columnName}-#{$i} {
-          flex: 0 0 $i * 100% / $numberOfColumns;
-          max-width: $i * 100% / $numberOfColumns;
-        }
-      }
-    }
-  }
-}
-
 @include make-column($columns);
-
-/* Unused mixin
-@mixin center-all() {
-  -webkit-align-items: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  justify-content: center;
- } */
-
-@mixin col-size($percent) {
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 0 $percent;
-  -ms-flex: 0 0 $percent;
-  flex: 0 0 $percent;
-  max-width: $percent;
-}
 
 .row {
   margin-right: auto;

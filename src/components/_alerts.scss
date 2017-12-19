@@ -1,8 +1,5 @@
-@import 'colors';
-@import 'borders';
-
 .alert {
-    @extend .border;
+    @include border;
     padding: 15px;
     margin-bottom: 20px;
     width: 100%;

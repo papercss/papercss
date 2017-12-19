@@ -6,34 +6,32 @@ $shadow-regular: 15px 28px 25px -18px $shadow-color-regular;
 $shadow-large: 20px 38px 34px -26px $shadow-color-regular;
 $shadow-hover: 2px 8px 8px -5px $shadow-color-hover;
 
-.shadow {
-  -webkit-box-shadow: $shadow-regular;
-  -moz-box-shadow: $shadow-regular;
+@mixin shadow($type: regular) {
+  @if $type == hover {
+    box-shadow: $shadow-hover;
+    transform: translate(0, 2px);
+  } @else if $type == small {
+    transition: all .5s ease;
+    box-shadow: $shadow-small;
+  } @else if $type == regular {
+    transition: all .5s ease;
+    box-shadow: $shadow-regular;
+  } @else if $type == large {
+    transition: all .5s ease;
+    box-shadow: $shadow-large;
+  } @else {
+    @error "@mixin shadow(input) does not exist"
+  }
+}
+
+.child-shadows > * {
   box-shadow: $shadow-regular;
   transition: all .5s ease;
-  &.shadow-large {
-    -webkit-box-shadow: $shadow-large;
-    -moz-box-shadow: $shadow-large;
-    box-shadow: $shadow-large;
-  }
-  &.shadow-small {
-    -webkit-box-shadow: $shadow-small;
-    -moz-box-shadow: $shadow-small;
-    box-shadow: $shadow-small;
-  }
-  &.shadow-hover {
-    &:hover{
-      -webkit-box-shadow: $shadow-hover;
-      -moz-box-shadow: $shadow-hover;
-      box-shadow: $shadow-hover;
-      transform: translate(0, 2px);
-    }
-  }
 }
-.child-shadows > * {
-  @extend .shadow;
-}
+
 .child-shadows-hover > * {
-  @extend .shadow;
-  @extend .shadow-hover;
+  &:hover {
+    box-shadow: $shadow-hover;
+    transform: translate(0, 2px);
+  }
 }

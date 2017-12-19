@@ -1,16 +1,19 @@
 @charset 'UTF-8';
 
 @media screen {
+  // Settings && Mixins
+  @import 'components/config';
+
+  // Individual Components
   @import 'components/reset';
   @import 'components/boxreset';
-  @import 'components/colors';
-  @import 'components/fonts';
   @import 'components/borders';
+  @import 'components/fonts';
   @import 'components/shadows';
-  @import 'components/flexbox';
-  @import 'components/container';
-  @import 'components/buttons';
   @import 'components/forms';
+  @import 'components/container';
+  @import 'components/flexbox';
+  @import 'components/buttons';
   @import 'components/lists';
   @import 'components/code';
   @import 'components/tables';

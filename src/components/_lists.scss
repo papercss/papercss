@@ -13,11 +13,7 @@ ol {
     }
   }
 }
-@mixin li-bullet($char) {
-  li:before {
-    content: $char;
-  }
-}
+
 ul {
   list-style: none;
   margin-left: 0;
@@ -36,13 +32,13 @@ ul {
       ul {
         @include li-bullet("⤍");
         ul {
-         @include li-bullet("⁎");
+          @include li-bullet("⁎");
         }
       }
     }
   }
-  &.inline li{
-      display: inline;
+  &.inline li {
+    display: inline;
     margin-left: 5px;
   }
 }

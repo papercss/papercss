@@ -1,8 +1,5 @@
-@import 'colors';
-@import 'borders';
-
 .badge {
-  @extend .border;
+  @include border;
   display: inline-block;
   padding: .25em .4em;
   font-size: 75%;

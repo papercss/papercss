@@ -1,10 +1,8 @@
-@import 'borders';
-
 img {
     max-width: 100%;
     height: auto;
     display: block;
-    @extend .border;
+    @include border;
     &.float-left {
         float: left;
         margin: 1rem 1rem 1rem 0rem;

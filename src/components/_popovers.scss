@@ -1,6 +1,3 @@
-@import 'colors';
-@import 'borders';
-
 // Core popovers
 [popover-top],
 [popover-right],
@@ -31,7 +28,7 @@
     background: $light-dark;
     transition: opacity .25s ease-out;
     transform: translateX(-50%) translateY(-100%);
-    @extend .border;
+    @include border;
   }
 }
 

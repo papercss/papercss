@@ -30,12 +30,12 @@ gulp.task('minify-css', () => {
     .pipe(gulp.dest('dist'));
 });
 
-gulp.task('components', () => {
-  gulp.src('src/*.scss')
-    .pipe(sass.sync().on('error', sass.logError))
-    .pipe(cleanCSS({format: 'beautify'}))
-    .pipe(gulp.dest('dist/components'));
-});
+//gulp.task('components', () => {
+//  gulp.src('src/*.scss')
+//    .pipe(sass.sync().on('error', sass.logError))
+//    .pipe(cleanCSS({format: 'beautify'}))
+//    .pipe(gulp.dest('dist/components'));
+//});
 
 gulp.task('default', ['sass', 'webserver', 'watch']);
-gulp.task('build', ['components', 'sass', 'minify-css']);
+gulp.task('build', ['sass', 'minify-css']);
