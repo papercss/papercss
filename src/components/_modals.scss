@@ -1,15 +1,13 @@
-@import './colors.less';
-@import './container.less';
-@import './utilities.less';
+@import 'colors';
+@import 'container';
+@import 'utilities';
 
-@mixin translate($x; $y)
-{
+@mixin translate($x, $y) {
   -webkit-transform: translate($x, $y);
   -ms-transform: translate($x, $y);
   transform: translate($x, $y);
 }
-@mixin transition-transform($transition)
-{
+@mixin transition-transform($transition) {
   -webkit-transition: -webkit-transform $transition;
   -moz-transition: -moz-transform $transition;
   -o-transition: -o-transform $transition;
@@ -21,14 +19,13 @@
   &:before{
     content: "";
     display: none;
-    background: rgba(0,0,0,.6);
+    background: rgba(black,.6);
     position: fixed;
     top: 0; left: 0; right: 0; bottom: 0;
     z-index: 10;
   }
 
   &:target{
-
     &:before{
       display: flex;
     }
@@ -47,14 +44,14 @@
     position: fixed;
     z-index: 11;
     max-width: 960px;
-    @media $medium-screen {
+    @include resp(medium) {
       max-width: 85%;
     }
-    @media $xsmall-screen {
+    @include resp(xsmall) {
       max-width: 90%;
     }
     @include translate(0, -500%);
-    @include transition-transform(#{"0.3s ease-out"});
+    @include transition-transform(0.3s ease-out);
   }
 
   .btn-close{
@@ -62,12 +59,11 @@
     font-size: 30px;
     text-decoration: none;
     position: absolute; right: 0; top: 0;
-    .margin;
+    @extend .margin;
     background: inherit;
     &:hover{
       color: $muted;
     }
-
   }
 
   .modal-title, h4 {
@@ -76,8 +72,7 @@
   }
 
   .modal-subtitle, h5 {
-    .text-secondary;
-
+    @extend .text-secondary;
     margin-top: 0;
     margin-bottom: 0.5rem;
   }

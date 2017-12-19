@@ -1,10 +1,9 @@
-@import './colors.less';
-@import './shadows.less';
+@import 'colors';
+@import 'shadows';
 
 .card {
-  .shadow;
-  .shadow-hover;
-
+  @extend .shadow;
+  @extend .shadow-hover;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -35,7 +34,7 @@
     }
 
     .card-subtitle, h5 {
-      .text-secondary;
+      @extend .text-secondary;
 
       margin-top: 0;
       margin-bottom: 0.5rem;

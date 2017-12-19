@@ -1,0 +1,74 @@
+@import 'colors';
+
+// Sizes
+$large-screen: 1200px;
+$medium-screen: 992px;
+$small-screen: 768px;
+$xsmall-screen: 480px;
+
+@mixin resp($max:null, $min:null) {
+  @if $max == large or $max == lg  { $max: $large-screen; }
+  @if $max == medium or $max == md { $max: $medium-screen; }
+  @if $max == small or $max == sm { $max: $small-screen; }
+  @if $max == xsmall or $max == xs { $max: $xsmall-screen; }
+  @if ($min != null and $max != null) {@media only screen and (max-width: $max) and (min-width: $min) { @content; }}
+  @else if($max != null and $min == null){@media only screen and (max-width: $max) { @content; }}
+  @else if($min != null and $max == null){@media only screen and (min-width: $min) { @content; }}
+  @else { @error "no matching size found";}
+}
+@mixin hr-after() {
+  text-align: center;
+  color: lighten($primary, 30%);
+  display: block;
+  content: "~~~";
+  position: relative;
+  font-size: 1.5rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 960px;
+  position: relative;
+  margin: 0 auto;
+  @include resp(medium) {
+      width: 85%;
+  }
+  @include resp(xsmall) {
+      width: 90%;
+  }
+}
+.section {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  word-wrap: break-word;
+
+  &:after {
+    @include hr-after;
+  }
+}
+
+hr {
+  border: 0;
+
+  &:after {
+    @include hr-after;
+    top: -.75rem;
+  }
+}
+
+.paper {
+  border: 1px solid $primary-light;
+  background-color: $main-background;
+  padding: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  -webkit-box-shadow: -1px 5px 35px -9px hsla(0,0%,0%,.2);
+  -moz-box-shadow: -1px 5px 35px -9px hsla(0,0%,0%,.2);
+  box-shadow: -1px 5px 35px -9px hsla(0,0%,0%,.2);
+  @include resp(xsmall) {
+    padding: 1rem;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}

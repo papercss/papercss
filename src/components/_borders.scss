@@ -1,4 +1,4 @@
-@import './colors.less';
+@import 'colors';
 
 .border {
     border: 2px solid $primary;
@@ -55,13 +55,8 @@
     border-width: 5px;
 }
 
-@mixin make-border-color-classes($i: length($colors)) when ($i > 0)
-{
-    @include make-border-color-classes($i - 1);
-    $color: extract($colors, $i);
-    .border-${color} {
-        border-color: $$color;
-    }
+@each $colorName, $color in $colors {
+  .border-#{$colorName} {
+    border-color: $color;
+  }
 }
-
-@include make-border-color-classes();

@@ -1,28 +1,31 @@
+@charset 'UTF-8';
+
 @media screen {
-  @import 'reset';
-  @import 'boxreset';
-  @import 'colors';
-  @import 'fonts';
-  @import 'borders';
-  @import 'shadows';
-  @import 'flexbox';
-  @import 'container';
-  @import 'buttons';
-  @import 'forms';
-  @import 'lists';
-  @import 'code';
-  @import 'tables';
-  @import 'images';
-  @import 'utilities';
-  @import 'popovers';
-  @import 'cards';
-  @import 'badges';
-  @import 'alerts';
-  @import 'tabs';
-  @import 'article';
-  @import 'modals';
+  @import 'components/reset';
+  @import 'components/boxreset';
+  @import 'components/colors';
+  @import 'components/fonts';
+  @import 'components/borders';
+  @import 'components/shadows';
+  @import 'components/flexbox';
+  @import 'components/container';
+  @import 'components/buttons';
+  @import 'components/forms';
+  @import 'components/lists';
+  @import 'components/code';
+  @import 'components/tables';
+  @import 'components/images';
+  @import 'components/utilities';
+  @import 'components/popovers';
+  @import 'components/cards';
+  @import 'components/badges';
+  @import 'components/alerts';
+  @import 'components/tabs';
+  @import 'components/article';
+  @import 'components/modals';
 }
 
+// @todo: Add print styles? ;)
 // @media print {
-//  @import 'print';
+//  @import 'components/print';
 // }

@@ -1,3 +1,6 @@
+// Global PaperCSS Config
+
+// Set Colors
 $primary: #41403E;
 $secondary: #0071DE;
 
@@ -25,18 +28,25 @@ $warning-text: $primary;
 $danger-text: $primary;
 $muted-text: $primary;
 
-$colors: (primary, $primary, $primary-light),
-         (secondary, $secondary, $secondary-light),
-         (success, $success, $success-light),
-         (warning, $warning, $warning-light),
-         (danger, $danger, $danger-light),
-         (muted, $muted, $muted-light);
+// Set class names to generate the css classes on build
+$colors: (primary, $primary, $primary-light, $primary-text),
+         (secondary, $secondary, $secondary-light, $secondary-text),
+         (success, $success, $success-light, $success-text),
+         (warning, $warning, $warning-light, $warning-text),
+         (danger, $danger, $danger-light, $danger-text),
+         (muted, $muted, $muted-light, $muted-text);
 
 @each $colorName, $color, $color-light in $colors {
   .text-#{$colorName} {
-    color: #{$color};
+    color: $color;
   }
   .background-#{$colorName} {
-    background-color: #{$color-light};
+    background-color: $color-light;
   }
 }
+COLORS
+BORDERS
+SHADOWS
+BORDERS
+
+// Grid Breakpoints && Class Names
