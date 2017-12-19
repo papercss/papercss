@@ -1,29 +1,3 @@
-$shadow-color-regular: hsla(0,0,0%,.2);
-$shadow-color-hover: hsla(0,0,0%,.3);
-
-$shadow-small: 10px 19px 17px -13px $shadow-color-regular;
-$shadow-regular: 15px 28px 25px -18px $shadow-color-regular;
-$shadow-large: 20px 38px 34px -26px $shadow-color-regular;
-$shadow-hover: 2px 8px 8px -5px $shadow-color-hover;
-
-@mixin shadow($type: regular) {
-  @if $type == hover {
-    box-shadow: $shadow-hover;
-    transform: translate(0, 2px);
-  } @else if $type == small {
-    transition: all .5s ease;
-    box-shadow: $shadow-small;
-  } @else if $type == regular {
-    transition: all .5s ease;
-    box-shadow: $shadow-regular;
-  } @else if $type == large {
-    transition: all .5s ease;
-    box-shadow: $shadow-large;
-  } @else {
-    @error "@mixin shadow(input) does not exist"
-  }
-}
-
 .child-shadows > * {
   box-shadow: $shadow-regular;
   transition: all .5s ease;
