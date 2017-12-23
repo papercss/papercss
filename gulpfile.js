@@ -1,3 +1,5 @@
+'use strict';
+
 const gulp = require('gulp'),
       connect = require('gulp-connect'),
       sass = require('gulp-sass'),
@@ -24,10 +26,10 @@ gulp.task('watch', function () {
 });
 
 gulp.task('minify-css', () => {
-  gulp.src('dist/paper.css')
-    .pipe(cleanCSS())
-    .pipe(rename('paper.min.css'))
-    .pipe(gulp.dest('dist'));
+  return gulp.src('src/**/*.scss')
+  .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+  .pipe(rename('paper.min.css'))
+  .pipe(gulp.dest('dist'));
 });
 
 gulp.task('default', ['sass', 'webserver', 'watch']);
