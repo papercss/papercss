@@ -2,18 +2,22 @@ table {
   box-sizing: border-box;
   width: 100%;
   max-width: 100%;
+  overflow-x: auto;
+
   thead tr th {
     vertical-align: bottom;
     text-align: left;
     padding: 8px;
     line-height: 1.5;
   }
+
   tbody tr td {
     padding: 8px;
     line-height: 1.5;
     vertical-align: top;
     border-top: 1px dashed lighten($primary, 60%);
   }
+
   @include resp(xsmall) {
     thead tr th {
         padding: 2%;
@@ -22,9 +26,11 @@ table {
         padding: 2%;
     }
   }
+
   &.table-hover tbody tr:hover {
     color: $secondary;
   }
+
   &.table-alternating tbody tr:nth-of-type(even) {
     color: lighten($primary, 25%);
   }

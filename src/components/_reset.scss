@@ -188,3 +188,12 @@ template {
 [hidden] {
   display: none
 }
+
+// Why is box sizing not the default?
+// https://www.paulirish.com/2012/box-sizing-border-box-ftw/
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}

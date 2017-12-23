@@ -38,7 +38,7 @@ hr {
   -webkit-box-shadow: -1px 5px 35px -9px hsla(0,0%,0%,.2);
   -moz-box-shadow: -1px 5px 35px -9px hsla(0,0%,0%,.2);
   box-shadow: -1px 5px 35px -9px hsla(0,0%,0%,.2);
-  @include resp(xsmall) {
+  @include resp(xs) {
     padding: 1rem;
     width: 100%;
     margin-top: 0;

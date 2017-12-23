@@ -1,60 +1,37 @@
-@mixin border($style: 1, $color: $primary) {
-  border: 2px solid $color;
 
-  @if $style == 1 {
-    .border-#{$style},
-    .child-borders>*:nth-child(6n+1) {
-      border-top-left-radius: 255px 15px;
-      border-top-right-radius: 15px 225px;
-      border-bottom-right-radius: 225px 15px;
-      border-bottom-left-radius: 15px 255px;
-    }
-  }
-  @if $style == 2 {
-    .border-2,
-    .child-borders>*:nth-child(6n+2) {
-      border-top-left-radius: 125px 25px;
-      border-top-right-radius: 10px 205px;
-      border-bottom-right-radius: 20px 205px;
-      border-bottom-left-radius: 185px 25px;
-    }
-  }
-  @if $style == 3 {
-    .border-3,
-    .child-borders>*:nth-child(6n+3) {
-      border-top-left-radius: 15px 225px;
-      border-top-right-radius: 255px 15px;
-      border-bottom-left-radius: 225px 15px;
-      border-bottom-right-radius: 15px 255px;
-    }
-  }
-  @if $style == 4 {
-    .border-4,
-    .child-borders>*:nth-child(6n+4) {
-      border-top-left-radius: 15px 225px;
-      border-top-right-radius: 25px 150px;
-      border-bottom-left-radius: 25px 115px;
-      border-bottom-right-radius: 155px 25px;
-    }
-  }
-  @if $style == 5 {
-    .border-5,
-    .child-borders>*:nth-child(6n+5) {
-      border-top-left-radius: 250px 15px;
-      border-top-right-radius: 25px 80px;
-      border-bottom-left-radius: 20px 115px;
-      border-bottom-right-radius: 15px 105px;
-    }
-  }
-  @if $style == 6 {
-    .border-6,
-    .child-borders>*:nth-child(6n+6) {
-      border-top-left-radius: 28px 125px;
-      border-top-right-radius: 100px 30px;
-      border-bottom-right-radius: 20px 205px;
-      border-bottom-left-radius: 15px 225px;
-    }
-  }
+.border {
+  border: 2px solid $primary;
+}
+
+.border,
+.border-1,
+.child-borders>*:nth-child(6n+1) {
+  @include border-style(1);
+}
+
+.border-2,
+.child-borders>*:nth-child(6n+2) {
+  @include border-style(2);
+}
+
+.border-3,
+.child-borders>*:nth-child(6n+3) {
+  @include border-style(3);
+}
+
+.border-4,
+.child-borders>*:nth-child(6n+4) {
+  @include border-style(4);
+}
+
+.border-5,
+.child-borders>*:nth-child(6n+5) {
+  @include border-style(5);
+}
+
+.border-6,
+.child-borders>*:nth-child(6n+6) {
+  @include border-style(6);
 }
 
 .child-borders>* {

@@ -28,7 +28,8 @@
     background: $light-dark;
     transition: opacity .25s ease-out;
     transform: translateX(-50%) translateY(-100%);
-    @include border;
+    @include border-style();
+    border: 2px solid $primary;
   }
 }
 

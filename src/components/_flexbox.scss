@@ -1,12 +1,18 @@
-$columns: (0, col),
-          ($large-screen, lg),
-          ($medium-screen, md),
-          ($small-screen, sm),
-          ($xsmall-screen, xs);
-
 $numberOfColumns: 12;
 
-@include make-column($columns);
+@mixin create-flex-classes($colName, $breakpoint: 0px) {
+  @include resp($min: $breakpoint) {
+    @for $i from 1 through $numberOfColumns {
+      .#{$colName}-#{$i} {
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 $i * 100% / $numberOfColumns;
+        -ms-flex: 0 0 $i * 100% / $numberOfColumns;
+        flex: 0 0 $i * 100% / $numberOfColumns;
+        max-width: $i * 100% / $numberOfColumns;
+      }
+    }
+  }
+}
 
 .row {
   margin-right: auto;
@@ -21,6 +27,7 @@ $numberOfColumns: 12;
   -ms-flex-flow: row wrap;
   flex-flow: row wrap;
   margin-bottom: 1rem;
+
   &.flex-right {
     -webkit-box-pack: end;
     -webkit-justify-content: flex-end;
@@ -66,8 +73,8 @@ $numberOfColumns: 12;
 
 .col {
   padding: 1rem;
-  @include resp(small) {
-    // Stack for mobile
+
+  @include resp(sm) {
     @include col-size(100%);
   }
 }
@@ -76,6 +83,12 @@ $numberOfColumns: 12;
   width: auto;
   flex: 1 1 0px;
 }
+
+@include create-flex-classes(col);
+@include create-flex-classes(xs, $xsmall-screen);
+@include create-flex-classes(sm, $small-screen);
+@include create-flex-classes(md, $medium-screen);
+@include create-flex-classes(lg, $large-screen);
 
 .align-top {
   -webkit-align-self: flex-start;
@@ -94,4 +107,18 @@ $numberOfColumns: 12;
   -webkit-align-self: flex-end;
   -ms-flex-item-align: end;
   align-self: flex-end;
+}
+
+.container {
+  width: 100%;
+  max-width: 960px;
+  position: relative;
+  margin: 0 auto;
+
+  @include resp(md) {
+    width: 85%;
+  }
+  @include resp(xs) {
+    width: 90%;
+  }
 }

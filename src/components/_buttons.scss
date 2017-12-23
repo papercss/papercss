@@ -7,12 +7,19 @@ button,
   color: $primary;
   display: inline;
   outline: none;
-  border: solid 2px $primary;
-  @include border();
+  border: 2px solid $primary;
+  @include border-style();
   font-size: 1rem;
   padding: .75rem .75rem;
   cursor: pointer;
   @include shadow();
+
+  @include resp(520px) {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
 
   &.btn-large {
     @include shadow(large);
@@ -49,7 +56,8 @@ button,
 
   &.disabled,
   &[disabled] {
-    @extend .disabled;
+    cursor: not-allowed;
+    opacity: .5
   }
 }
 

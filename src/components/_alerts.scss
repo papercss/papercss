@@ -1,5 +1,6 @@
 .alert {
-    @include border;
+    @include border-style();
+    border: 2px solid $primary;
     padding: 15px;
     margin-bottom: 20px;
     width: 100%;

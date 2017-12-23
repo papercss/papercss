@@ -1,5 +1,6 @@
 .badge {
-  @include border;
+  @include border-style();
+  border: 2px solid $primary;
   display: inline-block;
   padding: .25em .4em;
   font-size: 75%;

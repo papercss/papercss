@@ -1,34 +1,32 @@
 @charset 'UTF-8';
 
-@media screen {
-  // Settings && Mixins
-  @import 'components/config';
+/* Variables & Mixins */
+@import 'components/config';
 
-  // Individual Components
-  @import 'components/reset';
-  @import 'components/boxreset';
-  @import 'components/borders';
-  @import 'components/fonts';
-  @import 'components/shadows';
-  @import 'components/forms';
-  @import 'components/container';
-  @import 'components/flexbox';
-  @import 'components/buttons';
-  @import 'components/lists';
-  @import 'components/code';
-  @import 'components/tables';
-  @import 'components/images';
-  @import 'components/utilities';
-  @import 'components/popovers';
-  @import 'components/cards';
-  @import 'components/badges';
-  @import 'components/alerts';
-  @import 'components/tabs';
-  @import 'components/article';
-  @import 'components/modals';
-}
+/* normalize.css v7.0.0 & box reset */
+@import 'components/reset';
 
-// @todo: Add print styles? ;)
+/* Components */
+@import 'components/flexbox';
+@import 'components/borders';
+@import 'components/fonts';
+@import 'components/shadows';
+@import 'components/forms';
+@import 'components/container';
+@import 'components/buttons';
+@import 'components/lists';
+@import 'components/code';
+@import 'components/tables';
+@import 'components/images';
+@import 'components/utilities';
+@import 'components/popovers';
+@import 'components/cards';
+@import 'components/badges';
+@import 'components/alerts';
+@import 'components/tabs';
+@import 'components/article';
+@import 'components/modals';
+
 // @media print {
 //  @import 'components/print';
 // }
