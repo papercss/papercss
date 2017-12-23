@@ -1,0 +1,61 @@
+
+.border {
+  border: 2px solid $primary;
+}
+
+.border,
+.border-1,
+.child-borders>*:nth-child(6n+1) {
+  @include border-style(1);
+}
+
+.border-2,
+.child-borders>*:nth-child(6n+2) {
+  @include border-style(2);
+}
+
+.border-3,
+.child-borders>*:nth-child(6n+3) {
+  @include border-style(3);
+}
+
+.border-4,
+.child-borders>*:nth-child(6n+4) {
+  @include border-style(4);
+}
+
+.border-5,
+.child-borders>*:nth-child(6n+5) {
+  @include border-style(5);
+}
+
+.border-6,
+.child-borders>*:nth-child(6n+6) {
+  @include border-style(6);
+}
+
+.child-borders>* {
+  border: 2px solid $primary;
+}
+
+.border-white {
+  border-color: $white;
+}
+
+.border-dotted {
+  border-style: dotted;
+}
+
+.border-dashed {
+  border-style: dashed;
+}
+
+.border-thick {
+  border-width: 5px;
+}
+
+@each $colorName, $color in $colors {
+  .border-#{$colorName} {
+    border-color: $color;
+  }
+}
