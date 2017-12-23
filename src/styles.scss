@@ -1,32 +1,36 @@
 @charset 'UTF-8';
 
-/* Variables & Mixins */
-@import 'components/config';
+/* PaperCSS core */
+@import 'core/config';
+@import 'core/reset';
 
-/* normalize.css v7.0.0 & box reset */
-@import 'components/reset';
+/* Layout styling */
+@import 'layout/container';
+@import 'layout/flexbox';
+
+/* Content styling */
+@import 'content/code';
+@import 'content/fonts';
+@import 'content/images';
+@import 'content/lists';
+@import 'content/tables';
+
+/* Utilities */
+@import 'utilities/borders';
+@import 'utilities/shadows';
 
 /* Components */
-@import 'components/flexbox';
-@import 'components/borders';
-@import 'components/fonts';
-@import 'components/shadows';
-@import 'components/forms';
-@import 'components/container';
-@import 'components/buttons';
-@import 'components/lists';
-@import 'components/code';
-@import 'components/tables';
-@import 'components/images';
-@import 'components/utilities';
-@import 'components/popovers';
-@import 'components/cards';
-@import 'components/badges';
 @import 'components/alerts';
-@import 'components/tabs';
 @import 'components/article';
+@import 'components/badges';
+@import 'components/buttons';
+@import 'components/cards';
+@import 'components/forms';
 @import 'components/modals';
+@import 'components/popovers';
+@import 'components/tabs';
+@import 'components/utilities';
 
 // @media print {
-//  @import 'components/print';
+//  @import 'layout/print';
 // }
