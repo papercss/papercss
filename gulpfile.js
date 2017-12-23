@@ -11,7 +11,7 @@ gulp.task('webserver', function() {
 });
 
 gulp.task('sass', function() {
-  gulp.src('src/styles.scss')
+  gulp.src('src/**/*.scss')
     .pipe(sass.sync().on('error', sass.logError))
     .pipe(cleanCSS({format: 'beautify'}))
     .pipe(rename('paper.css'))
@@ -20,7 +20,7 @@ gulp.task('sass', function() {
 });
 
 gulp.task('watch', function () {
-  gulp.watch('src/*.scss', ['sass']);
+  gulp.watch('src/**/*.scss', ['sass']);
 });
 
 gulp.task('minify-css', () => {
@@ -29,13 +29,6 @@ gulp.task('minify-css', () => {
     .pipe(rename('paper.min.css'))
     .pipe(gulp.dest('dist'));
 });
-
-//gulp.task('components', () => {
-//  gulp.src('src/*.scss')
-//    .pipe(sass.sync().on('error', sass.logError))
-//    .pipe(cleanCSS({format: 'beautify'}))
-//    .pipe(gulp.dest('dist/components'));
-//});
 
 gulp.task('default', ['sass', 'webserver', 'watch']);
 gulp.task('build', ['sass', 'minify-css']);
