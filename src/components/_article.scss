@@ -24,13 +24,6 @@ article {
   }
 
   button {
-    @include resp(xs) {
-      margin: 0 auto;
-      display: block;
-      width: 100%;
-      margin-bottom: 1.5rem;
-    }
-
     &:not(:first-of-type) {
       margin-left: 2rem;
 

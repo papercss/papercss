@@ -15,7 +15,7 @@ button,
   @include shadow();
 
   @include resp(520px) {
-    display: block;
+    display: inline-block;
     margin: 0 auto;
     text-align: center;
     margin-bottom: 1rem;
