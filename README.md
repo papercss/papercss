@@ -40,9 +40,11 @@ There are several options available:
 
 ## Content of the framework
 
-We provide compiled CSS (`paper.css`) as well as minified CSS (`paper.min.css`). You can also use single components that are build into `papercss/dist/components`.
+We provide compiled CSS (`paper.css`) as well as minified CSS (`paper.min.css`).
 
-You can also play with original, source files, written in LESS, in `src/`.
+You can choose which components you may want to use. Only the components that get imported in `src/styles.scss` will be compoiled into `dist/paper.css`.
+
+You can also play with original, source files, written in SCSS, in `src/`.
 
 ## Documentation
 
@@ -52,11 +54,11 @@ You can also view the develop branch at [develop.getpapercss.com](https://develo
 
 ## Customizing
 
-You can customize PaperCSS easily, clone the repo, run `npm install` and make any changes to `.less` files in `src/`.
+You can customize PaperCSS easily, clone the repo, run `npm install` and make any changes to `.scss` files in `src/`.
 
-The main places you might want to make changes would be `colors.less` or `fonts.less`, where you can specify new colors or fonts for your CSS build.
+The main place you might want to make changes would be `core/_config.scss`, where you can specify new colors or fonts for your CSS build.
 
-After you make changes, be sure to build the new CSS files. Do so by running `npm run build` and get them from the `dist/` folder.
+After you make changes, be sure to build the new CSS files. Do so by running `gulp build` and get them from the `dist/` folder.
 
 ## Contributing
 

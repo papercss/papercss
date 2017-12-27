@@ -1,0 +1,44 @@
+ol {
+  list-style-type: decimal;
+  ol {
+    list-style-type: upper-alpha;
+    ol {
+      list-style-type: upper-roman;
+      ol {
+        list-style-type: lower-alpha;
+        ol {
+          list-style-type: lower-roman;
+        }
+      }
+    }
+  }
+}
+
+ul {
+  list-style: none;
+  margin-left: 0;
+  li {
+    text-indent: -7px;
+    &:before {
+      position: relative;
+      left: -7px;
+    }
+  }
+  @include li-bullet("-");
+  ul {
+    @include li-bullet("+");
+    ul {
+      @include li-bullet("~");
+      ul {
+        @include li-bullet("⤍");
+        ul {
+          @include li-bullet("⁎");
+        }
+      }
+    }
+  }
+  &.inline li {
+    display: inline;
+    margin-left: 5px;
+  }
+}

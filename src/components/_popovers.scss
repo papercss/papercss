@@ -1,6 +1,3 @@
-@import './colors.less';
-@import './borders.less';
-
 // Core popovers
 [popover-top],
 [popover-right],
@@ -11,14 +8,14 @@
 
   // Popover hover trigger
   &:hover {
-    &::after {
+    &:after {
       transition: opacity .2s ease-out;
       opacity: 1;
     }
   }
 
   // Creating popover::after element
-  &::after {
+  &:after {
     position: absolute;
     top: -6px;
     left: 50%;
@@ -27,24 +24,25 @@
     min-width: 80px;
     font-size: 0.7em;
     text-align: center;
-    color: @white;
-    background: @light-dark;
+    color: $white;
+    background: $light-dark;
     transition: opacity .25s ease-out;
     transform: translateX(-50%) translateY(-100%);
-    .border;
+    @include border-style();
+    border: 2px solid $primary;
   }
 }
 
 // Popover positioning: left, right, top, bottom
 [popover-left] {
-  &::before {
+  &:before {
     left: 0;
     top: 50%;
     margin-left: -12px;
-    transform: translatey(-50%) rotate(-90deg);
+    transform: translateY(-50%) rotate(-90deg);
   }
 
-  &::after {
+  &:after {
     content: attr(popover-left);
     left: 0;
     top: 50%;
@@ -54,14 +52,14 @@
 }
 
 [popover-right] {
-  &::before {
+  &:before {
     left: 100%;
     top: 50%;
     margin-left: 1px;
     transform: translatey(-50%) rotate(90deg);
   }
 
-  &::after {
+  &:after {
     content: attr(popover-right);
     left: 100%;
     top: 50%;
@@ -71,24 +69,24 @@
 }
 
 [popover-top] {
-  &::before {
+  &:before {
     left: 50%;
   }
 
-  &::after {
+  &:after {
     content: attr(popover-top);
     left: 50%;
   }
 }
 
 [popover-bottom] {
-  &::before {
+  &:before {
     top:100%;
     margin-top: 8px;
     transform: translateX(-50%) translatey(-100%) rotate(-180deg);
   }
 
-  &::after {
+  &:after {
     content: attr(popover-bottom);
     top: 100%;
     margin-top: 8px;

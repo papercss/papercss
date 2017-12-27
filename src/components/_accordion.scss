@@ -1,0 +1,53 @@
+@mixin transition($transition){
+    -webkit-transition: max-height $transition, padding $transition, opacity $transition;
+    -moz-transition: max-height $transition, padding $transition, opacity $transition;
+    -o-transition: max-height $transition, padding $transition, opacity $transition;
+    transition: max-height $transition, padding $transition, opacity $transition;
+}
+
+.collapsible {
+    display: flex;
+    flex-direction: column;
+    &:nth-of-type(1) {
+        border-top: 1px solid $muted-light;
+    }
+
+    .collapsible-body {
+        max-height: 0px;
+        opacity: 0;
+        overflow: hidden;
+        padding: 0rem 0.75rem;
+        margin:0;
+        background-color: lighten($white-dark,80%);
+        border-bottom: 1px solid $muted-light;        
+        @include transition(#{"0.25s ease"});
+    }
+
+    input {
+        display: none;
+    }
+
+    label {
+        display: inline-block;
+        margin: 0 0 -1px;
+        padding: 0.75rem 0.75rem;
+        font-weight: 600;
+        text-align: center;
+        color: $primary;
+        border-bottom: 1px solid $muted-light;
+    }
+
+    label:hover {
+        color: $muted;
+        cursor: pointer;
+    }
+    input:checked+label {
+        color: $primary;
+    }
+    input[id ^="collapsible"]:checked ~ div.collapsible-body {
+        opacity: 1;
+        max-height: 960px;
+        padding: 0.75rem 0.75rem;
+        margin: 0;
+    }
+}

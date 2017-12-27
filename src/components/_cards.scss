@@ -1,28 +1,27 @@
-@import './colors.less';
-@import './shadows.less';
-
 .card {
-  .shadow;
-  .shadow-hover;
-
+  @include shadow;
   position: relative;
   display: flex;
   flex-direction: column;
   word-wrap: break-word;
-  border: 2px solid @muted-light;
+  border: 2px solid $muted-light;
+
+  &:hover {
+    @include shadow(hover);
+  }
 
   .card-header,
   .card-footer {
     padding: .75rem 1.25rem;
-    background-color: @white-dark;
+    background-color: $white-dark;
   }
 
   .card-header {
-    border-bottom: 2px solid @muted-light;
+    border-bottom: 2px solid $muted-light;
   }
 
   .card-footer {
-    border-top: 2px solid @muted-light;
+    border-top: 2px solid $muted-light;
   }
 
   .card-body {
@@ -35,7 +34,7 @@
     }
 
     .card-subtitle, h5 {
-      .text-secondary;
+      @extend .text-secondary;
 
       margin-top: 0;
       margin-bottom: 0.5rem;

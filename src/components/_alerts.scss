@@ -1,0 +1,15 @@
+.alert {
+    @include border-style();
+    border: 2px solid $primary;
+    padding: 15px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+@each $colorName, $color, $color-light in $colors {
+  .alert-#{$colorName} {
+    color: $color;
+    border-color: $color;
+    background-color: $color-light;
+  }
+}
