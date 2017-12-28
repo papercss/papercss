@@ -9,7 +9,7 @@ description: PaperCSS Spacing
   <div class="sm-3 col margin-top-small">Margin-top-small</div>
 </div>
 
-#### Code: 
+#### Code:
 
 ```html
 <div class="row flex-spaces child-borders">
@@ -27,7 +27,7 @@ description: PaperCSS Spacing
   <div class="sm-3 col padding-left-large">Padding-left-large</div>
 </div>
 
-#### Code: 
+#### Code:
 
 ```html
 <div class="row flex-spaces child-borders">

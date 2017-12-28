@@ -35,3 +35,21 @@ Insprired by [Imprefect Buttons](https://codepen.io/tmrDevelops/pen/VeRvKX)
 <button class="disabled">Disabled</button>
 <button disabled>Disabled</button>
 ```
+
+### Colors
+
+<input type="button" class="paper-btn btn-primary" value="Primary"/>
+<input type="button" class="btn-secondary" value="Secondary"/>
+<button class="btn-success">Success</button>
+<button class="btn-warning">Warning</button>
+<button class="btn-danger">Danger</button>
+
+#### Code:
+
+```html
+<input type="button" class="paper-btn btn-primary" value="Primary"/>
+<input type="button" class="btn-secondary" value="Secondary"/>
+<button class="btn-success">Success</button>
+<button class="btn-warning">Warning</button>
+<button class="btn-danger">Danger</button>
+```

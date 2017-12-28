@@ -13,7 +13,7 @@ gulp.task('sass', function() {
     .pipe(cleanCSS({format: 'beautify'}))
     .pipe(rename('paper.css'))
     .pipe(gulp.dest('dist'))
-    .pipe(gulp.dest('documentation/static'));
+    .pipe(gulp.dest('docs/static/assets'));
 });
 
 gulp.task('watch', function () {
@@ -22,7 +22,7 @@ gulp.task('watch', function () {
 
 gulp.task('hugo-server', function (cb) {
   let hugo_process = exec(
-    hugo, ['server', '--source=documentation', '--disableFastRender'],
+    hugo, ['server', '--source=docs', '--disableFastRender'],
     function (err, stdout, stderr) {
       console.log(stderr);
       return err ? cb(err) : cb();
@@ -34,7 +34,7 @@ gulp.task('hugo-server', function (cb) {
 
 gulp.task('hugo-build', function (cb) {
   let hugo_process = exec(
-    hugo, ['--source=documentation'],
+    hugo, ['--source=docs'],
     function (err, stdout, stderr) {
       console.log(stderr);
       return err ? cb(err) : cb();
@@ -49,7 +49,7 @@ gulp.task('minify-css', () => {
   .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
   .pipe(rename('paper.min.css'))
   .pipe(gulp.dest('dist'))
-  .pipe(gulp.dest('documentation/static'));
+  .pipe(gulp.dest('docs/static/assets'));
 });
 
 gulp.task('default', ['sass','watch','hugo-server']);

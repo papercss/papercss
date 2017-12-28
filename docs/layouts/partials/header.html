@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+
+{{ partial "head/head" . }}
+
+<body>
+  <div class="container paper">
+    <div class="paper">
+      <div class="demo-title">
+        <div class="row flex-center">
+          <div class="text-center">
+            <h1>{{ .Site.Title }}</h1>
+            <h3>{{ .Site.Params.info.description }}</h3>
+          </div>
+        </div>
+
+        {{ partial "nav/main" . }}

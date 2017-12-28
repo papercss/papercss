@@ -52,6 +52,15 @@ description: PaperCSS Lists
   <li>And now we're are the top!</li>
 </ul>
 
+### Inline List
+
+<ul class="inline">
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+  <li>Item 4</li>
+</ul>
+
 #### Codes:
 
 ```html
