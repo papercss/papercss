@@ -1,9 +1,12 @@
 <div class='sm-12 md-4 col sidebar'>
     {{ range .Site.Sections }}
     <div class='paper'>
+      <h3 class='sidebar-title' style='text-align:center'>
+        <a href='/docs'>PaperCSS Documentation</a>
+      </h3>
       <div class='row'>
         {{ range .Sections }}
-        <div class='collapsible'>
+        <div class='collapsible full-width'>
           <input id='collapsible-{{ .Title | urlize }}' type='radio' name='collapsible'>
           <label for="collapsible-{{ .Title | urlize }}">{{ .Title }}</label>
           <div class="collapsible-body">

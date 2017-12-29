@@ -37,6 +37,10 @@ img.no-responsive {
 .demo-title:hover + .to-top {
     opacity: 0
 }
-.sidebar .collapsible {
+.sidebar-title a {
+  color: inherit;
+  background: none;
+}
+.collapsible.full-width {
   width: 100%;
 }
