@@ -183,6 +183,11 @@ $shadow-hover: 2px 8px 8px -5px $shadow-color-hover !default;
   transform: translate($x, $y);
 }
 
+/*
+  Add global transition styles to selector
+  @param string
+  @default all | 235ms | ease-in-out | 0
+*/
 @mixin transition($name:all, $duration:235ms, $animation:ease-in-out, $delay:0s){
   -webkit-transition: $name $duration $animation $delay;
   -moz-transition: $name $duration $animation $delay;
