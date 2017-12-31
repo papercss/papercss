@@ -3,7 +3,7 @@ button,
 [type="button"] {
   align-self: center;
   background: transparent;
-  transition: all .5s ease, background-color .1s ease;
+  @include transition();
   color: $primary;
   display: inline;
   outline: none;
