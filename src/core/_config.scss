@@ -170,17 +170,22 @@ $shadow-hover: 2px 8px 8px -5px $shadow-color-hover !default;
   }
 }
 
-@mixin transition-transform($transition) {
-  -webkit-transition: -webkit-transform $transition;
-  -moz-transition: -moz-transform $transition;
-  -o-transition: -o-transform $transition;
-  transition: transform $transition;
-}
-
 @mixin translate($x, $y) {
   -webkit-transform: translate($x, $y);
   -ms-transform: translate($x, $y);
   transform: translate($x, $y);
+}
+
+/*
+  Add global transition styles to selector
+  @param string
+  @default all | 235ms | ease-in-out | 0
+*/
+@mixin transition($name:all, $duration:235ms, $animation:ease-in-out, $delay:0s){
+  -webkit-transition: $name $duration $animation $delay;
+  -moz-transition: $name $duration $animation $delay;
+  -o-transition: $name $duration $animation $delay;
+  transition: $name $duration $animation $delay;
 }
 
 /**
@@ -193,15 +198,15 @@ $shadow-hover: 2px 8px 8px -5px $shadow-color-hover !default;
     box-shadow: $shadow-hover;
     @include translate(0, 2px);
   } @else if $type == small {
-    transition: all .5s ease;
+    @include transition($animation: ease);
     box-shadow: $shadow-small;
   } @else if $type == regular {
-    transition: all .5s ease;
+    @include transition($animation: ease);
     box-shadow: $shadow-regular;
   } @else if $type == large {
-    transition: all .5s ease;
+    @include transition($animation: ease);
     box-shadow: $shadow-large;
   } @else {
-    @error "@mixin shadow(input) does not exist"
+    @error "wrong $type. available types: small | regular | large | hover"
   }
 }

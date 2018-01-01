@@ -26,7 +26,7 @@
     text-align: center;
     color: $white;
     background: $light-dark;
-    transition: opacity .25s ease-out;
+    @include transition(opacity);
     transform: translateX(-50%) translateY(-100%);
     @include border-style();
     border: 2px solid $primary;
