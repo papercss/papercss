@@ -12,11 +12,13 @@
       <input id='collapsible-section-{{ .Title | urlize }}' type='checkbox' name='collapsible-section' checked>
       <label for="collapsible-section-{{ .Title | urlize }}">{{ .Title }}</label>
       <div class='collapsible-body'>
-        <div class='row'>
+        <ul>
         {{ range .Pages }}
-          {{ .Render "li" }}
+          <li>
+            <a href='{{ .Permalink | relURL }}'>{{- .Title -}}</a>
+          </li>
         {{ end }}
-        </div>
+        </ul>
       </div>
     </div>
   {{ end }}
