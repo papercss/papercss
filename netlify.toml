@@ -1,0 +1,6 @@
+[build]
+publish = "public"
+command = "hugo --source=docs"
+
+[build.environment]
+HUGO_VERSION = "0.30"
