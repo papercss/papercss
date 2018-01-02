@@ -1,0 +1,13 @@
+<div class='col sm-6 md-4'>
+  <div class='card'>
+    <div class="card-body">
+      <h4 class="card-title">{{- .Title -}}</h4>
+      <div class="card-text">
+        {{- .Params.description -}}
+      </div>
+      <a class='paper-btn btn-block' href='{{ .Permalink | relURL }}'>
+        Let's see!
+      </a>
+    </div>
+  </div>
+</div>

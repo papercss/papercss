@@ -1,0 +1,12 @@
+{{- $title := ( .Title ) -}}
+{{- $siteTitle := ( .Site.Title ) -}}
+{{- $title404 := ( .Site.Params.info.title404 | default $title ) -}}
+{{- $sep := ( .Site.Params.seo.titleSeparator | default "•" ) -}}
+
+{{- if .IsHome -}}
+  {{ print $siteTitle " " $sep " " $.Site.Params.info.description }}
+{{- else if eq .Kind "404" -}}
+  {{ $title404 }} {{ $sep }} {{ $siteTitle }}
+{{- else -}}
+    {{ $title }} {{ $sep }} {{ $siteTitle }}
+{{- end -}}

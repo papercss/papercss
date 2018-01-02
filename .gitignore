@@ -3,3 +3,5 @@ npm-debug.log
 /dist
 /tests/node_modules
 .DS_Store
+/public
+.vscode
