@@ -1,6 +1,9 @@
 body {
     background-image: url("/img/geometry2.png")
 }
+#top {
+    max-width: 1440px;
+}
 .demo .row .col {
     background-color: #eee;
 }
