@@ -28,7 +28,7 @@
     position: fixed;
     z-index: 11;
     max-width: 960px;
-    @include translate(0, -500%);
+    @include translate(0, -5000%);
     @include transition(transform);
 
     @include resp(medium) {
