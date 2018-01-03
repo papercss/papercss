@@ -22,10 +22,10 @@ This can be used to implement modals along with features like title, subtitle, t
 #### Code:
 
 ```html
-<div class="row flex-space child-borders">
+<div class="row flex-spaces child-borders">
   <a href="modal-1" class="paper-btn margin">Open Modal!</a>
 </div>
-<div class="modal row flex-space" id="modal-1">
+<div class="modal row flex-spaces" id="modal-1">
   <div class="modal-body">
     <a class="btn-close" href="#modals">x</a>
     <h4 class="modal-title">Modal Title</h4>
@@ -46,7 +46,7 @@ This can be used to implement modals along with features like title, subtitle, t
     <a href="#modals" class="btn-close">x</a>
     <h4 class="modal-title">Modal Title</h4>
     <h5 class="modal-subtitle">Modal Subtitle</h5>
-    <p class="modal-text">This is an example of modal which is implemented with pure CSS! :D</p>
+    <p class="modal-text">This is another example of modal which is implemented with pure CSS! :D</p>
     <a class="modal-link" href="#modals">OK</a>
     <a class="modal-link" href="#modals">Close</a>
   </div>

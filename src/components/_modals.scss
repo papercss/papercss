@@ -28,14 +28,15 @@
     position: fixed;
     z-index: 11;
     max-width: 960px;
+    @include translate(0, -5000%);
+    @include transition(transform);
+
     @include resp(medium) {
       max-width: 85%;
     }
     @include resp(xsmall) {
       max-width: 90%;
     }
-    @include translate(0, -500%);
-    @include transition-transform(0.3s ease-out);
   }
 
   .btn-close{

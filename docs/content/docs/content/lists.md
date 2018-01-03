@@ -89,4 +89,7 @@ description: PaperCSS Lists
 </ol>
 
 <!-- Replace ol with ul for unordered lists. Go up to 5 levels deep! -->
+
+<!-- For inline lists -->
+<ul class="inline">...</ul>
 ```

@@ -1,7 +1,11 @@
 /node_modules
 npm-debug.log
-/dist
 /tests/node_modules
 .DS_Store
 /public
 .vscode
+
+# Ignore compiled CSS
+/docs/static/assets/paper.css
+/docs/static/assets/paper.min.css
+/dist

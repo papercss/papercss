@@ -25,6 +25,14 @@ description: PaperCSS Forms
   <input type="text" placeholder="Disabled" id="paperInputs4" disabled>
 </div>
 <div class="form-group">
+  <label>Large Input</label>
+  <textarea placeholder="Large input"></textarea>
+</div>
+<div class="form-group">
+    <label>No Resize</label>
+    <textarea class="no-resize" placeholder="No resize"></textarea>
+</div>
+<div class="form-group">
   <label for="paperSelects1">Select</label>
   <select id="paperSelects1">
     <option value="1">Option 1</option>
@@ -81,6 +89,14 @@ description: PaperCSS Forms
 <div class="form-group">
   <label for="paperInputs4">Disabled</label>
   <input type="text" placeholder="Disabled" id="paperInputs4" disabled>
+</div>
+<div class="form-group">
+  <label>Large Input</label>
+  <textarea placeholder="Large input"></textarea>
+</div>
+<div class="form-group">
+  <label>No Resize</label>
+  <textarea class="no-resize" placeholder="No resize"></textarea>
 </div>
 <div class="form-group">
   <label for="paperSelects1">Select</label>

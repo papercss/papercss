@@ -6,6 +6,7 @@ publishDir = "../public"
 
 # Syntax Highlighting ( https://gohugo.io/content-management/syntax-highlighting/ )
 pygmentsCodefences = true
+pygmentsStyle = "emacs"
 
 [params.info]
 description = "the less formal CSS framework"
