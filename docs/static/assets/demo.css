@@ -1,0 +1,49 @@
+body {
+    background-image: url("/img/geometry2.png")
+}
+#top {
+    max-width: 1440px;
+}
+.demo .row .col {
+    background-color: #eee;
+}
+.demo .row .col:nth-child(even) {
+    background-color: #ddd;
+}
+.docs {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.summary a {
+    color: #41403e;
+}
+img.no-responsive {
+    max-width: -webkit-fill-available;
+    max-width: -moz-available;
+}
+.to-top {
+    opacity: 1;
+    display: inline-block;
+    padding: 1em;
+    position: fixed;
+    bottom: 1em;
+    right: 1em
+}
+.to-top .paper-btn {
+    padding: .6em 1em;
+    background: #fff;
+    border-top-left-radius: 185px 160px;
+    border-top-right-radius: 200px 195px;
+    border-bottom-right-radius: 160px 195px;
+    border-bottom-left-radius: 185px 190px
+}
+.demo-title:hover + .to-top {
+    opacity: 0
+}
+.sidebar-title a {
+  color: inherit;
+  background: none;
+}
+.collapsible.full-width {
+  width: 100%;
+}

@@ -1,0 +1,31 @@
+{{ partial "header" . }}
+
+<div class='section'>
+  <h2>{{ .Title }}</h2>
+
+  {{ .Content }}
+
+  <div class='row flex-spaces'>
+
+  {{ range .Sections }}
+    <div class='collapsible full-width'>
+      <input id='collapsible-section-{{ .Title | urlize }}' type='checkbox' name='collapsible-section' checked>
+      <label for="collapsible-section-{{ .Title | urlize }}">{{ .Title }}</label>
+      <div class='collapsible-body'>
+        <div class="row child-borders">
+        {{ range .Pages }}
+          <a class="paper-btn margin" href='{{ .Permalink | relURL }}'>{{- .Title -}}</a>
+        {{ end }}
+      </div>
+      </div>
+    </div>
+  {{ end }}
+
+  {{ range .Pages }}
+    {{ .Render "li" }}
+  {{ end }}
+
+  </div>
+</div>
+
+{{ partial "footer" . }}

@@ -40,9 +40,11 @@ There are several options available:
 
 ## Content of the framework
 
-We provide compiled CSS (`paper.css`) as well as minified CSS (`paper.min.css`). You can also use single components that are build into `papercss/dist/components`.
+We provide compiled CSS (`paper.css`) as well as minified CSS (`paper.min.css`).
 
-You can also play with original, source files, written in LESS, in `src/`.
+You can choose which components you may want to use. Only the components that get imported in `src/styles.scss` will be compoiled into `dist/paper.css`.
+
+You can also play with original, source files, written in SCSS, in `src/`.
 
 ## Documentation
 
@@ -52,11 +54,11 @@ You can also view the develop branch at [develop.getpapercss.com](https://develo
 
 ## Customizing
 
-You can customize PaperCSS easily, clone the repo, run `npm install` and make any changes to `.less` files in `src/`.
+You can customize PaperCSS easily, clone the repo, run `npm install` and make any changes to `.scss` files in `src/`.
 
-The main places you might want to make changes would be `colors.less` or `fonts.less`, where you can specify new colors or fonts for your CSS build.
+The main place you might want to make changes would be `core/_config.scss`, where you can specify new colors or fonts for your CSS build.
 
-After you make changes, be sure to build the new CSS files. Do so by running `npm run build` and get them from the `dist/` folder.
+After you make changes, be sure to build the new CSS files. Do so by running `gulp build` and get them from the `dist/` folder.
 
 ## Contributing
 
@@ -72,20 +74,20 @@ Once you are ready to contribute, here the workflow you should follow:
 - Create your new branch where you will write your code: `git checkout -b feature-thing develop`. Please be sure to prepend your new feature branch with "feature-"
 - Start the local web-server: `gulp` or `npm start`
 - Once done commit and push your changes to your fork.
-- Open a pull request on the origin papercss repo. Be sure to include any picture and/or details on what you have done, it will helps reviewers **a lot**!
+- Open a pull request on the origin papercss repo. Be sure to include any pictures and/or details on what you have done, it will help reviewers **a lot**!
 - When your changes are approved, they will be merged into the `develop` branch, which will finally be merged into the `master` branch when we reach a milestone in terms of features and bug fixes. Check out [Vincent Driessen's blog post](http://nvie.com/posts/a-successful-git-branching-model/), [GitFlow](https://datasift.github.io/gitflow/IntroducingGitFlow.html), or [#27](https://github.com/rhyneav/papercss/issues/27) for more details on how this works.
 
 Note: If you have a hotfix (usually typos and minor documentation tweaks), create your hotfix branch off of the master branch instead of develop: `git checkout -b hotfix-thing master`. The changes will be merged into both master and develop to keep the branches consistent.
 
 ## About
 
-I got tired of mODerN STylEs and clean pages on the internet. I also wanted to learn more about Flexbox and Less. So I made PaperCSS to solve these two challenges of mine :)
+PaperCSS was originally made by [@rhyneav](https://github.com/rhyneav) to be something different than the typical mODerN STylEs and clean pages found in every other CSS framework. It was built with LESS and deployed on a single index.html page before being open sourced. It has since evolved; The CSS source has been rewritten in SCSS and the documentation is now built with Hugo (all thanks to some [wonderful contributors](https://github.com/papercss/papercss/graphs/contributors)). In addition to the original creator, it is maintained by [@Fraham](https://github.com/Fraham) and [@TotomInc](https://github.com/TotomInc).
 
 The goal of PaperCSS is to be as minimal as possible when adding classes. For example, a button should just look like a paper button. There shouldn't be a need to add a class such as `paper-button`. Because of this, adding PaperCSS to a markdown generated page should instantly paper-ize it.
 
-While I'm proud of how it's turned out so far, I think there's a lot that can still be done to make it better. Such things as refactoring, adding more utility classes and more border types (like dashed/dotted) could really polish off this framework. That's why it's open sourced and available for pull requests!
+Feel free to use it for wireframes, webapps, blogs, or whatever else you can think of! 
 
-If you are new to Git or Less, this would be a great project to get your feet wet with. I'd be happy to help walk you through the pull request process.
+If you are new to Git or SCSS, this would be a great project to get your feet wet with. I'd be happy to help walk you through the pull request process.
 
 ## Credits and license
 

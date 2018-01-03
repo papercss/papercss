@@ -1,0 +1,79 @@
+.modal{
+
+  &:before{
+    content: "";
+    display: none;
+    background: rgba(black,.6);
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 10;
+  }
+
+  &:target{
+    &:before{
+      display: flex;
+    }
+    .modal-body{
+      @include translate(0, 0);
+      top: 20%;
+    }
+  }
+
+  .modal-body{
+    flex: 1 1 auto;
+    padding: 1.25rem;
+    background: $white;
+    border: 2px solid $muted-light;
+    word-wrap: break-word;
+    position: fixed;
+    z-index: 11;
+    max-width: 960px;
+    @include translate(0, -5000%);
+    @include transition(transform);
+
+    @include resp(medium) {
+      max-width: 85%;
+    }
+    @include resp(xsmall) {
+      max-width: 90%;
+    }
+  }
+
+  .btn-close{
+    color: $primary-light;
+    font-size: 30px;
+    text-decoration: none;
+    position: absolute; right: 0; top: 0;
+    @extend .margin;
+    background: inherit;
+    &:hover{
+      color: $muted;
+    }
+  }
+
+  .modal-title, h4 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  .modal-subtitle, h5 {
+    @extend .text-secondary;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  .modal-text, p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+
+  .modal-link + .modal-link,
+  a + a {
+    margin-left: 1.25rem;
+  }
+
+  a button {
+    text-decoration: none;
+    background: $white;
+  }
+}
