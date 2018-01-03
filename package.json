@@ -7,7 +7,8 @@
     "start": "node node_modules/gulp/bin/gulp.js",
     "build": "node node_modules/gulp/bin/gulp.js build",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "gulp postinstall"
+    "postinstall": "gulp postinstall",
+    "stylelint": "node_modules/stylelint/bin/stylelint.js 'src/**/*.scss'; exit 0"
   },
   "repository": {
     "type": "git",
@@ -64,7 +65,9 @@
     "simplebuild-jshint": "^1.3.0",
     "simplebuild-karma": "^1.0.0",
     "stylelint": "8.4.0",
+    "stylelint-config-sass-guidelines": "4.0.1",
     "stylelint-config-standard": "18.0.0",
+    "stylelint-order": "0.8.0",
     "stylelint-scss": "2.2.0",
     "webpack-dev-server": "2.7.1"
   }

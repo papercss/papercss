@@ -1,6 +1,11 @@
 {
-  "extends": "stylelint-config-standard",
+  "extends": "stylelint-config-sass-guidelines",
   "plugins": [
     "stylelint-scss"
-  ]
+  ],
+  "rules": {
+    "max-nesting-depth": 5,
+    "property-no-vendor-prefix": null,
+    "value-no-vendor-prefix": null
+  }
 }
