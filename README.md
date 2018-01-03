@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://getpapercss.com">
-    <img src="https://github.com/papercss/papercss/blob/master/img/favicon.ico?raw=true" alt="PaperCSS logo">
+    <img src="https://raw.githubusercontent.com/papercss/papercss/master/docs/static/favicon.ico?raw=true" alt="PaperCSS logo">
   </a>
 
   <h3 align="center">PaperCSS</h3>
@@ -85,7 +85,7 @@ PaperCSS was originally made by [@rhyneav](https://github.com/rhyneav) to be som
 
 The goal of PaperCSS is to be as minimal as possible when adding classes. For example, a button should just look like a paper button. There shouldn't be a need to add a class such as `paper-button`. Because of this, adding PaperCSS to a markdown generated page should instantly paper-ize it.
 
-Feel free to use it for wireframes, webapps, blogs, or whatever else you can think of! 
+Feel free to use it for wireframes, webapps, blogs, or whatever else you can think of!
 
 If you are new to Git or SCSS, this would be a great project to get your feet wet with. I'd be happy to help walk you through the pull request process.
 
