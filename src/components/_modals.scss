@@ -11,7 +11,7 @@
   z-index: 12;
   flex: 1 1 auto;
   word-wrap: break-word;
-  @include transition(opacity, 130ms);
+  @include transition(opacity);
 
   // modal background
   &-bg {
@@ -83,7 +83,7 @@
     margin-left: 1.25rem;
   }
 
-  label[for],
+  label[for]:not(.modal-bg),
   .paper-btn {
     text-decoration: none;
     background: $white;
