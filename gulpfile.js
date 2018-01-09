@@ -5,7 +5,8 @@ const gulp = require('gulp'),
       cleanCSS = require('gulp-clean-css'),
       rename = require('gulp-rename'),
       exec = require('child_process').execFile,
-      hugo = require('hugo-bin')
+      optional = require('optional'),
+      hugo = optional('hugo-bin')
 
 gulp.task('sass', function() {
   gulp.src('src/**/*.scss')
@@ -54,3 +55,4 @@ gulp.task('minify-css', () => {
 
 gulp.task('default', ['sass','watch','hugo-server']);
 gulp.task('build', ['sass','minify-css','hugo-build']);
+gulp.task('postinstall', ['sass','minify-css']);

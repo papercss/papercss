@@ -7,7 +7,7 @@
     "start": "node node_modules/gulp/bin/gulp.js",
     "build": "node node_modules/gulp/bin/gulp.js build",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "gulp build"
+    "postinstall": "gulp postinstall"
   },
   "repository": {
     "type": "git",
@@ -24,12 +24,13 @@
     "gulp-clean-css": "3.9.0",
     "gulp-connect": "5.0.0",
     "gulp-plumber": "1.1.0",
-    "gulp-rename": "1.2.2"
+    "gulp-rename": "1.2.2",
+    "gulp-sass": "^3.1.0",
+    "optional": "^0.1.4"
   },
   "devDependencies": {
     "browserify": "^14.1.0",
     "chai": "^4.1.2",
-    "gulp-sass": "^3.1.0",
     "http-server": "^0.9.0",
     "gulp-less": "3.3.2",
     "gulp-plumber": "1.1.0",
