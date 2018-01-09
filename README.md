@@ -91,6 +91,6 @@ If you are new to Git or SCSS, this would be a great project to get your feet we
 
 ## Credits and license
 
-Code and documentation under [ISC license](https://github.com/papercss/papercss/blob/master/license∏).
+Code and documentation under [ISC license](https://github.com/papercss/papercss/blob/master/license).
 
 Shout out to Tiffany Rayside for creating Imperfect Buttons, which was an inspiration for this project. https://codepen.io/tmrDevelops/pen/VeRvKX
