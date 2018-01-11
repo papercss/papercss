@@ -5,6 +5,8 @@
   flex-direction: column;
   word-wrap: break-word;
   border: 2px solid $muted-light;
+  backface-visibility: hidden;
+  will-change: transform;
 
   &:hover {
     @include shadow(hover);
