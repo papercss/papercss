@@ -170,6 +170,13 @@ $shadow-hover: 2px 8px 8px -5px $shadow-color-hover !default;
   }
 }
 
+/*
+  Add transform: translate() with browser prefixes.
+  Same syntax for translate() and translate3d()
+  To get 3D add a $z value and set 'true'
+  @param string | boolean
+  @default 0 | false
+*/
 @mixin translate($x, $y, $z: 0, $transform3d: false) {
   @if $transform3d {
     -webkit-transform: translate3d($x, $y, $z);
