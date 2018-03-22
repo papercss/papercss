@@ -42,7 +42,7 @@ There are several options available:
 
 We provide compiled CSS (`paper.css`) as well as minified CSS (`paper.min.css`).
 
-You can choose which components you may want to use. Only the components that get imported in `src/styles.scss` will be compoiled into `dist/paper.css`.
+You can choose which components you may want to use. Only the components that get imported in `src/styles.scss` will be compiled into `dist/paper.css`.
 
 You can also play with original, source files, written in SCSS, in `src/`.
 
