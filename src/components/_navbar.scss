@@ -1,0 +1,107 @@
+html, body {
+  margin: 40px 0;
+  padding: 0;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #41403e;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+nav {
+  display: flex;
+  z-index: 100;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 1.0);
+}
+nav.split-nav {
+  justify-content: space-between;
+}
+nav.fixed {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+nav div {
+  margin: 0 20px;
+}
+nav ul.inline {
+  padding: 0;
+}
+nav ul.inline li {
+  display: inline-block;
+  margin: 0 10px;
+}
+nav a {
+  padding-bottom: .1em;
+  background-image: none;
+  border-bottom: 5px solid #41403e;
+  border-bottom-left-radius: 15px 3px;
+  border-bottom-right-radius: 15px 5px;
+  color: #41403e;
+}
+nav a:hover {
+  border-bottom: 5px solid rgba(65, 64, 62, 0.5);
+}
+nav ul.inline li a {
+  font-size: 1.3em;
+}
+nav ul.inline li:before {
+  content: "";
+}
+.nav-brand {
+  margin: 0;
+  margin-bottom: .2em;
+}
+
+@media (min-width: 53em) {
+  nav .collapsible .collapsible-body {
+    display: contents;
+  }
+}
+nav .collapsible input[id^=collapsible]:checked ~ div.collapsible-body {
+  opacity: 1;
+  max-height: 960px;
+  padding: 0;
+  margin: 0;
+}
+nav .collapsible:nth-of-type(1),
+nav .collapsible .collapsible-body {
+  border: none;
+}
+nav div.collapsible-body {
+  padding: none !important;
+}
+nav .collapsible label {
+  padding: 0;
+}
+nav .btn-mobile {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 1.5em;
+  margin-top: 1em;
+  display: none;
+  background-color: white;
+}
+@media (max-width: 62em) {
+  nav ul {
+    text-align: center;
+  }
+}
+@media (max-width: 53em) {
+  nav {
+    display: block;
+  }
+  nav ul.inline li {
+    display: block;
+    margin: 1em 0;
+  }
+  nav .btn-mobile {
+    display: block !important;
+  }
+}
