@@ -24,3 +24,9 @@ before_script:
     - gulp build
 
 script: "./jake.sh loose=true capture=Firefox"
+
+before_install:
+  - npm i -g npm@latest
+
+install:
+  - npm ci
