@@ -48,6 +48,7 @@ nav {
   ul.inline {
     padding: 0;
     margin-bottom: 0;
+    margin-top: 10px;
   }
   ul.inline li {
     display: inline-block;
@@ -71,8 +72,11 @@ nav {
     content: "";
   }
   .nav-brand {
-    margin: 0;
-    margin-bottom: .2rem;
+    h1, h2, h3,
+    h4, h5, h6, {
+      margin: 0;
+      margin-bottom: .2rem;
+    }
   }
 
   .collapsible input[id^=collapsible]:checked ~ div.collapsible-body {
@@ -97,22 +101,23 @@ nav {
     top: 0;
     right: 0;
     margin-right: 1.5rem;
-    margin-top: 1rem;
+    // margin-top: 1rem;
+    margin-top: .01rem;
     display: none;
     background-color: $main-background;
   }
 }
-@media (min-width: 53rem) {
+@include resp(null, $small-screen) {
   nav .collapsible .collapsible-body {
-    display: contents;
+    display: contents !important;
   }
 }
-@media (max-width: 62rem) {
+@include resp(medium) {
   nav ul {
     text-align: center;
   }
 }
-@media (max-width: 53rem) {
+@include resp(small) {
   nav {
     display: block;
   }
