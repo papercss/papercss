@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rhyneav/papercss.git"
+    "url": "git+https://github.com/papercss/papercss.git"
   },
   "author": "Rhyne Vlaservich <rhyneav@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/rhyneav/papercss/issues"
+    "url": "https://github.com/papercss/papercss/issues"
   },
-  "homepage": "https://github.com/rhyneav/papercss#readme",
+  "homepage": "https://www.getpapercss.com",
   "dependencies": {
     "gulp": "3.9.1",
     "gulp-clean-css": "3.9.0",
@@ -56,6 +56,7 @@
     "npm": "^5.3.0",
     "object-merge": "^2.5.1",
     "os": "^0.1.1",
+    "pre-commit": "^1.2.2",
     "procfile": "^0.1.1",
     "quixote": "^0.14.0",
     "request": "^2.83.0",
@@ -70,5 +71,8 @@
     "stylelint-order": "0.8.0",
     "stylelint-scss": "2.2.0",
     "webpack-dev-server": "2.7.1"
-  }
+  },
+  "pre-commit": [
+    "stylelint"
+  ]
 }

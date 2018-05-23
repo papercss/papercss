@@ -21,6 +21,7 @@ install:
   - npm ci
 
 before_script:
+    - npm run stylelint
     - "sh -e /etc/init.d/xvfb start"
     - sleep 3
     - fluxbox >/dev/null 2>&1 &
@@ -28,6 +29,5 @@ before_script:
     - chmod +x ./tests/build/scripts/run_jake.sh
     - export DISPLAY=:99.0
     - gulp build
-    - npm run stylelint
 
 script: "./jake.sh loose=true capture=Firefox"
