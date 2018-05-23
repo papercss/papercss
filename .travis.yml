@@ -14,6 +14,12 @@ addons:
     packages:
      - google-chrome-stable fluxbox
 
+before_install:
+  - npm install -g npm@5.10.0
+
+install:
+  - npm ci
+
 before_script:
     - "sh -e /etc/init.d/xvfb start"
     - sleep 3
@@ -22,11 +28,6 @@ before_script:
     - chmod +x ./tests/build/scripts/run_jake.sh
     - export DISPLAY=:99.0
     - gulp build
+    - npm run stylelint
 
 script: "./jake.sh loose=true capture=Firefox"
-
-before_install:
-  - npm i -g npm@latest
-
-install:
-  - npm ci
