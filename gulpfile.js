@@ -6,7 +6,7 @@ const gulp = require('gulp'),
       rename = require('gulp-rename'),
       exec = require('child_process').execFile,
       optional = require('optional'),
-      hugo = optional('hugo-bin')
+      hugo = optional('hugo-bin'),
       gulpStylelint = require('gulp-stylelint');
 
 gulp.task('sass', function() {
