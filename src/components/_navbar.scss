@@ -3,45 +3,49 @@
 //   padding: 0;
 // }
 
-.bar1, .bar2, .bar3 {
-  width: 2rem;
-  height: .3rem;
-  background-color: $primary;
-  margin: 6px 0;
-  transition: 0.4s;
-}
-nav {
-  .collapsible input[id^=collapsible]:checked + button .bar1 {
-    -webkit-transform: rotate(-45deg) translate(-9px, 7px);
-    transform: rotate(-45deg) translate(-9px, 7px);
-  }
-  .collapsible input[id^=collapsible]:checked + button .bar2 {
-    opacity: 0;
-  }
-  .collapsible input[id^=collapsible]:checked + button .bar3 {
-    -webkit-transform: rotate(45deg) translate(-8px, -9px);
-    transform: rotate(45deg) translate(-8px, -9px);
-  }
-}
-
 nav {
   display: flex;
   z-index: 100;
   width: 100%;
   background-color: $main-background;
   padding: .3rem;
-}
-nav.split-nav {
-  justify-content: space-between;
-}
-nav.fixed {
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-}
 
-nav {
+  @include resp(small) {
+    display: block;
+  }
+
+  .bar1, .bar2, .bar3 {
+    width: 2rem;
+    height: .3rem;
+    background-color: $primary;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+
+  .collapsible input[id^=collapsible]:checked + button {
+    .bar1 {
+      -webkit-transform: rotate(-45deg) translate(-9px, 7px);
+      transform: rotate(-45deg) translate(-9px, 7px);
+    }
+    .bar2 {
+      opacity: 0;
+    }
+    .bar3 {
+      -webkit-transform: rotate(45deg) translate(-8px, -9px);
+      transform: rotate(45deg) translate(-8px, -9px);
+    }
+  }
+
+  &.split-nav {
+    justify-content: space-between;
+  }
+  &.fixed {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+  }
+
   div {
     margin: 0 1rem;
   }
@@ -53,6 +57,11 @@ nav {
   ul.inline li {
     display: inline-block;
     margin: 0 .5rem;
+
+    @include resp(small) {
+      display: block;
+      margin: 1rem 0;
+    }
   }
   a {
     padding-bottom: .1rem;
@@ -71,6 +80,11 @@ nav {
   ul.inline li:before {
     content: "";
   }
+  ul {
+    @include resp(medium) {
+      text-align: center;
+    }
+  }
   .nav-brand {
     h1, h2, h3,
     h4, h5, h6, {
@@ -88,6 +102,10 @@ nav {
   .collapsible:nth-of-type(1),
   .collapsible .collapsible-body {
     border: none;
+
+    @include resp(null, $small-screen) {
+      display: contents !important;
+    }
   }
   div.collapsible-body {
     padding: none !important;
@@ -105,28 +123,8 @@ nav {
     margin-top: .01rem;
     display: none;
     background-color: $main-background;
-  }
-}
-@include resp(null, $small-screen) {
-  nav .collapsible .collapsible-body {
-    display: contents !important;
-  }
-}
-@include resp(medium) {
-  nav ul {
-    text-align: center;
-  }
-}
-@include resp(small) {
-  nav {
-    display: block;
-  }
-  nav {
-    ul.inline li {
-      display: block;
-      margin: 1rem 0;
-    }
-    .btn-mobile {
+
+    @include resp(small) {
       display: block !important;
     }
   }
