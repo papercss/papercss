@@ -1,6 +1,6 @@
 $numberOfColumns: 12;
 
-@mixin create-flex-classes($colName, $breakpoint: 0px) {
+@mixin create-flex-classes($colName, $breakpoint: 0) {
   @include resp($min: $breakpoint) {
     @for $i from 1 through $numberOfColumns {
       .#{$colName}-#{$i} {
@@ -15,59 +15,65 @@ $numberOfColumns: 12;
 }
 
 .row {
-  margin-right: auto;
-  margin-left: auto;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: horizontal;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
   -webkit-flex-flow: row wrap;
   -ms-flex-flow: row wrap;
   flex-flow: row wrap;
   margin-bottom: 1rem;
+  margin-left: auto;
+  margin-right: auto;
 
   &.flex-right {
     -webkit-box-pack: end;
-    -webkit-justify-content: flex-end;
     -ms-flex-pack: end;
+    -webkit-justify-content: flex-end;
     justify-content: flex-end;
   }
+
   &.flex-center {
     -webkit-box-pack: center;
-    -webkit-justify-content: center;
     -ms-flex-pack: center;
+    -webkit-justify-content: center;
     justify-content: center;
   }
+
   &.flex-edges {
     -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
+    -webkit-justify-content: space-between;
     justify-content: space-between;
   }
+
   &.flex-spaces {
-    -webkit-justify-content: space-around;
     -ms-flex-pack: distribute;
+    -webkit-justify-content: space-around;
     justify-content: space-around;
   }
+
   &.flex-top {
-    -webkit-box-align: start;
     -webkit-align-items: flex-start;
-    -ms-flex-align: start;
     align-items: flex-start;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
   }
+
   &.flex-middle {
-    -webkit-box-align: center;
     -webkit-align-items: center;
-    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
   }
+
   &.flex-bottom {
-    -webkit-box-align: end;
     -webkit-align-items: flex-end;
-    -ms-flex-align: end;
     align-items: flex-end;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
   }
 }
 
@@ -80,8 +86,8 @@ $numberOfColumns: 12;
 }
 
 .col-fill {
+  flex: 1 1 0;
   width: auto;
-  flex: 1 1 0px;
 }
 
 @include create-flex-classes(col);
@@ -92,28 +98,28 @@ $numberOfColumns: 12;
 
 .align-top {
   -webkit-align-self: flex-start;
-  -ms-flex-item-align: start;
   align-self: flex-start;
+  -ms-flex-item-align: start;
 }
 
 .align-middle {
   -webkit-align-self: center;
+  align-self: center;
   -ms-flex-item-align: center;
   -ms-grid-row-align: center;
-  align-self: center;
 }
 
 .align-bottom {
   -webkit-align-self: flex-end;
-  -ms-flex-item-align: end;
   align-self: flex-end;
+  -ms-flex-item-align: end;
 }
 
 .container {
-  width: 100%;
+  margin: 0 auto;
   max-width: 960px;
   position: relative;
-  margin: 0 auto;
+  width: 100%;
 
   @include resp(md) {
     width: 85%;

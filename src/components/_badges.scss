@@ -1,17 +1,17 @@
 .badge {
   @include border-style();
+  background-color: $muted;
   border: 2px solid $primary;
+  border-color: transparent;
+  color: $white;
   display: inline-block;
-  padding: .25em .4em;
   font-size: 75%;
   font-weight: 700;
   line-height: 1;
+  padding: 0.25em 0.4em;
   text-align: center;
-  white-space: nowrap;
   vertical-align: baseline;
-  background-color: $muted;
-  color: $white;
-  border-color: transparent;
+  white-space: nowrap;
 }
 
 @each $colorName, $color in $colors {

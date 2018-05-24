@@ -1,4 +1,6 @@
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
+
+/* stylelint-disable */
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -197,3 +199,4 @@ html {
 *, *:before, *:after {
   box-sizing: inherit;
 }
+/* stylelint-enable */

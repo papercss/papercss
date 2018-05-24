@@ -1,12 +1,12 @@
 .card {
   @include shadow;
-  position: relative;
+  backface-visibility: hidden;
+  border: 2px solid $muted-light;
   display: flex;
   flex-direction: column;
-  word-wrap: break-word;
-  border: 2px solid $muted-light;
-  backface-visibility: hidden;
+  position: relative;
   will-change: transform;
+  word-wrap: break-word;
 
   &:hover {
     @include shadow(hover);
@@ -14,8 +14,8 @@
 
   .card-header,
   .card-footer {
-    padding: .75rem 1.25rem;
     background-color: $white-dark;
+    padding: 0.75rem 1.25rem;
   }
 
   .card-header {
@@ -30,21 +30,23 @@
     flex: 1 1 auto;
     padding: 1.25rem;
 
-    .card-title, h4 {
-      margin-top: 0;
+    .card-title,
+    h4 {
       margin-bottom: 0.5rem;
+      margin-top: 0;
     }
 
-    .card-subtitle, h5 {
-      @extend .text-secondary;
-
-      margin-top: 0;
+    .card-subtitle,
+    h5 {
+      color: $secondary;
       margin-bottom: 0.5rem;
+      margin-top: 0;
     }
 
-    .card-text, p {
-      margin-top: 0;
+    .card-text,
+    p {
       margin-bottom: 1rem;
+      margin-top: 0;
     }
 
     .card-link + .card-link,

@@ -7,14 +7,14 @@
   }
 
   .collapsible-body {
-    max-height: 0px;
-    opacity: 0;
-    overflow: hidden;
-    padding: 0rem 0.75rem;
-    margin: 0;
+    @include transition;
     background-color: lighten($white-dark, 80%);
     border-bottom: 1px solid $muted-light;
-    @include transition;
+    margin: 0;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    padding: 0 0.75rem;
   }
 
   input {
@@ -24,22 +24,22 @@
       color: $primary;
     }
 
-    &[id^="collapsible"]:checked~div.collapsible-body {
-      opacity: 1;
-      max-height: 960px;
-      padding: 0.75rem 0.75rem;
+    &[id^='collapsible']:checked~div.collapsible-body {
       margin: 0;
+      max-height: 960px;
+      opacity: 1;
+      padding: 0.75rem;
     }
   }
 
   label {
-    display: inline-block;
-    margin: 0 0 -1px;
-    padding: 0.75rem 0.75rem;
-    font-weight: 600;
-    text-align: center;
-    color: $primary;
     border-bottom: 1px solid $muted-light;
+    color: $primary;
+    display: inline-block;
+    font-weight: 600;
+    margin: 0 0 -1px;
+    padding: 0.75rem;
+    text-align: center;
 
     &:hover {
       color: $muted;
