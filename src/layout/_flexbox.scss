@@ -1,14 +1,14 @@
-$numberOfColumns: 12;
+$number-columns: 12;
 
 @mixin create-flex-classes($colName, $breakpoint: 0) {
   @include resp($min: $breakpoint) {
-    @for $i from 1 through $numberOfColumns {
+    @for $i from 1 through $number-columns {
       .#{$colName}-#{$i} {
         -webkit-box-flex: 0;
-        -webkit-flex: 0 0 $i * 100% / $numberOfColumns;
-        -ms-flex: 0 0 $i * 100% / $numberOfColumns;
-        flex: 0 0 $i * 100% / $numberOfColumns;
-        max-width: $i * 100% / $numberOfColumns;
+        -webkit-flex: 0 0 $i * 100% / $number-columns;
+        -ms-flex: 0 0 $i * 100% / $number-columns;
+        flex: 0 0 $i * 100% / $number-columns;
+        max-width: $i * 100% / $number-columns;
       }
     }
   }

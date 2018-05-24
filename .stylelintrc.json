@@ -9,7 +9,6 @@
     "value-no-vendor-prefix": null,
     "selector-no-qualifying-type": null,
     "selector-max-compound-selectors": null,
-    "scss/dollar-variable-pattern": null,
     "scss/selector-no-redundant-nesting-selector": null,
     "scss/at-extend-no-missing-placeholder": null
   }
