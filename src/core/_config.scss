@@ -6,8 +6,8 @@
 @import url('https://fonts.googleapis.com/css?family=Neucha|Patrick+Hand+SC');
 
 // Set theme colors
-$primary: #41403E !default;
-$secondary: #0071DE !default;
+$primary: #41403e !default;
+$secondary: #0071de !default;
 
 $success: #86a361 !default;
 $warning: #ddcd45 !default;
@@ -21,29 +21,32 @@ $warning-light: lighten($warning, 30%) !default;
 $danger-light: lighten($danger, 45%) !default;
 $muted-light: lighten($muted, 35%) !default;
 
-$white-dark: rgba(black, 0.03) !default;
-$light-dark: rgba(black, 0.7) !default;
-$white: rgba(white, 1) !default;
-$main-background: rgba(white, 1) !default;
+$white-dark: rgba(#000, 0.03) !default;
+$light-dark: rgba(#000, 0.7) !default;
+$white: rgba(#fff, 1) !default;
+$main-background: rgba(#fff, 1) !default;
 
-$primary-text: #FFF !default;
+$primary-text: #fff !default;
 $secondary-text: $primary !default;
 $success-text: $primary !default;
 $warning-text: $primary !default;
 $danger-text: $primary !default;
 $muted-text: $primary !default;
 
-$shadow-color-regular: hsla(0,0,0%,.2) !default;
-$shadow-color-hover: hsla(0,0,0%,.3) !default;
+$shadow-color-regular: hsla(0, 0, 0%, 0.2) !default;
+$shadow-color-hover: hsla(0, 0, 0%, 0.3) !default;
 
 
 // Map to set your color names
+/* stylelint-disable */
 $colors: (primary, $primary, $primary-light, $primary-text),
          (secondary, $secondary, $secondary-light, $secondary-text),
          (success, $success, $success-light, $success-text),
          (warning, $warning, $warning-light, $warning-text),
          (danger, $danger, $danger-light, $danger-text),
          (muted, $muted, $muted-light, $muted-text);
+/* stylelint-enable */
+
 /**
   This Loop will generate the various .text- and .background- classes
   based on the $colors map above.
@@ -52,6 +55,7 @@ $colors: (primary, $primary, $primary-light, $primary-text),
   .text-#{$colorName} {
     color: $color;
   }
+
   .background-#{$colorName} {
     background-color: $color-light;
   }
@@ -84,40 +88,40 @@ $shadow-hover: 2px 8px 8px -5px $shadow-color-hover !default;
 */
 @mixin border-style($style: 1) {
   @if $style==1 {
+    border-bottom-left-radius: 15px 255px;
+    border-bottom-right-radius: 225px 15px;
     border-top-left-radius: 255px 15px;
     border-top-right-radius: 15px 225px;
-    border-bottom-right-radius: 225px 15px;
-    border-bottom-left-radius: 15px 255px;
   }
   @if $style==2 {
+    border-bottom-left-radius: 185px 25px;
+    border-bottom-right-radius: 20px 205px;
     border-top-left-radius: 125px 25px;
     border-top-right-radius: 10px 205px;
-    border-bottom-right-radius: 20px 205px;
-    border-bottom-left-radius: 185px 25px;
   }
   @if $style==3 {
-    border-top-left-radius: 15px 225px;
-    border-top-right-radius: 255px 15px;
     border-bottom-left-radius: 225px 15px;
     border-bottom-right-radius: 15px 255px;
+    border-top-left-radius: 15px 225px;
+    border-top-right-radius: 255px 15px;
   }
   @if $style==4 {
-    border-top-left-radius: 15px 225px;
-    border-top-right-radius: 25px 150px;
     border-bottom-left-radius: 25px 115px;
     border-bottom-right-radius: 155px 25px;
+    border-top-left-radius: 15px 225px;
+    border-top-right-radius: 25px 150px;
   }
   @if $style==5 {
-    border-top-left-radius: 250px 15px;
-    border-top-right-radius: 25px 80px;
     border-bottom-left-radius: 20px 115px;
     border-bottom-right-radius: 15px 105px;
+    border-top-left-radius: 250px 15px;
+    border-top-right-radius: 25px 80px;
   }
   @if $style==6 {
+    border-bottom-left-radius: 15px 225px;
+    border-bottom-right-radius: 20px 205px;
     border-top-left-radius: 28px 125px;
     border-top-right-radius: 100px 30px;
-    border-bottom-right-radius: 20px 205px;
-    border-bottom-left-radius: 15px 225px;
   }
 }
 
@@ -127,26 +131,27 @@ $shadow-hover: 2px 8px 8px -5px $shadow-color-hover !default;
   @default null
 */
 @mixin resp($max:null, $min:null) {
-  @if $max == large or $max == lg  { $max: $large-screen; }
+  @if $max == large or $max == lg { $max: $large-screen; }
   @if $max == medium or $max == md { $max: $medium-screen; }
   @if $max == small or $max == sm { $max: $small-screen; }
   @if $max == xsmall or $max == xs { $max: $xsmall-screen; }
-  @if ($min != null and $max != null) {@media only screen and (max-width: $max) and (min-width: $min) { @content; }}
-  @else if($max != null and $min == null){@media only screen and (max-width: $max) { @content; }}
-  @else if($min != null and $max == null){@media only screen and (min-width: $min) { @content; }}
-  @else { @error "no matching size found";}
+
+  @if ($min != null and $max != null) { @media only screen and (max-width: $max) and (min-width: $min) { @content; } }
+  @else if($max != null and $min == null) { @media only screen and (max-width: $max) { @content; } }
+  @else if($min != null and $max == null) { @media only screen and (min-width: $min) { @content; } }
+  @else { @error 'no matching size found';}
 }
 
 /**
   Useful helper mixins
 */
 @mixin hr-after() {
-  text-align: center;
   color: lighten($primary, 30%);
+  content: '~~~';
   display: block;
-  content: "~~~";
-  position: relative;
   font-size: 1.5rem;
+  position: relative;
+  text-align: center;
 }
 
 @mixin center-all() {
@@ -165,7 +170,7 @@ $shadow-hover: 2px 8px 8px -5px $shadow-color-hover !default;
 }
 
 @mixin li-bullet($char) {
-  li:before {
+  li::before {
     content: $char;
   }
 }
@@ -194,7 +199,7 @@ $shadow-hover: 2px 8px 8px -5px $shadow-color-hover !default;
   @param string
   @default all | 235ms | ease-in-out | 0
 */
-@mixin transition($name:all, $duration:235ms, $animation:ease-in-out, $delay:0s){
+@mixin transition($name:all, $duration:235ms, $animation:ease-in-out, $delay: 0s) {
   -webkit-transition: $name $duration $animation $delay;
   -moz-transition: $name $duration $animation $delay;
   -o-transition: $name $duration $animation $delay;
@@ -208,8 +213,8 @@ $shadow-hover: 2px 8px 8px -5px $shadow-color-hover !default;
 */
 @mixin shadow($type: regular) {
   @if $type == hover {
-    box-shadow: $shadow-hover;
     @include translate(0, 2px, 0, true);
+    box-shadow: $shadow-hover;
   } @else if $type == small {
     @include transition($animation: ease);
     box-shadow: $shadow-small;
@@ -220,6 +225,6 @@ $shadow-hover: 2px 8px 8px -5px $shadow-color-hover !default;
     @include transition($animation: ease);
     box-shadow: $shadow-large;
   } @else {
-    @error "wrong $type. available types: small | regular | large | hover"
+    @error 'wrong $type. available types: small | regular | large | hover';
   }
 }

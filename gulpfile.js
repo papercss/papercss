@@ -6,7 +6,8 @@ const gulp = require('gulp'),
       rename = require('gulp-rename'),
       exec = require('child_process').execFile,
       optional = require('optional'),
-      hugo = optional('hugo-bin')
+      hugo = optional('hugo-bin'),
+      gulpStylelint = require('gulp-stylelint');
 
 gulp.task('sass', function() {
   gulp.src('src/**/*.scss')
@@ -52,6 +53,15 @@ gulp.task('minify-css', () => {
   .pipe(gulp.dest('dist'))
   .pipe(gulp.dest('docs/static/assets'));
 });
+
+gulp.task('lint-css', function() {
+  return gulp.src('src/**/*.scss')
+    .pipe(gulpStylelint({
+      reporters: [
+        {formatter: 'string', console: true}
+      ]
+    }));
+})
 
 gulp.task('default', ['sass','watch','hugo-server']);
 gulp.task('build', ['sass','minify-css','hugo-build']);
