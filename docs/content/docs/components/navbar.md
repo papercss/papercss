@@ -11,7 +11,6 @@ description: PaperCSS Navbar
     <input id="collapsible1" type="checkbox" name="collapsible">
     <button class="btn-small btn-mobile">
       <label for="collapsible1">
-        <!-- <i class="fas fa-3x fa-bars"></i> -->
         <div class="bar1"></div>
         <div class="bar2"></div>
         <div class="bar3"></div>
@@ -35,7 +34,6 @@ description: PaperCSS Navbar
     <input id="collapsible2" type="checkbox" name="collapsible2">
     <button class="btn-small btn-mobile">
       <label for="collapsible2">
-        <!-- <i class="fas fa-3x fa-bars"></i> -->
         <div class="bar1"></div>
         <div class="bar2"></div>
         <div class="bar3"></div>
@@ -53,7 +51,7 @@ description: PaperCSS Navbar
 
 #### Code:
 
-Add ```.fixed``` to ```<nav>``` to fix the nav to the top to have it scroll the whole page.
+Add ```.fixed``` to ```<nav>``` to fix the nav to the top to have it scroll the whole page. It's also mobile responsive and will show a hamburger menu on small screens. No JavaScript required!
 
 ```html
 <nav class="border fixed split-nav">
@@ -64,7 +62,6 @@ Add ```.fixed``` to ```<nav>``` to fix the nav to the top to have it scroll the 
     <input id="collapsible1" type="checkbox" name="collapsible">
     <button class="btn-small btn-mobile">
     <label for="collapsible1">
-        <!-- <i class="fas fa-3x fa-bars"></i> (https://fontawesome.com/icons) -->
         <div class="bar1"></div>
         <div class="bar2"></div>
         <div class="bar3"></div>
@@ -91,7 +88,6 @@ Add ```.fixed``` to ```<nav>``` to fix the nav to the top to have it scroll the 
     <input id="collapsible2" type="checkbox" name="collapsible2">
     <button class="btn-small btn-mobile">
       <label for="collapsible2">
-        <!-- <i class="fas fa-3x fa-bars"></i> -->
         <div class="bar1"></div>
         <div class="bar2"></div>
         <div class="bar3"></div>
@@ -118,7 +114,6 @@ Add ```.fixed``` to ```<nav>``` to fix the nav to the top to have it scroll the 
     <input id="collapsible2" type="checkbox" name="collapsible2">
     <button class="btn-small btn-mobile">
       <label for="collapsible2">
-        <!-- <i class="fas fa-3x fa-bars"></i> -->
         <div class="bar1"></div>
         <div class="bar2"></div>
         <div class="bar3"></div>
