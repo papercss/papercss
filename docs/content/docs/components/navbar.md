@@ -8,9 +8,9 @@ description: PaperCSS Navbar
     <h3><a href="/">Get PaperCSS</a></h3>
   </div>
   <div class="collapsible">
-    <input id="collapsible1" type="checkbox" name="collapsible">
+    <input id="collapsible0" type="checkbox" name="collapsible0">
     <button class="btn-small btn-mobile">
-      <label for="collapsible1">
+      <label for="collapsible0">
         <div class="bar1"></div>
         <div class="bar2"></div>
         <div class="bar3"></div>
@@ -31,9 +31,9 @@ description: PaperCSS Navbar
     <h3><a href="#">Get PaperCSS</a></h3>
   </div>
   <div class="collapsible">
-    <input id="collapsible2" type="checkbox" name="collapsible2">
+    <input id="collapsible1" type="checkbox" name="collapsible1">
     <button class="btn-small btn-mobile">
-      <label for="collapsible2">
+      <label for="collapsible1">
         <div class="bar1"></div>
         <div class="bar2"></div>
         <div class="bar3"></div>
@@ -59,7 +59,7 @@ Add ```.fixed``` to ```<nav>``` to fix the nav to the top to have it scroll the 
     <h3><a href="#">Get PaperCSS</a></h3>
   </div>
   <div class="collapsible">
-    <input id="collapsible1" type="checkbox" name="collapsible">
+    <input id="collapsible1" type="checkbox" name="collapsible1">
     <button class="btn-small btn-mobile">
     <label for="collapsible1">
         <div class="bar1"></div>

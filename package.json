@@ -1,6 +1,6 @@
 {
   "name": "papercss",
-  "version": "1.4.1",
+  "version": "1.5.0",
   "description": "The less formal CSS framework.",
   "main": "index.js",
   "scripts": {
