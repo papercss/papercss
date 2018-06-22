@@ -120,7 +120,7 @@ nav {
   .collapsible .collapsible-body {
     border: 0;
 
-    @include resp(null, $small-screen) {
+    @include resp(null, $small-screen + 1px) {
       display: contents;
     }
   }
