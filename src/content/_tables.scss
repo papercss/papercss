@@ -1,30 +1,31 @@
 table {
   box-sizing: border-box;
-  width: 100%;
   max-width: 100%;
   overflow-x: auto;
-
-  thead tr th {
-    vertical-align: bottom;
-    text-align: left;
-    padding: 8px;
-    line-height: 1.5;
-  }
-
-  tbody tr td {
-    padding: 8px;
-    line-height: 1.5;
-    vertical-align: top;
-    border-top: 1px dashed lighten($primary, 60%);
-  }
+  width: 100%;
 
   @include resp(xsmall) {
     thead tr th {
-        padding: 2%;
+      padding: 2%;
     }
+
     tbody tr td {
-        padding: 2%;
+      padding: 2%;
     }
+  }
+
+  thead tr th {
+    line-height: 1.5;
+    padding: 8px;
+    text-align: left;
+    vertical-align: bottom;
+  }
+
+  tbody tr td {
+    border-top: 1px dashed lighten($primary, 60%);
+    line-height: 1.5;
+    padding: 8px;
+    vertical-align: top;
   }
 
   &.table-hover tbody tr:hover {

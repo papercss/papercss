@@ -8,6 +8,7 @@
   &.shadow-small {
     @include shadow(small);
   }
+
   &.shadow-hover {
     &:hover {
       @include shadow(hover);

@@ -1,0 +1,151 @@
+nav {
+  background-color: $main-background;
+  display: flex;
+  padding: 0.3rem;
+  position: relative;
+  width: 100%;
+  z-index: 100;
+
+  @include resp(small) {
+    display: block;
+  }
+
+  .bar1,
+  .bar2,
+  .bar3 {
+    background-color: $primary;
+    border-bottom: 5px solid $primary;
+    border-bottom-left-radius: 15px 5px;
+    border-bottom-right-radius: 15px 3px;
+    color: $primary;
+    margin: 6px 0;
+    transition: 0.4s;
+    width: 2rem;
+  }
+
+  .collapsible input[id^=collapsible]:checked + button {
+    .bar1 {
+      -webkit-transform: rotate(-45deg) translate(-9px, 7px);
+      transform: rotate(-45deg) translate(-9px, 7px);
+    }
+
+    .bar2 {
+      opacity: 0;
+    }
+
+    .bar3 {
+      -webkit-transform: rotate(45deg) translate(-8px, -9px);
+      transform: rotate(45deg) translate(-8px, -9px);
+    }
+  }
+
+  &.split-nav {
+    justify-content: space-between;
+  }
+
+  &.fixed {
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+  }
+
+  div {
+    margin: 0 1rem;
+  }
+
+  ul.inline {
+    margin-bottom: 0;
+    margin-top: 10px;
+    padding: 0;
+  }
+
+  ul.inline li {
+    display: inline-block;
+    margin: 0 0.5rem;
+
+    @include resp(small) {
+      display: block;
+      margin: 1rem 0;
+    }
+  }
+
+  a {
+    background-image: none;
+    border-bottom: 5px solid $primary;
+    border-bottom-left-radius: 15px 3px;
+    border-bottom-right-radius: 15px 5px;
+    color: $primary;
+    padding-bottom: 0.1rem;
+  }
+
+  a:hover {
+    border-bottom: 5px solid $primary-light;
+  }
+
+  ul.inline li a {
+    font-size: 1.3rem;
+  }
+
+  ul.inline li::before {
+    content: '';
+  }
+
+  ul {
+    @include resp(medium) {
+      text-align: center;
+    }
+  }
+
+  .nav-brand {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6, {
+      margin: 0;
+      margin-bottom: 0.2rem;
+    }
+  }
+
+  .collapsible input[id^=collapsible]:checked ~ div.collapsible-body {
+    margin: 0;
+    max-height: 960px;
+    opacity: 1;
+    padding: 0;
+  }
+
+  .collapsible:nth-of-type(1),
+  .collapsible .collapsible-body {
+    border: 0;
+
+    @include resp(null, $small-screen + 1px) {
+      display: contents;
+    }
+  }
+
+  div.collapsible-body {
+    padding: none;
+  }
+
+  .collapsible label {
+    border-bottom: 0;
+    padding: 0;
+  }
+
+  .collapsible > button {
+    background-color: $main-background;
+    display: none;
+    font-size: 0.5rem;
+    margin-right: 1rem;
+    padding: 0.25rem;
+    position: absolute;
+    right: 0;
+    top: 0.2rem;
+
+    @include resp(small) {
+      display: block;
+    }
+  }
+}

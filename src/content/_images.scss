@@ -1,24 +1,24 @@
 img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  border: 2px solid $primary;
   @include border-style();
+  border: 2px solid $primary;
+  display: block;
+  height: auto;
+  max-width: 100%;
 
   &.float-left {
     float: left;
-    margin: 1rem 1rem 1rem 0rem;
+    margin: 1rem 1rem 1rem 0;
   }
 
   &.float-right {
     float: right;
-    margin: 1rem 0rem 1rem 1rem;
+    margin: 1rem 0 1rem 1rem;
   }
 
   &.no-responsive {
-    max-width: initial;
-    height: initial;
     display: initial;
+    height: initial;
+    max-width: initial;
   }
 
   &.no-border {
