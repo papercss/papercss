@@ -14,7 +14,10 @@ nav {
   .bar2,
   .bar3 {
     background-color: $primary;
-    height: 0.3rem;
+    border-bottom: 5px solid $primary;
+    border-bottom-left-radius: 15px 5px;
+    border-bottom-right-radius: 15px 3px;
+    color: $primary;
     margin: 6px 0;
     transition: 0.4s;
     width: 2rem;
@@ -131,14 +134,15 @@ nav {
     padding: 0;
   }
 
-  .btn-mobile {
+  .collapsible > button {
     background-color: $main-background;
     display: none;
-    margin-right: 1.5rem;
-    margin-top: 0.01rem;
+    font-size: 0.5rem;
+    margin-right: 1rem;
+    padding: 0.25rem;
     position: absolute;
     right: 0;
-    top: 0;
+    top: 0.2rem;
 
     @include resp(small) {
       display: block;

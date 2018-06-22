@@ -9,7 +9,7 @@ description: PaperCSS Navbar
   </div>
   <div class="collapsible">
     <input id="collapsible0" type="checkbox" name="collapsible0">
-    <button class="btn-small btn-mobile">
+    <button>
       <label for="collapsible0">
         <div class="bar1"></div>
         <div class="bar2"></div>
@@ -32,7 +32,7 @@ description: PaperCSS Navbar
   </div>
   <div class="collapsible">
     <input id="collapsible1" type="checkbox" name="collapsible1">
-    <button class="btn-small btn-mobile">
+    <button>
       <label for="collapsible1">
         <div class="bar1"></div>
         <div class="bar2"></div>
@@ -60,7 +60,7 @@ Add ```.fixed``` to ```<nav>``` to fix the nav to the top to have it scroll the 
   </div>
   <div class="collapsible">
     <input id="collapsible1" type="checkbox" name="collapsible1">
-    <button class="btn-small btn-mobile">
+    <button>
     <label for="collapsible1">
         <div class="bar1"></div>
         <div class="bar2"></div>
@@ -82,11 +82,11 @@ Add ```.fixed``` to ```<nav>``` to fix the nav to the top to have it scroll the 
 
 <nav class="border">
   <div class="nav-brand">
-    <h4><a href="#">Get PaperCSS</a></h4>
+    <h3><a href="#">Get PaperCSS</a></h3>
   </div>
   <div class="collapsible">
     <input id="collapsible2" type="checkbox" name="collapsible2">
-    <button class="btn-small btn-mobile">
+    <button>
       <label for="collapsible2">
         <div class="bar1"></div>
         <div class="bar2"></div>
@@ -112,7 +112,7 @@ Add ```.fixed``` to ```<nav>``` to fix the nav to the top to have it scroll the 
   </div>
   <div class="collapsible">
     <input id="collapsible2" type="checkbox" name="collapsible2">
-    <button class="btn-small btn-mobile">
+    <button>
       <label for="collapsible2">
         <div class="bar1"></div>
         <div class="bar2"></div>
