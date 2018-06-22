@@ -73,7 +73,9 @@ Once you are ready to contribute, here the workflow you should follow:
 - Change your current branch to `develop`: `git checkout develop`
 - Create your new branch where you will write your code: `git checkout -b feature-thing develop`. Please be sure to prepend your new feature branch with "feature-"
 - Start the local web-server: `gulp` or `npm start`
-- Once done commit and push your changes to your fork.
+- Write some code!
+- Check to make sure your code is following style rules with `npm run stylelint`
+- Once done commit and push your changes to your fork. The linter is also run as a precommit hook.
 - Open a pull request on the origin papercss repo. Be sure to include any pictures and/or details on what you have done, it will help reviewers **a lot**!
 - When your changes are approved, they will be merged into the `develop` branch, which will finally be merged into the `master` branch when we reach a milestone in terms of features and bug fixes. Check out [Vincent Driessen's blog post](http://nvie.com/posts/a-successful-git-branching-model/), [GitFlow](https://datasift.github.io/gitflow/IntroducingGitFlow.html), or [#27](https://github.com/rhyneav/papercss/issues/27) for more details on how this works.
 

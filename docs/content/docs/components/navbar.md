@@ -8,10 +8,9 @@ description: PaperCSS Navbar
     <h3><a href="/">Get PaperCSS</a></h3>
   </div>
   <div class="collapsible">
-    <input id="collapsible1" type="checkbox" name="collapsible">
-    <button class="btn-small btn-mobile">
-      <label for="collapsible1">
-        <!-- <i class="fas fa-3x fa-bars"></i> -->
+    <input id="collapsible0" type="checkbox" name="collapsible0">
+    <button>
+      <label for="collapsible0">
         <div class="bar1"></div>
         <div class="bar2"></div>
         <div class="bar3"></div>
@@ -32,10 +31,9 @@ description: PaperCSS Navbar
     <h3><a href="#">Get PaperCSS</a></h3>
   </div>
   <div class="collapsible">
-    <input id="collapsible2" type="checkbox" name="collapsible2">
-    <button class="btn-small btn-mobile">
-      <label for="collapsible2">
-        <!-- <i class="fas fa-3x fa-bars"></i> -->
+    <input id="collapsible1" type="checkbox" name="collapsible1">
+    <button>
+      <label for="collapsible1">
         <div class="bar1"></div>
         <div class="bar2"></div>
         <div class="bar3"></div>
@@ -53,7 +51,7 @@ description: PaperCSS Navbar
 
 #### Code:
 
-Add ```.fixed``` to ```<nav>``` to fix the nav to the top to have it scroll the whole page.
+Add ```.fixed``` to ```<nav>``` to fix the nav to the top to have it scroll the whole page. It's also mobile responsive and will show a hamburger menu on small screens. No JavaScript required!
 
 ```html
 <nav class="border fixed split-nav">
@@ -61,10 +59,9 @@ Add ```.fixed``` to ```<nav>``` to fix the nav to the top to have it scroll the 
     <h3><a href="#">Get PaperCSS</a></h3>
   </div>
   <div class="collapsible">
-    <input id="collapsible1" type="checkbox" name="collapsible">
-    <button class="btn-small btn-mobile">
+    <input id="collapsible1" type="checkbox" name="collapsible1">
+    <button>
     <label for="collapsible1">
-        <!-- <i class="fas fa-3x fa-bars"></i> (https://fontawesome.com/icons) -->
         <div class="bar1"></div>
         <div class="bar2"></div>
         <div class="bar3"></div>
@@ -85,13 +82,12 @@ Add ```.fixed``` to ```<nav>``` to fix the nav to the top to have it scroll the 
 
 <nav class="border">
   <div class="nav-brand">
-    <h4><a href="#">Get PaperCSS</a></h4>
+    <h3><a href="#">Get PaperCSS</a></h3>
   </div>
   <div class="collapsible">
     <input id="collapsible2" type="checkbox" name="collapsible2">
-    <button class="btn-small btn-mobile">
+    <button>
       <label for="collapsible2">
-        <!-- <i class="fas fa-3x fa-bars"></i> -->
         <div class="bar1"></div>
         <div class="bar2"></div>
         <div class="bar3"></div>
@@ -116,9 +112,8 @@ Add ```.fixed``` to ```<nav>``` to fix the nav to the top to have it scroll the 
   </div>
   <div class="collapsible">
     <input id="collapsible2" type="checkbox" name="collapsible2">
-    <button class="btn-small btn-mobile">
+    <button>
       <label for="collapsible2">
-        <!-- <i class="fas fa-3x fa-bars"></i> -->
         <div class="bar1"></div>
         <div class="bar2"></div>
         <div class="bar3"></div>
