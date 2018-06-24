@@ -7,7 +7,7 @@ const gulp = require('gulp'),
       exec = require('child_process').execFile,
       optional = require('optional'),
       hugo = optional('hugo-bin'),
-      gulpStylelint = require('gulp-stylelint');
+      gulpStylelint = optional('gulp-stylelint');
 
 gulp.task('sass', function() {
   gulp.src('src/**/*.scss')
