@@ -228,3 +228,14 @@ $shadow-hover: 2px 8px 8px -5px $shadow-color-hover !default;
     @error 'wrong $type. available types: small | regular | large | hover';
   }
 }
+
+//function for string replacement
+@function str-replace($string, $search, $replace: '') {
+  $index: str-index($string, $search);
+
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+
+  @return $string;
+}
