@@ -25,6 +25,10 @@ ul {
 
   li {
     text-indent: -7px;
+    
+    .badge {
+      text-indent: 0;
+    }
 
     &::before {
       left: -7px;
