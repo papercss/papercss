@@ -1,0 +1,49 @@
+.progress {
+  @include border-style(5);
+  border: 2px solid $primary;
+  height: 1.5rem;
+  overflow: hidden;
+  width: 100%;
+
+  @mixin progress-bar-background($color) {
+    $color-dark: darken($color, 10%);
+    background: $color -webkit-repeating-linear-gradient(45deg, $color, $color 0.1rem, $color-dark 0.1rem, $color-dark 0.25rem);
+    background: $color -o-repeating-linear-gradient(45deg, $color, $color 0.1rem, $color-dark 0.1rem, $color-dark 0.25rem);
+    background: $color repeating-linear-gradient(45deg, $color, $color 0.1rem, $color-dark 0.1rem, $color-dark 0.25rem);
+  }
+
+  .progress-bar {
+    @include border-style(2);
+    @include progress-bar-background($primary-light);
+    align-items: center;
+    border-right: 2px solid $primary;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    -ms-flex-pack: center;
+    font-size: 0.75rem;
+    height: 100%;
+    justify-content: center;
+    width: 0%;
+  }
+
+  @each $colorName, $color, $color-light in $colors {
+    .progress-#{$colorName} {
+      @include progress-bar-background($color-light);
+    }
+  }
+
+  @for $i from 0 through 100 {
+    .progress-#{$i} {
+      width: $i + %;
+    }
+  }
+
+  .progress-0,
+  .progress-100 {
+    border-right: 0;
+  }
+}
