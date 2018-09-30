@@ -155,16 +155,11 @@ $shadow-hover: 2px 8px 8px -5px $shadow-color-hover !default;
 }
 
 @mixin center-all() {
-  -webkit-align-items: center;
   align-items: center;
-  -webkit-justify-content: center;
   justify-content: center;
 }
 
 @mixin col-size($percent) {
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 0 $percent;
-  -ms-flex: 0 0 $percent;
   flex: 0 0 $percent;
   max-width: $percent;
 }
@@ -176,7 +171,7 @@ $shadow-hover: 2px 8px 8px -5px $shadow-color-hover !default;
 }
 
 /*
-  Add transform: translate() with browser prefixes.
+  Add transform: translate().
   Same syntax for translate() and translate3d()
   To get 3D add a $z value and set 'true'
   @param string | boolean
@@ -184,12 +179,8 @@ $shadow-hover: 2px 8px 8px -5px $shadow-color-hover !default;
 */
 @mixin translate($x, $y, $z: 0, $transform3d: false) {
   @if $transform3d {
-    -webkit-transform: translate3d($x, $y, $z);
-    -ms-transform: translate3d($x, $y, $z);
     transform: translate3d($x, $y, $z);
   } @else {
-    -webkit-transform: translate($x, $y);
-    -ms-transform: translate($x, $y);
     transform: translate($x, $y);
   }
 }
@@ -200,9 +191,6 @@ $shadow-hover: 2px 8px 8px -5px $shadow-color-hover !default;
   @default all | 235ms | ease-in-out | 0
 */
 @mixin transition($name:all, $duration:235ms, $animation:ease-in-out, $delay: 0s) {
-  -webkit-transition: $name $duration $animation $delay;
-  -moz-transition: $name $duration $animation $delay;
-  -o-transition: $name $duration $animation $delay;
   transition: $name $duration $animation $delay;
 }
 

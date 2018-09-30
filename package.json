@@ -22,6 +22,7 @@
   "homepage": "https://www.getpapercss.com",
   "dependencies": {
     "gulp": "3.9.1",
+    "gulp-autoprefixer": "^6.0.0",
     "gulp-clean-css": "3.9.0",
     "gulp-connect": "5.0.0",
     "gulp-plumber": "1.1.0",
@@ -74,5 +75,8 @@
   },
   "pre-commit": [
     "stylelint"
+  ],
+  "browserslist": [
+    "last 4 versions"
   ]
 }
