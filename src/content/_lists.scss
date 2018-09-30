@@ -25,6 +25,14 @@ ul {
 
   li {
     text-indent: -7px;
+    
+    .badge,
+    [popover-bottom]::after,
+    [popover-left]::after,
+    [popover-right]::after,
+    [popover-top]::after {
+      text-indent: 0;
+    }
 
     &::before {
       left: -7px;
