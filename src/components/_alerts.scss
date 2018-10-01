@@ -7,11 +7,7 @@
 
   &.dismissible {
     @include transition;
-    -webkit-box-pack: justify;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: justify;
     justify-content: space-between;
     max-height: 48rem;
     opacity: 1;
