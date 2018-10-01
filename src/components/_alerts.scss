@@ -1,3 +1,13 @@
+@mixin btn-close-color($base-color) {
+  color: lighten($base-color, 10%);
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: darken($base-color, 10%);
+  }
+}
+
 .alert {
   @include border-style();
   border: 2px solid $primary;
@@ -16,15 +26,9 @@
 
   .btn-close {
     @include transition;
-    color: lighten($primary, 10%);
+    @include btn-close-color($primary);
     cursor: pointer;
     margin-left: 1rem;
-
-    &:hover,
-    &:active,
-    &:focus {
-      color: darken($primary, 10%);
-    }
   }
 }
 
@@ -35,13 +39,7 @@
     color: $color;
 
     .btn-close {
-      color: lighten($color, 10%);
-      
-      &:hover,
-      &:active,
-      &:focus {
-        color: darken($color, 10%);
-      }
+      @include btn-close-color($color);
     }
   }
 }
