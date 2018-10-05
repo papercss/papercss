@@ -20,7 +20,6 @@
     display: flex;
     justify-content: space-between;
     max-height: 48rem;
-    opacity: 1;
     overflow: hidden;
   }
 
@@ -28,7 +27,7 @@
     @include transition;
     @include btn-close-color($primary);
     cursor: pointer;
-    margin-left: 1rem;
+    margin-left: 0.75rem;
   }
 }
 
@@ -47,7 +46,7 @@
 .alert-state {
   display: none;
 
-  &:checked+.dismissible {
+  &:checked + .dismissible {
     border-width: 0;
     margin: 0;
     max-height: 0;
