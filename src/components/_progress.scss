@@ -1,30 +1,41 @@
 .progress {
   @include border-style(5);
   border: 2px solid $primary;
-  height: 1.5rem;
+  box-shadow: 2px 8px 4px -6px hsla(0, 0%, 0%, 0.3);
+  height: 1.2rem;
   overflow: hidden;
   width: 100%;
 
-  @mixin progress-bar-background($color) {
-    $color-dark: darken($color, 10%);
-    background: $color repeating-linear-gradient(45deg, $color, $color 0.1rem, $color-dark 0.1rem, $color-dark 0.25rem);
+  @mixin striped-background($base-color) {
+    $color-dark: darken($base-color, 10%);
+    background: repeating-linear-gradient(45deg, $base-color, $base-color 0.25rem, $color-dark 0.25rem, $color-dark 0.5rem);
   }
 
   .progress-bar {
-    @include border-style(2);
-    @include progress-bar-background($primary-light);
-    align-items: center;
+    @include border-style(5);
+    @include transition;
+    background-color: $primary-light;
     border-right: 2px solid $primary;
     display: flex;
-    font-size: 0.75rem;
+    flex-direction: column;
+    font-size: 0.6rem;
     height: 100%;
     justify-content: center;
+    text-align: center;
     width: 0%;
+
+    &.progress-striped {
+      @include striped-background($primary-light);
+    }
   }
 
   @each $colorName, $color, $color-light in $colors {
     .progress-#{$colorName} {
-      @include progress-bar-background($color-light);
+      background-color: $color-light;
+
+      &.progress-striped {
+        @include striped-background($color-light);
+      }
     }
   }
 
