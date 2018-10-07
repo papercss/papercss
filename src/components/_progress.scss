@@ -1,17 +1,12 @@
 .progress {
   @include border-style(5);
   border: 2px solid $primary;
-  box-shadow: 2px 8px 4px -6px hsla(0, 0%, 0%, 0.3);
+  box-shadow: 2px 8px 4px -6px hsla(0%, 0%, 0%, 0.3);
   height: 1.2rem;
   overflow: hidden;
   width: 100%;
 
-  @mixin striped-background($base-color) {
-    $color-dark: darken($base-color, 10%);
-    background: repeating-linear-gradient(45deg, $base-color, $base-color 0.25rem, $color-dark 0.25rem, $color-dark 0.5rem);
-  }
-
-  .progress-bar {
+  .bar {
     @include border-style(5);
     @include transition;
     background-color: $primary-light;
@@ -24,29 +19,34 @@
     text-align: center;
     width: 0%;
 
-    &.progress-striped {
+    @mixin striped-background($base-color) {
+      $color-dark: darken($base-color, 10%);
+      background: repeating-linear-gradient(45deg, $base-color, $base-color 0.25rem, $color-dark 0.25rem, $color-dark 0.5rem);
+    }
+
+    &.striped {
       @include striped-background($primary-light);
     }
-  }
 
-  @each $colorName, $color, $color-light in $colors {
-    .progress-#{$colorName} {
-      background-color: $color-light;
-
-      &.progress-striped {
-        @include striped-background($color-light);
+    @each $colorName, $color, $color-light in $colors {
+      &.#{$colorName} {
+        background-color: $color-light;
+  
+        &.striped {
+          @include striped-background($color-light);
+        }
       }
     }
-  }
 
-  @for $i from 0 through 100 {
-    .progress-#{$i} {
-      width: $i + %;
+    @for $i from 0 through 100 {
+      &.w-#{$i} {
+        width: $i + %;
+      }
     }
-  }
-
-  .progress-0,
-  .progress-100 {
-    border-right: 0;
+  
+    &.w-0,
+    &.w-100 {
+      border-right: 0;
+    }
   }
 }
