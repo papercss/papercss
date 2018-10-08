@@ -1,7 +1,7 @@
 .progress {
   @include border-style(5);
   border: 2px solid $primary;
-  box-shadow: 2px 8px 4px -6px hsla(0%, 0%, 0%, 0.3);
+  box-shadow: $shadow-hover;
   height: 1.2rem;
   overflow: hidden;
   width: 100%;
@@ -18,11 +18,6 @@
     justify-content: center;
     text-align: center;
     width: 0%;
-
-    @mixin striped-background($base-color) {
-      $color-dark: darken($base-color, 10%);
-      background: repeating-linear-gradient(45deg, $base-color, $base-color 0.25rem, $color-dark 0.25rem, $color-dark 0.5rem);
-    }
 
     &.striped {
       @include striped-background($primary-light);
