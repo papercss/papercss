@@ -1,0 +1,64 @@
+.card {
+  @include shadow;
+  backface-visibility: hidden;
+  border: 2px solid $muted-light;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  will-change: transform;
+  word-wrap: break-word;
+
+  &:hover {
+    @include shadow(hover);
+  }
+
+  .card-header,
+  .card-footer {
+    background-color: $white-dark;
+    padding: 0.75rem 1.25rem;
+  }
+
+  .card-header {
+    border-bottom: 2px solid $muted-light;
+  }
+
+  .card-footer {
+    border-top: 2px solid $muted-light;
+  }
+
+  .card-body {
+    flex: 1 1 auto;
+    padding: 1.25rem;
+
+    .card-title,
+    h4 {
+      margin-bottom: 0.5rem;
+      margin-top: 0;
+    }
+
+    .card-subtitle,
+    h5 {
+      color: $secondary;
+      margin-bottom: 0.5rem;
+      margin-top: 0;
+    }
+
+    .card-text,
+    p {
+      margin-bottom: 1rem;
+      margin-top: 0;
+    }
+
+    .card-link + .card-link,
+    a + a {
+      margin-left: 1.25rem;
+    }
+  }
+
+  .image-top,
+  .image-bottom,
+  img {
+    border: 0;
+    border-radius: 0;
+  }
+}

@@ -1,0 +1,38 @@
+article {
+  .article-title {
+    font-size: 3rem;
+  }
+
+  .article-meta {
+    color: $muted;
+    font-size: 15px;
+
+    a {
+      background-image: none;
+      color: $muted-text;
+
+      &:hover {
+        color: $light-dark;
+      }
+    }
+  }
+
+  .text-lead {
+    font-size: 30px;
+    line-height: 1.3;
+    margin: 35px;
+  }
+
+  button {
+    &:not(:first-of-type) {
+      margin-left: 2rem;
+      @include resp(xs) {
+        margin-left: 0;
+      }
+    }
+  }
+
+  p {
+    line-height: 1.6;
+  }
+}

@@ -1,0 +1,38 @@
+table {
+  box-sizing: border-box;
+  max-width: 100%;
+  overflow-x: auto;
+  width: 100%;
+
+  @include resp(xsmall) {
+    thead tr th {
+      padding: 2%;
+    }
+
+    tbody tr td {
+      padding: 2%;
+    }
+  }
+
+  thead tr th {
+    line-height: 1.5;
+    padding: 8px;
+    text-align: left;
+    vertical-align: bottom;
+  }
+
+  tbody tr td {
+    border-top: 1px dashed lighten($primary, 60%);
+    line-height: 1.5;
+    padding: 8px;
+    vertical-align: top;
+  }
+
+  &.table-hover tbody tr:hover {
+    color: $secondary;
+  }
+
+  &.table-alternating tbody tr:nth-of-type(even) {
+    color: lighten($primary, 25%);
+  }
+}

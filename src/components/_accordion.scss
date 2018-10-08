@@ -1,0 +1,49 @@
+.collapsible {
+  display: flex;
+  flex-direction: column;
+
+  &:nth-of-type(1) {
+    border-top: 1px solid $muted-light;
+  }
+
+  .collapsible-body {
+    @include transition;
+    background-color: lighten($white-dark, 80%);
+    border-bottom: 1px solid $muted-light;
+    margin: 0;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    padding: 0 0.75rem;
+  }
+
+  input {
+    display: none;
+
+    &:checked + label {
+      color: $primary;
+    }
+
+    &[id^='collapsible']:checked~div.collapsible-body {
+      margin: 0;
+      max-height: 960px;
+      opacity: 1;
+      padding: 0.75rem;
+    }
+  }
+
+  label {
+    border-bottom: 1px solid $muted-light;
+    color: $primary;
+    display: inline-block;
+    font-weight: 600;
+    margin: 0 0 -1px;
+    padding: 0.75rem;
+    text-align: center;
+
+    &:hover {
+      color: $muted;
+      cursor: pointer;
+    }
+  }
+}

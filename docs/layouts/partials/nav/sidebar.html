@@ -1,0 +1,31 @@
+<div class='sm-12 md-4 col sidebar'>
+    {{ range .Site.Sections }}
+    <div class='paper'>
+      <h3 class='sidebar-title' style='text-align:center'>
+        <a href='/docs'>Documentation</a>
+      </h3>
+      <div class='row'>
+        {{ range .Sections }}
+        <div class='collapsible full-width'>
+          <input id='collapsible-{{ .Title | urlize }}' type='radio' name='collapsible'>
+          <label for="collapsible-{{ .Title | urlize }}">{{ .Title }}</label>
+          <div class="collapsible-body">
+            <ul>
+            {{ range .Pages }}
+              <li>
+                <a href='{{ .Permalink | relURL }}'>{{ .Title }}</a>
+              </li>
+            {{ end }}
+            </ul>
+          </div>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+    {{ end }}
+    <div class='paper'>
+      <div class="row flex-center">
+        <p>Made with 💛 by <a href="https://vlaservi.ch" target="_blank">Rhyne</a> and some <a href="https://github.com/rhyneav/papercss/graphs/contributors">fantastic contributors</a>!</p>
+      </div>
+    </div>
+</div>

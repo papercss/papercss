@@ -1,0 +1,38 @@
+@charset 'UTF-8';
+
+/* PaperCSS core */
+@import 'core/config';
+@import 'core/reset';
+
+/* Layout styling */
+@import 'layout/container';
+@import 'layout/flexbox';
+
+/* Content styling */
+@import 'content/code';
+@import 'content/fonts';
+@import 'content/images';
+@import 'content/lists';
+@import 'content/tables';
+
+/* Utilities */
+@import 'utilities/borders';
+@import 'utilities/shadows';
+
+/* Components */
+@import 'components/accordion';
+@import 'components/alerts';
+@import 'components/article';
+@import 'components/badges';
+@import 'components/buttons';
+@import 'components/cards';
+@import 'components/forms';
+@import 'components/modals';
+@import 'components/popovers';
+@import 'components/tabs';
+@import 'components/utilities';
+@import 'components/navbar';
+
+// @media print {
+//  @import 'layout/print';
+// }

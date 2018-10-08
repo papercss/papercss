@@ -1,0 +1,28 @@
+img {
+  @include border-style();
+  border: 2px solid $primary;
+  display: block;
+  height: auto;
+  max-width: 100%;
+
+  &.float-left {
+    float: left;
+    margin: 1rem 1rem 1rem 0;
+  }
+
+  &.float-right {
+    float: right;
+    margin: 1rem 0 1rem 1rem;
+  }
+
+  &.no-responsive {
+    display: initial;
+    height: initial;
+    max-width: initial;
+  }
+
+  &.no-border {
+    border: 0;
+    border-radius: 0;
+  }
+}

@@ -1,0 +1,63 @@
+ol {
+  list-style-type: decimal;
+
+  ol {
+    list-style-type: upper-alpha;
+
+    ol {
+      list-style-type: upper-roman;
+
+      ol {
+        list-style-type: lower-alpha;
+
+        ol {
+          list-style-type: lower-roman;
+        }
+      }
+    }
+  }
+}
+
+ul {
+  @include li-bullet('-');
+  list-style: none;
+  margin-left: 0;
+
+  li {
+    text-indent: -7px;
+    
+    .badge,
+    [popover-bottom]::after,
+    [popover-left]::after,
+    [popover-right]::after,
+    [popover-top]::after {
+      text-indent: 0;
+    }
+
+    &::before {
+      left: -7px;
+      position: relative;
+    }
+  }
+
+  ul {
+    @include li-bullet('+');
+
+    ul {
+      @include li-bullet('~');
+
+      ul {
+        @include li-bullet('⤍');
+
+        ul {
+          @include li-bullet('⁎');
+        }
+      }
+    }
+  }
+
+  &.inline li {
+    display: inline;
+    margin-left: 5px;
+  }
+}

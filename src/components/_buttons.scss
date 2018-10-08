@@ -1,0 +1,98 @@
+button,
+.paper-btn,
+[type='button'] {
+  @include border-style();
+  @include shadow();
+  @include transition();
+  align-self: center;
+  background: transparent;
+  border: 2px solid $primary;
+  color: $primary;
+  cursor: pointer;
+  display: inline;
+  font-size: 1rem;
+  outline: none;
+  padding: 0.75rem;
+
+  @include resp(520px) {
+    display: inline-block;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  &.btn-large {
+    @include shadow(large);
+    font-size: 2rem;
+    padding: 1rem;
+  }
+
+  &.btn-small {
+    @include shadow(small);
+    font-size: 0.75rem;
+    padding: 0.5rem;
+  }
+
+  &.btn-block {
+    display: block;
+    width: 100%;
+  }
+
+  &:hover {
+    @include shadow(hover);
+  }
+
+  &:focus {
+    border: 2px solid $secondary;
+    -webkit-box-shadow: 2px 8px 4px -6px hsla(0, 0%, 0%, 0.3);
+    -moz-box-shadow: 2px 8px 4px -6px hsla(0, 0%, 0%, 0.3);
+    box-shadow: 2px 8px 4px -6px hsla(0, 0%, 0%, 0.3);
+  }
+
+  &:active {
+    border-color: hsla(0, 0%, 0%, 0.2);
+    transition: none;
+  }
+
+  &.disabled,
+  &[disabled] {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+}
+
+a {
+  background-image: linear-gradient(5deg, transparent 65%, $secondary 80%, transparent 90%), linear-gradient(165deg, transparent 5%, $secondary 15%, transparent 25%), linear-gradient(165deg, transparent 45%, $secondary 55%, transparent 65%), linear-gradient(15deg, transparent 25%, $secondary 35%, transparent 50%);
+  background-position: 0 90%;
+  background-repeat: repeat-x;
+  background-size: 4px 3px;
+  text-decoration: none;
+
+  &:visited {
+    color: $primary;
+    text-decoration: none;
+  }
+}
+
+
+@each $colorName, $color, $color-light, $color-text in $colors {
+  .alert-#{$colorName} {
+    background-color: $color-light;
+    border-color: $color;
+    color: $color;
+  }
+
+  button.btn-#{$colorName},
+  .paper-btn.btn-#{$colorName},
+  [type='button'].btn-#{$colorName} {
+    background-color: $color-light;
+    border-color: $color;
+    color: $color-text;
+
+    &:hover {
+      &:active {
+        background-color: darken($color-light, 10%);
+      }
+    }
+  }
+}

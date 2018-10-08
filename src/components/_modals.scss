@@ -1,0 +1,121 @@
+.modal {
+  @include transition(opacity);
+  background: rgba(#000, 0.6);
+  bottom: 0;
+  flex: 1 1 auto;
+  left: 0;
+  opacity: 0;
+  position: fixed;
+  right: 0;
+  text-align: left;
+  top: 0;
+  visibility: hidden;
+  word-wrap: break-word;
+  z-index: 12;
+
+  // modal background
+  &-bg {
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .modal-body {
+    @include transition;
+    @include translate(-50%, -50%);
+    backface-visibility: hidden;
+    background: $white;
+    border: 2px solid $muted-light;
+    left: 50%;
+    padding: 1.25rem;
+    position: absolute;
+    top: 0;
+
+    @include resp(sm) {
+      box-sizing: border-box;
+      width: 90%;
+    }
+  }
+
+  .btn-close {
+    @include transition;
+    color: $primary-light;
+    cursor: pointer;
+    font-size: 30px;
+    height: 1.1rem;
+    position: absolute;
+    right: 1rem;
+    text-decoration: none;
+    top: 1rem;
+    width: 1.1rem;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $primary;
+    }
+  }
+
+  h4,
+  .modal-title {
+    margin-bottom: 0.5rem;
+    margin-top: 0;
+  }
+
+  h5,
+  .modal-subtitle {
+    color: $secondary;
+    margin-bottom: 0.5rem;
+    margin-top: 0;
+  }
+
+  p,
+  .modal-text {
+    margin-bottom: 1rem;
+    margin-top: 0;
+  }
+
+  .modal-link+.modal-link,
+  a+a {
+    margin-left: 1.25rem;
+  }
+
+  .paper-btn {
+    background: $white;
+    display: inline-block;
+    text-decoration: none;
+  }
+
+  .modal-link,
+  a {
+    background-image: linear-gradient(5deg, transparent 65%, $secondary 80%, transparent 90%), linear-gradient(165deg, transparent 5%, $secondary 15%, transparent 25%), linear-gradient(165deg, transparent 45%, $secondary 55%, transparent 65%), linear-gradient(15deg, transparent 25%, $secondary 35%, transparent 50%);
+    background-position: 0 90%;
+    background-repeat: repeat-x;
+    background-size: 4px 3px;
+    cursor: pointer;
+    text-decoration: none;
+
+    &:hover,
+    &:focus,
+    &:visited {
+      color: $primary;
+      text-decoration: none;
+    }
+  }
+}
+
+.modal-state {
+  display: none;
+
+  &:checked+.modal {
+    opacity: 1;
+    visibility: visible;
+
+    .modal-body {
+      top: 50%;
+    }
+  }
+}

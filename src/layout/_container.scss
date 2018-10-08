@@ -1,0 +1,48 @@
+.container {
+  margin: 0 auto;
+  max-width: 960px;
+  position: relative;
+  width: 100%;
+  @include resp(medium) {
+    width: 85%;
+  }
+  @include resp(xsmall) {
+    width: 90%;
+  }
+}
+
+.section {
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+  word-wrap: break-word;
+
+  &::after {
+    @include hr-after;
+  }
+}
+
+hr {
+  border: 0;
+
+  &::after {
+    @include hr-after;
+    top: -0.75rem;
+  }
+}
+
+.paper {
+  background-color: $main-background;
+  border: 1px solid $primary-light;
+  -moz-box-shadow: -1px 5px 35px -9px hsla(0, 0%, 0%, 0.2);
+  -webkit-box-shadow: -1px 5px 35px -9px hsla(0, 0%, 0%, 0.2);
+  box-shadow: -1px 5px 35px -9px hsla(0, 0%, 0%, 0.2);
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  padding: 2rem;
+  @include resp(xs) {
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 1rem;
+    width: 100%;
+  }
+}

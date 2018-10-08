@@ -1,0 +1,9 @@
+<div class="row flex-center child-borders">
+  {{ range .Site.Menus.main }}
+    {{- $isCurrent := ( or ( $.IsMenuCurrent "main" . ) ( $.HasMenuCurrent "main" . ) ) -}}
+    <a class='paper-btn margin{{- if $isCurrent }} current{{- end -}}' href='{{ .URL }}'>
+      {{- .Name -}}
+    </a>
+  {{ end }}
+  <a href="https://github.com/rhyneav/papercss" target="_blank" class="paper-btn margin">Github</a>
+</div>

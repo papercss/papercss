@@ -1,0 +1,21 @@
+.badge {
+  @include border-style();
+  background-color: $muted;
+  border: 2px solid $primary;
+  border-color: transparent;
+  color: $white;
+  display: inline-block;
+  font-size: 75%;
+  font-weight: 700;
+  line-height: 1;
+  padding: 0.25em 0.4em;
+  text-align: center;
+  vertical-align: baseline;
+  white-space: nowrap;
+}
+
+@each $colorName, $color in $colors {
+  .badge.#{$colorName} {
+    background-color: $color;
+  }
+}

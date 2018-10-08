@@ -1,0 +1,130 @@
+$number-columns: 12;
+
+@mixin create-flex-classes($colName, $breakpoint: 0) {
+  @include resp($min: $breakpoint) {
+    @for $i from 1 through $number-columns {
+      .#{$colName}-#{$i} {
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 0 $i * 100% / $number-columns;
+        -ms-flex: 0 0 $i * 100% / $number-columns;
+        flex: 0 0 $i * 100% / $number-columns;
+        max-width: $i * 100% / $number-columns;
+      }
+    }
+  }
+}
+
+.row {
+  -webkit-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  margin-bottom: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+
+  &.flex-right {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    -webkit-justify-content: flex-end;
+    justify-content: flex-end;
+  }
+
+  &.flex-center {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+  }
+
+  &.flex-edges {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+  }
+
+  &.flex-spaces {
+    -ms-flex-pack: distribute;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+  }
+
+  &.flex-top {
+    -webkit-align-items: flex-start;
+    align-items: flex-start;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+  }
+
+  &.flex-middle {
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+  }
+
+  &.flex-bottom {
+    -webkit-align-items: flex-end;
+    align-items: flex-end;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+  }
+}
+
+.col {
+  padding: 1rem;
+
+  @include resp(sm) {
+    @include col-size(100%);
+  }
+}
+
+.col-fill {
+  flex: 1 1 0;
+  width: auto;
+}
+
+@include create-flex-classes(col);
+@include create-flex-classes(xs, $xsmall-screen);
+@include create-flex-classes(sm, $small-screen);
+@include create-flex-classes(md, $medium-screen);
+@include create-flex-classes(lg, $large-screen);
+
+.align-top {
+  -webkit-align-self: flex-start;
+  align-self: flex-start;
+  -ms-flex-item-align: start;
+}
+
+.align-middle {
+  -webkit-align-self: center;
+  align-self: center;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+}
+
+.align-bottom {
+  -webkit-align-self: flex-end;
+  align-self: flex-end;
+  -ms-flex-item-align: end;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 960px;
+  position: relative;
+  width: 100%;
+
+  @include resp(md) {
+    width: 85%;
+  }
+  @include resp(xs) {
+    width: 90%;
+  }
+}

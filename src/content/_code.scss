@@ -1,0 +1,39 @@
+code {
+  background-color: lighten($primary, 70%);
+  border-radius: 3px;
+  color: $secondary;
+  font-size: 80%;
+  padding: 2px 4px;
+}
+
+kbd {
+  background-color: $primary;
+  border-radius: 3px;
+  color: $white;
+  font-size: 80%;
+  padding: 2px 4px;
+}
+
+pre {
+  background-color: lighten($primary, 73%);
+  border: 1px solid lighten($primary, 50%);
+  border-radius: 3px;
+  color: $primary;
+  display: block;
+  font-size: 80%;
+  line-height: 1.5;
+  overflow-x: auto;
+  padding: 1em;
+  white-space: pre;
+  word-break: break-all;
+  word-wrap: break-word;
+
+  code {
+    background: transparent;
+    color: inherit;
+    display: block;
+    font-size: inherit;
+    padding: initial;
+    white-space: pre;
+  }
+}
