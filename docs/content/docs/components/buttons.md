@@ -3,7 +3,7 @@ title: Buttons
 description: PaperCSS Buttons
 ---
 
-Insprired by [Imprefect Buttons](https://codepen.io/tmrDevelops/pen/VeRvKX)
+Inspired by [Imperfect Buttons](https://codepen.io/tmrDevelops/pen/VeRvKX)
 
 <button class="btn-large">Large</button>
 <button>Default</button>
@@ -22,7 +22,7 @@ Insprired by [Imprefect Buttons](https://codepen.io/tmrDevelops/pen/VeRvKX)
 #### Code:
 
 ```html
-<p>Insprired by <a href="https://codepen.io/tmrDevelops/pen/VeRvKX" target="_blank">Imprefect Buttons</a></p>
+<p>Inspired by <a href="https://codepen.io/tmrDevelops/pen/VeRvKX" target="_blank">Imperfect Buttons</a></p>
 <button class="btn-large">Large</button>
 <button>Default</button>
 <button class="btn-small">Small</button>
