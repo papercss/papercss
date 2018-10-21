@@ -7,11 +7,13 @@ const gulp = require('gulp'),
       exec = require('child_process').execFile,
       optional = require('optional'),
       hugo = optional('hugo-bin'),
-      gulpStylelint = optional('gulp-stylelint');
+      gulpStylelint = optional('gulp-stylelint'),
+      autoprefixer = require('gulp-autoprefixer');
 
 gulp.task('sass', function() {
   gulp.src('src/**/*.scss')
     .pipe(sass.sync().on('error', sass.logError))
+    .pipe(autoprefixer())
     .pipe(cleanCSS({format: 'beautify'}))
     .pipe(rename('paper.css'))
     .pipe(gulp.dest('dist'))
@@ -49,6 +51,7 @@ gulp.task('hugo-build', function (cb) {
 gulp.task('minify-css', () => {
   return gulp.src('src/**/*.scss')
   .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+  .pipe(autoprefixer())
   .pipe(rename('paper.min.css'))
   .pipe(gulp.dest('dist'))
   .pipe(gulp.dest('docs/static/assets'));

@@ -5,8 +5,6 @@
   ],
   "rules": {
     "max-nesting-depth": 5,
-    "property-no-vendor-prefix": null,
-    "value-no-vendor-prefix": null,
     "selector-no-qualifying-type": null,
     "selector-max-compound-selectors": null,
     "scss/selector-no-redundant-nesting-selector": null,
