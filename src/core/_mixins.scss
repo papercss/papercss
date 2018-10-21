@@ -1,0 +1,159 @@
+/**
+  PaperCSS Mixins
+*/
+
+/**
+  Assign a border style to a component selector.
+  @param    integer
+  @default  1
+*/
+@mixin border-style($style: 1) {
+  @if $style==1 {
+    border-bottom-left-radius: 15px 255px;
+    border-bottom-right-radius: 225px 15px;
+    border-top-left-radius: 255px 15px;
+    border-top-right-radius: 15px 225px;
+  }
+  @if $style==2 {
+    border-bottom-left-radius: 185px 25px;
+    border-bottom-right-radius: 20px 205px;
+    border-top-left-radius: 125px 25px;
+    border-top-right-radius: 10px 205px;
+  }
+  @if $style==3 {
+    border-bottom-left-radius: 225px 15px;
+    border-bottom-right-radius: 15px 255px;
+    border-top-left-radius: 15px 225px;
+    border-top-right-radius: 255px 15px;
+  }
+  @if $style==4 {
+    border-bottom-left-radius: 25px 115px;
+    border-bottom-right-radius: 155px 25px;
+    border-top-left-radius: 15px 225px;
+    border-top-right-radius: 25px 150px;
+  }
+  @if $style==5 {
+    border-bottom-left-radius: 20px 115px;
+    border-bottom-right-radius: 15px 105px;
+    border-top-left-radius: 250px 15px;
+    border-top-right-radius: 25px 80px;
+  }
+  @if $style==6 {
+    border-bottom-left-radius: 15px 225px;
+    border-bottom-right-radius: 20px 205px;
+    border-top-left-radius: 28px 125px;
+    border-top-right-radius: 100px 30px;
+  }
+}
+
+/**
+  Mixin for setting responsive breakpoints
+  @param string | integer
+  @default null
+*/
+@mixin resp($max:null, $min:null) {
+  @if $max == large or $max == lg { $max: $large-screen; }
+  @if $max == medium or $max == md { $max: $medium-screen; }
+  @if $max == small or $max == sm { $max: $small-screen; }
+  @if $max == xsmall or $max == xs { $max: $xsmall-screen; }
+
+  @if ($min != null and $max != null) { @media only screen and (max-width: $max) and (min-width: $min) { @content; } }
+  @else if($max != null and $min == null) { @media only screen and (max-width: $max) { @content; } }
+  @else if($min != null and $max == null) { @media only screen and (min-width: $min) { @content; } }
+  @else { @error 'no matching size found';}
+}
+
+/**
+  Useful helper mixins
+*/
+@mixin hr-after() {
+  color: lighten($primary, 30%);
+  content: '~~~';
+  display: block;
+  font-size: 1.5rem;
+  position: relative;
+  text-align: center;
+}
+
+@mixin center-all() {
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin col-size($percent) {
+  flex: 0 0 $percent;
+  max-width: $percent;
+}
+
+@mixin li-bullet($char) {
+  li::before {
+    content: $char;
+  }
+}
+
+/*
+  Add transform: translate() with browser prefixes.
+  Same syntax for translate() and translate3d()
+  To get 3D add a $z value and set 'true'
+  @param string | boolean
+  @default 0 | false
+*/
+@mixin translate($x, $y, $z: 0, $transform3d: false) {
+  @if $transform3d {
+    transform: translate3d($x, $y, $z);
+  } @else {
+    transform: translate($x, $y);
+  }
+}
+
+/*
+  Add global transition styles to selector
+  @param string
+  @default all | 235ms | ease-in-out | 0
+*/
+@mixin transition($name:all, $duration:235ms, $animation:ease-in-out, $delay: 0s) {
+  transition: $name $duration $animation $delay;
+}
+
+/**
+  Set the shadow type for a component
+  @param    string
+  @default  regular
+*/
+@mixin shadow($type: regular) {
+  @if $type == hover {
+    @include translate(0, 2px, 0, true);
+    box-shadow: $shadow-hover;
+  } @else if $type == small {
+    @include transition($animation: ease);
+    box-shadow: $shadow-small;
+  } @else if $type == regular {
+    @include transition($animation: ease);
+    box-shadow: $shadow-regular;
+  } @else if $type == large {
+    @include transition($animation: ease);
+    box-shadow: $shadow-large;
+  } @else {
+    @error 'wrong $type. available types: small | regular | large | hover';
+  }
+}
+
+//function for string replacement
+@function str-replace($string, $search, $replace: '') {
+  $index: str-index($string, $search);
+
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+
+  @return $string;
+}
+
+/**
+  Sets a striped background on a component
+  @param    string
+*/
+@mixin striped-background($base-color) {
+  $color-dark: darken($base-color, 10%);
+  background: repeating-linear-gradient(45deg, $base-color, $base-color 0.25rem, $color-dark 0.25rem, $color-dark 0.5rem);
+}

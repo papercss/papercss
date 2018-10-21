@@ -1,6 +1,6 @@
 {
   "name": "papercss",
-  "version": "1.5.4",
+  "version": "1.6.0",
   "description": "The less formal CSS framework.",
   "main": "index.js",
   "scripts": {
@@ -22,6 +22,7 @@
   "homepage": "https://www.getpapercss.com",
   "dependencies": {
     "gulp": "3.9.1",
+    "gulp-autoprefixer": "^6.0.0",
     "gulp-clean-css": "3.9.0",
     "gulp-connect": "5.0.0",
     "gulp-plumber": "1.1.0",
