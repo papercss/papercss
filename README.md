@@ -50,7 +50,7 @@ You can also play with original, source files, written in SCSS, in `src/`.
 
 You can view the docs at [getpapercss.com](https://www.getpapercss.com). Those are directly from the `master` branch, this means those features are stable and ready to be used in your project.
 
-You can also view the develop branch at [develop.getpapercss.com](https://develop.getpapercss.com), this include new features that are coming soon in master branch. Be warned, a feature in develop can be removed without any prevention.
+You can also view the develop branch at [develop.getpapercss.com](https://develop.getpapercss.com), this includes new features that are coming soon in master branch. Be warned, a feature in develop can be removed without any prevention.
 
 ## Customizing
 
