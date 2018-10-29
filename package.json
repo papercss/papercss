@@ -44,7 +44,7 @@
     "install": "0.10.1",
     "jake": "^8.0.15",
     "jshint": "^2.9.6",
-    "karma": "^1.7.1",
+    "karma": "^3.1.1",
     "karma-chai": "^0.1.0",
     "karma-commonjs": "1.0.0",
     "karma-firefox-launcher": "^1.0.0",
