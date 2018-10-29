@@ -21,7 +21,7 @@
   },
   "homepage": "https://www.getpapercss.com",
   "dependencies": {
-    "gulp": "3.9.1",
+    "gulp": "^4.0.0",
     "gulp-autoprefixer": "^6.0.0",
     "gulp-clean-css": "3.9.0",
     "gulp-connect": "^5.6.1",
