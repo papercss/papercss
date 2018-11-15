@@ -60,18 +60,30 @@ button,
 }
 
 a {
-  background-image: linear-gradient(5deg, transparent 65%, $secondary 80%, transparent 90%), linear-gradient(165deg, transparent 5%, $secondary 15%, transparent 25%), linear-gradient(165deg, transparent 45%, $secondary 55%, transparent 65%), linear-gradient(15deg, transparent 25%, $secondary 35%, transparent 50%);
-  background-position: 0 90%;
-  background-repeat: repeat-x;
-  background-size: 4px 3px;
+  position: relative;
   text-decoration: none;
+
+  &::after {
+    background: $secondary;
+    border-bottom-right-radius: 225px 15px;
+    content: '';
+    height: 0.15em;
+    left: 0;
+    position: absolute;
+    top: 1.1em;
+    width: 100%;
+  }
 
   &:visited {
     color: $primary;
     text-decoration: none;
+
+    &::after {
+      background: $primary;
+      content: '';
+    }
   }
 }
-
 
 @each $colorName, $color, $color-light, $color-text in $colors {
   .alert-#{$colorName} {
