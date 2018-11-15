@@ -60,18 +60,28 @@ button,
 }
 
 a {
-  background-image: linear-gradient(5deg, transparent 65%, $secondary 80%, transparent 90%), linear-gradient(165deg, transparent 5%, $secondary 15%, transparent 25%), linear-gradient(165deg, transparent 45%, $secondary 55%, transparent 65%), linear-gradient(15deg, transparent 25%, $secondary 35%, transparent 50%);
-  background-position: 0 90%;
-  background-repeat: repeat-x;
-  background-size: 4px 3px;
+  position: relative;
+  &::after {
+    content: '';
+    background: $secondary;
+    width: 100%;
+    height: 0.15em;
+    position: absolute;
+    top: 1.1em;
+    left: 0;
+    border-bottom-right-radius: 225px 15px;
+  }
   text-decoration: none;
 
   &:visited {
     color: $primary;
     text-decoration: none;
+    &::after {
+      content: '';
+      background: $primary;
+    }
   }
 }
-
 
 @each $colorName, $color, $color-light, $color-text in $colors {
   .alert-#{$colorName} {
