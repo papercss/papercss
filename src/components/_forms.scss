@@ -64,9 +64,9 @@ select {
     /* the basic, unchecked style */
     input {
       border: 0;
-      display: none;
       height: 1px;
       margin: -1px;
+      opacity: 0;
       overflow: hidden;
       padding: 0;
       position: absolute;
