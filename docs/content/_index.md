@@ -30,7 +30,7 @@ Don't want to download it? That's cool. You can just link to PaperCSS via
 * [https://unpkg.com/papercss@1.6.0/dist/paper.css](https://unpkg.com/papercss@1.6.0/dist/paper.css)
 * [https://unpkg.com/papercss@1.6.0/dist/paper.min.css](https://unpkg.com/papercss@1.6.0/dist/paper.min.css)
 
-Here's a quck snippet to get started with PaperCSS:
+Here's a quick snippet to get started with PaperCSS:
 
 ```html
 <!DOCTYPE html>
