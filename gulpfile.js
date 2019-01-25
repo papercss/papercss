@@ -11,7 +11,7 @@ const gulp = require('gulp'),
       autoprefixer = require('gulp-autoprefixer');
 
 gulp.task('sass', function() {
-  gulp.src('src/**/*.scss')
+  return gulp.src('src/**/*.scss')
     .pipe(sass.sync().on('error', sass.logError))
     .pipe(autoprefixer())
     .pipe(cleanCSS({format: 'beautify'}))
@@ -21,51 +21,49 @@ gulp.task('sass', function() {
 });
 
 gulp.task('watch', function () {
-  gulp.watch('src/**/*.scss', ['sass']);
+  gulp.watch('src/**/*.scss', gulp.series('sass'));
 });
 
 gulp.task('hugo-server', function (cb) {
-  let hugo_process = exec(
-    hugo, ['server', '--source=docs', '--disableFastRender'],
-    function (err, stdout, stderr) {
-      console.log(stderr);
-      return err ? cb(err) : cb();
-    }
-  );
+  const flags = ['server', '--source=docs', '--disableFastRender'];
+  let hugo_process = exec(hugo, flags, function (err, stdout, stderr) {
+    console.log(stderr);
+    return err ? cb(err) : cb();
+  });
+
   hugo_process.stdout.pipe(process.stdout);
   return hugo_process;
 })
 
 gulp.task('hugo-build', function (cb) {
-  let hugo_process = exec(
-    hugo, ['--source=docs'],
-    function (err, stdout, stderr) {
-      console.log(stderr);
-      return err ? cb(err) : cb();
-    }
-  );
+  const flags = ['--source=docs'];
+  let hugo_process = exec(hugo, flags, function (err, stdout, stderr) {
+    console.log(stderr);
+    return err ? cb(err) : cb();
+  });
+
   hugo_process.stdout.pipe(process.stdout);
   return hugo_process;
 })
 
 gulp.task('minify-css', () => {
   return gulp.src('src/**/*.scss')
-  .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-  .pipe(autoprefixer())
-  .pipe(rename('paper.min.css'))
-  .pipe(gulp.dest('dist'))
-  .pipe(gulp.dest('docs/static/assets'));
+    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+    .pipe(autoprefixer())
+    .pipe(rename('paper.min.css'))
+    .pipe(gulp.dest('dist'))
+    .pipe(gulp.dest('docs/static/assets'));
 });
 
 gulp.task('lint-css', function() {
   return gulp.src('src/**/*.scss')
     .pipe(gulpStylelint({
       reporters: [
-        {formatter: 'string', console: true}
-      ]
+        { formatter: 'string', console: true },
+      ],
     }));
 })
 
-gulp.task('default', ['sass','watch','hugo-server']);
-gulp.task('build', ['sass','minify-css','hugo-build']);
-gulp.task('postinstall', ['sass','minify-css']);
+gulp.task('default', gulp.series('sass', 'minify-css', 'hugo-build'));
+gulp.task('build', gulp.series('sass', 'minify-css', 'hugo-build'));
+gulp.task('postinstall', gulp.series('sass', 'minify-css'));
