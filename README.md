@@ -26,7 +26,7 @@ There are several options available:
 - You can [download the latest release](https://github.com/papercss/papercss/releases).
 - Clone the repo: `git clone https://github.com/papercss/papercss.git`
 - Install with npm: `npm install papercss`
-- Install with yarn: `yarn install papercss`
+- Install with yarn: `yarn add papercss`
 - Import it using a CDN (it will automatically download the latest version):
     - `https://unpkg.com/papercss/dist/paper.min.css`
     - `https://unpkg.com/papercss/dist/paper.css`
