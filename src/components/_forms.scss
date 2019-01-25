@@ -23,6 +23,10 @@ textarea {
   }
 }
 
+select {
+  height: 2.35rem;
+}
+
 .disabled {
   cursor: not-allowed;
   opacity: 0.5;
@@ -60,9 +64,9 @@ textarea {
     /* the basic, unchecked style */
     input {
       border: 0;
-      display: none;
       height: 1px;
       margin: -1px;
+      opacity: 0;
       overflow: hidden;
       padding: 0;
       position: absolute;
