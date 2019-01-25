@@ -35,7 +35,7 @@
 
     @for $i from 0 through 100 {
       &.w-#{$i} {
-        width: $i + %;
+        width: $i * 1%;
       }
     }
   
