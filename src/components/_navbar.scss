@@ -134,8 +134,11 @@ nav {
   }
 
   .collapsible label {
-    border-bottom: 0;
-    padding: 0;
+    border: 2px solid #41403e;
+    border-bottom-left-radius: 15px 255px;
+    border-bottom-right-radius: 225px 15px;
+    border-top-left-radius: 255px 15px;
+    border-top-right-radius: 15px 225px;
   }
 
   .collapsible > label {
