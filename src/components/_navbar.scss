@@ -23,7 +23,7 @@ nav {
     width: 2rem;
   }
 
-  .collapsible input[id^=collapsible]:checked + button {
+  .collapsible input[id^=collapsible]:checked + label {
     .bar1 {
       transform: rotate(-45deg) translate(-9px, 7px);
     }
@@ -107,6 +107,13 @@ nav {
     }
   }
 
+  .collapsible {
+    @include resp(small) {
+      width: 100%;
+      margin-top: 50px;
+    }
+  }
+
   .collapsible input[id^=collapsible]:checked ~ div.collapsible-body {
     margin: 0;
     max-height: 960px;
@@ -132,7 +139,7 @@ nav {
     padding: 0;
   }
 
-  .collapsible > button {
+  .collapsible > label {
     background-color: $main-background;
     display: none;
     font-size: 0.5rem;
