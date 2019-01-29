@@ -8,7 +8,7 @@
     "build": "node node_modules/gulp/bin/gulp.js build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "gulp postinstall",
-    "stylelint": "node_modules/stylelint/bin/stylelint.js 'src/**/*.scss'"
+    "stylelint": "stylelint/bin/stylelint.js 'src/**/*.scss'"
   },
   "repository": {
     "type": "git",
