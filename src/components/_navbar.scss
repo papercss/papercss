@@ -109,7 +109,6 @@ nav {
 
   .collapsible {
     @include resp(small) {
-      margin-top: 50px;
       width: 100%;
     }
   }
