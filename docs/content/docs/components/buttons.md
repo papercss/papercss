@@ -60,7 +60,7 @@ Inspired by [Imperfect Buttons](https://codepen.io/tmrDevelops/pen/VeRvKX)
 <input type="button" class="btn-secondary-outline" value="Secondary"/>
 <button class="btn-success-outline">Success</button>
 <button class="btn-warning-outline">Warning</button>
-<a class="btn-danger-outline">Danger</a>
+<a href="#" class="paper-btn btn-danger-outline">Danger</a>
 
 #### Code:
 
@@ -69,5 +69,5 @@ Inspired by [Imperfect Buttons](https://codepen.io/tmrDevelops/pen/VeRvKX)
 <input type="button" class="btn-secondary-outline" value="Secondary"/>
 <button class="btn-success-outline">Success</button>
 <button class="btn-warning-outline">Warning</button>
-<a class="btn-danger-outline">Danger</a>
+<a href="#" class="paper-btn btn-danger-outline">Danger</a>
 ```
