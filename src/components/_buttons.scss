@@ -72,7 +72,6 @@ a {
   }
 }
 
-
 @each $colorName, $color, $color-light, $color-text in $colors {
   .alert-#{$colorName} {
     background-color: $color-light;
@@ -86,6 +85,27 @@ a {
     background-color: $color-light;
     border-color: $color;
     color: $color-text;
+
+    &:hover {
+      &:active {
+        background-color: darken($color-light, 10%);
+      }
+    }
+  }
+}
+
+@each $colorName, $color, $color-light, $color-text in $colors-outline {
+  button.btn-#{$colorName},
+  .paper-btn.btn-#{$colorName},
+  [type='button'].btn-#{$colorName} {
+    background-color: $white;
+    border-color: darken($color-light, 10%);
+    color: $color-text;
+
+    &:hover {
+      border-color: $color;
+      background-color: $color-light;
+    }
 
     &:hover {
       &:active {

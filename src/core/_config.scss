@@ -45,6 +45,13 @@ $colors: (primary, $primary, $primary-light, $primary-text),
          (warning, $warning, $warning-light, $warning-text),
          (danger, $danger, $danger-light, $danger-text),
          (muted, $muted, $muted-light, $muted-text);
+
+$colors-outline: (primary-outline, $primary, $primary-light, $primary),
+                 (secondary-outline, $secondary, $secondary-light, $secondary-text),
+                 (success-outline, $success, $success-light, $success-text),
+                 (warning-outline, $warning, $warning-light, $warning-text),
+                 (danger-outline, $danger, $danger-light, $danger-text),
+                 (muted-outline, $muted, $muted-light, $muted-text);
 /* stylelint-enable */
 
 /**
