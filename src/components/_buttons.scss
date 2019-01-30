@@ -103,8 +103,8 @@ a {
     color: $color-text;
 
     &:hover {
-      border-color: $color;
       background-color: $color-light;
+      border-color: $color;
     }
 
     &:hover {
