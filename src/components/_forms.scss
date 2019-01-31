@@ -162,14 +162,14 @@ select {
 
     .paper-switch-slider {
       bottom: 0;
+      border: 2px solid $primary;
+      border-bottom-left-radius: 15px 255px;
+      border-bottom-right-radius: 225px 15px;
+      border-top-left-radius: 255px 15px;
+      border-top-right-radius: 15px 225px;
       cursor: pointer;
       left: 0;
       top: 0;
-      border: 2px solid $primary;
-      border-top-left-radius: 255px 15px;
-      border-bottom-left-radius: 15px 255px;
-      border-bottom-right-radius: 225px 15px;
-      border-top-right-radius: 15px 225px;
       position: absolute;
       right: 0;
       transition: 0.4s;
@@ -257,16 +257,17 @@ select {
   }
 
   .paper-switch-tile {
+    cursor: pointer;
     display: block;
     float: left;
     height: 80px;
     margin: 40px 0 0 40px;
     perspective: 1000px;
-    cursor: pointer;
     position: relative;
-    transform-style: preserve-3d;
     transform: translate(-50%, -50%);
+    transform-style: preserve-3d;
     width: 80px;
+
     &:hover {
       .paper-switch-tile-card {
         box-shadow: 2px 8px 4px -5px rgba(0, 0, 0, 0.2);
@@ -306,8 +307,8 @@ select {
       box-shadow: 2px 8px 8px -5px rgba(0, 0, 0, 0.3);
       height: 100%;
       line-height: 70px;
-      text-align: center;
       position: absolute;
+      text-align: center;
       width: 100%;
     }
 
