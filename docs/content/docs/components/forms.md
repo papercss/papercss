@@ -140,7 +140,7 @@ description: PaperCSS Forms
   </label>
 </fieldset>
 <fieldset class="form-group">
-  <p>Type3 - tile style (square & circle)</p>
+  <p>Type3 - Tile style</p>
   <label for="paperSwitch1" class="paper-switch-tile">
     <input id="paperSwitch1" name="paperSwitch1" type="checkbox" />
     <div class="paper-switch-tile-card border">
@@ -299,7 +299,7 @@ description: PaperCSS Forms
   </label>
 </fieldset>
 <fieldset class="form-group">
-  <p>Type3 - tile style (square & circle)</p>
+  <p>Type3 - Tile style</p>
   <label for="paperSwitch1" class="paper-switch-tile">
     <input id="paperSwitch1" name="paperSwitch1" type="checkbox" />
     <div class="paper-switch-tile-card border">
