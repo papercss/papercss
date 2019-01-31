@@ -161,28 +161,28 @@ select {
     }
 
     .paper-switch-slider {
-      bottom: 0;
       border: 2px solid $primary;
       border-bottom-left-radius: 15px 255px;
       border-bottom-right-radius: 225px 15px;
       border-top-left-radius: 255px 15px;
       border-top-right-radius: 15px 225px;
+      bottom: 0;
       cursor: pointer;
       left: 0;
-      top: 0;
       position: absolute;
       right: 0;
+      top: 0;
       transition: 0.4s;
 
       &::before {
         background: $secondary;
         content: '';
         left: 4px;
-        position: absolute;
         border-bottom-left-radius: 15px 255px;
         border-bottom-right-radius: 225px 15px;
         border-top-left-radius: 255px 15px;
         border-top-right-radius: 15px 225px;
+        position: absolute;
         transition: 0.4s;
       }
 
