@@ -143,8 +143,8 @@ select {
     
     input {
       height: 0;
-      width: 0;
       opacity: 0;
+      width: 0;
 
       &:checked + .paper-switch-slider {
         background-color: #d0dbc2;
@@ -162,21 +162,21 @@ select {
 
     .paper-switch-slider {
       cursor: pointer;
-      left: 0;
       bottom: 0;
       top: 0;
-      right: 0;
-      position: absolute;
+      left: 0;
       border: 2px solid $primary;
+      border-top-left-radius: 255px 15px;
+      position: absolute;
+      right: 0;
       border-bottom-left-radius: 15px 255px;
       border-bottom-right-radius: 225px 15px;
-      border-top-left-radius: 255px 15px;
       border-top-right-radius: 15px 225px;
       transition: 0.4s;
 
       &::before {
-        content: '';
         background: $secondary;
+        content: '';
         left: 4px;
         position: absolute;
         border-bottom-left-radius: 15px 255px;
@@ -257,28 +257,27 @@ select {
   }
 
   .paper-switch-tile {
-    float: left;
     display: block;
-    margin: 40px 0 0 40px;
+    float: left;
     height: 80px;
-    width: 80px;
+    margin: 40px 0 0 40px;
     perspective: 1000px;
-    transform-style: preserve-3d;
+    width: 80px;
     cursor: pointer;
+    transform-style: preserve-3d;
     position: relative;
     transform: translate(-50%, -50%);
 
     &:hover {
       .paper-switch-tile-card {
         box-shadow: 2px 8px 4px -5px rgba(0, 0, 0, 0.2);
-        -webkit-transform: rotateX(30deg);
         transform: rotateX(30deg);
       }
 
       &:checked + .paper-switch-tile-card {
         background-color: transparent;
-        transform: rotateX(150deg);
         box-shadow: 0 10px 15px -15px rgba(0, 0, 0, 0.9);
+        transform: rotateX(150deg);
       }
 
     }
@@ -298,23 +297,22 @@ select {
     background-color: transparent;
     border-color: transparent;
     height: 100%;
-    width: 100%;
     position: relative;
+    width: 100%;
     transform-style: preserve-3d;
     transition: all 600ms;
     
     div {
       backface-visibility: hidden;
       line-height: 70px;
-      text-align: center;
       height: 100%;
-      width: 100%;
+      text-align: center;
+      box-shadow: 2px 8px 8px -5px rgba(0, 0, 0, 0.3);
       position: absolute;
-      box-shadow: 2px 8px 8px -5px rgba(0, 0 ,0, 0.3);
+      width: 100%;
     }
 
     .paper-switch-tile-card-back {
-      -webkit-transform: rotateX(180deg);
       transform: rotateX(180deg);
     }
 
