@@ -147,7 +147,7 @@ select {
       width: 0;
 
       &:checked + .paper-switch-slider {
-        background-color: #d0dbc2;
+        background-color: $success-light;
       }
 
       &:checked + .paper-switch-slider::before {
@@ -155,7 +155,7 @@ select {
       }
 
       &:focus + .paper-switch-slider {
-        box-shadow: 0 0 1px #2196f3;
+        box-shadow: 0 0 3px $secondary;
       }
 
     }
