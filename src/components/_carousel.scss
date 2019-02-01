@@ -1,0 +1,120 @@
+.paper-carousel {
+  box-shadow: 0 1px 6px $light-dark;
+  margin-top: 26px;
+  position: relative;
+
+  .paper-carousel-inner {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+
+    .paper-carousel-open:checked + .paper-carousel-item {
+      opacity: 100;
+      position: static;
+    }
+
+    .paper-carousel-item {
+      opacity: 0;
+      position: absolute;
+      transition: opacity 0.6s ease-out;
+
+      img {
+        display: block;
+        height: auto;
+        max-width: 100%;
+      }
+
+      .paper-carousel-title {
+        margin: 0;
+        padding: 10px 0 50px;
+        text-align: center;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.33), -1px 0 2px rgba(255, 255, 255, 0);
+        width: 100%;
+      }
+    }
+
+    .paper-carousel-control {
+      background: rgba(0, 0, 0, 0.28);
+      border-radius: 50%;
+      color: $white;
+      cursor: pointer;
+      display: none;
+      font-size: 40px;
+      height: 40px;
+      line-height: 35px;
+      position: absolute;
+      text-align: center;
+      top: 50%;
+      transform: translate(0, -50%);
+      width: 40px;
+      z-index: 9;
+    }
+    
+    .paper-carousel-control.prev {
+      left: 2%;
+    }
+
+    .paper-carousel-control.next {
+      right: 2%;
+    }
+
+    .paper-carousel-control:hover {
+      background: $light-dark;
+      color: #aaa;
+    }
+
+    .paper-carousel-indicators {
+      bottom: 2%;
+      left: 0;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      right: 0;
+      text-align: center;
+      z-index: 10;
+
+      li {
+        display: inline-block;
+        margin: 0 5px;
+
+        .paper-carousel-bullet {
+          color: #aaa;
+          cursor: pointer;
+          display: block;
+          font-size: 35px;
+
+          &:hover {
+            color: #428bca;
+          }
+        }
+      }
+    }
+    
+    input[id='paper-carousel-1']:checked ~ .pc-control-1,
+    input[id='paper-carousel-2']:checked ~ .pc-control-2,
+    input[id='paper-carousel-3']:checked ~ .pc-control-3,
+    input[id='paper-carousel-4']:checked ~ .pc-control-4,
+    input[id='paper-carousel-5']:checked ~ .pc-control-5,
+    input[id='paper-carousel-6']:checked ~ .pc-control-6,
+    input[id='paper-carousel-7']:checked ~ .pc-control-7,
+    input[id='paper-carousel-8']:checked ~ .pc-control-8,
+    input[id='paper-carousel-9']:checked ~ .pc-control-9,
+    input[id='paper-carousel-10']:checked ~ .pc-control-10 {
+      display: block;
+    }
+    
+    input[id='paper-carousel-1']:checked ~ .pc-control-1 ~ .paper-carousel-indicators li:nth-child(1) .paper-carousel-bullet,
+    input[id='paper-carousel-2']:checked ~ .pc-control-2 ~ .paper-carousel-indicators li:nth-child(2) .paper-carousel-bullet,
+    input[id='paper-carousel-3']:checked ~ .pc-control-3 ~ .paper-carousel-indicators li:nth-child(3) .paper-carousel-bullet,
+    input[id='paper-carousel-4']:checked ~ .pc-control-4 ~ .paper-carousel-indicators li:nth-child(4) .paper-carousel-bullet,
+    input[id='paper-carousel-5']:checked ~ .pc-control-5 ~ .paper-carousel-indicators li:nth-child(5) .paper-carousel-bullet,
+    input[id='paper-carousel-6']:checked ~ .pc-control-6 ~ .paper-carousel-indicators li:nth-child(6) .paper-carousel-bullet,
+    input[id='paper-carousel-7']:checked ~ .pc-control-7 ~ .paper-carousel-indicators li:nth-child(7) .paper-carousel-bullet,
+    input[id='paper-carousel-8']:checked ~ .pc-control-8 ~ .paper-carousel-indicators li:nth-child(8) .paper-carousel-bullet,
+    input[id='paper-carousel-9']:checked ~ .pc-control-9 ~ .paper-carousel-indicators li:nth-child(9) .paper-carousel-bullet,
+    input[id='paper-carousel-10']:checked ~ .pc-control-10 ~ .paper-carousel-indicators li:nth-child(10) .paper-carousel-bullet {
+      color: #428bca;
+    }
+  }
+}
