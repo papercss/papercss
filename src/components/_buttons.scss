@@ -94,13 +94,17 @@ a {
   }
 }
 
-@each $colorName, $color, $color-light, $color-text in $colors-outline {
-  button.btn-#{$colorName},
-  .paper-btn.btn-#{$colorName},
-  [type='button'].btn-#{$colorName} {
+@each $colorName, $color, $color-light, $color-text in $colors {
+  button.btn-#{$colorName}-outline,
+  .paper-btn.btn-#{$colorName}-outline,
+  [type='button'].btn-#{$colorName}-outline {
     background-color: $white;
     border-color: darken($color-light, 10%);
-    color: $color-text;
+    @if $colorName == primary {
+      color: $color;
+    } @else {
+      color: $color-text;
+    }
 
     &:hover {
       background-color: $color-light;
