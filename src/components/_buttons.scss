@@ -72,7 +72,6 @@ a {
   }
 }
 
-
 @each $colorName, $color, $color-light, $color-text in $colors {
   .alert-#{$colorName} {
     background-color: $color-light;
@@ -86,6 +85,31 @@ a {
     background-color: $color-light;
     border-color: $color;
     color: $color-text;
+
+    &:hover {
+      &:active {
+        background-color: darken($color-light, 10%);
+      }
+    }
+  }
+}
+
+@each $colorName, $color, $color-light, $color-text in $colors {
+  button.btn-#{$colorName}-outline,
+  .paper-btn.btn-#{$colorName}-outline,
+  [type='button'].btn-#{$colorName}-outline {
+    background-color: $white;
+    border-color: darken($color-light, 10%);
+    @if $colorName == primary {
+      color: $color;
+    } @else {
+      color: $color-text;
+    }
+
+    &:hover {
+      background-color: $color-light;
+      border-color: $color;
+    }
 
     &:hover {
       &:active {

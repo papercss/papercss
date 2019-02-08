@@ -53,3 +53,21 @@ Inspired by [Imperfect Buttons](https://codepen.io/tmrDevelops/pen/VeRvKX)
 <button class="btn-warning">Warning</button>
 <button class="btn-danger">Danger</button>
 ```
+
+### Outline colors
+
+<input type="button" class="paper-btn btn-primary-outline" value="Primary"/>
+<input type="button" class="btn-secondary-outline" value="Secondary"/>
+<button class="btn-success-outline">Success</button>
+<button class="btn-warning-outline">Warning</button>
+<a href="#" class="paper-btn btn-danger-outline">Danger</a>
+
+#### Code:
+
+```html
+<input type="button" class="paper-btn btn-primary-outline" value="Primary"/>
+<input type="button" class="btn-secondary-outline" value="Secondary"/>
+<button class="btn-success-outline">Success</button>
+<button class="btn-warning-outline">Warning</button>
+<a href="#" class="paper-btn btn-danger-outline">Danger</a>
+```
