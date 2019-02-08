@@ -64,6 +64,105 @@ description: PaperCSS Forms
     <span>This is the second check</span>
   </label>
 </fieldset>
+<fieldset class="form-group">
+  <legend>Some Switch</legend>
+  <p>Default - standard outline style (square & circle)</p>
+  <label class="paper-switch">
+    <input id="paperSwitch4" name="paperSwitch4" type="checkbox" />
+    <span class="paper-switch-slider"></span>
+  </label>
+  <label for="paperSwitch4" class="paper-switch-label">
+    Square switch
+  </label>
+</fieldset>
+<fieldset class="form-group">
+  <label for="paperSwitch5" class="paper-switch-label">
+    Square switch
+  </label>
+  <label class="paper-switch">
+    <input id="paperSwitch5" name="paperSwitch5" type="checkbox" checked />
+    <span class="paper-switch-slider"></span>
+  </label>
+</fieldset>
+<fieldset class="form-group">
+  <label class="paper-switch">
+    <input id="paperSwitch6" name="paperSwitch6" type="checkbox" checked />
+    <span class="paper-switch-slider round"></span>
+  </label>
+  <label for="paperSwitch6" class="paper-switch-label">
+    Circle switch
+  </label>
+</fieldset>
+<fieldset class="form-group">
+  <label for="paperSwitch7" class="paper-switch-label">
+    Circle switch
+  </label>
+  <label class="paper-switch">
+    <input id="paperSwitch7" name="paperSwitch7" type="checkbox" />
+    <span class="paper-switch-slider round"></span>
+  </label>
+</fieldset>
+<fieldset class="form-group">
+  <p>Type2 - inline style (square & circle)</p>
+  <label class="paper-switch-2">
+    <input id="paperSwitch8" name="paperSwitch8" type="checkbox" checked />
+    <span class="paper-switch-slider"></span>
+  </label>
+  <label for="paperSwitch8" class="paper-switch-2-label">
+    Square switch
+  </label>
+</fieldset>
+<fieldset class="form-group">
+  <label for="paperSwitch9" class="paper-switch-2-label">
+    Square switch
+  </label>
+  <label class="paper-switch-2">
+    <input id="paperSwitch9" name="paperSwitch9" type="checkbox" />
+    <span class="paper-switch-slider"></span>
+  </label>
+</fieldset>
+<fieldset class="form-group">
+  <label class="paper-switch-2">
+    <input id="paperSwitch10" name="paperSwitch10" type="checkbox" />
+    <span class="paper-switch-slider round"></span>
+  </label>
+  <label for="paperSwitch10" class="paper-switch-2-label">
+    Circle switch
+  </label>
+</fieldset>
+<fieldset class="form-group">
+  <label for="paperSwitch11" class="paper-switch-2-label">
+    Circle switch
+  </label>
+  <label class="paper-switch-2">
+    <input id="paperSwitch11" name="paperSwitch11" type="checkbox" checked />
+    <span class="paper-switch-slider round"></span>
+  </label>
+</fieldset>
+<fieldset class="form-group">
+  <p>Type3 - Tile style</p>
+  <label for="paperSwitch1" class="paper-switch-tile">
+    <input id="paperSwitch1" name="paperSwitch1" type="checkbox" />
+    <div class="paper-switch-tile-card border">
+      <div class="paper-switch-tile-card-front border">Front</div>
+      <div class="paper-switch-tile-card-back border background-primary">Back</div>
+    </div>
+  </label>
+  <label for="paperSwitch2" class="paper-switch-tile">
+    <input id="paperSwitch2" name="paperSwitch2" type="checkbox" />
+    <div class="paper-switch-tile-card border">
+      <div class="paper-switch-tile-card-front border background-warning">Off</div>
+      <div class="paper-switch-tile-card-back border background-secondary">On</div>
+    </div>
+  </label>
+  <label for="paperSwitch3" class="paper-switch-tile">
+    <input id="paperSwitch3" name="paperSwitch3" type="checkbox" />
+    <div class="paper-switch-tile-card border">
+      <div class="paper-switch-tile-card-front border background-danger">Declined</div>
+      <div class="paper-switch-tile-card-back border background-success">Accepted</div>
+    </div>
+  </label>
+</fieldset>
 
 #### Code:
 
@@ -122,6 +221,105 @@ description: PaperCSS Forms
   </label>
   <label for="paperChecks2" class="paper-check">
     <input type="checkbox" name="paperChecks" id="paperChecks2" value="option 2"> <span>This is the second check</span>
+  </label>
+</fieldset>
+<fieldset class="form-group">
+  <legend>Some Switch</legend>
+  <p>Default - standard outline style (square & circle)</p>
+  <label class="paper-switch">
+    <input id="paperSwitch4" name="paperSwitch4" type="checkbox" />
+    <span class="paper-switch-slider"></span>
+  </label>
+  <label for="paperSwitch4" class="paper-switch-label">
+    Square switch
+  </label>
+</fieldset>
+<fieldset class="form-group">
+  <label for="paperSwitch5" class="paper-switch-label">
+    Square switch
+  </label>
+  <label class="paper-switch">
+    <input id="paperSwitch5" name="paperSwitch5" type="checkbox" checked />
+    <span class="paper-switch-slider"></span>
+  </label>
+</fieldset>
+<fieldset class="form-group">
+  <label class="paper-switch">
+    <input id="paperSwitch6" name="paperSwitch6" type="checkbox" checked />
+    <span class="paper-switch-slider round"></span>
+  </label>
+  <label for="paperSwitch6" class="paper-switch-label">
+    Circle switch
+  </label>
+</fieldset>
+<fieldset class="form-group">
+  <label for="paperSwitch7" class="paper-switch-label">
+    Circle switch
+  </label>
+  <label class="paper-switch">
+    <input id="paperSwitch7" name="paperSwitch7" type="checkbox" />
+    <span class="paper-switch-slider round"></span>
+  </label>
+</fieldset>
+<fieldset class="form-group">
+  <p>Type2 - inline style (square & circle)</p>
+  <label class="paper-switch-2">
+    <input id="paperSwitch8" name="paperSwitch8" type="checkbox" checked />
+    <span class="paper-switch-slider"></span>
+  </label>
+  <label for="paperSwitch8" class="paper-switch-2-label">
+    Square switch
+  </label>
+</fieldset>
+<fieldset class="form-group">
+  <label for="paperSwitch9" class="paper-switch-2-label">
+    Square switch
+  </label>
+  <label class="paper-switch-2">
+    <input id="paperSwitch9" name="paperSwitch9" type="checkbox" />
+    <span class="paper-switch-slider"></span>
+  </label>
+</fieldset>
+<fieldset class="form-group">
+  <label class="paper-switch-2">
+    <input id="paperSwitch10" name="paperSwitch10" type="checkbox" />
+    <span class="paper-switch-slider round"></span>
+  </label>
+  <label for="paperSwitch10" class="paper-switch-2-label">
+    Circle switch
+  </label>
+</fieldset>
+<fieldset class="form-group">
+  <label for="paperSwitch11" class="paper-switch-2-label">
+    Circle switch
+  </label>
+  <label class="paper-switch-2">
+    <input id="paperSwitch11" name="paperSwitch11" type="checkbox" checked />
+    <span class="paper-switch-slider round"></span>
+  </label>
+</fieldset>
+<fieldset class="form-group">
+  <p>Type3 - Tile style</p>
+  <label for="paperSwitch1" class="paper-switch-tile">
+    <input id="paperSwitch1" name="paperSwitch1" type="checkbox" />
+    <div class="paper-switch-tile-card border">
+      <div class="paper-switch-tile-card-front border">Front</div>
+      <div class="paper-switch-tile-card-back border background-primary">Back</div>
+    </div>
+  </label>
+  <label for="paperSwitch2" class="paper-switch-tile">
+    <input id="paperSwitch2" name="paperSwitch2" type="checkbox" />
+    <div class="paper-switch-tile-card border">
+      <div class="paper-switch-tile-card-front border background-warning">Off</div>
+      <div class="paper-switch-tile-card-back border background-secondary">On</div>
+    </div>
+  </label>
+  <label for="paperSwitch3" class="paper-switch-tile">
+    <input id="paperSwitch3" name="paperSwitch3" type="checkbox" />
+    <div class="paper-switch-tile-card border">
+      <div class="paper-switch-tile-card-front border background-danger">Declined</div>
+      <div class="paper-switch-tile-card-back border background-success">Accepted</div>
+    </div>
   </label>
 </fieldset>
 ```

@@ -119,6 +119,205 @@ select {
       }
     }
   }
+
+  .paper-switch-label,
+  .paper-switch-2-label {
+    cursor: pointer;
+    float: left;
+  }
+
+  .paper-switch-label {
+    margin: -6px 10px 0 0;
+  }
+
+  .paper-switch-2-label {
+    margin: 0 10px 0 0;
+  }
+
+  .paper-switch,
+  .paper-switch-2 {
+    display: block;
+    float: left;
+    margin: 0 10px 0 0;
+    position: relative;
+    
+    input {
+      height: 0;
+      opacity: 0;
+      width: 0;
+
+      &:checked + .paper-switch-slider {
+        background-color: $success-light;
+      }
+
+      &:checked + .paper-switch-slider::before {
+        transform: translateX(26px);
+      }
+
+      &:focus + .paper-switch-slider {
+        box-shadow: 0 0 3px $secondary;
+      }
+
+    }
+
+    .paper-switch-slider {
+      border: 2px solid $primary;
+      border-bottom-left-radius: 15px 255px;
+      border-bottom-right-radius: 225px 15px;
+      border-top-left-radius: 255px 15px;
+      border-top-right-radius: 15px 225px;
+      bottom: 0;
+      cursor: pointer;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      transition: 0.4s;
+
+      &::before {
+        background: $secondary;
+        border-bottom-left-radius: 15px 255px;
+        border-bottom-right-radius: 225px 15px;
+        border-top-left-radius: 255px 15px;
+        border-top-right-radius: 15px 225px;
+        content: '';
+        left: 4px;
+        position: absolute;
+        transition: 0.4s;
+      }
+
+    }
+
+    .paper-switch-slider.round {
+      border: 2px solid $primary;
+      border-bottom-left-radius: 0.7rem 1rem;
+      border-bottom-right-radius: 1rem 0.9rem;
+      border-top-left-radius: 1rem 1rem;
+      border-top-right-radius: 1rem 0.6rem;
+
+      &::before {
+        background: url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A//www.w3.org/2000/svg'%20viewBox%3D'0%200%20100%20100'%3E%3Cpath%20fill%3D'%230071de'%20d%3D'M49.346,46.341c-3.79-2.005,3.698-10.294,7.984-8.89%20c8.713,2.852,4.352,20.922-4.901,20.269c-4.684-0.33-12.616-7.405-14.38-11.818c-2.375-5.938,7.208-11.688,11.624-13.837%20c9.078-4.42,18.403-3.503,22.784,6.651c4.049,9.378,6.206,28.09-1.462,36.276c-7.091,7.567-24.673,2.277-32.357-1.079%20c-11.474-5.01-24.54-19.124-21.738-32.758c3.958-19.263,28.856-28.248,46.044-23.244c20.693,6.025,22.012,36.268,16.246,52.826%20c-5.267,15.118-17.03,26.26-33.603,21.938c-11.054-2.883-20.984-10.949-28.809-18.908C9.236,66.096,2.704,57.597,6.01,46.371%20c3.059-10.385,12.719-20.155,20.892-26.604C40.809,8.788,58.615,1.851,75.058,12.031c9.289,5.749,16.787,16.361,18.284,27.262%20c0.643,4.698,0.646,10.775-3.811,13.746'%3E%3C/path%3E%3C/svg%3E") left center no-repeat;
+        border-bottom-left-radius: 0.7rem 1rem;
+        border-bottom-right-radius: 1rem 0.9rem;
+        border-top-left-radius: 1rem 1rem;
+        border-top-right-radius: 1rem 0.6rem;
+        left: 4px;
+      }
+
+    }
+
+  }
+
+  .paper-switch {
+    height: 12px;
+    width: 60px;
+
+    .paper-switch-slider {
+      &::before {
+        bottom: -6px;
+        height: 20px;
+        width: 20px;
+      }
+
+    }
+
+    .paper-switch-slider.round {
+      &::before {
+        bottom: -7px;
+        height: 23px;
+        width: 23px;
+      }
+
+    }
+
+  }
+
+  .paper-switch-2 {
+    height: 22px;
+    width: 50px;
+
+    .paper-switch-slider {
+      &::before {
+        bottom: 2px;
+        height: 14px;
+        width: 14px;
+      }
+
+    }
+
+    .paper-switch-slider.round {
+      &::before {
+        bottom: 2px;
+        height: 14px;
+        width: 14px;
+      }
+
+    }
+
+  }
+
+  .paper-switch-tile {
+    cursor: pointer;
+    display: block;
+    float: left;
+    height: 80px;
+    margin: 40px 0 0 40px;
+    perspective: 1000px;
+    position: relative;
+    transform: translate(-50%, -50%);
+    transform-style: preserve-3d;
+    width: 80px;
+
+    &:hover {
+      .paper-switch-tile-card {
+        box-shadow: 2px 8px 4px -5px rgba(0, 0, 0, 0.2);
+        transform: rotateX(30deg);
+      }
+
+      &:checked + .paper-switch-tile-card {
+        background-color: transparent;
+        box-shadow: 0 10px 15px -15px rgba(0, 0, 0, 0.9);
+        transform: rotateX(150deg);
+      }
+
+    }
+
+    input {
+      display: none;
+      
+      &:checked + .paper-switch-tile-card {
+        transform: rotateX(180deg);
+      }
+
+    }
+
+  }
+
+  .paper-switch-tile-card {
+    background-color: transparent;
+    border-color: transparent;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 600ms;
+    width: 100%;
+    
+    div {
+      backface-visibility: hidden;
+      box-shadow: 2px 8px 8px -5px rgba(0, 0, 0, 0.3);
+      height: 100%;
+      line-height: 70px;
+      position: absolute;
+      text-align: center;
+      width: 100%;
+    }
+
+    .paper-switch-tile-card-back {
+      transform: rotateX(180deg);
+    }
+
+  }
+
 }
 
 fieldset.form-group {
