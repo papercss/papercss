@@ -23,6 +23,7 @@ nav {
     width: 2rem;
   }
 
+  .collapsible input[id^=collapsible]:checked + button, // Leaving for backwards compatibility. See docs for proper usage
   .collapsible input[id^=collapsible]:checked + label {
     .bar1 {
       transform: rotate(-45deg) translate(-9px, 7px);
@@ -101,7 +102,7 @@ nav {
     h3,
     h4,
     h5,
-    h6, {
+    h6 {
       margin: 0;
       margin-bottom: 0.2rem;
     }
@@ -141,6 +142,11 @@ nav {
     border-top-right-radius: 15px 225px;
   }
 
+  .collapsible > button { // Leaving for backwards compatibility. See docs for proper usage
+    border: 0;
+  }
+
+  .collapsible > button, // Leaving for backwards compatibility. See docs for proper usage
   .collapsible > label {
     background-color: $main-background;
     display: none;
