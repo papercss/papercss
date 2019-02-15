@@ -1,0 +1,185 @@
+/* Ripple */
+
+.ripple {
+  overflow: hidden;
+  position: relative;
+  transform: translate3d(0, 0, 0);
+
+  &::after {
+    background-image: radial-gradient(circle, #000 10%, transparent 10.01%);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    content: '';
+    display: block;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    transform: scale(10, 10);
+    transition: transform 0.5s, opacity 1s;
+    width: 100%;
+  }
+
+  &:active::after {
+    opacity: 0.2;
+    transform: scale(0, 0);
+    transition: 0s;
+  }
+
+}
+
+@each $colorName, $color, $color-light, $color-text in $colors {
+  .ripple-#{$colorName}::after {
+    background-image: radial-gradient(circle, $color 10%, transparent 10.01%);
+  }
+}
+
+/* Fade In */
+
+.fade-in {
+  animation: fade-in 1s linear;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  
+  50% {
+    opacity: 0.5;
+  }
+  
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Fade Out */
+
+.fade-out {
+  animation: fade-out 1s linear;
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  
+  50% {
+    opacity: 0.5;
+  }
+  
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Slide in Top */
+
+.slidein-top {
+  animation: slidein-top 0.8s;
+  position: relative;
+}
+
+@keyframes slidein-top {
+  0% {
+    opacity: 0;
+    top: -300px;
+  }
+  
+  100% {
+    opacity: 1;
+    top: 0;
+  }
+}
+
+/* Slide in Bottom */
+
+.slidein-bottom {
+  animation: slidein-bottom 0.8s;
+  position: relative;
+}
+
+@keyframes slidein-bottom {
+  0% {
+    bottom: -300px;
+    opacity: 0;
+  }
+  
+  100% {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+
+/* Slide in Left */
+
+.slidein-left {
+  animation: slidein-left 0.8s;
+  position: relative;
+}
+
+@keyframes slidein-left {
+  0% {
+    left: -300px;
+    opacity: 0;
+  }
+  
+  100% {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+/* Slide in Right */
+
+.slidein-right {
+  animation: slidein-right 0.8s;
+  position: relative;
+}
+
+@keyframes slidein-right {
+  0% {
+    opacity: 0;
+    right: -300px;
+  }
+  
+  100% {
+    opacity: 1;
+    right: 0;
+  }
+}
+
+/* Zoom */
+
+.zoom {
+  animation: zoom 0.7s linear;
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+  
+  to {
+    transform: scale(1);
+  }
+}
+
+/* Spin */
+
+.spin {
+  animation: spin 2s infinite linear;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  
+  100% {
+    transform: rotate(359deg);
+  }
+}
