@@ -1,0 +1,28 @@
+ul.breadcrumb {
+  list-style: none;
+  padding: 10px 16px;
+
+  li {
+    display: inline;
+    font-size: 20px;
+
+    &::before {
+      content: '';
+    }
+
+    a {
+      background-image: none;
+      color: $secondary;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  li + li::before {
+    content: '/\00a0';
+    padding: 8px;
+  }
+}
