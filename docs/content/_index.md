@@ -7,12 +7,12 @@ weight: -270
 #### Download
 
 Download the latest version (1.6.1) using either of the links below. Or
-download an older release via Github.
+download an older release via GitHub.
 
 <div class="row flex-spaces text-center">
   <a class="paper-btn margin" href="https://github.com/rhyneav/papercss/releases/download/v1.6.1/paper.css">CSS File</a>
   <a class="paper-btn margin" href="https://github.com/rhyneav/papercss/releases/download/v1.6.1/paper.min.css">Minified CSS File</a>
-  <a class="paper-btn margin" href="https://github.com/rhyneav/papercss/releases">Github Releases</a>
+  <a class="paper-btn margin" href="https://github.com/rhyneav/papercss/releases">GitHub Releases</a>
 </div>
 
 #### NPM
