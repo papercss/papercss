@@ -11,6 +11,23 @@
   }
 }
 
+.container.container-xs {
+  max-width: 750px;
+}
+
+.container.container-sm {
+  max-width: 900px;
+}
+
+.container.container-lg {
+  max-width: 1400px;
+}
+
+.container.container-xl {
+  max-width: 1600px;
+}
+
+
 .section {
   margin-bottom: 2rem;
   margin-top: 1rem;
