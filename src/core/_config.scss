@@ -38,7 +38,7 @@ $shadow-color-regular: hsla(0, 0, 0%, 0.2) !default;
 $shadow-color-hover: hsla(0, 0, 0%, 0.3) !default;
 
 
-/////////
+// Set dark theme colors
 
 $dark-primary: #fff !default;
 $dark-secondary: #339bff !default;
@@ -72,7 +72,6 @@ $dark-shadow-color-regular: hsla(0, 0, 0%, 0.2) !default;
 $dark-shadow-color-hover: hsla(0, 0, 0%, 0.3) !default;
 
 
-////////@debug
 
 $theme-map: (
   light: (
