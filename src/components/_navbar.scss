@@ -1,5 +1,5 @@
 nav {
-  background-color: $main-background;
+  @include color('background-color', 'main-background');
   display: flex;
   padding: 0.3rem;
   position: relative;
@@ -70,11 +70,13 @@ nav {
   }
 
   a {
+    @include color('color', 'primary');
+    @include color('border-bottom-color', 'primary');
     background-image: none;
-    border-bottom: 5px solid $primary;
     border-bottom-left-radius: 15px 3px;
     border-bottom-right-radius: 15px 5px;
-    color: $primary;
+    border-bottom-style: solid;
+    border-bottom-width: 5px;
     padding-bottom: 0.1rem;
   }
 
@@ -135,20 +137,23 @@ nav {
   }
 
   .collapsible label {
-    border: 2px solid #41403e;
     border-bottom-left-radius: 15px 255px;
     border-bottom-right-radius: 225px 15px;
+    border-color: #41403e;
+    border-style: solid;
     border-top-left-radius: 255px 15px;
     border-top-right-radius: 15px 225px;
+    border-width: 2px;
   }
 
-  .collapsible > button { // Leaving for backwards compatibility. See docs for proper usage
+  .collapsible > button {
+    // Leaving for backwards compatibility. See docs for proper usage
     border: 0;
   }
 
   .collapsible > button, // Leaving for backwards compatibility. See docs for proper usage
   .collapsible > label {
-    background-color: $main-background;
+    @include color('background-color', 'main-background');
     display: none;
     font-size: 0.5rem;
     margin-right: 1rem;

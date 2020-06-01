@@ -1,13 +1,15 @@
 input,
 select,
 textarea {
+  @include color('color', 'primary');
+  @include color('border-color', 'primary');
   background: transparent;
-  border: 2px solid $primary;
   border-bottom-left-radius: 15px 255px;
   border-bottom-right-radius: 225px 15px;
+  border-style: solid;
   border-top-left-radius: 255px 15px;
   border-top-right-radius: 15px 225px;
-  color: $primary;
+  border-width: 2px;
   display: block;
   font-size: 1rem;
   outline: none;

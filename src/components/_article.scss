@@ -4,15 +4,15 @@ article {
   }
 
   .article-meta {
-    color: $muted;
+    @include color(color, 'muted-text');
     font-size: 15px;
 
     a {
+      @include color(color, 'muted-text');
       background-image: none;
-      color: $muted-text;
 
       &:hover {
-        color: $light-dark;
+        @include color(color, 'light-dark');
       }
     }
   }

@@ -7,20 +7,20 @@
   input {
     display: none;
 
-    &:checked+label {
+    &:checked + label {
+      @include color(color, 'primary');
       border-bottom: solid 3px $secondary;
-      color: $primary;
     }
 
     @for $num from 1 through 5 {
-      &[id='tab#{$num}']:checked~div[id='content#{$num}'] {
+      &[id='tab#{$num}']:checked ~ div[id='content#{$num}'] {
         display: block;
       }
     }
   }
 
   label {
-    color: $primary-light;
+    @include color('color', primary-light);
     display: inline-block;
     font-weight: 600;
     margin: 0 0 -1px;
@@ -28,7 +28,7 @@
     text-align: center;
 
     &:hover {
-      color: $muted;
+      @include color('color', muted);
       cursor: pointer;
     }
   }

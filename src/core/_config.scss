@@ -25,6 +25,7 @@ $white-dark: rgba(#000, 0.03) !default;
 $light-dark: rgba(#000, 0.7) !default;
 $white: rgba(#fff, 1) !default;
 $main-background: rgba(#fff, 1) !default;
+$main-background-light: lighten($main-background, 50%) !default;
 
 $primary-text: #fff !default;
 $secondary-text: $primary !default;
@@ -36,6 +37,161 @@ $muted-text: $primary !default;
 $shadow-color-regular: hsla(0, 0, 0%, 0.2) !default;
 $shadow-color-hover: hsla(0, 0, 0%, 0.3) !default;
 
+
+/////////
+
+$dark-primary: #fff !default;
+$dark-secondary: #339bff !default;
+
+$dark-success: #189418 !default;
+$dark-warning: #ddcd45 !default;
+$dark-danger: #ff8c86 !default;
+$dark-muted: #868e96 !default;
+
+$dark-primary-light: lighten($dark-primary, 50%) !default;
+$dark-secondary-light: lighten($dark-secondary, 50%) !default;
+$dark-success-light: lighten($dark-success, 30%) !default;
+$dark-warning-light: lighten($dark-warning, 30%) !default;
+$dark-danger-light: lighten($dark-danger, 45%) !default;
+$dark-muted-light: lighten($dark-muted, 35%) !default;
+
+$dark-white-dark: rgba(#000, 0.03) !default;
+$dark-light-dark: rgba(#000, 0.7) !default;
+$dark-white: rgba(#fff, 1) !default;
+$dark-main-background: rgba(#41403e, 1) !default;
+$dark-main-background-light: lighten($dark-main-background, 50%) !default;
+
+$dark-primary-text: #41403e !default;
+$dark-secondary-text: $dark-secondary !default;
+$dark-success-text: $dark-primary !default;
+$dark-warning-text: $dark-primary !default;
+$dark-danger-text: $dark-primary !default;
+$dark-muted-text: $dark-primary !default;
+
+$dark-shadow-color-regular: hsla(0, 0, 0%, 0.2) !default;
+$dark-shadow-color-hover: hsla(0, 0, 0%, 0.3) !default;
+
+
+////////@debug
+
+$theme-map: (
+  light: (
+    primary: $primary,
+    secondary: $secondary,
+    success: $success,
+    warning: $warning,
+    danger: $danger,
+    muted: $muted,
+    primary-light: #{$primary-light},
+    secondary-light:$secondary-light,
+    success-light:$success-light,
+    warning-light:$warning-light,
+    danger-light:$danger-light,
+    muted-light:$muted-light,
+    white-dark:$white-dark,
+    light-dark:$light-dark,
+    white:$white,
+    main-background: $main-background,
+    main-background-light: $main-background-light,
+    primary-text:$primary-text,
+    secondary-text:$secondary-text,
+    success-text:$success-text,
+    warning-text:$warning-text,
+    danger-text:$danger-text,
+    muted-text:$muted-text,
+    shadow-color-regular: $shadow-color-regular,
+    shadow-color-hover: $shadow-color-hover,
+  ),
+  dark: (
+    primary: $dark-primary,
+    secondary: $dark-secondary,
+    success: $dark-success,
+    warning: $dark-warning,
+    danger: $dark-danger,
+    muted: $dark-muted,
+    primary-light: #{$dark-primary-light},
+    secondary-light:$dark-secondary-light,
+    success-light:$dark-success-light,
+    warning-light:$dark-warning-light,
+    danger-light:$dark-danger-light,
+    muted-light:$dark-muted-light,
+    white-dark:$dark-white-dark,
+    light-dark:$dark-light-dark,
+    white:$dark-white,
+    main-background: $dark-main-background,
+    main-background-light: $dark-main-background-light,
+    primary-text:$dark-primary-text,
+    secondary-text:$dark-secondary-text,
+    success-text:$dark-success-text,
+    warning-text:$dark-warning-text,
+    danger-text:$dark-danger-text,
+    muted-text:$dark-muted-text,
+    shadow-color-regular: $dark-shadow-color-regular,
+    shadow-color-hover: $dark-shadow-color-hover,
+  )
+);
+
+
+html {
+  --primary: #{map-get(map-get($theme-map, 'light'), 'primary')};
+  --secondary: #{map-get(map-get($theme-map, 'light'), 'secondary')};
+  --success: #{map-get(map-get($theme-map, 'light'), 'success')};
+  --warning: #{map-get(map-get($theme-map, 'light'), 'warning')};
+  --danger: #{map-get(map-get($theme-map, 'light'), 'danger')};
+  --muted: #{map-get(map-get($theme-map, 'light'), 'muted')};
+  --primary-light: #{map-get(map-get($theme-map, 'light'), 'primary-light')};
+  --secondary-light: #{map-get(map-get($theme-map, 'light'), 'secondary-light')};
+  --success-light: #{map-get(map-get($theme-map, 'light'), 'success-light')};
+  --warning-light: #{map-get(map-get($theme-map, 'light'), 'warning-light')};
+  --danger-light: #{map-get(map-get($theme-map, 'light'), 'danger-light')};
+  --muted-light: #{map-get(map-get($theme-map, 'light'), 'muted-light')};
+  --white-dark: #{map-get(map-get($theme-map, 'light'), 'white-dark')};
+  --light-dark: #{map-get(map-get($theme-map, 'light'), 'light-dark')};
+  --white: #{map-get(map-get($theme-map, 'light'), 'white')};
+  --main-background: #{map-get(map-get($theme-map, 'light'), 'main-background')};
+  --primary-text: #{map-get(map-get($theme-map, 'light'), 'primary-text')};
+  --secondary-text: #{map-get(map-get($theme-map, 'light'), 'secondary-text')};
+  --success-text: #{map-get(map-get($theme-map, 'light'), 'success-text')};
+  --warning-text: #{map-get(map-get($theme-map, 'light'), 'warning-text')};
+  --danger-text: #{map-get(map-get($theme-map, 'light'), 'danger-text')};
+  --muted-text: #{map-get(map-get($theme-map, 'light'), 'muted-text')};
+  --shadow-color-regular: #{map-get(map-get($theme-map, 'light'), 'shadow-color-regular')};
+  --shadow-color-hover: #{map-get(map-get($theme-map, 'light'), 'shadow-color-hover')};
+}
+
+html.dark {
+  --primary: #{map-get(map-get($theme-map, 'dark'), 'primary')};
+  --secondary: #{map-get(map-get($theme-map, 'dark'), 'secondary')};
+  --success: #{map-get(map-get($theme-map, 'dark'), 'success')};
+  --warning: #{map-get(map-get($theme-map, 'dark'), 'warning')};
+  --danger: #{map-get(map-get($theme-map, 'dark'), 'danger')};
+  --muted: #{map-get(map-get($theme-map, 'dark'), 'muted')};
+  --primary-light: #{map-get(map-get($theme-map, 'dark'), 'primary-light')};
+  --secondary-light: #{map-get(map-get($theme-map, 'dark'), 'secondary-light')};
+  --success-light: #{map-get(map-get($theme-map, 'dark'), 'success-light')};
+  --warning-light: #{map-get(map-get($theme-map, 'dark'), 'warning-light')};
+  --danger-light: #{map-get(map-get($theme-map, 'dark'), 'danger-light')};
+  --muted-light: #{map-get(map-get($theme-map, 'dark'), 'muted-light')};
+  --white-dark: #{map-get(map-get($theme-map, 'dark'), 'white-dark')};
+  --light-dark: #{map-get(map-get($theme-map, 'dark'), 'light-dark')};
+  --white: #{map-get(map-get($theme-map, 'dark'), 'white')};
+  --main-background: #{map-get(map-get($theme-map, 'dark'), 'main-background')};
+  --primary-text: #{map-get(map-get($theme-map, 'dark'), 'primary-text')};
+  --secondary-text: #{map-get(map-get($theme-map, 'dark'), 'secondary-text')};
+  --success-text: #{map-get(map-get($theme-map, 'dark'), 'success-text')};
+  --warning-text: #{map-get(map-get($theme-map, 'dark'), 'warning-text')};
+  --danger-text: #{map-get(map-get($theme-map, 'dark'), 'danger-text')};
+  --muted-text: #{map-get(map-get($theme-map, 'dark'), 'muted-text')};
+  --shadow-color-regular: #{map-get(map-get($theme-map, 'dark'), 'shadow-color-regular')};
+  --shadow-color-hover: #{map-get(map-get($theme-map, 'dark'), 'shadow-color-hover')};
+}
+
+
+@mixin color($property, $varName) {
+  // IE falls back to light theme always
+  #{$property}: #{map-get(map-get($theme-map, 'light'), 'primary')};
+  #{$property}: var(--#{$varName});
+}
 
 // Map to set your color names
 /* stylelint-disable */
@@ -53,11 +209,12 @@ $colors: (primary, $primary, $primary-light, $primary-text),
 */
 @each $colorName, $color, $color-light in $colors {
   .text-#{$colorName} {
-    color: $color;
+    @include color('color',#{$colorName});
   }
 
   .background-#{$colorName} {
-    background-color: $color-light;
+    @include color('background-color',#{$colorName}-light);
+    // @include color('color', 'primary-text');
   }
 }
 
