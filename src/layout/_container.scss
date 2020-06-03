@@ -11,22 +11,29 @@
   }
 }
 
-.container.container-xs {
-  max-width: 750px;
+.container {
+  &.container-xs {
+    max-width: $xsmall-screen;
+  }
 }
 
-.container.container-sm {
-  max-width: 900px;
+.container {
+  &.container-sm {
+    max-width: $small-screen;
+  }
 }
 
-.container.container-lg {
-  max-width: 1400px;
+.container {
+  &.container-md {
+    max-width: $medium-screen;
+  }
 }
 
-.container.container-xl {
-  max-width: 1600px;
+.container {
+  &.container-lg {
+    max-width: $large-screen;
+  }
 }
-
 
 .section {
   margin-bottom: 2rem;
