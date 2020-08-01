@@ -64,6 +64,6 @@ gulp.task('lint-css', function() {
     }));
 })
 
-gulp.task('default', gulp.series('sass', 'minify-css', 'hugo-build'));
+gulp.task('default', gulp.series('sass', 'minify-css', 'hugo-server'));
 gulp.task('build', gulp.series('sass', 'minify-css', 'hugo-build'));
 gulp.task('postinstall', gulp.series('sass', 'minify-css'));
