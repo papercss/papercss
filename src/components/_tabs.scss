@@ -14,7 +14,7 @@
     }
 
     @for $num from 1 through 5 {
-      &[id='tab#{$num}']:checked~div[id='content#{$num}'] {
+      &[id$='tab#{$num}']:checked~div[id$='content#{$num}'] {
         display: block;
       }
     }
