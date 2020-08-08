@@ -132,57 +132,15 @@ $theme-map: (
 
 
 html {
-  --primary: #{map-get(map-get($theme-map, 'light'), 'primary')};
-  --secondary: #{map-get(map-get($theme-map, 'light'), 'secondary')};
-  --success: #{map-get(map-get($theme-map, 'light'), 'success')};
-  --warning: #{map-get(map-get($theme-map, 'light'), 'warning')};
-  --danger: #{map-get(map-get($theme-map, 'light'), 'danger')};
-  --muted: #{map-get(map-get($theme-map, 'light'), 'muted')};
-  --primary-light: #{map-get(map-get($theme-map, 'light'), 'primary-light')};
-  --secondary-light: #{map-get(map-get($theme-map, 'light'), 'secondary-light')};
-  --success-light: #{map-get(map-get($theme-map, 'light'), 'success-light')};
-  --warning-light: #{map-get(map-get($theme-map, 'light'), 'warning-light')};
-  --danger-light: #{map-get(map-get($theme-map, 'light'), 'danger-light')};
-  --muted-light: #{map-get(map-get($theme-map, 'light'), 'muted-light')};
-  --white-dark: #{map-get(map-get($theme-map, 'light'), 'white-dark')};
-  --light-dark: #{map-get(map-get($theme-map, 'light'), 'light-dark')};
-  --white: #{map-get(map-get($theme-map, 'light'), 'white')};
-  --main-background: #{map-get(map-get($theme-map, 'light'), 'main-background')};
-  --primary-text: #{map-get(map-get($theme-map, 'light'), 'primary-text')};
-  --secondary-text: #{map-get(map-get($theme-map, 'light'), 'secondary-text')};
-  --success-text: #{map-get(map-get($theme-map, 'light'), 'success-text')};
-  --warning-text: #{map-get(map-get($theme-map, 'light'), 'warning-text')};
-  --danger-text: #{map-get(map-get($theme-map, 'light'), 'danger-text')};
-  --muted-text: #{map-get(map-get($theme-map, 'light'), 'muted-text')};
-  --shadow-color-regular: #{map-get(map-get($theme-map, 'light'), 'shadow-color-regular')};
-  --shadow-color-hover: #{map-get(map-get($theme-map, 'light'), 'shadow-color-hover')};
+  @each $var in map-get($theme-map, 'light') {
+    --#{$var}: #{map-get(map-get($theme-map, 'light'), $var)};
+  }
 }
 
 html.dark {
-  --primary: #{map-get(map-get($theme-map, 'dark'), 'primary')};
-  --secondary: #{map-get(map-get($theme-map, 'dark'), 'secondary')};
-  --success: #{map-get(map-get($theme-map, 'dark'), 'success')};
-  --warning: #{map-get(map-get($theme-map, 'dark'), 'warning')};
-  --danger: #{map-get(map-get($theme-map, 'dark'), 'danger')};
-  --muted: #{map-get(map-get($theme-map, 'dark'), 'muted')};
-  --primary-light: #{map-get(map-get($theme-map, 'dark'), 'primary-light')};
-  --secondary-light: #{map-get(map-get($theme-map, 'dark'), 'secondary-light')};
-  --success-light: #{map-get(map-get($theme-map, 'dark'), 'success-light')};
-  --warning-light: #{map-get(map-get($theme-map, 'dark'), 'warning-light')};
-  --danger-light: #{map-get(map-get($theme-map, 'dark'), 'danger-light')};
-  --muted-light: #{map-get(map-get($theme-map, 'dark'), 'muted-light')};
-  --white-dark: #{map-get(map-get($theme-map, 'dark'), 'white-dark')};
-  --light-dark: #{map-get(map-get($theme-map, 'dark'), 'light-dark')};
-  --white: #{map-get(map-get($theme-map, 'dark'), 'white')};
-  --main-background: #{map-get(map-get($theme-map, 'dark'), 'main-background')};
-  --primary-text: #{map-get(map-get($theme-map, 'dark'), 'primary-text')};
-  --secondary-text: #{map-get(map-get($theme-map, 'dark'), 'secondary-text')};
-  --success-text: #{map-get(map-get($theme-map, 'dark'), 'success-text')};
-  --warning-text: #{map-get(map-get($theme-map, 'dark'), 'warning-text')};
-  --danger-text: #{map-get(map-get($theme-map, 'dark'), 'danger-text')};
-  --muted-text: #{map-get(map-get($theme-map, 'dark'), 'muted-text')};
-  --shadow-color-regular: #{map-get(map-get($theme-map, 'dark'), 'shadow-color-regular')};
-  --shadow-color-hover: #{map-get(map-get($theme-map, 'dark'), 'shadow-color-hover')};
+  @each $var in map-get($theme-map, 'dark') {
+    --#{$var}: #{map-get(map-get($theme-map, 'dark'), $var)};
+  }
 }
 
 
