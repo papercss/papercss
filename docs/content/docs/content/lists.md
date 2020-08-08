@@ -9,23 +9,27 @@ description: PaperCSS Lists
   <li>Do this</li>
   <li>Then this</li>
   <li>Finally this</li>
-  <li>Then we'll go one deeper</li>
-  <ol>
-    <li>Dillon</li>
-    <li>Francis</li>
+  <li>Then we'll go one deeper
     <ol>
-      <li>What if we went...</li>
-      <li>One more deeper?</li>
-      <ol>
-        <li>DJ</li>
-        <li>Hanzel</li>
+      <li>Dillon</li>
+      <li>Francis
         <ol>
-          <li>Five levels should be enough</li>
-          <li>Right?</li>
+          <li>What if we went...</li>
+          <li>One more deeper?
+            <ol>
+              <li>DJ</li>
+              <li>Hanzel
+                <ol>
+                  <li>Five levels should be enough</li>
+                  <li>Right?</li>
+                </ol>
+              </li>
+            </ol>
+          </li>
         </ol>
-      </ol>
+      </li>
     </ol>
-  </ol>
+  </li>
   <li>But don't forget this</li>
 </ol>
 
@@ -33,22 +37,26 @@ description: PaperCSS Lists
 
 <ul>
   <li>Let's try this</li>
-  <li>Let's try this again</li>
-  <ul>
-    <li>And now we are nested</li>
-    <li>Pretty cool?</li>
+  <li>Let's try this again
     <ul>
-      <li>The list items are just text</li>
-      <li>From this font</li>
-      <ul>
-        <li>We'll keep going</li>
-        <li>Until we hit</li>
+      <li>And now we are nested</li>
+      <li>Pretty cool?
         <ul>
-          <li>LEVEL 5</li>
+          <li>The list items are just text</li>
+          <li>From this font
+            <ul>
+              <li>We'll keep going</li>
+              <li>Until we hit
+                <ul>
+                  <li>LEVEL 5</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
         </ul>
-      </ul>
+      </li>
     </ul>
-  </ul>
+  </li>
   <li>And now we're are the top!</li>
 </ul>
 
@@ -68,23 +76,27 @@ description: PaperCSS Lists
   <li>Do this</li>
   <li>Then this</li>
   <li>Finally this</li>
-  <li>Then we'll go one deeper</li>
-  <ol>
+  <li>Then we'll go one deeper
+    <ol>
       <li>Dillon</li>
-      <li>Francis</li>
-      <ol>
-        <li>What if we went...</li>
-        <li>One more deeper?</li>
+      <li>Francis
         <ol>
-          <li>DJ</li>
-          <li>Hanzel</li>
-          <ol>
-            <li>Five levels should be enough</li>
-            <li>Right?</li>
-          </ol>
+          <li>What if we went...</li>
+          <li>One more deeper?
+            <ol>
+              <li>DJ</li>
+              <li>Hanzel
+                <ol>
+                  <li>Five levels should be enough</li>
+                  <li>Right?</li>
+                </ol>
+              </li>
+            </ol>
+          </li>
         </ol>
-      </ol>
-  </ol>
+      </li>
+    </ol>
+  </li>
   <li>But don't forget this</li>
 </ol>
 
