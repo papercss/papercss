@@ -10,7 +10,9 @@
 
     &:checked + label {
       @include color(color, 'primary');
-      border-bottom: solid 3px $secondary;
+      @include color('border-bottom-color', 'secondary');
+      border-bottom-style: solid;
+      border-bottom-width: 3px;
     }
 
     @for $num from 1 through 5 {
