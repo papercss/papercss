@@ -171,7 +171,6 @@ $colors: (primary, $primary, $primary-light, $primary-text),
 
   .background-#{$colorName} {
     @include color('background-color',#{$colorName}-light);
-    // @include color('color', 'primary-text');
   }
 }
 
