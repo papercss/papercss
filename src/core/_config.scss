@@ -132,13 +132,13 @@ $theme-map: (
 
 
 html {
-  @each $var in map-get($theme-map, 'light') {
+  @each $var in map-keys(map-get($theme-map, 'light')) {
     --#{$var}: #{map-get(map-get($theme-map, 'light'), $var)};
   }
 }
 
 html.dark {
-  @each $var in map-get($theme-map, 'dark') {
+  @each $var in map-keys(map-get($theme-map, 'dark')) {
     --#{$var}: #{map-get(map-get($theme-map, 'dark'), $var)};
   }
 }
