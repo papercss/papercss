@@ -3,13 +3,17 @@
   flex-direction: column;
 
   &:nth-of-type(1) {
-    border-top: 1px solid $muted-light;
+    @include color('border-top-color', 'muted-light');
+    border-top-style: solid;
+    border-top-width: 1px;
   }
 
   .collapsible-body {
+    @include color('border-bottom-color', 'muted-light');
+    @include color('background-color', 'white-dark-light-80');
     @include transition;
-    background-color: lighten($white-dark, 80%);
-    border-bottom: 1px solid $muted-light;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
     margin: 0;
     max-height: 0;
     opacity: 0;
@@ -34,7 +38,9 @@
 
   label {
     @include color('color', 'primary');
-    border-bottom: 1px solid $muted-light;
+    @include color('border-bottom-color', 'muted-light');
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
     display: inline-block;
     font-weight: 600;
     margin: 0 0 -1px;
