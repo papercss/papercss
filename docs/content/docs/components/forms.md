@@ -163,6 +163,15 @@ description: PaperCSS Forms
     </div>
   </label>
 </fieldset>
+<fieldset class="form-group">
+  <label for="input-range">Note /10 :</label>
+  <input type="range" name="note" id="input-range" min="0" max="10">
+</fieldset>
+<fieldset class="form-group">
+  <label for="percentage">Percentage (<code>.input-block</code>) :</label>
+  <input class="input-block" type="range" name="percentage" id="percentage" min="0" max="100" oninput="output.value = this.value + '%';">
+  <output id="output" for="percentage">50%</output>
+</fieldset>
 
 #### Code:
 
@@ -321,5 +330,15 @@ description: PaperCSS Forms
       <div class="paper-switch-tile-card-back border background-success">Accepted</div>
     </div>
   </label>
+</fieldset>
+<fieldset class="form-group">
+  <label for="input-range">Note /10 :</label>
+  <input type="range" name="note" id="input-range" min="0" max="10">
+</fieldset>
+<fieldset class="form-group">
+  <label for="percentage">Percentage (<code>.input-block</code>) :</label>
+  <input class="input-block" type="range" name="percentage" id="percentage"
+         min="0" max="100" oninput="output.value = this.value + '%';">
+  <output id="output" for="percentage">50%</output>
 </fieldset>
 ```
