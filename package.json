@@ -23,7 +23,7 @@
   "dependencies": {
     "gulp": "^4.0.0",
     "gulp-autoprefixer": "^6.0.0",
-    "gulp-clean-css": "3.9.0",
+    "gulp-clean-css": "^3.9.3",
     "gulp-connect": "^5.6.1",
     "gulp-plumber": "1.1.0",
     "gulp-rename": "1.2.2",
