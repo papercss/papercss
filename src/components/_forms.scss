@@ -320,10 +320,7 @@ select {
 
   input[type='range'] {
     appearance: none;
-
-    &:focus {
-      border-color: $secondary;
-    }
+    border-width: 0;
 
     /* For Chromium */
     &::-webkit-slider-runnable-track {
