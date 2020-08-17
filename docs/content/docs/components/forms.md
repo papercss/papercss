@@ -25,12 +25,12 @@ description: PaperCSS Forms
   <input type="text" placeholder="Disabled" id="paperInputs4" disabled>
 </div>
 <div class="form-group">
-  <label>Large Input</label>
-  <textarea placeholder="Large input"></textarea>
+  <label for="large-input">Large Input</label>
+  <textarea id="large-input" placeholder="Large input"></textarea>
 </div>
 <div class="form-group">
-    <label>No Resize</label>
-    <textarea class="no-resize" placeholder="No resize"></textarea>
+    <label for="no-resize">No Resize</label>
+    <textarea class="no-resize" id="no-resize" placeholder="No resize"></textarea>
 </div>
 <div class="form-group">
   <label for="paperSelects1">Select</label>
@@ -38,19 +38,17 @@ description: PaperCSS Forms
     <option value="1">Option 1</option>
     <option value="2">Option 2</option>
     <option value="3">Option 3</option>
-    <select>
+  </select>
 </div>
 <fieldset class="form-group">
   <legend>Some Radio Buttons</legend>
   <label for="paperRadios1" class="paper-radio">
     <input type="radio" name="paperRadios" id="paperRadios1" value="option 1">
-    <span>This is the first option
-      <span>
+    <span>This is the first option</span>
   </label>
   <label for="paperRadios2" class="paper-radio">
     <input type="radio" name="paperRadios" id="paperRadios2" value="option 2">
-    <span>This is the second option
-      <span>
+    <span>This is the second option</span>
   </label>
 </fieldset>
 <fieldset class="form-group">
@@ -190,12 +188,12 @@ description: PaperCSS Forms
   <input type="text" placeholder="Disabled" id="paperInputs4" disabled>
 </div>
 <div class="form-group">
-  <label>Large Input</label>
-  <textarea placeholder="Large input"></textarea>
+  <label for="large-input">Large Input</label>
+  <textarea id="large-input" placeholder="Large input"></textarea>
 </div>
 <div class="form-group">
-  <label>No Resize</label>
-  <textarea class="no-resize" placeholder="No resize"></textarea>
+    <label for="no-resize">No Resize</label>
+    <textarea class="no-resize" id="no-resize" placeholder="No resize"></textarea>
 </div>
 <div class="form-group">
   <label for="paperSelects1">Select</label>
@@ -203,15 +201,15 @@ description: PaperCSS Forms
     <option value="1">Option 1</option>
     <option value="2">Option 2</option>
     <option value="3">Option 3</option>
-  <select>
+  </select>
 </div>
 <fieldset class="form-group">
   <legend>Some Radio Buttons</legend>
   <label for="paperRadios1" class="paper-radio">
-    <input type="radio" name="paperRadios" id="paperRadios1" value="option 1"> <span>This is the first option<span>
+    <input type="radio" name="paperRadios" id="paperRadios1" value="option 1"> <span>This is the first option</span>
   </label>
   <label for="paperRadios2" class="paper-radio">
-    <input type="radio" name="paperRadios" id="paperRadios2" value="option 2"> <span>This is the second option<span>
+    <input type="radio" name="paperRadios" id="paperRadios2" value="option 2"> <span>This is the second option</span>
   </label>
 </fieldset>
 <fieldset class="form-group">
