@@ -10,6 +10,7 @@
 
 ## Table of contents
 
+- [Table of contents](#table-of-contents)
 - [Quick-start](#quick-start)
 - [Status](#status)
 - [Content of the framework](#content-of-the-framework)
@@ -65,6 +66,8 @@ After you make changes, be sure to build the new CSS files. Do so by running `gu
 This project is open source and contributions are very welcomed. It is also as beginner friendly as possible, so don't be afraid to jump in if you've never contributed to any Git project before! Feel free to reach out if you are new and need help with the process.
 
 Please before sending a PR, make sure you are properly using the `.editorconfig` file with your IDE. If your IDE doesn't natively support `editorconfig` files, you can use an extension/package/module. For example in Atom there is the [editorconfig package](https://atom.io/packages/editorconfig), as well for [Sublime Text](https://github.com/sindresorhus/editorconfig-sublime), [VS Code](https://github.com/editorconfig/editorconfig-vscode), [Vim](https://github.com/editorconfig/editorconfig-vim), ...
+
+We use node-sass to transform the SCSS to plain CSS. Compiling on Windows machines require the [node-gyp prerequisites](https://github.com/nodejs/node-gyp#on-windows) (including an instalation of Python).
 
 Once you are ready to contribute, here the workflow you should follow:
 
