@@ -140,7 +140,7 @@ select {
     float: left;
     margin: 0 10px 0 0;
     position: relative;
-    
+
     input {
       height: 0;
       opacity: 0;
@@ -284,7 +284,7 @@ select {
 
     input {
       display: none;
-      
+
       &:checked + .paper-switch-tile-card {
         transform: rotateX(180deg);
       }
@@ -301,7 +301,7 @@ select {
     transform-style: preserve-3d;
     transition: all 600ms;
     width: 100%;
-    
+
     div {
       backface-visibility: hidden;
       box-shadow: 2px 8px 8px -5px rgba(0, 0, 0, 0.3);
@@ -314,6 +314,95 @@ select {
 
     .paper-switch-tile-card-back {
       transform: rotateX(180deg);
+    }
+
+  }
+
+  input[type='range'] {
+    appearance: none;
+    border-width: 0;
+
+    /* For Chromium */
+    &::-webkit-slider-runnable-track {
+      background: $secondary;
+      border: 1px solid $primary;
+      border-radius: 18px;
+      box-shadow: 1px 1px 1px #000, 0 0 1px #0d0d0d;
+      cursor: pointer;
+      height: 8px;
+      margin: 10px 0;
+      width: 100%;
+    }
+
+    &::-webkit-slider-thumb {
+      appearance: none;
+      background: #fff;
+      border: 1px solid $primary;
+      border-bottom-left-radius: 0.7rem 1rem;
+      border-bottom-right-radius: 1rem 0.9rem;
+      border-top-left-radius: 1rem 1rem;
+      border-top-right-radius: 1rem 0.6rem;
+      box-shadow: 1px 1px 1px #000, 0 0 1px #0d0d0d;
+      cursor: pointer;
+      height: 36px;
+      margin-top: -14px;
+      width: 16px;
+    }
+
+    /* For Mozilla Firefox */
+    &::-moz-range-track {
+      background: $secondary;
+      border: 1px solid $primary;
+      border-radius: 18px;
+      box-shadow: 1px 1px 1px #000, 0 0 1px #0d0d0d;
+      cursor: pointer;
+      height: 8px;
+      width: 100%;
+    }
+
+    &::-moz-range-thumb {
+      background: #fff;
+      border: 1px solid $primary;
+      border-bottom-left-radius: 0.7rem 1rem;
+      border-bottom-right-radius: 1rem 0.9rem;
+      border-top-left-radius: 1rem 1rem;
+      border-top-right-radius: 1rem 0.6rem;
+      box-shadow: 1px 1px 1px #000, 0 0 1px #0d0d0d;
+      cursor: pointer;
+      height: 36px;
+      width: 16px;
+    }
+
+    /* For IE */
+    &::-ms-track {
+      background: transparent;
+      border-color: transparent;
+      border-width: 16px 0;
+      color: transparent;
+      cursor: pointer;
+      height: 8px;
+      width: 100%;
+    }
+
+    &::-ms-fill-lower,
+    &::-ms-fill-upper {
+      background: $secondary;
+      border: 1px solid $primary;
+      border-radius: 18px;
+      box-shadow: 1px 1px 1px #000, 0 0 1px #0d0d0d;
+    }
+
+    &::-ms-thumb {
+      background: #fff;
+      border: 1px solid $primary;
+      border-bottom-left-radius: 0.7rem 1rem;
+      border-bottom-right-radius: 1rem 0.9rem;
+      border-top-left-radius: 1rem 1rem;
+      border-top-right-radius: 1rem 0.6rem;
+      box-shadow: 1px 1px 1px #000, 0 0 1px #0d0d0d;
+      cursor: pointer;
+      height: 36px;
+      width: 16px;
     }
 
   }
