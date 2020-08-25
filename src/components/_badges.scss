@@ -2,7 +2,8 @@
   @include border-style();
   @include color('color', 'primary-text');
   @include color('background-color', 'muted');
-  border: 2px solid $primary;
+  @include color('border-color', 'primary');
+  border: 2px solid;
   border-color: transparent;
   display: inline-block;
   font-size: 75%;
@@ -16,6 +17,6 @@
 
 @each $colorName, $color in $colors {
   .badge.#{$colorName} {
-    background-color: $color;
+    @include color('background-color', #{$colorName});
   }
 }
