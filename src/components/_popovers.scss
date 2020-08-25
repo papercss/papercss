@@ -18,8 +18,9 @@
   &::after {
     @include border-style();
     @include transition(opacity);
-    background: $light-dark;
-    border: 2px solid $primary;
+    @include color('background-color', 'light-dark');
+    @include color('border-color', 'primary');
+    border: 2px solid;
     color: $white;
     font-size: 0.7em;
     left: 50%;
