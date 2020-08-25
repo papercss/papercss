@@ -1,7 +1,8 @@
 .card {
   @include shadow;
+  @include color('border-color', 'muted-light');
   backface-visibility: hidden;
-  border: 2px solid $muted-light;
+  border: 2px solid;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -14,16 +15,18 @@
 
   .card-header,
   .card-footer {
-    background-color: $white-dark;
+    @include color('background-color', 'white-dark');
     padding: 0.75rem 1.25rem;
   }
 
   .card-header {
-    border-bottom: 2px solid $muted-light;
+    @include color('border-color', 'muted-light');
+    border-bottom: 2px solid;
   }
 
   .card-footer {
-    border-top: 2px solid $muted-light;
+    @include color('border-color', 'muted-light');
+    border-top: 2px solid;
   }
 
   .card-body {
