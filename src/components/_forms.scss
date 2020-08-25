@@ -16,7 +16,8 @@ textarea {
   padding: 0.5rem;
 
   &:focus {
-    border: 2px solid $secondary;
+    @include color('border-color', 'secondary');
+    border: 2px solid;
   }
 
   &.disabled,
@@ -78,7 +79,8 @@ select {
         display: block;
 
         &::before {
-          border: 2px solid $primary;
+          @include color('border-color', 'primary');
+          border: 2px solid;
           content: '';
           display: inline-block;
           height: 1rem;
@@ -149,7 +151,7 @@ select {
       width: 0;
 
       &:checked + .paper-switch-slider {
-        background-color: $success-light;
+        @include color('background-color', 'success-light');
       }
 
       &:checked + .paper-switch-slider::before {
@@ -163,7 +165,8 @@ select {
     }
 
     .paper-switch-slider {
-      border: 2px solid $primary;
+      @include color('border-color', 'primary');
+      border: 2px solid;
       border-bottom-left-radius: 15px 255px;
       border-bottom-right-radius: 225px 15px;
       border-top-left-radius: 255px 15px;
@@ -177,7 +180,7 @@ select {
       transition: 0.4s;
 
       &::before {
-        background: $secondary;
+        @include color('background', 'secondary');
         border-bottom-left-radius: 15px 255px;
         border-bottom-right-radius: 225px 15px;
         border-top-left-radius: 255px 15px;
@@ -191,7 +194,8 @@ select {
     }
 
     .paper-switch-slider.round {
-      border: 2px solid $primary;
+      @include color('border-color', 'primary');
+      border: 2px solid;
       border-bottom-left-radius: 0.7rem 1rem;
       border-bottom-right-radius: 1rem 0.9rem;
       border-top-left-radius: 1rem 1rem;
