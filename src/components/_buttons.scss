@@ -1,3 +1,4 @@
+// here
 button,
 .paper-btn,
 [type='button'] {
@@ -45,7 +46,8 @@ button,
   }
 
   &:focus {
-    border: 2px solid $secondary;
+    @include color('border-color', 'secondary');
+    border: 2px solid;
     box-shadow: 2px 8px 4px -6px hsla(0, 0%, 0%, 0.3);
   }
 
@@ -84,18 +86,12 @@ a {
 }
 
 @each $colorName, $color, $color-light, $color-text in $colors {
-  .alert-#{$colorName} {
-    background-color: $color-light;
-    border-color: $color;
-    color: $color;
-  }
-
   button.btn-#{$colorName},
   .paper-btn.btn-#{$colorName},
   [type='button'].btn-#{$colorName} {
-    background-color: $color-light;
-    border-color: $color;
-    color: $color-text;
+    @include color('color', #{$colorName}-text);
+    @include color('background-color', #{$colorName}-light);
+    @include color('border-color', #{$colorName});
 
     &:hover {
       &:active {
