@@ -11,7 +11,7 @@ ul.breadcrumb {
     }
 
     a {
-      @include color(color, 'secondary');
+      @include color('color', 'secondary');
       background-image: none;
       text-decoration: none;
 
