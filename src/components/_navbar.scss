@@ -13,11 +13,11 @@ nav {
   .bar1,
   .bar2,
   .bar3 {
-    background-color: $primary;
-    border-bottom: 5px solid $primary;
+    @include color('background-color', 'primary');
+    @include color('border-color', 'primary');
+    @include color('color', 'primary');
     border-bottom-left-radius: 15px 5px;
     border-bottom-right-radius: 15px 3px;
-    color: $primary;
     margin: 6px 0;
     transition: 0.4s;
     width: 2rem;
@@ -81,7 +81,8 @@ nav {
   }
 
   a:hover {
-    border-bottom: 5px solid $primary-light;
+    @include color('border-color', 'primary-light');
+    border-bottom: 5px solid;
   }
 
   ul.inline li a {
