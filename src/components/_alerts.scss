@@ -1,9 +1,10 @@
 @mixin btn-close-color($base-color-name) {
   @include color('color', #{$base-color-name}-light-10);
+
   &:hover,
   &:active,
   &:focus {
-    @include color('color', #{$base-color-name}-dark-10)
+    @include color('color', #{$base-color-name}-dark-10);
   }
 }
 
