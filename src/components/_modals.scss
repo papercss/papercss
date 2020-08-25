@@ -26,10 +26,11 @@
   .modal-body {
     @include color('color', 'primary');
     @include color('background', 'main-background');
+    @include color('border-color', 'muted-light');
     @include transition;
     backface-visibility: hidden;
 
-    border: 2px solid $muted-light;
+    border: 2px solid;
     left: 50%;
     padding: 1.25rem;
     position: absolute;
@@ -86,7 +87,7 @@
   }
 
   .paper-btn {
-    background: $white;
+    @include color('background', 'main-background');
     display: inline-block;
     text-decoration: none;
   }
