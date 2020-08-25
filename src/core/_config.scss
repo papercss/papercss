@@ -21,7 +21,30 @@ $warning-light: lighten($warning, 30%) !default;
 $danger-light: lighten($danger, 45%) !default;
 $muted-light: lighten($muted, 35%) !default;
 
+$primary-dark: darken($primary, 50%) !default;
+$secondary-dark: darken($secondary, 50%) !default;
+$success-dark: darken($success, 30%) !default;
+$warning-dark: darken($warning, 30%) !default;
+$danger-dark: darken($danger, 45%) !default;
+$muted-dark: darken($muted, 35%) !default;
+
+$primary-light-10: lighten($primary, 10%) !default;
+$secondary-light-10: lighten($secondary, 10%) !default;
+$success-light-10: lighten($success, 10%) !default;
+$warning-light-10: lighten($warning, 10%) !default;
+$danger-light-10: lighten($danger, 10%) !default;
+$muted-light-10: lighten($muted, 10%) !default;
+
+$primary-dark-10: darken($primary, 10%) !default;
+$secondary-dark-10: darken($secondary, 10%) !default;
+$success-dark-10: darken($success, 10%) !default;
+$warning-dark-10: darken($warning, 10%) !default;
+$danger-dark-10: darken($danger, 10%) !default;
+$muted-dark-10: darken($muted, 10%) !default;
+
+
 $white-dark: rgba(#000, 0.03) !default;
+$white-dark-light-80: lighten($white-dark, 80%) !default;
 $light-dark: rgba(#000, 0.7) !default;
 $white: rgba(#fff, 1) !default;
 $main-background: rgba(#fff, 1) !default;
@@ -41,32 +64,54 @@ $shadow-color-hover: hsla(0, 0, 0%, 0.3) !default;
 // Set dark theme colors
 
 $dark-primary: #fff !default;
-$dark-secondary: #339bff !default;
+$dark-secondary: #0071de !default;
 
 $dark-success: #189418 !default;
 $dark-warning: #ddcd45 !default;
 $dark-danger: #ff8c86 !default;
 $dark-muted: #868e96 !default;
 
-$dark-primary-light: lighten($dark-primary, 50%) !default;
-$dark-secondary-light: lighten($dark-secondary, 50%) !default;
-$dark-success-light: lighten($dark-success, 30%) !default;
-$dark-warning-light: lighten($dark-warning, 30%) !default;
-$dark-danger-light: lighten($dark-danger, 45%) !default;
-$dark-muted-light: lighten($dark-muted, 35%) !default;
+$dark-primary-light: lighten($dark-primary, 5%) !default;
+$dark-secondary-light: lighten($dark-secondary, 5%) !default;
+$dark-success-light: lighten($dark-success, 5%) !default;
+$dark-warning-light: lighten($dark-warning, 5%) !default;
+$dark-danger-light: lighten($dark-danger, 5%) !default;
+$dark-muted-light: lighten($dark-muted, 5%) !default;
 
-$dark-white-dark: rgba(#000, 0.03) !default;
-$dark-light-dark: rgba(#000, 0.7) !default;
+$dark-primary-dark: darken($dark-primary, 50%) !default;
+$dark-secondary-dark: darken($dark-secondary, 50%) !default;
+$dark-success-dark: darken($dark-success, 30%) !default;
+$dark-warning-dark: darken($dark-warning, 30%) !default;
+$dark-danger-dark: darken($dark-danger, 45%) !default;
+$dark-muted-dark: darken($dark-muted, 35%) !default;
+
+$dark-primary-light-10: lighten($dark-primary, 10%) !default;
+$dark-secondary-light-10: lighten($dark-secondary, 10%) !default;
+$dark-success-light-10: lighten($dark-success, 10%) !default;
+$dark-warning-light-10: lighten($dark-warning, 10%) !default;
+$dark-danger-light-10: lighten($dark-danger, 10%) !default;
+$dark-muted-light-10: lighten($dark-muted, 10%) !default;
+
+$dark-primary-dark-10: darken($dark-primary, 10%) !default;
+$dark-secondary-dark-10: darken($dark-secondary, 10%) !default;
+$dark-success-dark-10: darken($dark-success, 10%) !default;
+$dark-warning-dark-10: darken($dark-warning, 10%) !default;
+$dark-danger-dark-10: darken($dark-danger, 10%) !default;
+$dark-muted-dark-10: darken($dark-muted, 10%) !default;
+
+$dark-white-dark: rgba(#fff, 0.03) !default;
+$dark-white-dark-light-80: lighten($dark-white-dark, 80%) !default;
+$dark-light-dark: rgba(#fff, 0.7) !default;
 $dark-white: rgba(#fff, 1) !default;
 $dark-main-background: rgba(#41403e, 1) !default;
 $dark-main-background-light: lighten($dark-main-background, 50%) !default;
 
 $dark-primary-text: #41403e !default;
-$dark-secondary-text: $dark-secondary !default;
-$dark-success-text: $dark-primary !default;
-$dark-warning-text: $dark-primary !default;
-$dark-danger-text: $dark-primary !default;
-$dark-muted-text: $dark-primary !default;
+$dark-secondary-text: #41403e !default;
+$dark-success-text: #41403e !default;
+$dark-warning-text: #41403e !default;
+$dark-danger-text: #41403e !default;
+$dark-muted-text: #41403e !default;
 
 $dark-shadow-color-regular: hsla(0, 0, 0%, 0.2) !default;
 $dark-shadow-color-hover: hsla(0, 0, 0%, 0.3) !default;
@@ -81,13 +126,32 @@ $theme-map: (
     warning: $warning,
     danger: $danger,
     muted: $muted,
-    primary-light: #{$primary-light},
+    primary-light: $primary-light,
     secondary-light:$secondary-light,
     success-light:$success-light,
     warning-light:$warning-light,
     danger-light:$danger-light,
     muted-light:$muted-light,
+    primary-dark: $primary-dark,
+    secondary-dark:$secondary-dark,
+    success-dark:$success-dark,
+    warning-dark:$warning-dark,
+    danger-dark:$danger-dark,
+    muted-dark:$muted-dark,
+    primary-light-10:$primary-light-10,
+    secondary-light-10:$secondary-light-10,
+    success-light-10:$success-light-10,
+    warning-light-10:$warning-light-10,
+    danger-light-10:$danger-light-10,
+    muted-light-10:$muted-light-10,
+    primary-dark-10:$primary-dark-10,
+    secondary-dark-10:$secondary-dark-10,
+    success-dark-10:$success-dark-10,
+    warning-dark-10:$warning-dark-10,
+    danger-dark-10:$danger-dark-10,
+    muted-dark-10:$muted-dark-10,
     white-dark:$white-dark,
+    white-dark-light-80:$white-dark-light-80,
     light-dark:$light-dark,
     white:$white,
     main-background: $main-background,
@@ -108,13 +172,32 @@ $theme-map: (
     warning: $dark-warning,
     danger: $dark-danger,
     muted: $dark-muted,
-    primary-light: #{$dark-primary-light},
+    primary-light: $dark-primary-light,
     secondary-light:$dark-secondary-light,
     success-light:$dark-success-light,
     warning-light:$dark-warning-light,
     danger-light:$dark-danger-light,
     muted-light:$dark-muted-light,
+    primary-dark: $dark-primary-dark,
+    secondary-dark:$dark-secondary-dark,
+    success-dark:$dark-success-dark,
+    warning-dark:$dark-warning-dark,
+    danger-dark:$dark-danger-dark,
+    muted-dark:$dark-muted-dark,
+    primary-light-10:$dark-primary-light-10,
+    secondary-light-10:$dark-secondary-light-10,
+    success-light-10:$dark-success-light-10,
+    warning-light-10:$dark-warning-light-10,
+    danger-light-10:$dark-danger-light-10,
+    muted-light-10:$dark-muted-light-10,
+    primary-dark-10:$dark-primary-dark-10,
+    secondary-dark-10:$dark-secondary-dark-10,
+    success-dark-10:$dark-success-dark-10,
+    warning-dark-10:$dark-warning-dark-10,
+    danger-dark-10:$dark-danger-dark-10,
+    muted-dark-10:$dark-muted-dark-10,
     white-dark:$dark-white-dark,
+    white-dark-light-80:$dark-white-dark-light-80,
     light-dark:$dark-light-dark,
     white:$dark-white,
     main-background: $dark-main-background,
