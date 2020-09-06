@@ -1,13 +1,13 @@
 code {
   @include color('color', 'secondary');
-  @include color('background-color', 'primary-light');
+  @include color('background-color', 'primary-light-70');
   border-radius: 3px;
   font-size: 80%;
   padding: 2px 4px;
 }
 
 kbd {
-  @include color('color', 'primary-text');
+  @include color('color', 'white');
   @include color('background-color', 'primary');
   border-radius: 3px;
   font-size: 80%;
@@ -16,8 +16,8 @@ kbd {
 
 pre {
   @include color('color', 'primary');
-  @include color('background-color', 'main-background');
-  @include color('border-color', 'main-background-light');
+  @include color('background-color', 'primary-light-70');
+  @include color('border-color', 'primary-light-50');
 
   border-radius: 3px;
   border-style: solid;
@@ -32,7 +32,7 @@ pre {
   word-wrap: break-word;
 
   code {
-    @include color('background-color', 'main-background');
+    background: transparent;
     color: inherit;
     display: block;
     font-size: inherit;

@@ -29,6 +29,8 @@ $danger-dark: darken($danger, 45%) !default;
 $muted-dark: darken($muted, 35%) !default;
 
 $primary-light-10: lighten($primary, 10%) !default;
+$primary-light-70: lighten($primary, 70%) !default;
+$primary-light-50: lighten($primary, 50%) !default;
 $secondary-light-10: lighten($secondary, 10%) !default;
 $success-light-10: lighten($success, 10%) !default;
 $warning-light-10: lighten($warning, 10%) !default;
@@ -86,6 +88,8 @@ $dark-danger-dark: darken($dark-danger, 45%) !default;
 $dark-muted-dark: darken($dark-muted, 35%) !default;
 
 $dark-primary-light-10: lighten($dark-primary, 10%) !default;
+$dark-primary-light-70: lighten($dark-primary, 70%) !default;
+$dark-primary-light-50: lighten($dark-primary, 50%) !default;
 $dark-secondary-light-10: lighten($dark-secondary, 10%) !default;
 $dark-success-light-10: lighten($dark-success, 10%) !default;
 $dark-warning-light-10: lighten($dark-warning, 10%) !default;
@@ -139,6 +143,8 @@ $theme-map: (
     danger-dark:$danger-dark,
     muted-dark:$muted-dark,
     primary-light-10:$primary-light-10,
+    primary-light-50: $primary-light-50,
+    primary-light-70: $primary-light-70,
     secondary-light-10:$secondary-light-10,
     success-light-10:$success-light-10,
     warning-light-10:$warning-light-10,
@@ -185,6 +191,8 @@ $theme-map: (
     danger-dark:$dark-danger-dark,
     muted-dark:$dark-muted-dark,
     primary-light-10:$dark-primary-light-10,
+    primary-light-50: $dark-primary-light-50,
+    primary-light-70: $dark-primary-light-70,
     secondary-light-10:$dark-secondary-light-10,
     success-light-10:$dark-success-light-10,
     warning-light-10:$dark-warning-light-10,
