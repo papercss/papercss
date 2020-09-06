@@ -17,7 +17,8 @@ textarea {
 
   &:focus {
     @include color('border-color', 'secondary');
-    border: 2px solid;
+    border-style: solid;
+    border-width: 2px;
   }
 
   &.disabled,
