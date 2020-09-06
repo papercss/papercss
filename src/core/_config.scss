@@ -50,7 +50,7 @@ $white: rgba(#fff, 1) !default;
 $main-background: rgba(#fff, 1) !default;
 $main-background-light: lighten($main-background, 50%) !default;
 
-$primary-text: #fff !default;
+$primary-text: $primary !default;
 $secondary-text: $primary !default;
 $success-text: $primary !default;
 $warning-text: $primary !default;

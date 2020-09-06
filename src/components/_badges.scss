@@ -1,6 +1,6 @@
 .badge {
   @include border-style();
-  @include color('color', 'primary-text');
+  @include color('color', 'white');
   @include color('background-color', 'muted');
   @include color('border-color', 'primary');
   border: 2px solid;
