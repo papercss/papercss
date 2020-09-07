@@ -1,6 +1,7 @@
 .border {
   @include color('border-color','primary' );
-  border: 2px solid;
+  border-style: solid;
+  border-width: 2px;
 }
 
 .border,
@@ -36,7 +37,8 @@
 
 .child-borders>* {
   @include color('border-color', 'primary');
-  border: 2px solid;
+  border-style: solid;
+  border-width: 2px;
 }
 
 .border-white {

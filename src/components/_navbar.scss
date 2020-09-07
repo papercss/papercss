@@ -82,7 +82,8 @@ nav {
 
   a:hover {
     @include color('border-color', 'primary-light');
-    border-bottom: 5px solid;
+    border-bottom-style: solid;
+    border-bottom-width: 5px;
   }
 
   ul.inline li a {

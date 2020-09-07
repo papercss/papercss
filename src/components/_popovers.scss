@@ -20,7 +20,8 @@
     @include transition(opacity);
     @include color('background-color', 'light-dark');
     @include color('border-color', 'primary');
-    border: 2px solid;
+    border-style: solid;
+    border-width: 2px;
     color: $white;
     font-size: 0.7em;
     left: 50%;
