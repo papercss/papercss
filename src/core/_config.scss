@@ -50,6 +50,7 @@ $white-dark-light-80: lighten($white-dark, 80%) !default;
 $light-dark: rgba(#000, 0.7) !default;
 $white: rgba(#fff, 1) !default;
 $main-background: rgba(#fff, 1) !default;
+$black: rgba(#000, 1) !default;
 $main-background-light: lighten($main-background, 50%) !default;
 
 $primary-text: $primary !default;
@@ -109,6 +110,7 @@ $dark-light-dark: rgba(#fff, 0.7) !default;
 $dark-white: rgba(#fff, 1) !default;
 $dark-main-background: rgba(#41403e, 1) !default;
 $dark-main-background-light: lighten($dark-main-background, 50%) !default;
+$dark-black: rgba(#000, 1) !default;
 
 $dark-primary-text: #41403e !default;
 $dark-secondary-text: #41403e !default;
@@ -162,6 +164,7 @@ $theme-map: (
     white:$white,
     main-background: $main-background,
     main-background-light: $main-background-light,
+    black: $black,
     primary-text:$primary-text,
     secondary-text:$secondary-text,
     success-text:$success-text,
@@ -210,6 +213,7 @@ $theme-map: (
     white:$dark-white,
     main-background: $dark-main-background,
     main-background-light: $dark-main-background-light,
+    black: $dark-black,
     primary-text:$dark-primary-text,
     secondary-text:$dark-secondary-text,
     success-text:$dark-success-text,

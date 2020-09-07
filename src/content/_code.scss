@@ -7,7 +7,7 @@ code {
 }
 
 kbd {
-  @include color('color', 'white');
+  @include color('color', 'black');
   @include color('background-color', 'primary');
   border-radius: 3px;
   font-size: 80%;
@@ -15,7 +15,7 @@ kbd {
 }
 
 pre {
-  @include color('color', 'primary');
+  @include color('color', 'black');
   @include color('background-color', 'primary-light-70');
   @include color('border-color', 'primary-light-50');
 
@@ -32,8 +32,8 @@ pre {
   word-wrap: break-word;
 
   code {
+    @include color('color', 'black');
     background: transparent;
-    color: inherit;
     display: block;
     font-size: inherit;
     padding: initial;
