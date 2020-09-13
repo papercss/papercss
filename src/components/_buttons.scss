@@ -4,10 +4,13 @@ button,
   @include border-style();
   @include shadow();
   @include transition();
+  @include color('color', 'primary');
+  @include color('border-color', 'primary');
+  @include color('background-color', 'main-background');
   align-self: center;
-  background: transparent;
-  border: 2px solid $primary;
-  color: $primary;
+  background-image: none;
+  border-style: solid;
+  border-width: 2px;
   cursor: pointer;
   display: inline-block;
   font-size: 1rem;
@@ -43,7 +46,9 @@ button,
   }
 
   &:focus {
-    border: 2px solid $secondary;
+    @include color('border-color', 'secondary');
+    border-style: solid;
+    border-width: 2px;
     box-shadow: 2px 8px 4px -6px hsla(0, 0%, 0%, 0.3);
   }
 
@@ -60,6 +65,7 @@ button,
 }
 
 a {
+  @include color('color', 'secondary');
   background-image: linear-gradient(5deg, transparent 65%, $secondary 80%, transparent 90%), linear-gradient(165deg, transparent 5%, $secondary 15%, transparent 25%), linear-gradient(165deg, transparent 45%, $secondary 55%, transparent 65%), linear-gradient(15deg, transparent 25%, $secondary 35%, transparent 50%);
   background-position: 0 90%;
   background-repeat: repeat-x;
@@ -67,24 +73,18 @@ a {
   text-decoration: none;
 
   &:visited {
-    color: $primary;
+    @include color('color', 'primary');
     text-decoration: none;
   }
 }
 
 @each $colorName, $color, $color-light, $color-text in $colors {
-  .alert-#{$colorName} {
-    background-color: $color-light;
-    border-color: $color;
-    color: $color;
-  }
-
   button.btn-#{$colorName},
   .paper-btn.btn-#{$colorName},
   [type='button'].btn-#{$colorName} {
-    background-color: $color-light;
-    border-color: $color;
-    color: $color-text;
+    @include color('color', #{$colorName}-text);
+    @include color('background-color', #{$colorName}-light);
+    @include color('border-color', #{$colorName});
 
     &:hover {
       &:active {

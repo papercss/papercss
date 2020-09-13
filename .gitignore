@@ -8,4 +8,3 @@ npm-debug.log
 # Ignore compiled CSS
 /docs/static/assets/paper.css
 /docs/static/assets/paper.min.css
-/dist

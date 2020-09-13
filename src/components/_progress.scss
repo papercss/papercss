@@ -1,6 +1,7 @@
 .progress {
   @include border-style(5);
-  border: 2px solid $primary;
+  @include color('border-color', 'primary');
+  border: 2px solid;
   box-shadow: $shadow-hover;
   height: 1.2rem;
   overflow: hidden;
@@ -9,8 +10,9 @@
   .bar {
     @include border-style(5);
     @include transition;
-    background-color: $primary-light;
-    border-right: 2px solid $primary;
+    @include color('background-color', 'primary-light');
+    @include color('border-color', 'primary');
+    border-right: 2px solid;
     display: flex;
     flex-direction: column;
     font-size: 0.6rem;
@@ -25,7 +27,7 @@
 
     @each $colorName, $color, $color-light in $colors {
       &.#{$colorName} {
-        background-color: $color-light;
+        @include color('background-color', #{$colorName}-light);
   
         &.striped {
           @include striped-background($color-light);
