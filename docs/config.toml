@@ -16,5 +16,7 @@ title404 = "Nothing's here!"
 # Title Separator: - – — · • * ⋆ | ~ « » < >
 titleSeparator = "•"
 
-[blackfriday]
-hrefTargetBlank = true
+[markup]
+  defaultMarkdownHandler = "blackfriday"
+  [markup.blackFriday]
+    hrefTargetBlank = true
