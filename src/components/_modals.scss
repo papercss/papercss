@@ -24,10 +24,13 @@
   }
 
   .modal-body {
+    @include color('color', 'primary');
+    @include color('background', 'main-background');
+    @include color('border-color', 'muted-light');
     @include transition;
     backface-visibility: hidden;
-    background: $white;
-    border: 2px solid $muted-light;
+
+    border: 2px solid;
     left: 50%;
     padding: 1.25rem;
     position: absolute;
@@ -41,8 +44,8 @@
   }
 
   .btn-close {
+    @include color('color', 'primary-light');
     @include transition;
-    color: $primary-light;
     cursor: pointer;
     font-size: 30px;
     height: 1.1rem;
@@ -55,7 +58,7 @@
     &:hover,
     &:active,
     &:focus {
-      color: $primary;
+      @include color('color', 'primary');
     }
   }
 
@@ -67,7 +70,7 @@
 
   h5,
   .modal-subtitle {
-    color: $secondary;
+    @include color('color', 'secondary');
     margin-bottom: 0.5rem;
     margin-top: 0;
   }
@@ -84,7 +87,7 @@
   }
 
   .paper-btn {
-    background: $white;
+    @include color('background', 'main-background');
     display: inline-block;
     text-decoration: none;
   }
@@ -101,7 +104,7 @@
     &:hover,
     &:focus,
     &:visited {
-      color: $primary;
+      @include color('color', 'primary');
       text-decoration: none;
     }
   }

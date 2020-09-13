@@ -39,7 +39,7 @@ description: PaperCSS Borders & Shadows
   <div class="sm-2 col border border-success">Border success</div>
   <div class="sm-2 col border border-warning">Border warning</div>
   <div class="sm-2 col border border-danger">Border danger</div>
-  <div class="sm-2 col border background-primary border-white">Border white</div>
+  <div class="sm-2 col border border-white">Border white</div>
 </div>
 
 #### Code:
@@ -51,7 +51,7 @@ description: PaperCSS Borders & Shadows
   <div class="sm-2 col border border-success">Border success</div>
   <div class="sm-2 col border border-warning">Border warning</div>
   <div class="sm-2 col border border-danger">Border danger</div>
-  <div class="sm-2 col border background-primary border-white">Border white</div>
+  <div class="sm-2 col border border-white">Border white</div>
 </div>
 <div class="row child-borders">
   <div class="sm-2 col border border-primary">Border primary</div>
@@ -59,7 +59,7 @@ description: PaperCSS Borders & Shadows
   <div class="sm-2 col border border-success">Border success</div>
   <div class="sm-2 col border border-warning">Border warning</div>
   <div class="sm-2 col border border-danger">Border danger</div>
-  <div class="sm-2 col border background-primary border-white">Border white</div>
+  <div class="sm-2 col border border-white">Border white</div>
 </div>
 ```
 

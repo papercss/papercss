@@ -1,5 +1,5 @@
 html {
-  color: $font-color;
+  @include color('color', 'primary');
   font-family: $body-font, sans-serif;
   font-size: $global-font-size;
 }

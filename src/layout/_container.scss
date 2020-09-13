@@ -55,7 +55,7 @@ hr {
 }
 
 .paper {
-  background-color: $main-background;
+  @include color('background-color', 'main-background');
   border: 1px solid $primary-light;
   box-shadow: -1px 5px 35px -9px hsla(0, 0%, 0%, 0.2);
   margin-bottom: 1rem;

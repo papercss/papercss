@@ -1,6 +1,7 @@
-
 .border {
-  border: 2px solid $primary;
+  @include color('border-color','primary' );
+  border-style: solid;
+  border-width: 2px;
 }
 
 .border,
@@ -35,11 +36,13 @@
 }
 
 .child-borders>* {
-  border: 2px solid $primary;
+  @include color('border-color', 'primary');
+  border-style: solid;
+  border-width: 2px;
 }
 
 .border-white {
-  border-color: $white;
+  @include color('border-color', 'white');
 }
 
 .border-dotted {
@@ -56,6 +59,6 @@
 
 @each $colorName, $color in $colors {
   .border-#{$colorName} {
-    border-color: $color;
+    @include color('border-color', #{$colorName});
   }
 }

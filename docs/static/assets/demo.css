@@ -1,5 +1,8 @@
 body {
-    background-image: url("/img/geometry2.png")
+  background-image: url("/img/geometry2.png")
+}
+html.dark  body {
+  background: #41403e;
 }
 #top {
     max-width: 1440px;
@@ -31,7 +34,6 @@ img.no-responsive {
 }
 .to-top .paper-btn {
     padding: .6em 1em;
-    background: #fff;
     border-top-left-radius: 185px 160px;
     border-top-right-radius: 200px 195px;
     border-bottom-right-radius: 160px 195px;

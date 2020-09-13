@@ -8,9 +8,11 @@
   input {
     display: none;
 
-    &:checked+label {
-      border-bottom: solid 3px $secondary;
-      color: $primary;
+    &:checked + label {
+      @include color(color, 'primary');
+      @include color('border-bottom-color', 'secondary');
+      border-bottom-style: solid;
+      border-bottom-width: 3px;
     }
 
     @for $num from 1 through 5 {
@@ -21,7 +23,7 @@
   }
 
   label {
-    color: $primary-light;
+    @include color('color', primary-light);
     display: inline-block;
     font-weight: 600;
     margin: 0 0 -1px;
@@ -29,7 +31,7 @@
     text-align: center;
 
     &:hover {
-      color: $muted;
+      @include color('color', muted);
       cursor: pointer;
     }
   }

@@ -29,7 +29,7 @@ table {
   }
 
   &.table-hover tbody tr:hover {
-    color: $secondary;
+    @include color('color', 'secondary');
   }
 
   &.table-alternating tbody tr:nth-of-type(even) {

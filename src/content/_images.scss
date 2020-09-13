@@ -1,6 +1,8 @@
 img {
   @include border-style();
-  border: 2px solid $primary;
+  @include color('border-color', 'primary');
+  border-style: solid;
+  border-width: 2px;
   display: block;
   height: auto;
   max-width: 100%;
