@@ -165,11 +165,15 @@ description: PaperCSS Forms
 </fieldset>
 <fieldset class="form-group">
   <legend>Sliders</legend>
-  <label for="input-range">Note /10 :</label>
-  <input type="range" name="note" id="input-range" min="0" max="10">
-  <label for="percentage">Percentage (<code>.input-block</code>) :</label>
-  <input class="input-block" type="range" name="percentage" id="percentage" min="0" max="100" oninput="output.value = this.value + '%';">
-  <output id="output" for="percentage">50%</output>
+  <div class="form-group">
+    <label for="input-range">Note /10 :</label>
+    <input type="range" name="note" id="input-range" min="0" max="10">
+  </div>
+  <div class="form-group">
+    <label for="percentage">Percentage (<code>.input-block</code>) :</label>
+    <input class="input-block" type="range" name="percentage" id="percentage" min="0" max="100" oninput="output.value = this.value + '%';">
+    <output id="output" for="percentage">50%</output>
+  </div>
 </fieldset>
 
 #### Code:
@@ -332,10 +336,14 @@ description: PaperCSS Forms
 </fieldset>
 <fieldset class="form-group">
   <legend>Sliders</legend>
-  <label for="input-range">Note /10 :</label>
-  <input type="range" name="note" id="input-range" min="0" max="10">
-  <label for="percentage">Percentage (<code>.input-block</code>) :</label>
-  <input class="input-block" type="range" name="percentage" id="percentage" min="0" max="100" oninput="output.value = this.value + '%';">
-  <output id="output" for="percentage">50%</output>
+  <div class="form-group">
+    <label for="input-range">Note /10 :</label>
+    <input type="range" name="note" id="input-range" min="0" max="10">
+  </div>
+  <div class="form-group">
+    <label for="percentage">Percentage (<code>.input-block</code>) :</label>
+    <input class="input-block" type="range" name="percentage" id="percentage" min="0" max="100" oninput="output.value = this.value + '%';">
+    <output id="output" for="percentage">50%</output>
+  </div>
 </fieldset>
 ```

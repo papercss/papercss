@@ -139,9 +139,10 @@ nav {
   }
 
   .collapsible label {
+    @include color('border-color', 'primary');
+
     border-bottom-left-radius: 15px 255px;
     border-bottom-right-radius: 225px 15px;
-    border-color: #41403e;
     border-style: solid;
     border-top-left-radius: 255px 15px;
     border-top-right-radius: 15px 225px;

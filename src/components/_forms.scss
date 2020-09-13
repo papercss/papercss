@@ -331,12 +331,16 @@ select {
   input[type='range'] {
     appearance: none;
     border-width: 0;
+    padding: 0;
 
     /* For Chromium */
     &::-webkit-slider-runnable-track {
-      background: $secondary;
-      border: 1px solid $primary;
+      @include color('background', 'secondary');
+      @include color('border-color', 'primary');
+
       border-radius: 18px;
+      border-style: solid;
+      border-width: 1px;
       box-shadow: 1px 1px 1px #000, 0 0 1px #0d0d0d;
       cursor: pointer;
       height: 8px;
@@ -345,13 +349,16 @@ select {
     }
 
     &::-webkit-slider-thumb {
+      @include color('background', 'white');
+      @include color('border-color', 'primary');
+
       appearance: none;
-      background: #fff;
-      border: 1px solid $primary;
       border-bottom-left-radius: 0.7rem 1rem;
       border-bottom-right-radius: 1rem 0.9rem;
+      border-style: solid;
       border-top-left-radius: 1rem 1rem;
       border-top-right-radius: 1rem 0.6rem;
+      border-width: 1px;
       box-shadow: 1px 1px 1px #000, 0 0 1px #0d0d0d;
       cursor: pointer;
       height: 36px;
@@ -361,8 +368,9 @@ select {
 
     /* For Mozilla Firefox */
     &::-moz-range-track {
-      background: $secondary;
-      border: 1px solid $primary;
+      @include color('background', 'secondary');
+      @include color('border-color', 'primary');
+
       border-radius: 18px;
       box-shadow: 1px 1px 1px #000, 0 0 1px #0d0d0d;
       cursor: pointer;
@@ -371,12 +379,15 @@ select {
     }
 
     &::-moz-range-thumb {
-      background: #fff;
-      border: 1px solid $primary;
+      @include color('background', 'white');
+      @include color('border-color', 'primary');
+
       border-bottom-left-radius: 0.7rem 1rem;
       border-bottom-right-radius: 1rem 0.9rem;
+      border-style: solid;
       border-top-left-radius: 1rem 1rem;
       border-top-right-radius: 1rem 0.6rem;
+      border-width: 1px;
       box-shadow: 1px 1px 1px #000, 0 0 1px #0d0d0d;
       cursor: pointer;
       height: 36px;
@@ -396,19 +407,26 @@ select {
 
     &::-ms-fill-lower,
     &::-ms-fill-upper {
-      background: $secondary;
-      border: 1px solid $primary;
+      @include color('background', 'secondary');
+      @include color('border-color', 'primary');
+
       border-radius: 18px;
+      border-style: solid;
+      border-width: 1px;
       box-shadow: 1px 1px 1px #000, 0 0 1px #0d0d0d;
     }
 
     &::-ms-thumb {
-      background: #fff;
+      @include color('background', 'white');
+      @include color('border-color', 'primary');
+
       border: 1px solid $primary;
       border-bottom-left-radius: 0.7rem 1rem;
       border-bottom-right-radius: 1rem 0.9rem;
+      border-style: solid;
       border-top-left-radius: 1rem 1rem;
       border-top-right-radius: 1rem 0.6rem;
+      border-width: 1px;
       box-shadow: 1px 1px 1px #000, 0 0 1px #0d0d0d;
       cursor: pointer;
       height: 36px;

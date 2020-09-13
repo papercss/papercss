@@ -17,17 +17,18 @@
   .card-header,
   .card-footer {
     @include color('background-color', 'white-dark');
+    @include color('border-color', 'muted-light');
     padding: 0.75rem 1.25rem;
   }
 
   .card-header {
-    @include color('border-color', 'muted-light');
-    border-bottom: 2px solid;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
   }
 
   .card-footer {
-    @include color('border-color', 'muted-light');
-    border-top: 2px solid;
+    border-top-style: solid;
+    border-top-width: 2px;
   }
 
   .card-body {

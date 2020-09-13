@@ -1,13 +1,13 @@
 code {
   @include color('color', 'secondary');
-  @include color('background-color', 'primary-light-70');
+  @include color('background-color', 'primary-shaded-70');
   border-radius: 3px;
   font-size: 80%;
   padding: 2px 4px;
 }
 
 kbd {
-  @include color('color', 'black');
+  @include color('color', 'primary-inverse');
   @include color('background-color', 'primary');
   border-radius: 3px;
   font-size: 80%;
@@ -15,9 +15,9 @@ kbd {
 }
 
 pre {
-  @include color('color', 'black');
-  @include color('background-color', 'primary-light-70');
-  @include color('border-color', 'primary-light-50');
+  @include color('color', 'inverse-primary');
+  @include color('background-color', 'primary-shaded-70');
+  @include color('border-color', 'primary-shaded-50');
 
   border-radius: 3px;
   border-style: solid;
@@ -32,7 +32,7 @@ pre {
   word-wrap: break-word;
 
   code {
-    @include color('color', 'black');
+    @include color('color', 'inverse-primary');
     background: transparent;
     display: block;
     font-size: inherit;

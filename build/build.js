@@ -20,7 +20,9 @@ async function build() {
   log('Cleaning "dist/, docs/static/assets/paper.css" folder...');
 
   rimraf.sync('dist', { disableGlob: true });
-  fs.unlinkSync(paperDocsPath);
+  if (fs.existsSync(paperDocsPath)) {
+    fs.unlinkSync(paperDocsPath);
+  }
 
   log('Compiling SCSS to CSS, entrypoint:', entrypoint);
 
