@@ -1,16 +1,13 @@
 const fs = require('fs');
 const path = require('path');
 const sass = require('sass');
-const chalk = require('chalk');
 const write = require('write');
 const rimraf = require('rimraf');
 const postcss = require('postcss');
 const cssnano = require('cssnano');
 const autoprefixer = require('autoprefixer');
 
-function log(...args) {
-  return console.log('📦', chalk.cyan(...args));
-}
+const log = require('./log');
 
 async function build() {
   const entrypoint = path.resolve(__dirname, '../src/styles.scss');
@@ -20,6 +17,7 @@ async function build() {
   log('Cleaning "dist/, docs/static/assets/paper.css" folder...');
 
   rimraf.sync('dist', { disableGlob: true });
+
   if (fs.existsSync(paperDocsPath)) {
     fs.unlinkSync(paperDocsPath);
   }
