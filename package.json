@@ -27,6 +27,8 @@
     "autoprefixer": "^9.8.6",
     "chai": "^4.1.2",
     "chalk": "^4.1.0",
+    "chokidar": "^3.4.2",
+    "concurrently": "^5.3.0",
     "cssnano": "^4.1.10",
     "hugo-bin": "^0.62.3",
     "postcss": "^7.0.32",
