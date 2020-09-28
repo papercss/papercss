@@ -1,32 +1,27 @@
 const fs = require('fs');
-const path = require('path');
 const sass = require('sass');
-const chalk = require('chalk');
 const write = require('write');
 const rimraf = require('rimraf');
 const postcss = require('postcss');
 const cssnano = require('cssnano');
 const autoprefixer = require('autoprefixer');
 
-function log(...args) {
-  return console.log('📦', chalk.cyan(...args));
-}
+const constants = require('./constants');
+const log = require('./log');
 
 async function build() {
-  const entrypoint = path.resolve(__dirname, '../src/styles.scss');
-  const paperDocsPath = path.resolve(__dirname, '../docs/static/assets/paper.css');
-
   log('Starting PaperCSS build...');
   log('Cleaning "dist/, docs/static/assets/paper.css" folder...');
 
   rimraf.sync('dist', { disableGlob: true });
-  if (fs.existsSync(paperDocsPath)) {
-    fs.unlinkSync(paperDocsPath);
+
+  if (fs.existsSync(constants.PAPER_DOCS_PATH)) {
+    fs.unlinkSync(constants.PAPER_DOCS_PATH);
   }
 
-  log('Compiling SCSS to CSS, entrypoint:', entrypoint);
+  log('Compiling SCSS to CSS, entrypoint:', constants.ENTRYPOINT_PATH);
 
-  const compiledCSS = sass.renderSync({ file: entrypoint });
+  const compiledCSS = sass.renderSync({ file: constants.ENTRYPOINT_PATH });
 
   log('Processing CSS: autoprefixer...');
 
@@ -36,14 +31,11 @@ async function build() {
 
   const minifiedCSS = await postcss([cssnano]).process(autoprefixedCSS.css, { from: undefined });
 
-  const paperPath = path.resolve(__dirname, '../dist/paper.css');
-  const paperminpath = path.resolve(__dirname, '../dist/paper.min.css');
-
   log('Writing paper.css and paper.min.css files to dist/ and docs/ folders...');
 
-  write(paperPath, autoprefixedCSS.css);
-  write(paperminpath, minifiedCSS.css);
-  write(paperDocsPath, autoprefixedCSS.css);
+  write(constants.PAPER_DIST_PATH, autoprefixedCSS.css);
+  write(constants.PAPER_DIST_MIN_PATH, minifiedCSS.css);
+  write(constants.PAPER_DOCS_PATH, autoprefixedCSS.css);
 
   log('Build done!');
 }

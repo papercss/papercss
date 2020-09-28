@@ -4,10 +4,12 @@
   "description": "The less formal CSS framework.",
   "main": "dist/paper.css",
   "scripts": {
+    "build": "npm run css:build && npm run hugo:build",
     "css:build": "node ./build/build.js",
+    "dev": "concurrently --kill-others \"npm run dev:hot-reload\" \"npm run hugo:serve\"",
+    "dev:hot-reload": "node ./build/hot-reload.js",
     "hugo:build": "hugo -D --source=docs",
     "hugo:serve": "hugo server --source=docs --disableFastRender",
-    "build": "npm run css:build && npm run hugo:build",
     "lint": "npm run stylelint",
     "start": "npm run hugo:serve",
     "stylelint": "stylelint 'src/**/*.scss'"
@@ -27,6 +29,8 @@
     "autoprefixer": "^9.8.6",
     "chai": "^4.1.2",
     "chalk": "^4.1.0",
+    "chokidar": "^3.4.2",
+    "concurrently": "^5.3.0",
     "cssnano": "^4.1.10",
     "hugo-bin": "^0.62.3",
     "postcss": "^7.0.32",
