@@ -4,7 +4,6 @@
 /img
 /node_modules
 /public
-/src
 .browserslistrc
 .editorconfig
 .stylelintrc.json
@@ -12,4 +11,3 @@ CODE_OF_CONDUCT.md
 CONTRIBUTING.md
 netlify.toml
 npm-debug.log
-yarn.lock
