@@ -2,8 +2,13 @@
   Global PaperCSS Config
 */
 
+// The src for fonts (false to disable)
+$font-src: 'https://fonts.googleapis.com/css?family=Neucha|Patrick+Hand+SC' !default;
+
 // Imports
-@import url('https://fonts.googleapis.com/css?family=Neucha|Patrick+Hand+SC');
+@if $font-src {
+  @import url($font-src);
+}
 
 // Set theme colors
 $primary: #41403e !default;
