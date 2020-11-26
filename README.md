@@ -59,7 +59,7 @@ You can customize PaperCSS easily, clone the repo, run `npm install` and make an
 
 The main place you might want to make changes would be `core/_config.scss`, where you can specify new colors or fonts for your CSS build.
 
-After you make changes, be sure to build the new CSS files. Do so by running `gulp build` and get them from the `dist/` folder.
+After you make changes, be sure to build the new CSS files. Do so by running `npm run css:build` and get them from the `dist/` folder.
 
 ## Contributing
 
@@ -67,16 +67,15 @@ This project is open source and contributions are very welcomed. It is also as b
 
 Please before sending a PR, make sure you are properly using the `.editorconfig` file with your IDE. If your IDE doesn't natively support `editorconfig` files, you can use an extension/package/module. For example in Atom there is the [editorconfig package](https://atom.io/packages/editorconfig), as well for [Sublime Text](https://github.com/sindresorhus/editorconfig-sublime), [VS Code](https://github.com/editorconfig/editorconfig-vscode), [Vim](https://github.com/editorconfig/editorconfig-vim), ...
 
-We use node-sass to transform the SCSS to plain CSS. Compiling on Windows machines require the [node-gyp prerequisites](https://github.com/nodejs/node-gyp#on-windows) (including an instalation of Python).
-
 Once you are ready to contribute, here the workflow you should follow:
 
 - Fork the repo then clone it: `git clone git@github.com:[your_username]/papercss.git`
 - `cd papercss` then install dependencies: `npm install`
 - Change your current branch to `develop`: `git checkout develop`
 - Create your new branch where you will write your code: `git checkout -b feature-thing develop`. Please be sure to prepend your new feature branch with "feature-"
-- Start the local web-server: `gulp` or `npm start`
 - Write some code!
+- To build the scss (in `src/`) to css (in `dist/`), run `npm run css:build`. Note: you will need to re-run this command to include the latest changes in `src/`.
+- To preview your changes, you can run `npm start`. This will start a `localhost` server.
 - Check to make sure your code is following style rules with `npm run stylelint`
 - Once done commit and push your changes to your fork. The linter is also run as a pre-commit hook.
 - Open a pull request on the origin papercss repo. Be sure to include any pictures and/or details on what you have done; it will help reviewers **a lot**!
