@@ -27,20 +27,20 @@
 
   .btn-close {
     @include transition;
-    @include btn-close-color($primary);
+    @include btn-close-color(primary);
     cursor: pointer;
     margin-left: 0.75rem;
   }
 }
 
-@each $colorName, $color, $color-light in $colors {
-  .alert-#{$colorName} {
-    @include color('color', #{$colorName}-text);
-    @include color('background-color', #{$colorName}-light);
-    @include color('border-color', #{$colorName});
+@each $color-name, $color, $color-light, $color-text in $colors {
+  .alert-#{$color-name} {
+    @include color('color', #{$color-name}-text);
+    @include color('background-color', #{$color-name}-light);
+    @include color('border-color', $color-name);
 
     .btn-close {
-      @include btn-close-color($color);
+      @include btn-close-color($color-name);
     }
   }
 }
