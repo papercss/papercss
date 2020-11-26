@@ -10,7 +10,7 @@
     "build": "npm run css:build && npm run hugo:build",
     "lint": "npm run stylelint",
     "start": "npm run hugo:serve",
-    "stylelint": "stylelint 'src/**/*.scss'"
+    "stylelint": "stylelint src/**/*.scss"
   },
   "repository": {
     "type": "git",
@@ -33,11 +33,11 @@
     "pre-commit": "^1.2.2",
     "rimraf": "^3.0.2",
     "sass": "^1.26.10",
-    "stylelint": "8.4.0",
+    "stylelint": "^13.7.2",
     "stylelint-config-sass-guidelines": "4.0.1",
-    "stylelint-config-standard": "18.0.0",
-    "stylelint-order": "0.8.0",
-    "stylelint-scss": "2.2.0",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-order": "^4.1.0",
+    "stylelint-scss": "^3.18.0",
     "write": "^2.0.0"
   },
   "pre-commit": [
