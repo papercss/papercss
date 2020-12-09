@@ -10,9 +10,9 @@ description: PaperCSS Navbar
   <div class="collapsible">
     <input id="collapsible0" type="checkbox" name="collapsible0">
     <label for="collapsible0">
-      <div class="bar1"></div>
-      <div class="bar2"></div>
-      <div class="bar3"></div>
+      <div class="bar1 border"></div>
+      <div class="bar2 border"></div>
+      <div class="bar3 border"></div>
     </label>
     <div class="collapsible-body">
       <ul class="inline">
@@ -31,9 +31,9 @@ description: PaperCSS Navbar
   <div class="collapsible">
     <input id="collapsible1" type="checkbox" name="collapsible1">
     <label for="collapsible1">
-      <div class="bar1"></div>
-      <div class="bar2"></div>
-      <div class="bar3"></div>
+      <div class="bar1 border"></div>
+      <div class="bar2 border"></div>
+      <div class="bar3 border"></div>
     </label>
     <div class="collapsible-body">
       <ul class="inline">
@@ -57,9 +57,9 @@ Add ```.fixed``` to ```<nav>``` to fix the nav to the top to have it scroll the 
   <div class="collapsible">
     <input id="collapsible1" type="checkbox" name="collapsible1">
     <label for="collapsible1">
-      <div class="bar1"></div>
-      <div class="bar2"></div>
-      <div class="bar3"></div>
+      <div class="bar1 border"></div>
+      <div class="bar2 border"></div>
+      <div class="bar3 border"></div>
     </label>
     <div class="collapsible-body">
       <ul class="inline">
@@ -81,9 +81,9 @@ Add ```.fixed``` to ```<nav>``` to fix the nav to the top to have it scroll the 
   <div class="collapsible">
     <input id="collapsible2" type="checkbox" name="collapsible2">
     <label for="collapsible2">
-      <div class="bar1"></div>
-      <div class="bar2"></div>
-      <div class="bar3"></div>
+      <div class="bar1 border"></div>
+      <div class="bar2 border"></div>
+      <div class="bar3 border"></div>
     </label>
     <div class="collapsible-body">
       <ul class="inline">
@@ -105,9 +105,9 @@ Add ```.fixed``` to ```<nav>``` to fix the nav to the top to have it scroll the 
   <div class="collapsible">
     <input id="collapsible2" type="checkbox" name="collapsible2">
     <label for="collapsible2">
-      <div class="bar1"></div>
-      <div class="bar2"></div>
-      <div class="bar3"></div>
+      <div class="bar1 border"></div>
+      <div class="bar2 border"></div>
+      <div class="bar3 border"></div>
     </label>
     <div class="collapsible-body">
       <ul class="inline">
