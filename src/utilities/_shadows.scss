@@ -20,6 +20,12 @@
   @include shadow();
 }
 
+.child-shadows {
+  .shadow-none {
+    box-shadow: none;
+  }
+}
+
 .child-shadows-hover > * {
   @include shadow();
 
