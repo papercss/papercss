@@ -136,7 +136,7 @@ Use this if you want all children to have a shadow.
 <div class="row flex-spaces child-borders child-shadows">
   <div class="sm-3 col">Shadow</div>
   <div class="sm-3 col">Shadow</div>
-  <div class="sm-3 col">Shadow</div>
+  <div class="sm-3 col shadow-none">No Shadow</div>
 </div>
 
 #### Code:
@@ -145,7 +145,7 @@ Use this if you want all children to have a shadow.
 <div class="row flex-spaces child-borders child-shadows">
   <div class="sm-3 col">Shadow</div>
   <div class="sm-3 col">Shadow</div>
-  <div class="sm-3 col">Shadow</div>
+  <div class="sm-3 col shadow-none">No Shadow</div>
 </div>
 ```
 
