@@ -69,11 +69,11 @@ $primary-inverse: #fff !default;
 // Set dark theme colors
 
 $dark-primary: #fff !default;
-$dark-secondary: #0071de !default;
+$dark-secondary: #5097d5 !default;
 
-$dark-success: #189418 !default;
-$dark-warning: #ddcd45 !default;
-$dark-danger: #ff8c86 !default;
+$dark-success: #5dd55e !default;
+$dark-warning: #d4c252 !default;
+$dark-danger: #df4c57 !default;
 $dark-muted: #868e96 !default;
 
 $dark-primary-light: lighten($dark-primary, 5%) !default;
@@ -84,10 +84,10 @@ $dark-danger-light: lighten($dark-danger, 5%) !default;
 $dark-muted-light: lighten($dark-muted, 5%) !default;
 
 $dark-primary-dark: darken($dark-primary, 50%) !default;
-$dark-secondary-dark: darken($dark-secondary, 50%) !default;
-$dark-success-dark: darken($dark-success, 30%) !default;
+$dark-secondary-dark: darken($dark-secondary, 30%) !default;
+$dark-success-dark: darken($dark-success, 35%) !default;
 $dark-warning-dark: darken($dark-warning, 30%) !default;
-$dark-danger-dark: darken($dark-danger, 45%) !default;
+$dark-danger-dark: darken($dark-danger, 30%) !default;
 $dark-muted-dark: darken($dark-muted, 35%) !default;
 
 $dark-primary-light-10: lighten($dark-primary, 10%) !default;
@@ -116,11 +116,11 @@ $dark-main-background-light: lighten($dark-main-background, 50%) !default;
 $dark-black: rgba(#000, 1) !default;
 
 $dark-primary-text: $primary !default;
-$dark-secondary-text: $dark-secondary-dark-10 !default;
-$dark-success-text: $dark-success-dark-10 !default;
-$dark-warning-text: $dark-warning-dark-10 !default;
-$dark-danger-text: $dark-danger-dark-10 !default;
-$dark-muted-text: $dark-muted-dark-10 !default;
+$dark-secondary-text: $dark-secondary-dark !default;
+$dark-success-text: $dark-success-dark !default;
+$dark-warning-text: $dark-warning-dark !default;
+$dark-danger-text: $dark-danger-dark !default;
+$dark-muted-text: $dark-muted-dark !default;
 
 $dark-shadow-color-regular: hsla(0, 0, 0%, 0.2) !default;
 $dark-shadow-color-hover: hsla(0, 0, 0%, 0.3) !default;
