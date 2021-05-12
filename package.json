@@ -29,7 +29,7 @@
     "chalk": "^4.1.0",
     "cssnano": "^4.1.10",
     "hugo-bin": "^0.62.3",
-    "postcss": "^7.0.32",
+    "postcss": "^8.2.10",
     "pre-commit": "^1.2.2",
     "rimraf": "^3.0.2",
     "sass": "^1.26.10",
