@@ -1282,6 +1282,10 @@ table.table-alternating tbody tr:nth-of-type(even) {
   box-shadow: 15px 28px 25px -18px rgba(0, 0, 0, 0.2);
 }
 
+.child-shadows .shadow-none {
+  box-shadow: none;
+}
+
 .child-shadows-hover > * {
   transition: all 235ms ease 0s;
   box-shadow: 15px 28px 25px -18px rgba(0, 0, 0, 0.2);
