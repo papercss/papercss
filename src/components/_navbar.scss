@@ -23,8 +23,9 @@ nav {
     width: 2rem;
   }
 
-  .collapsible input[id^=collapsible]:checked + button, // Leaving for backwards compatibility. See docs for proper usage
-  .collapsible input[id^=collapsible]:checked + label {
+  .collapsible input[id^=collapsible]:checked+button,
+  // Leaving for backwards compatibility. See docs for proper usage
+  .collapsible input[id^=collapsible]:checked+label {
     .bar1 {
       transform: rotate(-45deg) translate(-9px, 7px);
     }
@@ -66,6 +67,46 @@ nav {
     @include resp(small) {
       display: block;
       margin: 1rem 0;
+    }
+  }
+
+  ul.inline li.dropdown {
+    font-size: 1.3rem;
+    margin: 0;
+
+    div.dropdown-title {
+      cursor: pointer;
+      margin: 0;
+      padding: 0 10px;
+
+      &::after {
+        content: '▼';
+        font-size: 0.8rem;
+        padding: 0 2px;
+        vertical-align: middle;
+      }
+    }
+
+    ul.dropdown-menu {
+      @include color('background-color', 'primary-inverse');
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      padding: 10px;
+      position: absolute;
+
+      li {
+        margin: 0 15px 10px 30px;
+
+        a {
+          font-size: 1.1rem;
+        }
+      }
+    }
+
+    div.dropdown-title:hover+ul.dropdown-menu,
+    ul.dropdown-menu:hover {
+      display: flex;
     }
   }
 
@@ -118,7 +159,7 @@ nav {
     }
   }
 
-  .collapsible input[id^=collapsible]:checked ~ div.collapsible-body {
+  .collapsible input[id^=collapsible]:checked~div.collapsible-body {
     margin: 0;
     max-height: 960px;
     opacity: 1;
@@ -149,13 +190,14 @@ nav {
     border-width: 2px;
   }
 
-  .collapsible > button {
+  .collapsible>button {
     // Leaving for backwards compatibility. See docs for proper usage
     border: 0;
   }
 
-  .collapsible > button, // Leaving for backwards compatibility. See docs for proper usage
-  .collapsible > label {
+  .collapsible>button,
+  // Leaving for backwards compatibility. See docs for proper usage
+  .collapsible>label {
     @include color('background-color', 'main-background');
     display: none;
     font-size: 0.5rem;
