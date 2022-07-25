@@ -12,7 +12,7 @@
     "hugo:serve": "hugo server --source=docs --disableFastRender",
     "lint": "npm run stylelint",
     "start": "npm run hugo:serve",
-    "stylelint": "stylelint 'src/**/*.scss'"
+    "stylelint": "stylelint \"src/**/*.scss\""
   },
   "repository": {
     "type": "git",
@@ -24,7 +24,6 @@
     "url": "https://github.com/papercss/papercss/issues"
   },
   "homepage": "https://www.getpapercss.com",
-  "dependencies": {},
   "devDependencies": {
     "autoprefixer": "^9.8.6",
     "chai": "^4.1.2",
