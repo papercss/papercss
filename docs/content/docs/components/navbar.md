@@ -72,6 +72,66 @@ Add ```.fixed``` to ```<nav>``` to fix the nav to the top to have it scroll the 
 </nav>
 ```
 
+### Navbar with Dropdown
+
+<nav class="border split-nav">
+  <div class="nav-brand">
+    <h3><a href="#">Get PaperCSS</a></h3>
+  </div>
+  <div class="collapsible">
+    <input id="collapsible2" type="checkbox" name="collapsible2">
+    <label for="collapsible2">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </label>
+    <div class="collapsible-body">
+      <ul class="inline">
+        <li><a href="#">Documentation</a></li>
+        <li class="dropdown">
+          <div class="dropdown-title">About</div>
+          <ul class="dropdown-menu border border-4">
+            <li><a href="#">Github</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+#### Code:
+
+```html
+<nav class="border split-nav">
+  <div class="nav-brand">
+    <h3><a href="#">Get PaperCSS</a></h3>
+  </div>
+  <div class="collapsible">
+    <input id="collapsible2" type="checkbox" name="collapsible2">
+    <label for="collapsible2">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </label>
+    <div class="collapsible-body">
+      <ul class="inline">
+        <li><a href="#">Documentation</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Github</a></li>
+        <li class="dropdown">
+          <div class="dropdown-title">About</div>
+          <ul class="dropdown-menu border border-4">
+            <li><a href="#">Github</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+```
+
 ### Not Split Navbar
 
 <nav class="border">

@@ -27,7 +27,7 @@
 
   .btn-close {
     @include transition;
-    @include btn-close-color($primary);
+    @include btn-close-color('primary');
     cursor: pointer;
     margin-left: 0.75rem;
   }
@@ -40,7 +40,7 @@
     @include color('border-color', #{$colorName});
 
     .btn-close {
-      @include btn-close-color($color);
+      @include btn-close-color($colorName);
     }
   }
 }
