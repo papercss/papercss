@@ -18,6 +18,7 @@ nav {
     @include color('color', 'primary');
     border-bottom-left-radius: 15px 5px;
     border-bottom-right-radius: 15px 3px;
+    height: 0.3rem;
     margin: 6px 0;
     transition: 0.4s;
     width: 2rem;
