@@ -12,25 +12,25 @@ $font-src: 'https://fonts.googleapis.com/css?family=Neucha|Patrick+Hand+SC&displ
 
 // Set theme colors
 $primary: #41403e !default;
-$secondary: #0071de !default;
+$secondary: #0b74d5 !default;
 
-$success: #09c800 !default;
-$warning: #decf00 !default;
-$danger: #e7001b !default;
+$success: #86a361 !default;
+$warning: #ddcd45 !default;
+$danger: #a7342d !default;
 $muted: #868e96 !default;
 
-$primary-light: lighten($primary, 65%) !default;
-$secondary-light: lighten($secondary, 50%) !default;
-$success-light: lighten($success, 53%) !default;
-$warning-light: lighten($warning, 50%) !default;
-$danger-light: lighten($danger, 50%) !default;
-$muted-light: lighten($muted, 50%) !default;
+$primary-light: lighten($primary, 55%) !default;
+$secondary-light: lighten($secondary, 48%) !default;
+$success-light: lighten($success, 32%) !default;
+$warning-light: lighten($warning, 30%) !default;
+$danger-light: lighten($danger, 45%) !default;
+$muted-light: lighten($muted, 35%) !default;
 
 $primary-dark: darken($primary, 50%) !default;
 $secondary-dark: darken($secondary, 50%) !default;
-$success-dark: darken($success, 40%) !default;
-$warning-dark: darken($warning, 40%) !default;
-$danger-dark: darken($danger, 40%) !default;
+$success-dark: darken($success, 30%) !default;
+$warning-dark: darken($warning, 30%) !default;
+$danger-dark: darken($danger, 45%) !default;
 $muted-dark: darken($muted, 35%) !default;
 
 $primary-light-10: lighten($primary, 10%) !default;
@@ -42,8 +42,8 @@ $muted-light-10: lighten($muted, 10%) !default;
 
 $primary-dark-10: darken($primary, 10%) !default;
 $secondary-dark-10: darken($secondary, 10%) !default;
-$success-dark-10: darken($success, 15%) !default;
-$warning-dark-10: darken($warning, 15%) !default;
+$success-dark-10: darken($success, 23%) !default;
+$warning-dark-10: darken($warning, 30%) !default;
 $danger-dark-10: darken($danger, 10%) !default;
 $muted-dark-10: darken($muted, 10%) !default;
 
@@ -74,9 +74,9 @@ $primary-inverse: #fff !default;
 // Set dark theme colors
 
 $dark-primary: #fff !default;
-$dark-secondary: #5097d5 !default;
+$dark-secondary: #5595ce !default;
 
-$dark-success: #5dd55e !default;
+$dark-success: #70c272 !default;
 $dark-warning: #d4c252 !default;
 $dark-danger: #df4c57 !default;
 $dark-muted: #868e96 !default;
