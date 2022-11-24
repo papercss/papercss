@@ -1319,20 +1319,20 @@ table.table-alternating tbody tr:nth-of-type(even) {
   overflow: hidden;
   padding: 0 0.75rem;
 }
-.collapsible input {
+.collapsible > input {
   display: none;
 }
-.collapsible input:checked + label {
+.collapsible > input:checked + label {
   color: #41403e;
   color: var(--primary);
 }
-.collapsible input[id^=collapsible]:checked ~ div.collapsible-body {
+.collapsible > input[id^=collapsible]:checked ~ div.collapsible-body {
   margin: 0;
   max-height: 960px;
   opacity: 1;
   padding: 0.75rem;
 }
-.collapsible label {
+.collapsible > label {
   color: #41403e;
   color: var(--primary);
   border-bottom-color: #41403e;
@@ -1345,7 +1345,7 @@ table.table-alternating tbody tr:nth-of-type(even) {
   padding: 0.75rem;
   text-align: center;
 }
-.collapsible label:hover {
+.collapsible > label:hover {
   color: #41403e;
   color: var(--muted);
   cursor: pointer;
@@ -2400,7 +2400,7 @@ fieldset.form-group {
   top: 0;
   visibility: hidden;
   word-wrap: break-word;
-  z-index: 12;
+  z-index: 200;
 }
 .modal-bg {
   bottom: 0;
