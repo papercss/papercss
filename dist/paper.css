@@ -3173,6 +3173,8 @@ nav .bar3 {
   color: var(--primary);
   border-bottom-left-radius: 15px 5px;
   border-bottom-right-radius: 15px 3px;
+  border-bottom-style: solid;
+  border-bottom-width: 5px;
   margin: 6px 0;
   transition: 0.4s;
   width: 2rem;
