@@ -119,3 +119,78 @@ Add ```.fixed``` to ```<nav>``` to fix the nav to the top to have it scroll the 
   </div>
 </nav>
 ```
+
+
+### Navbar with Dropdown
+
+<nav class="border">
+  <div class="nav-brand">
+    <h3><a href="#">Get PaperCSS</a></h3>
+  </div>
+  <div class="collapsible">
+    <input id="collapsible3" type="checkbox" name="collapsible3">
+    <label for="collapsible3">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </label>
+    <div class="collapsible-body">
+      <ul class="inline">
+        <li><a href="#">Documentation</a></li>
+        <li><a href="#">About</a></li>
+        <li>
+          <div class="dropdown">
+            <input id="dropdown1" type="checkbox"></input>
+            <label for="dropdown1">Dropdown</label>
+            <div class="border dropdown-body">
+              <ul>
+                <li><a href="#">link</a></li>
+                <li><a href="#">link</a></li>
+                <li><a href="#">link</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li><a href="#">Github</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+#### Code:
+
+```html
+<nav class="border">
+  <div class="nav-brand">
+    <h3><a href="#">Get PaperCSS</a></h3>
+  </div>
+  <div class="collapsible">
+    <input id="collapsible3" type="checkbox" name="collapsible3">
+    <label for="collapsible3">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </label>
+    <div class="collapsible-body">
+      <ul class="inline">
+        <li><a href="#">Documentation</a></li>
+        <li><a href="#">About</a></li>
+        <li>
+          <div class="dropdown">
+            <input id="dropdown1" type="checkbox"></input>
+            <label for="dropdown1">Dropdown</label>
+            <div class="border dropdown-body">
+              <ul>
+                <li><a href="#">link</a></li>
+                <li><a href="#">link</a></li>
+                <li><a href="#">link</a></li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li><a href="#">Github</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+```

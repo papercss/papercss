@@ -25,8 +25,9 @@ nav {
     width: 2rem;
   }
 
-  .collapsible input[id^=collapsible]:checked + button, // Leaving for backwards compatibility. See docs for proper usage
-  .collapsible input[id^=collapsible]:checked + label {
+  .collapsible input[id^=collapsible]:checked+button,
+  // Leaving for backwards compatibility. See docs for proper usage
+  .collapsible input[id^=collapsible]:checked+label {
     .bar1 {
       transform: rotate(-45deg) translate(-9px, 7px);
     }
@@ -71,7 +72,8 @@ nav {
     }
   }
 
-  a {
+  a,
+  .dropdown>label {
     @include color('color', 'primary');
     @include color('border-bottom-color', 'primary');
     background-image: none;
@@ -82,18 +84,82 @@ nav {
     padding-bottom: 0.1rem;
   }
 
-  a:hover {
+  a:hover,
+  .dropdown>label:hover {
     @include color('border-color', 'primary-light');
     border-bottom-style: solid;
     border-bottom-width: 5px;
   }
 
-  ul.inline li a {
-    font-size: 1.3rem;
-  }
+  ul.inline li {
+    a,
+    .dropdown label {
+      font-size: 1.3rem;
+    }
 
-  ul.inline li::before {
-    content: '';
+    &::before {
+      content: '';
+    }
+
+    .dropdown {
+      margin: 0;
+
+      &>label {
+        cursor: pointer;
+        user-select: none;
+      }
+
+      &>label::after {
+        content: '▼';
+        font-size: 0.6rem;
+        vertical-align: middle;
+      }
+
+      .dropdown-body,
+      input[id^=dropdown] {
+        display: none;
+      }
+
+      input[id^=dropdown]:checked~.dropdown-body {
+        display: block;
+        position: absolute;
+
+        @include resp(small) {
+          position: static;
+        }
+      }
+
+      .dropdown-body {
+        @include color('background-color', 'main-background');
+        @include transition;
+
+        display: none;
+        margin-top: 10px;
+
+        @include resp(small) {
+          background-color: transparent;
+          border-style: none;
+        }
+
+        ul {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          overflow: hidden;
+          padding: 5px 10px 10px 13px;
+          text-align: center;
+
+          li {
+            margin-bottom: 5px;
+            margin-top: 5px;
+          }
+
+          li a {
+            font-size: 1.1rem;
+          }
+        }
+      }
+    }
   }
 
   ul {
@@ -120,7 +186,7 @@ nav {
     }
   }
 
-  .collapsible input[id^=collapsible]:checked ~ div.collapsible-body {
+  .collapsible input[id^=collapsible]:checked~div.collapsible-body {
     margin: 0;
     max-height: 960px;
     opacity: 1;
@@ -140,7 +206,7 @@ nav {
     padding: none;
   }
 
-  .collapsible label {
+  .collapsible>label {
     @include color('border-color', 'primary');
 
     border-bottom-left-radius: 15px 255px;
@@ -151,13 +217,14 @@ nav {
     border-width: 2px;
   }
 
-  .collapsible > button {
+  .collapsible>button {
     // Leaving for backwards compatibility. See docs for proper usage
     border: 0;
   }
 
-  .collapsible > button, // Leaving for backwards compatibility. See docs for proper usage
-  .collapsible > label {
+  .collapsible>button,
+  // Leaving for backwards compatibility. See docs for proper usage
+  .collapsible>label {
     @include color('background-color', 'main-background');
     display: none;
     font-size: 0.5rem;
@@ -171,4 +238,5 @@ nav {
       display: block;
     }
   }
+
 }
