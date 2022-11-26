@@ -98,7 +98,7 @@ Add ```.fixed``` to ```<nav>``` to fix the nav to the top to have it scroll the 
 #### Code:
 
 ```html
-<nav class="border fixed">
+<nav class="border">
   <div class="nav-brand">
     <h4><a href="#">Get PaperCSS</a></h4>
   </div>
