@@ -1098,6 +1098,9 @@ ul li::before {
   left: -7px;
   position: relative;
 }
+ul li > p {
+  display: inline;
+}
 ul ul li::before {
   content: "+";
 }

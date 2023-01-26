@@ -25,7 +25,7 @@ ul {
 
   li {
     text-indent: -7px;
-    
+
     .badge,
     [popover-bottom]::after,
     [popover-left]::after,
@@ -37,6 +37,10 @@ ul {
     &::before {
       left: -7px;
       position: relative;
+    }
+
+    & > p {
+      display: inline;
     }
   }
 
