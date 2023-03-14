@@ -10,7 +10,8 @@
   &:hover {
     &::after {
       opacity: 1;
-      transition: opacity 0.2s ease-out;
+      transition: opacity 0.2s ease-out, visibility 0s linear 0s;
+      visibility: visible;
     }
   }
 
@@ -32,6 +33,8 @@
     text-align: center;
     top: -6px;
     transform: translateX(-50%) translateY(-100%);
+    transition: opacity 0.2s ease-out, visibility 0s linear 0.2s;
+    visibility: hidden;
   }
 }
 
