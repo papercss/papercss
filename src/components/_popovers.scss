@@ -18,7 +18,6 @@
   // Creating popover::after element
   &::after {
     @include border-style();
-    @include transition(opacity);
     @include color('background-color', 'light-dark');
     @include color('border-color', 'light-dark');
     @include color('color', 'primary-inverse');
