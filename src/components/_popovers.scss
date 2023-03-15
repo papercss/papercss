@@ -32,7 +32,7 @@
     text-align: center;
     top: -6px;
     transform: translateX(-50%) translateY(-100%);
-    transition: opacity 235ms ease-in-out, visibility 0s linear 0.2s;
+    transition: opacity 235ms ease-in-out, visibility 0s linear 235ms;
     visibility: hidden;
   }
 }
