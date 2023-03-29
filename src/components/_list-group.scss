@@ -1,0 +1,40 @@
+.list-group {
+  @include border-style(1);
+  border: 1px solid $muted;
+  padding: 0;
+
+  & li::before {
+    content: '';
+  }
+
+  & li,
+  .list-group-item {
+    @include border-style(1);
+    padding: 0.5rem;
+    padding-left: 1rem;
+  }
+
+  .active {
+    @include border-style(1);
+    background: $secondary;
+    color: $white;
+    padding: 0.5rem;
+    padding-left: 1rem;
+  }
+
+  @each $colorName,
+    $color,
+    $color-light,
+    $color-text in $colors {
+
+    .list-group-item-#{$colorName},
+    .paper-list-group-item-#{$colorName} {
+      @include border-style(1);
+      background: $color;
+      color: $white;
+      padding: 0.5rem;
+      padding-left: 1rem;
+    }
+  }
+
+}
