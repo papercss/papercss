@@ -1,6 +1,6 @@
 .list-group {
   @include border-style(1);
-  border: 1px solid $muted;
+  border: 2px solid $muted;
   padding: 0;
 
   & li::before {
@@ -10,16 +10,26 @@
   & li,
   .list-group-item {
     @include border-style(1);
+    border-bottom: 1px solid $muted;
     padding: 0.5rem;
     padding-left: 1rem;
+
+    &:last-child {
+      border-bottom: 0;
+    }
   }
 
   .active {
     @include border-style(1);
     background: $secondary;
+    border-bottom: 1px solid $secondary;
     color: $white;
     padding: 0.5rem;
     padding-left: 1rem;
+
+    &:last-child {
+      border-bottom: 0;
+    }
   }
 
   @each $colorName,
@@ -31,9 +41,14 @@
     .paper-list-group-item-#{$colorName} {
       @include border-style(1);
       background: $color;
+      border-bottom: 1px solid $color;
       color: $white;
       padding: 0.5rem;
       padding-left: 1rem;
+
+      &:last-child {
+        border-bottom: 0;
+      }
     }
   }
 

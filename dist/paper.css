@@ -3330,7 +3330,7 @@ nav .collapsible > label {
   border-bottom-right-radius: 225px 15px;
   border-top-left-radius: 255px 15px;
   border-top-right-radius: 15px 225px;
-  border: 1px solid #868e96;
+  border: 2px solid #868e96;
   padding: 0;
 }
 .list-group li::before {
@@ -3342,8 +3342,13 @@ nav .collapsible > label {
   border-bottom-right-radius: 225px 15px;
   border-top-left-radius: 255px 15px;
   border-top-right-radius: 15px 225px;
+  border-bottom: 1px solid #868e96;
   padding: 0.5rem;
   padding-left: 1rem;
+}
+.list-group li:last-child,
+.list-group .list-group-item:last-child {
+  border-bottom: 0;
 }
 .list-group .active {
   border-bottom-left-radius: 15px 255px;
@@ -3351,9 +3356,13 @@ nav .collapsible > label {
   border-top-left-radius: 255px 15px;
   border-top-right-radius: 15px 225px;
   background: #0b74d5;
+  border-bottom: 1px solid #0b74d5;
   color: white;
   padding: 0.5rem;
   padding-left: 1rem;
+}
+.list-group .active:last-child {
+  border-bottom: 0;
 }
 .list-group .list-group-item-primary,
 .list-group .paper-list-group-item-primary {
@@ -3362,9 +3371,14 @@ nav .collapsible > label {
   border-top-left-radius: 255px 15px;
   border-top-right-radius: 15px 225px;
   background: #41403e;
+  border-bottom: 1px solid #41403e;
   color: white;
   padding: 0.5rem;
   padding-left: 1rem;
+}
+.list-group .list-group-item-primary:last-child,
+.list-group .paper-list-group-item-primary:last-child {
+  border-bottom: 0;
 }
 .list-group .list-group-item-secondary,
 .list-group .paper-list-group-item-secondary {
@@ -3373,9 +3387,14 @@ nav .collapsible > label {
   border-top-left-radius: 255px 15px;
   border-top-right-radius: 15px 225px;
   background: #0b74d5;
+  border-bottom: 1px solid #0b74d5;
   color: white;
   padding: 0.5rem;
   padding-left: 1rem;
+}
+.list-group .list-group-item-secondary:last-child,
+.list-group .paper-list-group-item-secondary:last-child {
+  border-bottom: 0;
 }
 .list-group .list-group-item-success,
 .list-group .paper-list-group-item-success {
@@ -3384,9 +3403,14 @@ nav .collapsible > label {
   border-top-left-radius: 255px 15px;
   border-top-right-radius: 15px 225px;
   background: #86a361;
+  border-bottom: 1px solid #86a361;
   color: white;
   padding: 0.5rem;
   padding-left: 1rem;
+}
+.list-group .list-group-item-success:last-child,
+.list-group .paper-list-group-item-success:last-child {
+  border-bottom: 0;
 }
 .list-group .list-group-item-warning,
 .list-group .paper-list-group-item-warning {
@@ -3395,9 +3419,14 @@ nav .collapsible > label {
   border-top-left-radius: 255px 15px;
   border-top-right-radius: 15px 225px;
   background: #ddcd45;
+  border-bottom: 1px solid #ddcd45;
   color: white;
   padding: 0.5rem;
   padding-left: 1rem;
+}
+.list-group .list-group-item-warning:last-child,
+.list-group .paper-list-group-item-warning:last-child {
+  border-bottom: 0;
 }
 .list-group .list-group-item-danger,
 .list-group .paper-list-group-item-danger {
@@ -3406,9 +3435,14 @@ nav .collapsible > label {
   border-top-left-radius: 255px 15px;
   border-top-right-radius: 15px 225px;
   background: #a7342d;
+  border-bottom: 1px solid #a7342d;
   color: white;
   padding: 0.5rem;
   padding-left: 1rem;
+}
+.list-group .list-group-item-danger:last-child,
+.list-group .paper-list-group-item-danger:last-child {
+  border-bottom: 0;
 }
 .list-group .list-group-item-muted,
 .list-group .paper-list-group-item-muted {
@@ -3417,7 +3451,12 @@ nav .collapsible > label {
   border-top-left-radius: 255px 15px;
   border-top-right-radius: 15px 225px;
   background: #868e96;
+  border-bottom: 1px solid #868e96;
   color: white;
   padding: 0.5rem;
   padding-left: 1rem;
+}
+.list-group .list-group-item-muted:last-child,
+.list-group .paper-list-group-item-muted:last-child {
+  border-bottom: 0;
 }
