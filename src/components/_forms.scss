@@ -28,6 +28,7 @@ textarea {
 }
 
 select {
+  @include color('background-color', 'main-background');
   height: 2.35rem;
 }
 
