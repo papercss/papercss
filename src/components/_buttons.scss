@@ -98,17 +98,12 @@ a {
   button.btn-#{$colorName}-outline,
   .paper-btn.btn-#{$colorName}-outline,
   [type='button'].btn-#{$colorName}-outline {
-    background-color: $white;
-    border-color: darken($color-light, 10%);
-    @if $colorName == primary {
-      color: $color;
-    } @else {
-      color: $color-text;
-    }
+    @include color('background-color', main-background);
+    @include color('color', #{$colorName});
+    @include color('border-color', #{$colorName});
 
     &:hover {
       background-color: $color-light;
-      border-color: $color;
     }
 
     &:hover {

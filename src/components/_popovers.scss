@@ -19,10 +19,10 @@
     @include border-style();
     @include transition(opacity);
     @include color('background-color', 'light-dark');
-    @include color('border-color', 'primary');
+    @include color('border-color', 'light-dark');
+    @include color('color', 'primary-inverse');
     border-style: solid;
     border-width: 2px;
-    color: $white;
     font-size: 0.7em;
     left: 50%;
     min-width: 80px;

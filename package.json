@@ -1,6 +1,6 @@
 {
   "name": "papercss",
-  "version": "1.8.3",
+  "version": "1.9.1",
   "description": "The less formal CSS framework.",
   "main": "dist/paper.css",
   "scripts": {

@@ -12,16 +12,16 @@ $font-src: 'https://fonts.googleapis.com/css?family=Neucha|Patrick+Hand+SC&displ
 
 // Set theme colors
 $primary: #41403e !default;
-$secondary: #0071de !default;
+$secondary: #0b74d5 !default;
 
 $success: #86a361 !default;
 $warning: #ddcd45 !default;
 $danger: #a7342d !default;
 $muted: #868e96 !default;
 
-$primary-light: lighten($primary, 50%) !default;
-$secondary-light: lighten($secondary, 50%) !default;
-$success-light: lighten($success, 30%) !default;
+$primary-light: lighten($primary, 55%) !default;
+$secondary-light: lighten($secondary, 48%) !default;
+$success-light: lighten($success, 32%) !default;
 $warning-light: lighten($warning, 30%) !default;
 $danger-light: lighten($danger, 45%) !default;
 $muted-light: lighten($muted, 35%) !default;
@@ -42,8 +42,8 @@ $muted-light-10: lighten($muted, 10%) !default;
 
 $primary-dark-10: darken($primary, 10%) !default;
 $secondary-dark-10: darken($secondary, 10%) !default;
-$success-dark-10: darken($success, 10%) !default;
-$warning-dark-10: darken($warning, 10%) !default;
+$success-dark-10: darken($success, 23%) !default;
+$warning-dark-10: darken($warning, 30%) !default;
 $danger-dark-10: darken($danger, 10%) !default;
 $muted-dark-10: darken($muted, 10%) !default;
 
@@ -65,8 +65,8 @@ $warning-text: $warning-dark-10 !default;
 $danger-text: $danger-dark-10 !default;
 $muted-text: $muted-dark-10 !default;
 
-$shadow-color-regular: hsla(0, 0, 0%, 0.2) !default;
-$shadow-color-hover: hsla(0, 0, 0%, 0.3) !default;
+$shadow-color-regular: hsla(0, 0%, 0%, 0.2) !default;
+$shadow-color-hover: hsla(0, 0%, 0%, 0.3) !default;
 
 $primary-inverse: #fff !default;
 
@@ -74,11 +74,11 @@ $primary-inverse: #fff !default;
 // Set dark theme colors
 
 $dark-primary: #fff !default;
-$dark-secondary: #0071de !default;
+$dark-secondary: #5595ce !default;
 
-$dark-success: #189418 !default;
-$dark-warning: #ddcd45 !default;
-$dark-danger: #ff8c86 !default;
+$dark-success: #70c272 !default;
+$dark-warning: #d4c252 !default;
+$dark-danger: #df4c57 !default;
 $dark-muted: #868e96 !default;
 
 $dark-primary-light: lighten($dark-primary, 5%) !default;
@@ -89,10 +89,10 @@ $dark-danger-light: lighten($dark-danger, 5%) !default;
 $dark-muted-light: lighten($dark-muted, 5%) !default;
 
 $dark-primary-dark: darken($dark-primary, 50%) !default;
-$dark-secondary-dark: darken($dark-secondary, 50%) !default;
-$dark-success-dark: darken($dark-success, 30%) !default;
+$dark-secondary-dark: darken($dark-secondary, 30%) !default;
+$dark-success-dark: darken($dark-success, 35%) !default;
 $dark-warning-dark: darken($dark-warning, 30%) !default;
-$dark-danger-dark: darken($dark-danger, 45%) !default;
+$dark-danger-dark: darken($dark-danger, 30%) !default;
 $dark-muted-dark: darken($dark-muted, 35%) !default;
 
 $dark-primary-light-10: lighten($dark-primary, 10%) !default;
@@ -121,14 +121,14 @@ $dark-main-background-light: lighten($dark-main-background, 50%) !default;
 $dark-black: rgba(#000, 1) !default;
 
 $dark-primary-text: $primary !default;
-$dark-secondary-text: $dark-secondary-dark-10 !default;
-$dark-success-text: $dark-success-dark-10 !default;
-$dark-warning-text: $dark-warning-dark-10 !default;
-$dark-danger-text: $dark-danger-dark-10 !default;
-$dark-muted-text: $dark-muted-dark-10 !default;
+$dark-secondary-text: $dark-secondary-dark !default;
+$dark-success-text: $dark-success-dark !default;
+$dark-warning-text: $dark-warning-dark !default;
+$dark-danger-text: $dark-danger-dark !default;
+$dark-muted-text: $dark-muted-light !default;
 
-$dark-shadow-color-regular: hsla(0, 0, 0%, 0.2) !default;
-$dark-shadow-color-hover: hsla(0, 0, 0%, 0.3) !default;
+$dark-shadow-color-regular: hsla(0, 0%, 0%, 0.2) !default;
+$dark-shadow-color-hover: hsla(0, 0%, 0%, 0.3) !default;
 
 $dark-primary-inverse: $primary !default;
 
