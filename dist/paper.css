@@ -2531,7 +2531,8 @@ fieldset.form-group {
 [popover-bottom]:hover::after,
 [popover-left]:hover::after {
   opacity: 1;
-  transition: opacity 0.2s ease-out;
+  transition: opacity 235ms ease-in-out, visibility 0s linear;
+  visibility: visible;
 }
 [popover-top]::after,
 [popover-right]::after,
@@ -2541,7 +2542,6 @@ fieldset.form-group {
   border-bottom-right-radius: 225px 15px;
   border-top-left-radius: 255px 15px;
   border-top-right-radius: 15px 225px;
-  transition: opacity 235ms ease-in-out 0s;
   background-color: #41403e;
   background-color: var(--light-dark);
   border-color: #41403e;
@@ -2559,6 +2559,8 @@ fieldset.form-group {
   text-align: center;
   top: -6px;
   transform: translateX(-50%) translateY(-100%);
+  transition: opacity 235ms ease-in-out, visibility 0s linear 235ms;
+  visibility: hidden;
 }
 
 [popover-left]::before {
