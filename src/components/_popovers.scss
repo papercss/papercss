@@ -10,14 +10,14 @@
   &:hover {
     &::after {
       opacity: 1;
-      transition: opacity 0.2s ease-out;
+      transition: opacity 235ms ease-in-out, visibility 0s linear;
+      visibility: visible;
     }
   }
 
   // Creating popover::after element
   &::after {
     @include border-style();
-    @include transition(opacity);
     @include color('background-color', 'light-dark');
     @include color('border-color', 'light-dark');
     @include color('color', 'primary-inverse');
@@ -32,6 +32,8 @@
     text-align: center;
     top: -6px;
     transform: translateX(-50%) translateY(-100%);
+    transition: opacity 235ms ease-in-out, visibility 0s linear 235ms;
+    visibility: hidden;
   }
 }
 
