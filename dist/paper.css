@@ -3000,10 +3000,10 @@ fieldset.form-group {
   flex-basis: 100%;
   padding: 0.75rem 0 0;
 }
-.tabs input {
+.tabs input[id^=tab] {
   display: none;
 }
-.tabs input:checked + label {
+.tabs input[id^=tab]:checked + label {
   color: #41403e;
   color: var(--primary);
   border-bottom-color: #41403e;
@@ -3011,22 +3011,22 @@ fieldset.form-group {
   border-bottom-style: solid;
   border-bottom-width: 3px;
 }
-.tabs input[id$=tab1]:checked ~ div[id$=content1] {
+.tabs input[id^=tab][id$=tab1]:checked ~ div[id$=content1] {
   display: block;
 }
-.tabs input[id$=tab2]:checked ~ div[id$=content2] {
+.tabs input[id^=tab][id$=tab2]:checked ~ div[id$=content2] {
   display: block;
 }
-.tabs input[id$=tab3]:checked ~ div[id$=content3] {
+.tabs input[id^=tab][id$=tab3]:checked ~ div[id$=content3] {
   display: block;
 }
-.tabs input[id$=tab4]:checked ~ div[id$=content4] {
+.tabs input[id^=tab][id$=tab4]:checked ~ div[id$=content4] {
   display: block;
 }
-.tabs input[id$=tab5]:checked ~ div[id$=content5] {
+.tabs input[id^=tab][id$=tab5]:checked ~ div[id$=content5] {
   display: block;
 }
-.tabs label {
+.tabs label[for^=tab] {
   color: #41403e;
   color: var(--primary-light);
   display: inline-block;
@@ -3035,7 +3035,7 @@ fieldset.form-group {
   padding: 0.75rem;
   text-align: center;
 }
-.tabs label:hover {
+.tabs label[for^=tab]:hover {
   color: #41403e;
   color: var(--muted);
   cursor: pointer;
