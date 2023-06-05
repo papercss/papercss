@@ -284,11 +284,9 @@ select {
         transform: rotateX(30deg);
       }
 
-      input {
-        &:checked + .paper-switch-tile-card {
-          box-shadow: 2px -8px 4px -5px rgba(0, 0, 0, 0.2);
-          transform: rotateX(210deg);
-        }
+      input:checked + .paper-switch-tile-card {
+        box-shadow: 2px -8px 4px -5px rgba(0, 0, 0, 0.2);
+        transform: rotateX(210deg);
       }
 
     }
