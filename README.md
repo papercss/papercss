@@ -17,8 +17,8 @@
 - [Customizing](#customizing)
 - [Contributing](#contributing)
 - [About](#about)
-- [Credits and license](#credits-and-license)
 - [Resources](#resources)
+- [Credits and license](#credits-and-license)
 
 ## Quick-start
 
