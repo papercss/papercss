@@ -17,6 +17,7 @@
 - [Customizing](#customizing)
 - [Contributing](#contributing)
 - [About](#about)
+- [Resources](#resources)
 - [Credits and license](#credits-and-license)
 
 ## Quick-start
@@ -84,6 +85,22 @@ The goal of PaperCSS is to be as minimal as possible when adding classes. For ex
 Feel free to use it for wireframes, web apps, blogs, or whatever else you can think of!
 
 If you are new to Git or SCSS, this would be a great project to get your feet wet with. I'd be happy to help walk you through the pull request process.
+
+## Resources
+
+Components:
+
+- [react-papercss-design](https://hacker0limbo.github.io/react-papercss-design/en-US) a React component library based on PaperCSS
+- [Spaper](https://oli8.github.io/spaper/) PaperCSS components for Svelte
+- [vue-papercss](https://github.com/papercss/vue-papercss) A vue-plugin for the less formal CSS framework
+- [RailsPapercss](https://github.com/papercss/rails_papercss_gem) Rails gem for Papercss framework
+- [react-native-paper-css](https://github.com/papercss/react-native-paper-css) PaperCSS for react-native
+- [React PaperCSS](https://papercss.github.io/React-Paper-CSS-Page/) Another react component library implementation for PaperCSS
+
+Icons:
+
+- [handdrawn.css](https://fxaeberhard.github.io/handdrawn.css/) Another hand-drawn css library with rich icons included
+- [hand-drawn-icons](https://github.com/nikhilol/hand-drawn-icons) Icon pack with a hand-drawn style
 
 ## Credits and license
 
