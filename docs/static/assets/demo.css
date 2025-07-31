@@ -1,9 +1,3 @@
-body {
-  background-image: url("/img/geometry2.png")
-}
-html.dark  body {
-  background: #41403e;
-}
 #top {
     max-width: 1440px;
 }

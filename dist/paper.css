@@ -453,6 +453,11 @@ html {
 }
 
 /* stylelint-enable */
+html {
+  background-color: #41403e;
+  background-color: var(--main-background);
+}
+
 /* Layout styling */
 .container {
   margin: 0 auto;
@@ -2029,6 +2034,8 @@ textarea:focus {
   border-width: 2px;
 }
 select {
+  background-color: #41403e;
+  background-color: var(--main-background);
   height: 2.35rem;
 }
 
