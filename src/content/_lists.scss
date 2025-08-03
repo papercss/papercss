@@ -38,6 +38,10 @@ ul {
       left: -7px;
       position: relative;
     }
+    
+    & > p {
+      display: inline;
+    }
   }
 
   ul {
