@@ -1,4 +1,4 @@
-## ISC Licence
+## ISC License
 
 Copyright (c) 2017–2018, Rhyne Vlaservich <rhyneav@gmail.com>
 
