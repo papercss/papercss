@@ -1319,11 +1319,16 @@ table.table-alternating tbody tr:nth-of-type(even) {
   transition: all 235ms ease-in-out 0s;
   border-bottom-style: solid;
   border-bottom-width: 1px;
+  display: grid;
+  grid-template-rows: 0fr;
   margin: 0;
-  max-height: 0;
   opacity: 0;
   overflow: hidden;
   padding: 0 0.75rem;
+}
+.collapsible .collapsible-body > * {
+  min-height: 0;
+  overflow: hidden;
 }
 .collapsible > input {
   display: none;
@@ -1333,8 +1338,8 @@ table.table-alternating tbody tr:nth-of-type(even) {
   color: var(--primary);
 }
 .collapsible > input[id^=collapsible]:checked ~ div.collapsible-body {
+  grid-template-rows: 1fr;
   margin: 0;
-  max-height: 960px;
   opacity: 1;
   padding: 0.75rem;
 }
@@ -3283,7 +3288,6 @@ nav .nav-brand h6 {
 }
 nav .collapsible input[id^=collapsible]:checked ~ div.collapsible-body {
   margin: 0;
-  max-height: 960px;
   opacity: 1;
   padding: 0;
 }

@@ -14,11 +14,20 @@
     @include transition;
     border-bottom-style: solid;
     border-bottom-width: 1px;
+    display: grid;
+    grid-template-rows: 0fr;
     margin: 0;
-    max-height: 0;
     opacity: 0;
     overflow: hidden;
     padding: 0 0.75rem;
+
+    // Clips the content while its row track animates between 0fr and 1fr,
+    // and lets the row shrink below content height (grid items default to
+    // min-height: auto, which would otherwise block the collapse).
+    > * {
+      min-height: 0;
+      overflow: hidden;
+    }
   }
 
   > input {
@@ -29,8 +38,8 @@
     }
 
     &[id^='collapsible']:checked~div.collapsible-body {
+      grid-template-rows: 1fr;
       margin: 0;
-      max-height: 960px;
       opacity: 1;
       padding: 0.75rem;
     }
